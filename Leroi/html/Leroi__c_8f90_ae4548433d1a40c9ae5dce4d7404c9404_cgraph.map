@@ -1,0 +1,11 @@
+<map id="prm_boss_lp" name="prm_boss_lp">
+<area shape="rect" id="node2" href="$Leroi_8f90.html#a8e7ce2c7dc3e5ee45a8adefc6e6bba97" title="set_kfg" alt="" coords="161,5,227,32"/>
+<area shape="rect" id="node3" href="$Leroi_8f90.html#a677c57fa23bac760da7b8f845b3f9f9d" title="prm_hnk_cl" alt="" coords="149,56,239,83"/>
+<area shape="rect" id="node7" href="$Leroi_8f90.html#a89b4321e05fd2190aba745c6eec86645" title="prm_hnk_ol" alt="" coords="149,107,239,133"/>
+<area shape="rect" id="node9" href="$Leroi_8f90.html#a836d1cb8acb3544a3a9fa63433efc1b6" title="cubspl" alt="" coords="164,157,224,184"/>
+<area shape="rect" id="node10" href="$Leroi_8f90.html#af139b1e21e0c1e77a354000840adee66" title="rxyz2plt" alt="" coords="160,208,228,235"/>
+<area shape="rect" id="node4" href="$Leroi_8f90.html#a04185f4ba85efc3e493f2de9019a69da" title="prm_ker_cl" alt="" coords="287,56,373,83"/>
+<area shape="rect" id="node5" href="$Leroi_8f90.html#a2ffa10f72b064e2c52fb28da1b335098" title="edsx_coef" alt="" coords="421,81,504,108"/>
+<area shape="rect" id="node6" href="$Leroi_8f90.html#a58ae4aba68186ebcf3cfb74fa1361584" title="propagate" alt="" coords="552,81,631,108"/>
+<area shape="rect" id="node8" href="$Leroi_8f90.html#a5a775b5fbe7ca4b27ec968d5efde2795" title="prm_ker_ol" alt="" coords="287,107,373,133"/>
+</map>

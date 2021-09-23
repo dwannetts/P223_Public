@@ -1,0 +1,1661 @@
+!   PROGRAM Leroi
+!-----------------------------------------------------------------------------------------
+ Module LG_Metadata
+!--------------
+! 
+! Module designed to hold 'constant character options'
+    Implicit NONE
+
+    Character (Len = 40), Parameter :: PNAME = 'Leroi'
+    Character (Len = 40), Parameter :: PVERS = '8.0.4a'
+    Character (Len = 40), Parameter :: PDATE = '05 September, 2018'
+    Character (Len = 40), Parameter :: PAUT1 = 'CSIRO Electromagnetic Modelling Group'
+    Character (Len = 40), Parameter :: PAUT2 = 'Art Raiche, Fred Sugeng and Glenn Wilson'
+    Character (Len = 40), Parameter :: PPROJ = 'AMIRA P223F'
+
+End Module LG_Metadata
+!-----------------------------------------------------------------------------------------
+!
+! Changes
+!
+!	8.0.4
+!	1.	started move to better module structure
+!	2.	changed default plotting point to Rx
+!	3.	corrected array access error in SET_SWYTD
+!
+!	8.0.3
+!	1.	Include model in MF1 file
+!-----------------------------------------------------------------------------------------
+!    Leroi 8.0.1 represents a major improvrment in Leroi capabilities.   
+!    Plates can be in any layer but cannot cross layers.
+!    
+!    Errors, which have been present since the major revision of the P223E version,
+!    have been discovered and corrected as part of the major new development of 
+!    The Green;s function subroutines.
+!    
+!    =========================================================================
+!
+!    For modelling tasks only, plates are no longer confined to basement if  
+!      DO3D is set to 3 in RECORD 2.  For this option:
+!
+!         Plates can be in any layer.
+!
+!         All plates must have zero plunge.  Leroi will enforce this condition
+!         by setting all plunge ot zero if necessary..
+!
+!         Plates cannot cross layers.  Leroi will enforce this condition by 
+!         by decreasing the depthextent of all offending plates.
+!
+!         Inversion is not permitted unless all paltes are in the basement.
+!
+!    =========================================================================
+!
+!================
+!   DESCRIPTION |
+!================
+!
+!      The Model
+!      ---------
+!  Leroi models the response of and can invert for one or more 3D thin plate targets
+!  in a horizontally layered host.
+!
+!  In theory, the term "thin plate" means zero thickness, ie, a conductance
+!  of zero volume imposed upon the host region.  This implies that all the
+!  induced currents lie in the planes defined by the plates.  In practice, the
+!  thin plate algorithm will be accurate when the target is electrically thin;
+!  ie, when its thickness is a fraction of the incident wavelength.
+!
+!  A 5 m thick, dike of high conductance will not be a thin target at high
+!  frequencies or equivalently early delay times.  A 40 m thick moderately
+!  conducting dyke can be regarded as electrically thin, especially at lower
+!  frequencies.  Conductive layers will filter out high frequencies which
+!  serves to extend the applicability of the thin plate assumption.
+!
+!  The plates are defined by a conductance, a plate length, a dip width, the
+!  east, north and depth coordinates of the plate reference point plus azimuthal
+!  dip and plunge rotations about that point.  For a zero plunge plate, the
+!  terms strike length and plate length are synonymous.
+!
+!=================================================================================
+!  NOTE ON STRIKE LENGTH, STRIKE & DIP AZIMUTH
+!  -------------------------------------------
+!
+!   In previous versions of Leroi, before non-zero PLUNGE was allowed the terms
+!   STRIKE LENGTH and STRIKE were used to describe the length and azimuth of the
+!   plate.  These terms are still used in relevant places in the documentation of
+!   many subroutines.
+!
+!   STRIKE LENGTH - PLATE LENGTH when PLUNGE = 0
+!
+!   STRIKE ANGLE = DIP AZIMUTH - 90 degrees
+!                = azimuth of the top of the (unplunged) plate
+!
+!   Internally, the program converts DIP AZIMUTH to STRIKE ANGLE to avoid the
+!   extensive and unnecessary redevelopment of all the subroutines that deal
+!   with the position and orientation of the cells.
+!
+!=================================================================================
+!
+!
+!                     2 _____________________ 3
+!                      |                     |
+!                      |       N             |
+!                      |                     |
+!                  ^   |       ^             |
+!                  |   |       |             |
+!                  |   |       |             |
+!                      |        ---> E       |
+!                 ETA  |                     |
+!                      |                     |
+!                      |_____________________|
+!                     1           *           4
+!                                PRP
+!
+!                           <--  XI
+!
+!  Each plate modelled by Leroi starts as a horizontal rectangular plate whose
+!  strike edge runs east-west; ie. the dip azimuth points north.  The southern
+!  edge is designated as the XI axis and the PRE or plate reference edge.
+!  Initially XI points west.  The down-dip coordinate, ETA, initially points
+!  north.  The midpoint of the XI axis, or PRE, is designated as the PRP or
+!  plate reference point.  All rotations are performed about axes that pass
+!  through the PRP.
+!
+!  The plate orientation is described in terms of dip azimuth, dip and plunge.
+!  From the observer standpoint, the plate orientation is achieved by first
+!  applying an azimuthal rotation (clockwise looking dowm) about the vertical
+!  axis, followed by a clockwise dip rotation about the rotated XI axis (PRE)
+!  followed by a clockwise plunge rotation about the plate normal.
+!
+!  In practice, SUBROUTINE SET_CELLS describes and uses a mathematical equivalent
+!  based on rotations about fixed axes in reverse order.
+!
+!      Systems
+!      -------
+!  Leroi can be used in frequency or time-domain mode to model most ground or
+!  borehole systems for controlled source EM.  It can be used for magnetic
+!  dipole, closed loop or dipole transmitters.  It can be used
+!  for magnetic dipole, closed loop or dipole receivers.
+!  The vertices of closed and open loop transmitters and receivers must have
+!  the same elevation (or depth) but they and magnetic dipole transmitters can
+!  be on, above or below the surface in any layer including basement.
+!
+!  There are basically two source-receiver specification modes.
+!  Independently specified transmitter and receiver groupings or
+!  fixed offset surveys.
+
+!  All transmitters in a survey must be of the same type: either, open or
+!  closed loops or magnetic dipoles.
+!
+!  Regardless of transmitter type, all types of receivers can be used in the same
+!  survey as long as each group has only one type of receiver.
+!
+!
+!====================
+!   FILE CONVENTIONS
+!====================
+!
+!   INPUT FILES:
+!   -----------
+!
+!   The input control file, named Leroi.cfl is read
+!   from logical unit number NR = 3.
+!
+!   For inversion the data to be inverted must be contained in
+!   Leroi.inv, read from logical unit NRI = 13
+!
+!
+!   INPUT-OUTPUT FILES:
+!   ------------------
+!
+!   For forward modelling only, frequency-domain output data, for reuse in
+!   the time-domain restart option, is written to and read from
+!   Leroi.frq, on logical unit ND = 7
+!
+!
+!   VERBOSE-OUTPUT FILES:
+!   --------------------
+!
+!   The Leroi.out is written to logical unit NW = 4
+!
+!   Messages about data or runtime errors are written in a file
+!   called Leroi.log on logical unit NLG = 9
+!
+!
+!   OUTPUT FILES FOR PLOTTING:
+!   --------------------------
+!
+!   The AMIRA format file, Leroi.amx has been replaced by Leroi.mf1
+!   (forward modelling only)
+!
+!   Terse inversion output for plotting is written to
+!   logical unit NI = 14
+!
+!                                                                         Forward
+!    UNIT #   UNIT ID      FILE ID      Function                 Invert    Model
+!    ------   -------      -------      --------                 ------   -------
+!       3       NR       Leroi.cfl      Input control file          x       x
+!       4       NW       Leroi.out      Verbose output data         x       x
+!       7       ND       Leroi.frq      F-D data for T-D reuse              x
+!       9       NLG      Leroi.log      Data error messages         x       x
+!      13       NRI      Leroi.inv      Data to be inverted         x
+!      14       np      Leroi.mv1      Inversion plotting output   x
+!      14       np      Leroi.mf1      Forward model output                x
+!
+!------------------------------------------------------------------------
+!
+!   Survey Geometry Conventions
+!   --------------------------
+!
+!   There are basically two options: fixed loop
+!   with one or more receiver groups and generalised slingram: one or more
+!   magnetic dipole receivers moving at fixed offset(s) with respect to a
+!   moving transmitter (loop or magnetic dipole).  Transmitter and receiver
+!   coordinates are specified in terms of Easting, Northing and RLs (relative
+!   level) that increases negatively downwards.
+!
+!   For generalised slingram, there is an option to specify only the
+!   coordinates of the first transmitter position and then the others are
+!   determined by loop interval and survey azimuth.
+!
+!   The survey azimuth is defined as 0 degrees pointing north and positive
+!   clockwise.  For surface lines, the X (radial) component will point along
+!   the survey azimuth.  The Y (tangential) component will be the horizontal
+!   transverse component.  The Z component is vertical.
+!
+!   For downhole surveys, the U-V-A system will be used.  A is the axial
+!   component, V (horizontal) is the horizontal component perpendicular to the
+!   receiver azimuth and U (slope) is the component (perpendicular to the
+!   Axial component) in the vertical plane determined by the receiver azimuth.
+!   For a vertical hole (DIP = 0) U points along the survey azimuth.
+!
+!   Plate Geometry
+!   --------------
+!   Initially, each plate starts as an east-west oriented horizontal plate.
+!   The plate reference edge (PRE) is defined as the southern edge.  The PRP
+!   (plate reference point) is the midpoint of this edge.  The user enters
+!   the coordinates of this point in terms of Easting, Northing and RL.
+!
+!   The plate orientation will henceforth be specified by the direction of the
+!   normal to the plate and the relative plate rotation about that normal.  This
+!   avoids the ambiguity of the strike-dip-plunge description used in previous
+!   versions.
+!
+!------------------------------------------------------------------------
+!
+!   Time-domain waveform sign convention
+!   ------------------------------------
+!
+!  Leroi assumes that the specified transmitter current will start at 0 or
+!  some low value, and rise to a positive maximum before going to zero or
+!  oscillating about zero with small magnitudes.  In this case, dI/dt will
+!  be computed using the negative I so that the early off-time response is
+!  positive for vertical fields.
+!
+
+!**********************************
+!     DESCRIPTION OF DATA RECORDS *
+!**********************************
+!
+!  All records are in list directed (free) format except for
+!  the TITLE in RECORD 1.
+!
+!    NOTE:  All distances and locations are to be specified in metres.
+!    ----   All angles are to be specified in degrees.
+!
+!      In plan view, the coordinate system used for input and output
+!      has X positive to the North and Y positive to the East.
+!      Depth is described as RLs or relative levels.
+!      RL increases negatively downwards.
+!
+!***************************************************************************
+!
+!** RECORD 1:  TITLE - up to 200 characters
+!
+!** RECORD 2:  TDFD, DO3D, ISYS, PRFL, ISTOP
+!
+!      TDFD = 1 => time-domain modelling - STANDARD OPTION
+!           = 2 => frequency-domain modelling
+!
+!           = 0 => time-domain modelling - USER CONTROL OPTION
+!
+!         The default spectrum for the 1D host computation extends 0.001 Hz. to 100 MHz.
+!
+!         The default spectrum for the 3D part is between 0.1 KHz and 100 KHz. at 6 PPD
+!         (points per decade) above 10 Hz and 3 PPD below.  It reaches a decade lower for
+!         ground and downhole programs than for AEM because of the longer pulse length.
+!         The upper frequency limit is based on skin depth in a discretised target
+!
+!         The time domain transformation first splines the 3D data over the explicit
+!         spectrum and than extrapolates to DC.  A fast Hankel transform is used to
+!         compute the raw time-domain response out to 5 full cycles to account for
+!         previous pulses in conductive environments.  That is then folded back into
+!         the single pulse response and convolved with the input signal.
+!
+!         Numerical experiments have indicated that 6 points per decade is adequate
+!         frequency discretisation, even at the high end.  Moreover, for perfect
+!         frequency-domain data, only 3 frequencies are required from 1 to 10 Hz to
+!         maintain an accuracy of better than .1 percent for the range of models studied.
+!         This means that 28 frequencies are needed for the 1Hz to 100kHz range.
+!
+!         In many cases one could achieve the same accuracy with fewer 3D frequency-domain
+!         computations.  The default spectrum can be over-ridden by setting TDFD = 0 in
+!         which case the user needs to specify the minimum and maximum frequencies plus
+!         points per decade in RECORD 2.1
+!
+!==========================================================================
+!      DO3D = -1  INVERSION
+!                 In this case, NPLATE = 0 is not allowed.
+!
+!==========================================================================
+!
+!      DO3D =  1, 2, 3 or 0 for MODELLING
+!
+!      DO3D =  1  computes response of 3-D heterogeneities and prints
+!                 voltages as measured by receivers.
+!
+!           =  2  (time-domain only)
+!                 instead of computing the frequency-domain responses
+!                 (95-99 percent of Leroi usual computation time) use
+!                 previously computed frequency-domain responses contained
+!                 in file Leroi.frq to calculate 3-D time-domain responses.
+!
+!           =  3  Plates can be in any layer; ie not restricted to basement.
+!                 PLUNGE must be 0 for all plates.
+!                 Inversion hasn't been implemented for this geometry.
+!                 These restrictions are in place only because the 31-01-08
+!                 project deadline does not permit further work.
+!
+!           =  0  compute layered earth model only
+!
+!      ISYS = 0 : Standard output processing
+!           = 2 : Sampo processing => ABS (Bz/Bx) = vertical / radial
+!           = 4 : Utem processing
+!
+!      PRFL = 1  prints response in profile mode.
+!                Each column contains the response for one channel
+!                (or frequency) for all stations on the profile.
+!
+!           = 11 as above but include scattered fields in .OUT file
+!
+!           = 0  prints responses in temporal or frequency mode.
+!                Each column contains the responses for one receiver
+!                position for either all channels (if TDFD = 1) or
+!                for all frequencies (if TDFD = 2).
+!
+!           = 10 as above but include scattered fields in .OUT file
+!
+!     ISTOP = 0  read the input data and run the specified models.
+!           = 1  read the input data, print the model description
+!                  and STOP so that the model description can be verified.
+!                  REMEMBER to change ISTOP to 0 once the models have been
+!                  verified.
+!   ______________________________________________________________________________________
+!
+!    only if TDFD = 0
+!**  RECORD 2.1:  MIN_FREQ, MAX_FREQ, IPPD, KHSQ
+!
+!       MIN_FREQ - Lowest frequency for time-domain transform
+!       MAX_FREQ - Highest frequency for time-domain transform
+!
+!           IPPD =  0 : 3 points per decade will be used between MIN_FREQ and 10 KHz
+!                       6 points per decade will be used between 10 KHz and MAX_FREQ
+!                =  3 :  3 points per decade will be used between MIN_FREQ and MAX_FREQ
+!                =  6 :  6 points per decade will be used between MIN_FREQ and MAX_FREQ
+!                = 12 : 12 points per decade will be used between MIN_FREQ and MAX_FREQ
+!
+!      The frequency range is chosen as a compromise between accuracy and computation time.
+!      The default TDFD = 1 is overly generous and often by using a smaller frequency set,
+!      one can achieve accurate results in less time.
+!
+!      However, layered halfspace computations are very quick.  Moreover one needs a wider
+!      frequency range to accommodate the very early and very late times to which the 3D part
+!      make negligible contribution.  Thus, the default halfspace frequency spectrum is from
+!      0.001 Hz to 100 MHz at 6 points per decade.  This too can be over-ridden by setting
+!      KHSQ = 1 in which case the user-defined spectrum will also apply to the halfspace as
+!      well as the 3D part.
+!
+!      KHSQ = 0 : This spectrum will be applied to the 3D part only.
+!      KHSQ = 1 : This spectrum will be applied to both the layered earth
+!                and the 3D computations.
+!
+!   ---------------------------------------------------------------------------------------
+!
+!         WAVEFORM & WINDOWS FOR UTEM SYSTEMS
+!         -----------------------------------
+!
+!** RECORD 3 (time-domain):  TXFREQ, NCHNL
+!
+!      TXFREQ : Base frequency for UTEM
+!      NCHNL  : Number of channels (Must be 10 or 20)
+!
+!%% SKIP to RECORD 5
+!
+!         WAVEFORM & WINDOWS FOR NORMAL TIME-DOMAIN SYSTEMS
+!         -------------------------------------------------
+!
+!** RECORD 3 (time-domain):  STEP, NSX, NCHNL, KRXW, REFTYM, OFFTIME
+!
+!      STEP = 0 : Compute dB/dt for all magnetic dipole receivers.
+!           = 1 : Compute B for all magnetic dipole receivers.
+!
+!      NSX =  number of points needed to describe 1/2 cycle of the transmitter
+!             waveform.  A bipolar waveform is assumed.  Thus for a system
+!             like Sirotem or EM37, NSX = 4, one point each for the start
+!             and end of the two ramps.
+!             For an ideal step turnoff system set NSX = 1
+!
+!      NCHNL - number of receiver channels
+!
+!      KRXW = 1 : receiver channels will be read in terms of start and end
+!                 times in ms relative to REFTYM.
+!
+!           = 2 : receiver channels will be read in terms of midpoints (relative
+!                  to REFTYM) and channel widths.
+!
+!      REFTYM - Time (in ms) from which TMS or TOPN & TCLS are measured.  For
+!               example, this could be signal off-time or start of downward ramp.
+!
+!      OFFTIME - time (milliseconds) between end of one pulse and the start of
+!                the next pulse (of opposite sign) since a bipolar waveform is
+!                assumed.  For systems which have a signal which is always on,
+!                OFFTIME = 0.
+!
+!** RECORD 4.1 (time-domain):  (TXON(J), TXAMP(J), J = 1,NSX)
+!
+!      TXON(J) = digitised time (in milliseconds)
+!                In most cases, TXON(1) = 0, TXON(NSX) = pulse on-time
+!
+!      TXAMP(J) = transmitter current in amps at time TXON(J)
+!
+!
+!   For KRXW = 1
+!** RECORD 4.2 (time-domain):  (TOPN(J), TCLS(J), J=1, NCHNL)
+!
+!              Start and end times (in ms) of receiver windows.
+!              (measured from REFTYM.)
+!
+!%% SKIP to RECORD 5
+!
+!   For KRXW = 2
+!** RECORD 4.2 (time-domain):  (TMS(J), J=1,NCHNL)
+!** RECORD 4.3 (time-domain):  (WIDTH(J), J=1,NCHNL)
+!
+!        TMS(J) -  centre of receiver window J in ms.
+!                  measured from REFTYM.
+!      WIDTH(J) -  width of receiver window J in ms.
+!
+!
+!         CONTROL PARAMETERS FOR FREQUENCY-DOMAIN SYSTEMS
+!         -----------------------------------------------
+!
+!** RECORD 3 (frequency-domain):  NFRQ
+!
+!      NFRQ - number of frequencies
+!
+!** RECORD 4 (frequency-domain):  (FREQ(J), CURNT(J), J = 1,NFRQ)
+!
+!       FREQ(J) - frequency in Hz
+!      CURNT(J) - current in amps for Jth frequency.
+!
+!         SURVEY INFORMATION
+!         ------------------
+!
+!** RECORD 5:  SURVEY_TYPE
+!
+!      SURVEY_TYPE = 1 : GENERAL OPTION for separate setup of transmitter and
+!                        receiver arrays.  Open and closed loops are not shape
+!                        restricted.   Inductive and galvanic sources &
+!                        receivers are permitted.
+!                        This would be the correct choice for downhole surveys
+!                        using surface loop transmitters or for CSAMT..
+!
+!                  = 2 : MOVING LOOP SURVEY with one or more magnetic dipole
+!                        receivers moving at fixed horizontal offsets with
+!                        respect to rectangular loop.
+!                        (Central loop = 1 receiver at zero offset)
+!
+!                  = 3 : SURFACE MAGNETIC DIPOLE-DIPOLE SURVEY with one or more
+!                        magnetic dipole receivers moving at fixed horizontal
+!                        offsets with respect to magnetic dipole transmitter on
+!                        or above ground
+!
+!                  = 4 : COINCIDENT LOOP SURVEY with rectangular loop
+!
+!                  = 5 : BOREHOLE MAGNETIC DIPOLE-DIPOLE SURVEY
+!                        Single magnetic dipole receiver moving downhole at
+!                        fixed offset with a magnetic dipole transmitter
+!
+!===========================================================================
+!
+!          OUTPUT UNITS DEFINITION FOR ALL SURVEY OPTIONS: if SURVEY_TYPE = 1
+!          units can be specified individually for each receiver group.
+!          ------------------------------------------------------------------
+!
+!            UNITS = 1 : volts
+!                    2 : millivolts
+!                    3 : microvolts
+!                    4 : nanovolts
+!
+!              Only for un-normalised response from magnetic dipole receivers
+!              -------------------------------------------------------------
+!                   11 : nanoteslas / sec
+!                   12 : picoteslas / sec
+!
+!                   21 : nanoteslas
+!                   22 : picoteslas
+!
+!              Only for normalised response from magnetic dipole receivers
+!              -----------------------------------------------------------
+!                   31 : simple ratio
+!                   32 : percent
+!                   33 : ppt - parts per thousand
+!                   34 : ppm - parts per million
+!                   35 : ppb - parts per billion
+!
+!              Only for point electric field receivers
+!              ---------------------------------------
+!
+!            UNITS = 41 : volts per metre
+!                    42 : millivolts per metre
+!                    43 : microvolts per metre
+!                    44 : nanovolts per metre
+!
+!          ----------------------------------------------
+!
+!
+!  DEFINITION OF MAGNETIC DIPOLE RECEIVER COMPONENT & PLOT CONVENTIONS FOR ALL SURVEY OPTIONS:
+!  ------------------------------------------------------------------------------------------
+!
+!    Define CMP(J), the component selection for magnetic dipole and point electric receivers.
+!    For inversion, this will define the data components of Line J that are to be inverted.
+!    For modelling, these will govern output for Line J.
+!
+!    For coincident loop or electric dipole receivers or Sampo, Leroi sets CMP = 1
+!
+!    In what follows, depending upon the value of IDH:
+!
+!      X is shorthand for the X, U or N component
+!      Y is shorthand for the Y, V or S component
+!      Z is shorthand for the Z, A or W component
+!
+!      CMP(J) =   1 : model or invert on X (U,N) data only for Line(J)
+!             =   2 : model or invert on Y (V,S) data only for Line(J)
+!             =   3 : model or invert on Z (A,W) data only for Line(J)
+!             =  12 : model or invert on X (U,N) and Y (V,S) data for Line(J)
+!             =  13 : model or invert on Z (A,W) and X (U,N) data for Line(J)
+!             =  23 : model or invert on Z (A,W) and Y (V,S) data for Line(J)
+!             = 123 : model or invert on all three Line(J) components
+!
+!        The order of the integers is unimportant; eg, CMP = 312 will give the
+!        same result as 123.
+!
+!
+!          For vertical coaxial dipole surveys,
+!              the X component is computed: set CMP = 1
+!          For vertical coplanar dipole surveys (broadside),
+!             the Y component is computed: set CMP = 2
+!          For horizontal coplanar dipole surveys,
+!             the Z component is computed: set CMP = 3
+!
+!    Specify ground or downhole surveys
+!
+!      IDH = 0 for all surface surveys.
+!          = 1 or 2 for downhole magnetic dipole receivers only
+!
+!
+!          Set IDH = 0 for Surface Receiver Components
+!          -------------------------------------------
+!
+!    The X component is horizontal and lies along the nominated survey line azimuth
+!    The Y component is horizontal and lies perpendicular to the survey line azimuth
+!    The Z component is vertical.
+!
+!
+!          Set IDH = 1 for Downhole receivers - U, V, A convention
+!          -------------------------------------------------------
+!
+!    A, the axial component, lies along the local receiver dipole axis.
+!
+!    U, the slope component is orthogonal to the local Rx dip and lies in the vertical
+!                    plane whose azimuth is determined by the local Rx azimuth.
+!
+!    V, horizontal component is orthogonal to U & A.
+!
+!
+!          Set IDH = 2 for UTEM Downhole receivers - W, N, S convention
+!          ------------------------------------------------------------
+!
+!    W, the axial component, lies along the local receiver dipole axis.
+!
+!    N, the out-section component is orthogonal W and has zero horizontal
+!                    component in the direction of the survey line azimuth.
+!
+!    S, the in-section component = N x W, orthogonal to W & N.
+!
+!
+!
+!          PLOT CONVENTION
+!          ---------------
+!
+!      IPLT(J) = 1 : plot response of Line J at receiver location
+!              = 2 : plot response of Line J at transmitter-receiver midpoint
+!              = 3 : plot response of Line J at transmitter location
+!
+!      This definition allows the user to specify different plot conventions
+!      for each component by defining separate lines (and hence different IPLT)
+!      for each component.
+!
+!
+!*******************************************
+!
+! RECORDS 6-9 for SURVEY_TYPE = 1 : Fixed Tx
+!===========================================
+!
+!** RECORD 6:  NLINES, MRXL, NTX, SOURCE_TYPE, MXVRTX, TXMNT
+!
+!      NLINES - number of lines of data to be modelled or inverted.
+!               For this option, a line of data consists of specifying a
+!               single transmitter plus a line of receivers.
+!
+!               Different RECEIVER types are allowed for different lines
+!               but ALL receivers in any line must be of the same type:
+!               magnetic dipoles, electric dipoles or rectangular loops.
+!
+!               The same SOURCE type must be used for all lines in the
+!               modelling or inversion project
+!
+!      MRXL - maximum number of receiver positions per line.
+!
+!      NTX = number of distinct transmitter positions for source
+!            (loop, magnetic dipole, or electric bipole or dipole)
+!
+!            Note that the same transmitter position can be used for more than one
+!            line by combining it with different receiver groups.  For example one
+!            line might consist of a transmitter position and a group of surface
+!            receivers and another might consist of the same transmitter position
+!            and a group of downhole receivers.
+!
+!            If only one line of receivers is used for every transmitter position,
+!            NLINES = NTX
+!
+!      SOURCE_TYPE = 1 : general loop    - vertex locations will be specified
+!                  = 2 : grounded wire   - path + endpoints will be specified
+!                  = 3 : magnetic dipole - location & orientation will be specified
+!
+!      MXVRTX - maximum number of vertices for all sources.
+!               If SOURCE_TYPE = 3, magnetic dipole, set MXVRTX = 1
+!
+!      TXMNT = NTRN, number of turns for closed loop source (SOURCE_TYPE = 1)
+!
+!            = 1 for open loop or grounded electrodes source (SOURCE_TYPE = 2)
+!
+!            = TXMNT if SOURCE_TYPE = 3 : Tx dipole moment (turns * area in m^2)
+!
+!
+!  TRANSMITTER LOCATIONS FOR SURVEY_TYPE = 1
+!  ==========================================
+!
+!** For SOURCE_TYPE = 1 or 2 (closed loop & grounded wire)
+!   ------------------------------------------------------
+!
+!     For each source position, specify the number of vertices followed by the
+!     easting, northing of each vertex.
+!     Loops are restricted to lie horizontally; ie one depth for each open or closed loop.
+!
+!     If SOURCE_TYPE = 1, the program will connect the first vertex
+!                         to the last to complete the loop.
+!                         DON'T SPECIFY THE SAME VERTEX MORE THAN ONCE.
+!
+!     If SOURCE_TYPE = 2, the program assumes that the wire is grounded
+!                         at the first and last (NVRTX) vertex.
+!
+!
+!   SPECIFY_TX: DO FOR J = 1 TO NTX
+!
+!** RECORD 7.J.0: NVRTX(J), TXZ(J)
+!
+!         NVRTX(J) = number of vertices for transmitter loop J
+!           TXZ(J) = elevation of loop J
+!             (TXZ > 0 for loops in air
+!             (TXZ < 0 for loops below air-earth or air-sea interface)
+!
+!     SPECIFY_VERTICES: DO FOR I = 1 TO NVRTX
+!**** RECORDS 7.J.I: SXE(I,J), SXN(I,J)
+!
+!       SXE(I,J) = east coordinate of vertex I for loop position J
+!       SXN(I,J) = north coordinate of vertex I for loop position J
+!
+!     END SPECIFY_VERTICES FOR TX POSITION J
+!
+!     Note that the current will flow in the direction specified
+!     by the order of the vertices.  Clockwise order will yield a
+!     positive time-domain magnetic field in the loop centre.
+!
+!   END SPECIFY_TX
+!
+!
+!** For SOURCE_TYPE = 3 (magnetic dipole source)
+!   --------------------------------------------
+!
+!   SPECIFY_TX: DO FOR J = 1 TO NTX
+!** RECORD 7.J: SDE(J), SDN(J), SDZ(J), TXCLN(J), TXAZM(J)
+!
+!       SDE(J) - easting  of transmitter J
+!       SDN(J) - northing of transmitter J
+!       SDZ(J) - ground clearance height (positive above) of transmitter J
+!     TXCLN(J) - inclination in degrees of transmitter J.
+!                0 = vertical; 90 = horizontal
+!     TXAZM(J) - azimuth of transmitter J
+!                0 - north; 90 = east
+!----------------------------------------------------------------------------
+!
+!   LINE & RECEIVER SPECIFICATION FOR SURVEY_TYPE = 1
+!   -------------------------------------------------
+!
+!     For each Line J:  J = 1, NLINES, RECORDS 8.J and 9.J are read in pairs
+!     -------------------------------
+!
+!** RECORD 8.J.1: LINE(J), IDTX(J), RX_TYPE(J), NRX(J), UNITS(J)
+!        LINE(J) - line number for Line J
+!        IDTX(J) - transmitter index for Line J; ie, IDTX is an integer from 1 to NTX.
+!                  It specifies which of the NTX transmitter positions is to be used
+!                  for LINE(J).  In the case where the same transmitter position is
+!                  to be used for more than one line of receivers, it is important to
+!                  group the lines such that all the lines corresponding to the first
+!                  transmitter position are followed by all the lines for the
+!                  second position etc.
+!
+!         NRX(J) = number of receivers for Line J
+!
+!     RX_TYPE(J) = 1 for magnetic dipole receivers -
+!
+!                = 2 for electric dipole receivers
+!                    not allowed if SOURCE_TYPE = 3 (magnetic dipole transmitters)
+!
+!                = 3 (frequency domain only)  for point electric field measurements.
+!                    not allowed if SOURCE_TYPE = 3 (magnetic dipole transmitters)
+!
+!         This program requires that receiver electrodes be buried at least 1 mm below surface.
+!         This is forced by parameter MIN_RXED IN SUBROUTINE READ_SYSTEM_AND_SURVEY_DATA
+!
+!       UNITS(J) - defined above at end of RECORD 5 description
+!
+!
+!   Enter 8.J.2 only for magnetic dipole & point electric receivers: (RX_TYPE = 1 or 3)
+!   Skip 8.J.2 for electric dipole receivers: (RX_TYPE = 2)
+!   ---------------------------------------------------------
+!** RECORD 8.J.2: (RX_TYPE = 1 only) CMP(J), SV_AZM(J),KNORM(J), IPLT(J), IDH(J), RXMNT(J)
+!** RECORD 8.J.2: (RX_TYPE = 3 only) CMP(J), SV_AZM(J)
+!
+!          CMP(J) : Component selection. See definitions below RECORD 5 (SURVEY_TYPE)
+!
+!       SV_AZM(J) : azimuth of survey line J.  SV_AZM = 0 pointing north.
+!                   It is positive clockwise.
+!
+!           For surface surveys, SV_AZM orients the X & Y components.
+!               The X (radial) component lies along SV_AZM
+!               The Y (transverse) component is perpendicular to SV_AZM
+!               Z = vertical component.
+!
+!           If IDH = 2, SV_AZM orients the U & V components.
+!
+!       KNORM(J) = 0 : output is not normalised.  UNITS(J) < 30
+!                = 1 : output is normalised to TOTAL DC primary (air) field.  UNITS(J) > 30
+!
+!                = 2 for MAGNETIC DIPOLE SOURCE (SOURCE_TYPE = 3)
+!                    magnetic dipole receiver output is normalised to AXIAL DC primary.
+!
+!                = 2 for CLOSED LOOP SOURCE (SOURCE_TYPE = 1)
+!                    magnetic dipole receiver output is normalised to VERTICAL DC primary.
+!
+!       Normalisation (KNORM > 0) is allowed for frequency-domain and
+!       B field time-domain computations.
+!       It is not allowed for time-domain dB/dt output.
+!
+!
+!       IPLT(J) = 1 : plot response of Line J at receiver location
+!               = 2 : plot response of Line J at transmitter-receiver midpoint
+!               = 3 : plot response of Line J at transmitter midpoint
+!
+!           IDH = 0 : surface receivers
+!               = 1 : downhole receivers.  Use UVA processing
+!               = 2 : downhole receivers.  Use UTEM processing
+!
+!       RXMNT(J) - dipole receiver moment (area * turns) for Line J
+!                  (magnetic dipole only)
+!
+!
+!     SPECIFY_RECEIVER_LOCATIONS
+!     --------------------------
+!    Under each line 8.J, enter records I = 1, NRX(J) records for each receiver on Line J.
+!
+!     For magnetic dipole receivers:
+!     -----------------------------
+!     Enter the easting (RXE), northing (RXN) and ground clearance
+!     (positive RXZ = above, negative implies below ground)
+!     for each receiver I on Line J.  For downhole processing (IDH > 0)
+!     BHDIP(I,J) and BHAZM(I,J) are also required.
+!
+!     For IDH = 0 (X,Y,Z) processing
+!**   RECORD 9.J.I  RXE(I,J), RXN(I,J), RXZ(I,J)
+!
+!     For IDH = 1 or 2 (U,V,A) downhole processing
+!**   RECORD 9.J.I  RXE(I,J), RXN(I,J), RXZ(I,J), BHDIP(I,J), BHAZM(I,J)
+!
+!
+!     For electric dipole receivers (voltage):
+!     ---------------------------------------
+!     This version of Leroi requires that electric dipole receivers be horizontal.
+!     Thus only one depth is required. RXZ must be < or = 0.
+!     The output is voltage computed as the integral of the electric field.
+!     Enter the easting (RXE), northing (RXN) for each electrode followed by receiver depth.
+!
+!**   RECORD 9.J.I  RXE(I,J,1), RXN(I,J,1), RXE(I,J,2), RXN(I,J,2), RXZ(I,J)
+!
+!     For point electric field output:
+!     -------------------------------
+!
+!     This is used for measurements down a hole referenced to a single point.
+!     Enter the easting (RXE), northing (RXN) and depth (RXZ) for each point.
+!
+!**   RECORD 9.J.I  RXE(I,J), RXN(I,J), RXZ(I,J)
+!
+!
+!
+!^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+!%% SKIP to RECORD 10 for model specification
+!----------------------------------------------
+!
+!===============================================================================
+!
+!_________________________________________________
+!*************************************************
+!
+! RECORDS 6-8 for SURVEY_TYPE = 2 : Moving Loop Tx
+!=================================================
+!
+!    MRXTX = the number of dipole receivers moving at fixed horizontal offsets
+!    with respect to each rectangular loop position.  Loops are specified by
+!    length, width  and the coordinates of loop centres.
+!
+!    For central loop, MRXTX = 1 receiver at zero offset
+!
+!    NTXL will be the number of distinct transmitter lines.
+!    NLINES = NTXL * MRXTX for surveys with multiple offset receivers
+!                        per transmitter position
+!
+!    NTXL transmitter lines need to be specified separately to avoid
+!    excessive computation times for redundant transmitter positions.
+!
+! ====================================
+!
+!** RECORD 6:  NTXL, MRXL, MRXTX, NTRN, ISTAT
+!
+!        NTXL - number of distinct transmitter lines
+!        MRXL - maximum number of transmitter or receiver positions per line
+!               Each line consists of 1 transmitter with one constant offset receiver.
+!
+!       MRXTX = number of fixed offset receivers per loop position
+!
+!        NTRN = number of turns in transmitter loop
+!
+!       ISTAT = 1 : Transmitter positions will be specified by incremental
+!                   distances along the survey azimuth SV_AZM, starting
+!                   from the easting and northing of the first position.
+!
+!             = 2 : All transmitter positions will be specified by eastings
+!                   and northings
+!
+!   SPECIFY NTXL records (J = 1, NTXL) one for each line of transmitters
+!      Each of these records 7.J will be followed by MRXTX + 1 records 8.I
+!      containing receiver information and line number.
+!
+!** RECORD 7.J  NRX(J),TXLNGTH(J),TXWDTH(J),SV_AZM(J),SDE(1,J),SDN(1,J),SDZ0(J)
+!
+!            NRX(J) : number of transmitter positions on Line J
+!        TXLNGTH(J) : length of survey loop along Line J
+!         TXWDTH(J) : width of survey loop perpendicular to Line J
+!         SV_AZM(J) : azimuth of Tx Line J in degrees. North = 0, East = 90
+!                       X direction (radial) is defined positive along SV_AZM
+!                       Y direction (tangential) is positive along SV_AZM + 90
+!          SDE(1,J) : east coordinate of first transmitter loop centre for Line J
+!          SDN(1,J) : north coordinate of first transmitter loop centre for Line J
+!           SDZ0(J) = elevation of loop J
+!                    > 0 for loops in air
+!                    < 0 for loops below air-earth or air-sea interface)
+!
+!   Only if ISTAT = 1
+!** RECORD 8.J  DSTAT(I,J), I= 2,NRX(J))
+!
+!        DSTAT(I,J) : station spacing between position I and I-1 on Line J (NRX(J) - 1 entries)
+!
+!          Example :  if there were 30 equi-spaced loop positions 50 m apart on the
+!                     first transmitter line and the initial position was 6500 east
+!                     and 1000 north, then RECORD 8.J would be 29*50.
+!                     Spacings need not be uniform: eg, 10*50 9*25 10*50
+!
+!   Only if ISTAT = 2
+!** RECORD 8.J  SDE(I,J),SDN(I,J), I= 2,NRX(J))
+!                 eastings and northings of transmitter centre positions 2 to NRX(J)
+!
+!   Specify I = 1, MRXTX records, one for each receiver line offset on transmitter line J
+!   -------------------------------------------------------------------------------------
+!** RECORD 9.I:  LINE(I), CMP(I), XRXOF(I), YRXOF(I), ZRXOF(I), RXMNT(I),UNITS(I), KNORM(I), IPLT(I)
+!
+!         LINE(I) - line number for Ith fixed-offset receiver on Jth Tx line
+!         CMP(I)  - Component selection. See definitions below RECORD 5 (SURVEY_TYPE)
+!
+!         XRXOF(I) = offset of Ith receiver along X direction (SV_AZM) on Jth Tx line
+!                      (positive if receiver leads transmitter)
+!         YRXOF(I) = offset of Ith receiver along Y direction (SV_AZM + 90) on Jth Tx line
+!         ZRXOF(I) = ground clearance of Ith receiver (above is positive)
+!         RXMNT(I) - Receiver moment    (turns * area in m^2)
+!
+!         UNITS(I) & IPLT(I) are also defined below RECORD 5 description
+!
+!         KNORM(I) = 0 : output is not normalised.  UNITS(J) < 30
+!                  = 1 : output is normalised to total primary (air) field.  UNITS > 30
+!                  = 2 : magnetic dipole receiver output is normalised to VERTICAL DC primary.
+!
+!^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+!%% SKIP to RECORD 10 for model specification
+!----------------------------------------------
+!
+!===============================================================================
+!
+!___________________________________________________
+!***************************************************
+!
+! RECORDS 6-8 for SURVEY_TYPE = 3 : Moving Dipole Tx
+!===================================================
+!
+!    MRXTX = the number of dipole receivers moving at fixed horizontal offsets
+!    with respect to surface magnetic dipole transmitter
+!
+!    NTXL will be the number of distinct transmitter lines.
+!    NLINES = NTXL * MRXTX for surveys with multiple offset receivers
+!                        per transmitter position
+!
+!    NTXL transmitter lines need to be specified separately to avoid
+!    excessive computation times for redundant transmitter positions.
+!
+!** RECORD 6:  NTXL, MRXL, MRXTX, TXMNT, ISTAT
+!
+!        NTXL - number of transmitter dipole lines
+!        MRXL - maximum number of transmitter or receiver positions per line
+!               Each line consists of 1 transmitter with one constant offset receiver.
+!       MRXTX - number of fixed offset receivers per loop position
+!       TXMNT - transmitter moment (turns * area in m^2)
+!
+!       ISTAT = 1 : Transmitter positions will be specified by incremental
+!                   distances along the survey azimuth SV_AZM, starting
+!                   from the easting and northing of the first position.
+!
+!             = 2 : All transmitter positions will be specified by eastings
+!                   and northings
+!
+!   SPECIFY NTXL records (J = 1, NTXL) one for each line of transmitters
+!      Each of these records 7.J will be followed by MRXTX + 1 records 8.I
+!      containing receiver information and line number.
+!
+!** RECORD 7.J  NRX(J),TXCLN(J),TXAZM(J),SV_AZM(J),SDE(1,J),SDN(1,J),SDZ0(J)
+!
+!          NRX(J) : number of transmitter positions on line J
+!
+!          TXCLN(J) : inclination in degrees of transmitter J.
+!                     0 = vertical; 90 = horizontal
+!          TXAZM(J) - azimuth of dipole transmitter axis in degrees
+!                     0 - north; 90 = east
+!         SV_AZM(J) : azimuth of Tx Line J in degrees. North = 0, East = 90
+!                       X direction (radial) is defined positive along SV_AZM
+!                       Y direction (tangential) is positive along SV_AZM + 90
+!          SDE(1,J) : east coordinate of first transmitter position for Line J
+!          SDN(1,J) : north coordinate of first transmitter position for Line J
+!           SDZ0(J) : Magnetic dipole Tx elevation for Line J
+!
+!   Only if ISTAT = 1
+!** RECORD 8.J  DSTAT(I,J), I= 2,NRX(J))
+!
+!        DSTAT(I,J) : station spacing between position I and I-1 on Line J (NRX(J) - 1 entries)
+!
+!          Example :  if there were 30 equi-spaced loop positions 50 m apart on the
+!                     first transmitter line and the initial position was 6500 east
+!                     and 1000 north, then RECORD 8.J would be 29*50.
+!                     Spacings need not be uniform: eg, 10*50 9*25 10*50
+!
+!   Only if ISTAT = 2
+!** RECORD 8.J  SDE(I,J),SDN(I,J), I= 2,NRX(J))
+!                 eastings and northings of transmitter centre positions 2 to NRX(J)
+!
+!   Specify I = 1, MRXTX records, one for each receiver offset on transmitter line J
+!   --------------------------------------------------------------------------------
+!** RECORD 9.I:  LINE(I), CMP(J), XRXOF(I), YRXOF(I), ZRXOF(I), RXMNT(I),UNITS(I), KNORM(I), IPLT(I)
+!
+!         LINE(I) - line number for Ith fixed-offset receiver on Jth Tx line
+!         CMP(J)  - Component selection. See definitions below RECORD 5 (SURVEY_TYPE)
+!
+!         XRXOF(I) = offset of Ith receiver along X direction (SV_AZM) on Jth Tx line
+!                      (positive if receiver leads transmitter)
+!         YRXOF(I) = offset of Ith receiver along Y direction (SV_AZM + 90) on Jth Tx line
+!         ZRXOF(I) = ground clearance of Ith receiver (above is positive)
+!         RXMNT(I) - Receiver moment    (turns * area in m^2)
+!
+!         UNITS(I) & IPLT(I) are also defined below RECORD 5 description
+!
+!         KNORM(I) = 0 : output is not normalised.  UNITS(J) < 30
+!                  = 1 : output is normalised to total primary (air) field
+!                  = 2 : output is normalised to magnetic dipole AXIAL DC primary.   ( UNITS > 30 )
+!
+!^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+!%% SKIP to RECORD 10 for model specification
+!----------------------------------------------
+!
+!===============================================================================
+!
+!__________________________________________________
+!**************************************************
+!
+! RECORDS 6-8 for SURVEY_TYPE = 4 : Coincident Loop
+!==================================================
+!
+!** RECORD 6:  NTXL, MRXL, MRXTX, NTRN, ISTAT
+!
+!      NLINES - number of lines
+!        MRXL - maximum number of transmitter positions per line
+!        NTRN = number of turns in transmitter loop
+!       ISTAT = 1 : Transmitter positions will be specified by incremental
+!                   distances along the survey azimuth SV_AZM, starting
+!                   from the easting and northing of the first position.
+!
+!             = 2 : All transmitter positions will be specified by eastings
+!                   and northings
+!
+!   SPECIFY NLINES records (J = 1, NTXL) one for each line of transmitters
+!      Each of these records 7.J will be followed by MRXTX + 1 records 8.I
+!      containing receiver information and line number.
+!
+!** RECORD 7.J  NRX(J),TXLNGTH(J),TXWDTH(J),SV_AZM(J),SDE(1,J),SDN(1,J)
+!
+!            NRX(J) : number of transmitter positions on Line J
+!        TXLNGTH(J) : length of survey loop along Line J
+!         TXWDTH(J) : width of survey loop perpendicular to Line J
+!         SV_AZM(J) : azimuth of Tx Line J in degrees. North = 0, East = 90
+!                       X direction (radial) is defined positive along SV_AZM
+!                       Y direction (tangential) is positive along SV_AZM + 90
+!          SDE(1,J) : east coordinate of first transmitter loop centre for Line J
+!          SDN(1,J) : north coordinate of first transmitter loop centre for Line J
+!
+!   Only if ISTAT = 1
+!** RECORD 8.J  DSTAT(I,J), I= 2,NRX(J))
+!
+!        DSTAT(I,J) : station spacing between position I and I-1 on Line J (NRX(J) - 1 entries)
+!
+!          Example :  if there were 30 equi-spaced loop positions 50 m apart on the
+!                     first transmitter line and the initial position was 6500 east
+!                     and 1000 north, then RECORD 8.J would be 29*50.
+!                     Spacings need not be uniform: eg, 10*50 9*25 10*50
+!
+!   Only if ISTAT = 2
+!** RECORD 8.J  SDE(I,J),SDN(I,J), I= 2,NRX(J))
+!                 eastings and northings of transmitter centre positions 2 to NRX(J)
+!
+!** RECORD 9 LINE(J), UNITS(J)
+!
+!         LINE(J) - line number
+!         UNITS(J) are also defined below RECORD 5 description
+!
+!^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+!%% SKIP to RECORD 10 for model specification
+!----------------------------------------------
+!
+!_________________________________________________
+!*************************************************
+!
+! RECORDS 6-8 for SURVEY_TYPE = 5 : Downhole Probe
+!=================================================
+!
+!      Borehole fixed offset Tx-Rx system - Single magnetic dipole receiver
+!      moving downhole at fixed offset with a magnetic dipole transmitter
+!
+!** RECORD 6:  NLINES, MRXL, TXMNT, IDH
+!
+!      NLINES - number of downhole survey lines
+!      MRXL   - maximum number of transmitter or receiver positions per line
+!               Each line consists of 1 transmitter with one constant offset receiver.
+!
+!      TXMNT  - transmitter moment (turns * area in m^2)
+!
+!      IDH    = 1 : conventional U, V, A processing
+!             = 2 : UTEM S, N, W processing
+!             = 0 : X, Y, Z output
+!
+!
+!
+!   SPECIFY TX LINES: J = 1, NLINES
+!   -------------------------------
+!** RECORD 7.J.  LINE(J), SV_AZM(J), NRX(J), CMP(J), OFFSET(J), RXMNT(J), UNITS(I), KNORM(I), IPLT(I)
+!
+!       LINE(J)   - Line number for line J
+!       SV_AZM(J) - reference azimuth for line J
+!       NRX(J)    - number of transmitter positions down line J
+!       CMP(J)    - Component selection. See definitions below RECORD 5 (SURVEY_TYPE)
+!       OFFSET(J) - axial offset (metres) between transmitter and receiver.
+!                   (positive if receiver is above transmitter)
+!       RXMNT(J)  - receiver moment    (turns * area in m^2)
+!
+!       UNITS(I) & IPLT(I) are also defined below RECORD 5 description
+!
+!       KNORM(J) = 0 : output is not normalised.  UNITS(J) < 30
+!                = 1 : output is normalised to total primary (air) field.  UNITS > 30
+!                = 2 : output is normalised to magnetic dipole AXIAL DC primary.   ( UNITS > 30 )
+!
+!
+!     SPECIFY I = 1, NRX(J) positions and orientations under each line 7.J
+!     ---------------------------------------------------------------------
+!**   RECORD 8.J.I  SDE(I,J), SDN(I,J), SDZ(I,J), BHDIP(I,J), BHAZM(I,J)
+!
+!       SDE, SDN, SDZ are the easting, northing and RL of the Ith transmitter position of Line J.
+!       BHDIP, BHAZM are the dip and azimuth of the borehole at location I of borehole J.
+!       BHDIP = 0 for horizontal dipoles.  Azimuth: North = 0 ; East = 90
+!
+!
+!^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+!%% SKIP to RECORD 10 for model specification
+!----------------------------------------------
+!
+!=============================================================================
+!
+!          Lithology & structure for Leroi & LeroiAir
+!          ==========================================
+!
+!** RECORD 10:  NLAYER, NPLATE, NLITH
+!
+!      NLAYER - number of layers including basement.
+!
+!      NPLATE - number of thin plates
+!
+!       NLITH - number of layer plus plate lithologies.  Any number of
+!               lithologies may be defined.  Be careful not to use
+!               layer lithologies for plates and vice versa
+!
+!          DEFINE LITHOLOGIES
+!          ------------------
+!
+!** RECORD 11.1: RES(1), SIG_T(1), RMU(1), REPS(1), CHRG(1), CTAU(1), CFREQ(1)
+!** RECORD 11.2: RES(2), SIG_T(2), RMU(2), REPS(2), CHRG(2), CTAU(2), CFREQ(2)
+!     .
+!
+!** RECORD 11.N: RES(N), SIG_T(N), RMU(N), REPS(N), CHRG(N), CTAU(N), CFREQ(N)
+!
+!           N = NLITH
+!      RES(I) - layer resistivity
+!    SIG_T(I) - Conductance (conductivity-thickness product)
+!      RMU(I) - relative layer magnetic permeability for LITH_INDEX(I)
+!     REPS(I) - relative layer dielectric constant (permittivity for LITH_INDEX(I)
+!     CHRG(I) - Cole-Cole layer chargeability for LITH_INDEX(I)
+!     CTAU(I) - Cole-Cole layer time constant for LITH_INDEX(I)
+!    CFREQ(I) - Cole-Cole layer frequency constant for LITH_INDEX(I)
+!
+!    Default values:  RMU = 1   REPS = 1   CHRG = 0   CTAU = 0   CFREQ = 1
+!
+!    The default means no magnetic permeability contrast (MU = 4 PI * 10^(-7))
+!                      no dielectric constant contrast  (EPSILON = 8.854215E-12)
+!                      and no IP effects (no Cole-Cole)
+!
+!
+!     NOTE:  For layers, SIG_T must equal -1
+!            For plates, RES must = -1;   RMU must = 1;   REPS must = 1
+!
+!
+!          LAYERED EARTH STRUCTURE
+!          -----------------------
+!
+!   (Don't enter 12.1 for a uniform half-space)
+!** RECORD 12.1: LITH(1), THK(1)
+!** RECORD 12.2: LITH(2), THK(2)
+!
+!** RECORD 12.NLAYER: LITH (NLAYER)
+!
+!      LITH(J) = integer which assigns the resistivity and other
+!                physical properties from the list of RECORD 10
+!                to layer J.
+!
+!         THK  = thickness of layers above basement
+!
+!                *********************************************
+!                !   DATA ENTRY IS FINISHED IF DO3D = 0,     !
+!                *********************************************
+!
+!===============================================================================
+!
+!          INPUT DATA FOR THE 3D TARGET STRUCTURE
+!          --------------------------------------
+!
+!     DISCRETISATION AND COMPUTATION CONTROL
+!     --------------------------------------
+!
+!** RECORD 13:  CELLW
+!
+!        CELLW - dimension of target cells for all plates.
+!
+!   In many cases, CELLW = 25 is a good compromise between accuracy and speed.
+!
+!   LEROI will divide each target plate into a minimum of 2 cells
+!   along in each direction.  If a plate is 525 m. long and 100 m. down dip
+!   and CELLW has been set to 100 m., then the program
+!   will model the target as 6 by 2 cells, each of dimension 87.5 by 50 m.
+!
+!   The input value for CELLW represents a trade-off between speed and accuracy.
+!   Decreasing CELLW can substantially increase run times but will produce
+!   better accuracy.  When the plate is very large, CELLW = 25 may result in
+!   unacceptable runtimes and CELLW = 40 may give fast and reasonable results,
+!   In other cases, especially for strongly interacting multiple plates, a finer
+!   discretisation (eg; CELLW = 20) may be required for sufficient accuracy,
+!
+!
+!             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!                 The term PRE or plate reference edge refers to the south edge.
+!     ======>     of a pre-oriented horizontal plate square with respect to the
+!                 North and East. The PRP (plate reference point) is the midpoint
+!                 of the PRE
+!
+!     ======>     All rotations are constructed using the PRE as a pivot point.
+!
+!             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!
+!  RECORDS 14 & 15 are repeated sequentially for each plate
+!
+!  ___ READ FOR J = 1, NPLATE
+!  |
+!  | *** RECORD 14:  LITH(J), CNTR_East(J), CNTR_North(J), PLTOP(J)
+!  |
+!           LITH(J) = integer which assigns the conductance and other
+!                     physical properties from the list of RECORD 11
+!                     Make sure that a plate rather than a layer
+!                     lithology is specified.
+!
+!
+!  |        CNTR_East(J), CNTR_North(J) are the east and north coordinates of
+!  |        the PRP, PLATE REFERENCE POINT of plate J
+!  |
+!  |        PLTOP = RL of designated edge of plate J.
+!  |                Therefore PLTOP now increases NEGATIVELY downwards
+!  |
+!  |          TARGET SIZES & ORIENTATIONS
+!  |          ---------------------------
+!  | *** RECORD 15:  PLNGTH(J), DPWDTH(J), DZM(J), DIP(J), PLG(J)
+!  |
+!  |             PLNGTH - length of plate J.  If PLUNGE = 0, PLNGTH = strike length.
+!  |             DPWDTH - width of plate J along dip
+!  |                    = depth extent if the plate is vertical.
+!  |
+!  |                DZM - dip azimuth, (angle plate normal makes with north)
+!  |                      in degrees east of north for plate J.
+!  |                      If DIP = 0, DZM = 0.                       (0 <= DZM <= 180).
+!  |
+!  |
+!  |                DIP - dip angle (in degrees) of plate J.         ( 0 =< DIP < 180 )
+!  |
+!  |                PLG - plunge rotation about plate normal.        ( -90 <= PLG <= 90 )
+!  |                      For a vertical plate with dip azimuth = 0,
+!  |                      PLUNGE is positive clockwise looking north
+!  |
+!  |
+!  |   Initially, each plate starts as a west-east oriented horizontal plate.
+!  |   The PRE (plate reference edge) is defined as the southern edge.  The PRP,
+!  |   is the midpoint of this edge.  The user enters the coordinates of this
+!  |   point in terms of Easting, Northing and RL.  The PRP is held fixed for
+!  |   all rotations.
+!  |
+!  |   All rotation axes pass through the PRP.  Physically, the plate is oriented by
+!  |   an azimuth rotation about the vertical axis, a dip rotation about the PRE and
+!  |   a plunge rotation about the re-oriented plate normal.  In practice
+!  |   north (using the PRE as a hinge) followed by an azimuthal rotation DZM,
+!  |   about the vertical axis.  A plate rotation is made about an axis normal to
+!  |   the plate.
+!  |
+!  |   In practice a mathematical equivalent is used where rotations are made about
+!  |   fixed spatial axes in reverse order as described in subroutines SET_CELLS
+!  |   and RPLT2XYZ
+!  |
+!  |_____   END READ OVER NPLATE
+!
+!
+!___________________________________________
+!
+!     END OF DATA ENTRY IF NO INVERSION
+!___________________________________________
+!========================================================
+!========================================================
+!
+!             INVERSION CONTROL
+!             =================
+!
+!    The inversion will run until one of the following occurs:
+!
+!    1. The maximum number of iterations, specified by MAXITS in
+!       RECORD 16 has been completed.  This shouldn't happen
+!       since the suggested value is MAXITS = 90
+!
+!    2. The RMS error is below that specified by PCTCNV.
+!       Default = 0.1 percent
+!
+!    3. The inversion is unable to reduce the error any further.
+!
+!    4. The predicted error decrease goes to zero
+!
+!    5. After 10 iterations, the combined error reduction of the previous
+!       two iterations is less than 1 percent.
+!
+!    In view of these criteria, it is best not to set MAXITS too low.  During
+!    developmental testing, the number of iterations required for convergence
+!    rarely exceeded 25.  Often 10 iterations were insufficient.
+!
+!    MAXITS = 90 will allow the inversion to work to its full capability
+!    and is suggested unless the user is in a hurry.
+!
+!    Leroi computes sensitivities using a numerical derivative.  The
+!    default uses a sequence of 5 and 3 percent step to compute this.
+!    Leroi allows the user to specify a different derivative step through
+!    the RECORD 16 variable, CNVRG.
+!
+!
+!** RECORD 16: NFIX, MAXITS, CNVRG, INVPRT
+!
+!     NFIX   - the number of parameters that will be constrained.  If all
+!              parameters are free to vary without restriction, NFIX = 0
+!
+!               If NFIX > 0, NFIX records describing the constraint must be
+!               entered as RECORDS 17
+!
+!     MAXITS - Maximum number of iterations.  Suggested value: MAXITS = 90.
+!
+!     CNVRG = 1  => Iterations will proceed using the default stopping criteria.
+!                   The default derivative step regime will be used.
+!
+!           = 2  => The inversion will stop if the RMS (root mean square) error is
+!                   reduced to below a user-specified percent (PCTCNV in RECORD 16.1).
+!                   The default derivative step regime will be used.
+!
+!           = 10 => Iterations will proceed using the default stoppingg criteria.
+!                   A user-specified derivative regime will be specified in RECORD 16.2
+!
+!           = 20 => The inversion will stop if the RMS (root mean square) error is
+!                   reduced to below a user-specified percent (PCTCNV in RECORD 16.1).
+!                   A user-specified derivative step is used. (PCTPAR in RECORD 16.2)
+!
+!     INVPRT =  1  The model results and global RMS fitting error are written to
+!                  Leroi.out and Leroi.mv1 after each iteration.
+!                  Model data and error structure are not written to these files.
+!
+!            =  2  as above plus final model data and error structure
+!            =  3  as above plus model data and error structure after each iteration
+!
+!     ------------------
+!     only if CNVRG = 2 or 20
+!**   RECORD 16.1: PCTCNV - terminate inversion if SQRT {SUMSQ / NDATA } < PCTCNV
+!     -------------------
+!
+!        SUMSQ - sum of the squares of the weighted symmetric error
+!                 SERR(J) at each data point.
+!
+!        WSUM - sum of weights for all data points
+!             = NDATA if all data points are equally weighted.
+!
+!                    W(J) * ABS ( M(J) - D(J) )
+!        SERR(J) =   --------------------------
+!                    (ABS (M(J)) + ABS (D(J)) ) / 2.
+!
+!        M(J), D(J) & W(J) are the model value, data value & weight
+!        respectively at CHANNEL J.
+!
+!     ----------------------------------------------------------------------
+!     only if CNVRG = 10 or 20  (non-default step regime)
+!**   RECORD 16.2: NDSTP - number of difference steps to be used.
+!
+!**   RECORD 16.3: KPCT (1:NDSTP) - percent changes in parameter values when
+!                                   computing sensitivity matrix.
+!     ----------------------------------------------------------------------
+!
+!     Sensitivity Computations
+
+!  In theory, the sensitivity matrix, for each iteration would be computed using
+!  the analytic derivatives of the model with respect to each unfixed parameter.
+!  In practice, a numerical derivative scheme is faster and more stable.  In
+!  Leroi, this is done by computing models where each unfixed parameter in turn
+!  is increased by a specified percentage and then subtracting the original model
+!  data from each result.  Since the inversion is a non-linear process, the exact
+!  derivative is not necessarily the most efficient choice.  The inversion path
+!  (but not always the result) will be guided by the size of the difference step.
+!  The default step regime in Leroi computes sensitivities initially using a
+!  5 percent difference.  When subsequent iterations can no longer reduce the
+!  error significantly, a 3 percent difference scheme is tested.  If the error is
+!  reduced, it is used for the rest of the inversion.
+!
+!  If in RECORD 16, CNVRG is set to 10 or 20, the user can change this by specifying
+!  the number and value of the difference steps to be tested during inversion.  The
+!  first KPCT value will be used until the error can no longer be the reduced and
+!  then the next values will be used similarly.  Thus the time required by the i
+!  nversion will be increased according to how many KPCT values are specified.  At
+!  least 1 value is required (NDSTP = 1)  The suggested maximum value of NDSTP is 3.
+!  The values for KPCT should be in the interval from 2 to 15.  A KPCT value can be
+!  used more than once but it would be silly to use the same values sequentially.
+!
+!     Example (Default scheme)
+!     2         ! NDSTP
+!     5 3       ! KPCT (1:NDSTP)
+!
+!     Example of three step scheme
+!     3         ! NDSTP
+!     3 5 8     ! KPCT (1:NDSTP)
+!     _____________________________________________________________
+!
+!     only if NFIX > 0  (NFIX records)
+!
+!**   RECORD 17: CTYPE, PLT_INDX, KPAR, ELAS(KPAR), LBND(KPAR), UBND(KPAR)
+!     _____________________________________________________________________
+!
+!     CTYPE = 1 : parameter is fixed to initial model value
+!                 only PLT_INDX & KPAR need be specified.
+!                 ELAS(KPAR), LBND(KPAR), UBND(KPAR) are not read in
+!
+!           = 2 : frictional restraint
+!                 only PLT_INDX, KPAR & ELAS(KPAR)need be specified.
+!                 LBND(KPAR), UBND(KPAR) are not read in
+!
+!           = 3 : Buffered boundaries
+!                 PLT_INDX, KPAR, ELAS(KPAR), LBND(KPAR), UBND(KPAR) must be specified.
+!
+!     PLT_INDX - plate for which a parameter will be constrained.
+!               = 0 for layered earth parameters: host & OB resistivities & OB thickness
+!
+!     KPAR - parameter index for constrained parameter
+!
+!     For PLT_INDX > 0   (PLATES)
+!     ----------------
+!     KPAR = 1 => SIG_T  - conductance of plate JP
+!          = 2 => PLTOP  - depth of reference point of plate JP
+!          = 3 => PLNGTH - length of plate JP along strike (if PLUNGE = 0)
+!          = 4 => PLWDTH - dip width of plate JP
+!          = 5 => YCNTR  - east coordinate of reference point of plate JP
+!          = 6 => XCNTR  - north coordinate of reference point of plate JP
+!          = 7 => PLAZM  - dip azimuth of plate JP      (degrees)
+!          = 8 => PLDIP  - dip angle of plate JP        (degrees)
+!          = 9 => PLUNJ  - plunge angle of plate JP     (degrees)
+!
+!     For PLT_INDX < 0   (LAYERS)
+!     ----------------
+!
+!     PLT_INDX = -J     => layer J
+!
+!     KPAR = 1 => layer resistivity
+!          = 2 => layer thickness
+!
+!     ELAS(KPAR) - elasticity  of parameter KPAR  (0 < ELAS < 1)
+!           If ELAS > 0.95, it is set to ELAS = 1
+!           If ELAS < 0.05, it is set to ELAS = 0
+!
+!     LBND(KPAR) - lower bound of parameter KPAR
+!     UBND(KPAR) - upper bound of parameter KPAR
+!
+!        -------------------------------
+!    After each iteration, the inversion will compute a proposed step change
+!    for each parameter.  Call this STEP(KPAR)
+!
+!     For CTYPE = 1, the allowed STEP change = 0
+!
+!     For CTYPE = 2 - restrained step
+!        The maximum allowed parameter change will be ELAS * STEP(KPAR)
+!        ELAS serves like a frictional restraint or rubber band preventing a
+!        parameter from making the full change suggested by the inversion
+!        process.  It is used when a parameter value is thought to be known
+!        but allows more latitude than a hard fix.
+!
+!     For CTYPE = 3 - buffered bounds
+!        Suppose the B1(KPAR) is the bound in the direction proposed by STEP(KPAR)
+!        Define D1 as the distance between the current parameter value and B1
+!        The maximum allowed step for the current iteration S1 = ELAS * D1
+!        The actual parameter change will be the minimum of S1 & STEP(KPAR)
+!
+!   EXAMPLE:  Suppose there were two plates and it was desired to fix the rotation
+!             angle of each plate plus constrain the resistivity of the overburden
+!             and host to between 800 and 1220 ohm-m and let the OB thickness vary
+!             with some retardation.
+!
+!             In that case, NFIX = 5 and the 5 entries in RECORD 17 would read
+!
+!             1 1 9
+!             1 2 9
+!             3 -1 1 .9  800 1200   ! max step = 90 percent of distance to boundary.
+!             3 -2 1 .9  800 1200   ! max step = 90 percent of distance to boundary.
+!             2 -1 2  0.6           ! actual step = 60 percent of proposed step
+!
+!=======================================
+!                                      =
+!     END OF ENTRIES FOR Leroi.cfl     =
+!         (Logical unit NR = 3)        =
+!                                      =
+!                                      =
+!=======================================
+!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!=================================================================================!
+!=                                                                               =!
+!=      INVERSION DATA SPECIFICATION                                             =!
+!=                                                                               =!
+!=                                                                               =!
+!=      BEGIN DESCRIPTON FOR Leroi.inv (Logical unit NRI = 13)                   =!
+!=      ------------------------------------------------------                   =!
+!=                                                                               =!
+!=      Any number of comment lines can be inserted at the beginning of the      =!
+!=      .inv file by using either / or \ as the first character of the line.     =!
+!=                                                                               =!
+!=      Leroi will start reading at the first line not containing / or \         =!
+!=      as the first character.  Thereafter, any line beginning with  / or \     =!
+!=      will cause an error and an end to execution.                              =!
+!=                                                                               =!
+!_________________________________________________________________________________!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!=================================================================================!
+!
+!             DATA DESCRIPTION & WEIGHTING  - read from Leroi.inv
+!             ============================
+!
+!  Leroi.inv allows comment lines only at the start of the file.
+!  These must have either \ or / in the first column.
+!
+!  In what follows, the term channels is used generically to refer to either time
+!  or frequency-domain data
+!  Each data record must contain the responses for all the channels for all the
+!  spatial components specified.
+!
+!  The records must be arranged in blocks, one for each Line in the oder that
+!  the Lines have been specified.  Each block J must have NRX(J) records where
+!  NRX(J) = number of receivers on Line J. These records must be in sequential
+!  order corresponding to the order in which they were specified in Leroi.cfl
+!
+!  Each data record must be grouped component by component.  For example, if, in
+!  RECORD 2, KMP(J) = 312, then all the Z-component data channels must be followed
+!  by all the X-component data channels followed by all the Y-component data channels.
+!
+!  Leroi requires that all lines specified in Leroi.cfl will be inverted and
+!  that data will be presented in the same order as the line specification.
+!  All components specified by CMP in Leroi.cfl must be present in the data.
+!  For example, if CMP(J) = 13, then KMP(J) in RECORD 2 must be some permutation
+!  of 13 or 123
+!
+!**  RECORD 1: FD_ORDER
+!
+!      FD_ORDER = 0 for all time domain data OR
+!                   for frequency-domain data where absolute values rather than
+!                   inphase and qaudrature are used; eg Sampo
+!
+!               = 1 : Each datum will be entered as an Inphase, Quadrature pair
+!
+!               = 2 : All the inphase data for one component is followed by the
+!                     quadrature data for that component followed by the similarly
+!                     grouped inphase and quadrature data for any other components.
+!
+!  OUTPUT CONVENTION:  During and after inversion, survey and model data will be ordered using
+!                      FD_ORDER = 0 or 1
+!
+!   ---------------  FOR EACH LINE J:
+!  |                 ----------------
+!  |
+!  | **  RECORD 2: LINE_CHK, NSTAT, KMP(J)
+!  |
+!  |         LINE_CHK - Line number for Line J, (error checking purposes)
+!  |                    It must match Line(J) in Leroi.cfl to enable the inversion.
+!  |
+!  |         NSTAT     - Number of stations for Line J, (error checking purposes)
+!  |                    It must match NRX(J) in Leroi.cfl to enable the inversion.
+!  |
+!  |         KMP(J) is NOT required for coincident loop surveys, Sampo (ISYS = 2),
+!  |         or lines using electric dipole receivers (RX_TYPE = 2)
+!  |         In these cases, they are all set to 1.
+!  |
+!  |         KMP(J) IS required for magnetic dipole receivers (RX_TYPE = 1)
+!  |         (except for Sampo) and point E field receivers (RX_TYPE = 3)
+!  |         KMP governs which data components are present in Leroi.inv
+!  |         and the order in which they appear
+!  |
+!  |
+!  |     (ONLY IF RX_TYPE (J) = 1 or 3  - magnetic dipole receivers or point E field receivers
+!  |        In what follows: 1 = X for surface surveys, U for downhole surveys or S for downhole Utem
+!  |                         2 = Y for surface surveys, V for downhole surveys or N for downhole Utem
+!  |                         3 = Z for surface surveys, A for downhole surveys or W for downhole Utem
+!  |
+!  |        To keep the explanation below simple, for downhole surveys, substitute U or S for X
+!  |        V or N for Y and A or W for Z
+!  |
+!  |        For vertical coxial surveys, the X component is read => KMP = 1
+!  |        For vertical coplanar surveys (broadside), the Y component is read => KMP = 2
+!  |        For horizontal coplanar surveys, the Z component is read => KMP = 3
+!  |
+!  |        KMP =   1 : Leroi.inv will contain only X data
+!  |            =   2 : Leroi.inv will contain only Y data
+!  |            =   3 : Leroi.inv will contain only Z data
+!  |            =  13 : X data followed by Z data will be included in Leroi.inv.
+!  |            =  31 : Z data followed by X data will be included in Leroi.inv.
+!  |            =  23 : Y data followed by Z data will be included in Leroi.inv.
+!  |            =  32 : Z data followed by Y data will be included in Leroi.inv.
+!  |            = 123 : X data followed by Y data followed by Z data will be included in Leroi.inv.
+!  |            = 312 : Z data followed by X data followed by Y data will be included in Leroi.inv.
+!  |
+!  |        KMP = 12, 21, 132, 213, 231, 321 are similarly defined.
+!  |
+!  |     DATA_FLOORS (data rejection)
+!  |     -----------
+!  |       Any data value whose ABSOLUTE MAGNITUDE is less than DATA_FLOOR will be
+!  |       weighted to zero.
+!  |
+!  |  ==>  To ensure that all data is used, set DATA_FLOOR < 0
+!  |
+!  |  ==>  To exclude any data point, set its value to zero and specify DATA_FLOOR > 0
+!  |       This convention replaces identifying points by channel and station; ie,
+!  |       N0STAT & N0PTS have been eliminated.
+!  |
+!  |   ---------------------------------------
+!  |     For Time Domain Only
+!  | **  RECORD 3: DATA_FLOOR(J)
+!  |
+!  |   ---------------------------------------
+!  |     For Frequency Domain Only
+!  |     This allows individual frequency domain data to be weighted to zero by
+!  |     using a data floor higher than any possible value.
+!  |
+!  |     If the absolute value is used; eg Sampo, (FD_ORDER = 0), MCHNL = NFRQ
+!  |
+!  |     If FD_ORDER > 0, MCHNL = 2*NFRQ
+!  |     Enter all NFRQ inphase data floors followed by all NFRQ quadrature data floors
+!  |
+!  | **  RECORD 3.I: DATA_FLOOR_I (I,J) I = 1 to MCHNL)
+!  |
+!  |
+!  |              DATA ENTRY   (read from Leroi.inv)
+!  |              ==========
+!  |
+!  |     DO for each receiver J of each line K
+!  | **  RECORD 4.J: KSTAT(I,J), DATA(I,J,K), K = 1 to NPCHNL
+!  |
+!  |        KSTAT(I,J) = station index of receiver I of Line J (sequential from 1 to NRX(J)
+!  |       DATA(I,J,K) = consists of all the data (channels & components) associated
+!  |                     with KSTAT(I,J) of Line J, in the format specified by KMP(J)
+!  |                     and ORDER(J) in RECORD 2.
+!  |
+!  |      NPCHNL is the total number of data entries for a given receiver
+!  |      It equals the number of channels (frequencies) * number of spatial components.
+!  |      When both inphase and quadrature data are present, it is double the above.
+!  |
+!  |
+!  |____________  END OF DATA ENTRY FOR LINE J
+!
+!==========================================================
+!                                                         =
+!     END DATA ENTRY DESCRIPTIOM                          =
+!                                                         =
+!**********************************************************
+!
+!============================================================================

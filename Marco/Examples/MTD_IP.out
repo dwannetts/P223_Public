@@ -1,0 +1,271 @@
+
+      ######################################################################
+      #                                                                    #
+      #                 Marco - Version 4.4.1 10 June, 2003                #
+      #                 -----------------------------------                #
+      #                                                                    #
+      #      Develped by:  CSIRO Electromagnetic Modelling Group           #
+      #                    Zonghou Xiong and Art Raiche                    #
+      #                                                                    #
+      #              For:  AMIRA project P223D                             #
+      #                                                                    #
+      ######################################################################
+
+-------------------------------------------------------------------------------
+
+ Time domain IP over a paleochannel TD IP - 28 Jun 17:19:58                                                              
+
+  TDFD = 1;   PRFL = 1;   STEP = 0;   ISTOP = 0
+
+          +-----------------------------------------+
+          +  Time-Domain Ground System Information  +
+          +-----------------------------------------+
+
+  DO3D =  1;   NSX =   4;   NCHNL =  32
+  KRXW = 1;    OFFTYM =   2650.    
+
+
+             TXON (ms)    Transmitter current (amps)
+             ---------    --------------------------
+
+      1        0.000         0.000    
+      2        0.010         10.00    
+      3     2559.010         10.00    
+      4     2560.000         0.000    
+
+
+         Receiver Window Specifications (ms - referenced to signal origin)
+         ----------------------------------------------------------------
+
+       Window     Open       Close       Width     Centre
+       ------     ----       -----       -----     ------
+          1       0.100       5.000      4.900       2.550
+          2       8.000      12.000      4.000      10.000
+          3      18.000      22.000      4.000      20.000
+          4      27.000      33.000      6.000      30.000
+          5      47.000      53.000      6.000      50.000
+          6      97.000     103.000      6.000     100.000
+          7     197.000     203.000      6.000     200.000
+          8     297.000     303.000      6.000     300.000
+          9     497.000     503.000      6.000     500.000
+         10     997.000    1003.000      6.000    1000.000
+         11    1997.000    2003.000      6.000    2000.000
+         12    2550.000    2555.000      5.000    2552.500
+         13    2560.050    2560.150      0.100    2560.100
+         14    2560.100    2560.300      0.200    2560.200
+         15    2560.200    2560.400      0.200    2560.300
+         16    2560.400    2560.600      0.200    2560.500
+         17    2560.500    2561.500      1.000    2561.000
+         18    2561.500    2562.500      1.000    2562.000
+         19    2562.500    2563.500      1.000    2563.000
+         20    2564.500    2565.500      1.000    2565.000
+         21    2568.000    2572.000      4.000    2570.000
+         22    2578.000    2582.000      4.000    2580.000
+         23    2587.000    2593.000      6.000    2590.000
+         24    2608.000    2612.000      4.000    2610.000
+         25    2657.000    2663.000      6.000    2660.000
+         26    2757.000    2763.000      6.000    2760.000
+         27    2857.000    2863.000      6.000    2860.000
+         28    3057.000    3063.000      6.000    3060.000
+         29    3557.000    3563.000      6.000    3560.000
+         30    4057.000    4063.000      6.000    4060.000
+         31    4557.000    4563.000      6.000    4560.000
+         32    5097.000    5103.000      6.000    5100.000
+
+
+  SOURCE_TYPE = 2;   SURVEY_TYPE = 1;   NTX =  1;   NRXG = 1
+
+
+  Vertex Locations for Grounded Wire Sources
+  ------------------------------------------
+
+  Transmitter  1 has  4 vertices.
+
+            Easting      Northing      Elevation
+            -------      --------      ---------
+    1       -250.00          0.00          0.00
+    2       -250.00        200.00          0.00
+    3        250.00        200.00          0.00
+    4        250.00          0.00          0.00
+
+
+  Rx Group:  1;   NRX =  8;   Type = 3;   CMP = 1;   Units = 2
+
+           Electric Dipole Receiver Electrodes
+           -----------------------------------
+
+           East 1      North 1     Elevation 1    East 2      North 2     Elevation 2
+           ------      -------     -----------    ------      -------     -----------
+   1      -150.00         0.00         0.00      -200.00         0.00         0.00
+   2      -100.00         0.00         0.00      -150.00         0.00         0.00
+   3       -50.00         0.00         0.00      -100.00         0.00         0.00
+   4         0.00         0.00         0.00       -50.00         0.00         0.00
+   5        50.00         0.00         0.00         0.00         0.00         0.00
+   6       100.00         0.00         0.00        50.00         0.00         0.00
+   7       150.00         0.00         0.00       100.00         0.00         0.00
+   8       200.00         0.00         0.00       150.00         0.00         0.00
+
+    This survey is composed of  1 events.
+
+             Tx   Rx Group
+   Event   Index  Index    NRX
+
+     1       1       1      8
+
+
+  NLAYER =  3;   NPRISM =  1;   NLITH =  7;   GND_LVL =    0.00
+
+
+                          LITHOLOGY PROPERTIES
+                          --------------------
+
+                                  Relative   Relative     Cole-Cole Parameters
+        Resistivity  Conductance     MU     Dielectric   CHRG    CTAU       CFREQ
+
+   1      20.00         -1.0       1.000      1.000      0.00    0.00        1.00
+   2      100.0         -1.0       1.000      1.000      0.00    0.00        1.00
+   3      1000.         -1.0       1.000      1.000      0.00    0.00        1.00
+   4      3000.         -1.0       1.000      1.000      0.00    0.00        1.00
+   5      1.000         -1.0       1.000      1.000      0.00    0.00        1.00
+   6     0.5000         -1.0       1.000      1.000      0.00    0.00        1.00
+   7      40.00         -1.0       1.000      1.000      0.30   0.100E-01    0.40
+
+
+   Layered host specification
+   --------------------------
+   1   1   20.0   J, LITHL(J), THK(J)
+   2   2   60.0   J, LITHL(J), THK(J)
+   3   3             Basement Lithology
+
+
+  Initial parameters for  1 prisms
+  ---------------------------------------
+  KACC = 2    SOLVER = 1    OUTPUT = 10
+
+  J, LITHP, PRISM_EAST, PRISM_NORTH, PRISM_TOP:   1   7         0.0         0.0       -20.0
+     PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z                  200.0       300.0        40.0
+     CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z                   20.0        20.0        20.0
+
+  The prism structure has two-fold symmetry about
+  East-North coordinates:   0.000       0.000    
+
+  It has been reduced to an equivalent single quadrant structure
+  to allow faster computation using a group symmetry option.
+
+
+         Description of PRISM  1
+         -----------------------
+
+  PRISM  1 extends:
+           from    0.0  to  100.0 - West to East
+           from    0.0  to  150.0 - South to North
+           from   20.0  to   60.0 - Below Air-Earth Interface
+
+  PRISM  1 is discretised into:
+             5 cells of length   20.0 m.  East-West
+             7 cells of length   21.4 m.  North-South
+             2 cells of length   20.0 m.  Vertically
+
+  PRISM  1 resistivity =   40.00     ohm-m
+           Relative MU =   1.00    Relative EPSILON =   1.00
+             PRSM_CHRG =   0.30    PRSM_CFR =  0.40    PRSM_TAU =  0.1000E-01
+
+
+  Before computation begins, Marco transforms array and model coordinates from
+  "real world" coordimnates where elevation increases positive upwards to a
+  body- centred system where depth increases positive downwards.  The new 
+  vertical origin is at the air-earth interface.  If the model is symmetric
+  the new horizontal origin is over the centre of the model region.  Otherwise
+  the origin is over the top of the first prism specified
+  In the "real world" coordimnates the new computation origin is located at:
+
+   EAST:         0.00;    NORTH:         0.00;    ELEVATION:     0.00
+
+  Transformed Vertex Locations for Grounded Wire Sources
+  ------------------------------------------------------
+
+      Transmitter  1 has  4 vertices.
+
+         Easting   Northing     Depth
+
+    1    -250.00       0.00       0.00
+    2    -250.00     200.00       0.00
+    3     250.00     200.00       0.00
+    4     250.00       0.00       0.00
+
+
+  Transformed Electrode Positions for Electric Dipoles in Rx Group  1
+  -------------------------------------------------------------------
+         East 1    North 1    Depth 1     East 2    North 2    Depth 2
+
+   1    -150.00       0.00       0.00    -200.00       0.00       0.00
+   2    -100.00       0.00       0.00    -150.00       0.00       0.00
+   3     -50.00       0.00       0.00    -100.00       0.00       0.00
+   4       0.00       0.00       0.00     -50.00       0.00       0.00
+   5      50.00       0.00       0.00       0.00       0.00       0.00
+   6     100.00       0.00       0.00      50.00       0.00       0.00
+   7     150.00       0.00       0.00     100.00       0.00       0.00
+   8     200.00       0.00       0.00     150.00       0.00       0.00
+
+
+      Revised transmitter indexing
+      ----------------------------
+
+    Old          New        Receiver  Group
+  Tx Index     Tx Index     Groups     NRX
+
+    1             1            1        8
+
+
+          +----------------------------------+
+          +  Layered Earth Model Parameters  +
+          +----------------------------------+
+
+ Layer  Thickness  Resistivity   MU-R   EPS-R   CHRG    CTAU      CFREQ
+ -----  ---------  -----------   ----   -----   ----    ----      -----
+   1       20.0      20.00       1.00   1.00    0.00    0.0       1.00
+   2       60.0      100.0       1.00   1.00    0.00    0.0       1.00
+   3                 1000.       1.00   1.00    0.00    0.0       1.00
+
+  Marco will compute 3D responses for a time-domain system
+  using accuracy level:  2
+
+---------------------------------------------------------------------------
+                       END OF INPUT DATA DESCRIPTION
+---------------------------------------------------------------------------
+
+  The time-domain results will be constructed using frequency-domain
+  output computed at 3 points per decade, from  0.1 Hz to 10 Hz
+  and at 6 points per decade, from 10 Hz to   3162.     Hz.
+
+  Marco will start by computing new frequency-domain responses in the specified 
+  range to construct the spectrum from DC to the appropriate upper limit.
+
+  Time domain IP over a paleochannel TD IP - 28 Jun 17:19:58                                                              
+
+
+  Time-domain output for Transmitter Position  1 & Receiver Group  1
+  ------------------------------------------------------------------
+  The source is a grounded wire.  
+  The receivers in this group are grounded wires.  
+  For each receiver position, the output is printed in MILLIVOLTS.     
+
+
+      PROFILE OUTPUT:  
+      STANDARD OUTPUT - LAYERED EARTH + SCATTERED FIELDS
+
+          RECEIVER POSITIONS            CHNL 1       CHNL 2       CHNL 3       CHNL 4       CHNL 5       CHNL 6       CHNL 7       CHNL 8       CHNL 9      CHNL 10      CHNL 11      CHNL 12      CHNL 13      CHNL 14      CHNL 15      CHNL 16      CHNL 17      CHNL 18      CHNL 19      CHNL 20      CHNL 21      CHNL 22      CHNL 23      CHNL 24      CHNL 25      CHNL 26      CHNL 27      CHNL 28      CHNL 29      CHNL 30      CHNL 31      CHNL 32 
+       Northing     Easting     Elev    2.550        10.00        20.00        30.00        50.00        100.0        200.0        300.0        500.0        1000.        2000.        2552.        2560.        2560.        2560.        2560.        2561.        2562.        2563.        2565.        2570.        2580.        2590.        2610.        2660.        2760.        2860.        3060.        3560.        4060.        4560.        5100.    
+
+  1        0.00     -175.00     0.00    876.1        871.5        871.3        871.1        870.9        870.7        870.5        870.4        870.3        870.2        870.2        870.2       -30.65       -25.66       -21.26       -14.87       -9.601       -4.527       -3.222       -2.258       -1.556       -1.118      -0.9272      -0.7437      -0.4751      -0.3809      -0.2715      -0.1545      -0.4931E-01  -0.1378E-01   0.8154E-02   0.1650E-01
+  2        0.00     -125.00     0.00    525.5        518.5        518.2        518.0        517.7        517.5        517.2        517.1        517.0        516.9        516.8        516.8       -27.53       -25.95       -22.20       -15.88       -9.845       -5.055       -3.700       -2.676       -1.895       -1.381       -1.150      -0.9243      -0.5913      -0.4743      -0.3381      -0.1925      -0.6174E-01  -0.1755E-01   0.9757E-02   0.2015E-01
+  3        0.00      -75.00     0.00    385.6        380.4        380.7        380.9        381.1        381.5        381.7        381.9        382.0        382.1        382.2        382.2       -20.11       -18.90       -15.35       -9.237       -3.496       0.5163        1.413        1.834        1.804        1.517        1.316        1.089       0.7140       0.5782       0.4137       0.2371       0.7698E-01   0.2255E-01  -0.1118E-01  -0.2401E-01
+  4        0.00      -25.00     0.00    342.9        338.1        338.4        338.7        339.0        339.4        339.8        340.0        340.1        340.3        340.4        340.4       -19.04       -17.78       -14.26       -8.147       -2.432        1.449        2.266        2.582        2.414        1.991        1.718        1.416       0.9248       0.7478       0.5346       0.3060       0.9919E-01   0.2896E-01  -0.1456E-01  -0.3110E-01
+  5        0.00       25.00     0.00    349.7        344.3        344.5        344.7        344.9        345.2        345.4        345.5        345.7        345.8        345.8        345.8       -20.86       -19.55       -15.96       -9.755       -3.909       0.1432        1.068        1.525        1.547        1.312        1.141       0.9445       0.6194       0.5017       0.3588       0.2056       0.6673E-01   0.1956E-01  -0.9702E-02  -0.2083E-01
+  6        0.00       75.00     0.00    394.6        388.9        389.0        389.1        389.2        389.3        389.4        389.5        389.6        389.6        389.7        389.7       -22.48       -21.08       -17.39       -11.15       -5.260       -1.048      -0.2537E-01   0.5616       0.7571       0.6945       0.6151       0.5159       0.3418       0.2779       0.1991       0.1144       0.3730E-01   0.1107E-01  -0.5214E-02  -0.1141E-01
+  7        0.00      125.00     0.00    512.2        506.4        506.4        506.3        506.3        506.3        506.3        506.3        506.3        506.3        506.3        506.3       -24.60       -22.66       -18.86       -12.67       -6.910       -2.465       -1.329      -0.5883      -0.1861      -0.4453E-01  -0.1374E-01   0.2236E-02   0.8551E-02   0.9153E-02   0.7093E-02   0.4583E-02   0.1905E-02   0.8863E-03   0.1967E-03  -0.7431E-04
+  8        0.00      175.00     0.00    866.1        862.4        862.3        862.3        862.2        862.2        862.2        862.1        862.1        862.1        862.1        862.1       -28.74       -23.44       -18.97       -12.64       -7.564       -2.728       -1.573      -0.8040      -0.3635      -0.1839      -0.1324      -0.9472E-01  -0.5424E-01  -0.4142E-01  -0.2902E-01  -0.1583E-01  -0.4590E-02  -0.8512E-03   0.1414E-02   0.2284E-02
+
+
+  Computation time =       1.74 seconds.
+

@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['shftjn',['shftjn',['../namespacemg__filter__coefficients.html#afdd6d43570da7c2de03a1bf3f6cb2871',1,'mg_filter_coefficients']]],
+  ['snhi',['snhi',['../namespacemg__filter__coefficients.html#a87a2b5c09b18d463bdad44275dda292a',1,'mg_filter_coefficients']]],
+  ['snlo',['snlo',['../namespacemg__filter__coefficients.html#a1600fb58e8eb22d762634b8fdf79e1e3',1,'mg_filter_coefficients']]],
+  ['solver',['solver',['../namespacemg__input__routines.html#a7f66390bdc680c1cecf69ec8e1caae9b',1,'mg_input_routines']]],
+  ['source_5ftype',['source_type',['../namespacemg__input__routines.html#a449e5666c46949916131dbae4eb535b5',1,'mg_input_routines']]],
+  ['step',['step',['../namespacemg__input__routines.html#a60b46446ed51344037d5a78ec02b800d',1,'mg_input_routines']]],
+  ['survey_5ftype',['survey_type',['../namespacemg__input__routines.html#a60b4086f2db3ca8019664ea74b1db69d',1,'mg_input_routines']]],
+  ['swx',['swx',['../namespacemg__input__routines.html#a2ec39304a790c075267ce8d0a9df5198',1,'mg_input_routines']]],
+  ['swy',['swy',['../namespacemg__input__routines.html#a918ef23c1105dc44a79428e83be090c8',1,'mg_input_routines']]],
+  ['sxaz',['sxaz',['../namespacemg__input__routines.html#aa821bce738fe1604b19b8d83db934692',1,'mg_input_routines']]],
+  ['sxdip',['sxdip',['../namespacemg__input__routines.html#abb059525b2cbc04fed2e250e0ed7df08',1,'mg_input_routines']]],
+  ['sxe',['sxe',['../namespacemg__input__routines.html#af04dae3936f15389226f46ddc8c0f815',1,'mg_input_routines']]],
+  ['sxed',['sxed',['../namespacemg__input__routines.html#a148ea345433a4a23b86d112f33055942',1,'mg_input_routines']]],
+  ['sxmnt',['sxmnt',['../namespacemg__input__routines.html#ad077d55e4c73022ff46aa22100c32219',1,'mg_input_routines']]],
+  ['sxn',['sxn',['../namespacemg__input__routines.html#a767f35aedf1b84295f2130e0d4028b97',1,'mg_input_routines']]],
+  ['sxnd',['sxnd',['../namespacemg__input__routines.html#a37d88ac022398dee17396a07fc8e8be7',1,'mg_input_routines']]],
+  ['sxz',['sxz',['../namespacemg__input__routines.html#a35d6682fe8d7519dcfe49b65584486ae',1,'mg_input_routines']]],
+  ['sxzd',['sxzd',['../namespacemg__input__routines.html#ab1f662ce65466e18b9990781d43c69a6',1,'mg_input_routines']]]
+];

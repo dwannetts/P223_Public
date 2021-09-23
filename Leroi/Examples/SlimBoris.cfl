@@ -1,0 +1,38 @@
+SlimBoris System going through 2 sheets (10 m cells)
+2 1 1 0                                 ! TDFD, PRFL, STEP, ISTOP
+9                        ! NFRQ
+  35 300                 ! FREQ, CURNT(1)
+  70 250                 ! FREQ, CURNT(2)
+ 140 200                 ! FREQ, CURNT(3)
+ 280 175                 ! FREQ, CURNT(4)
+ 560 150                 ! FREQ, CURNT(5)
+1120 125                 ! FREQ, CURNT(6)
+2240 100                 ! FREQ, CURNT(7)
+4480 75                  ! FREQ, CURNT(8)
+8960 50                  ! FREQ, CURNT(9)
+3 2 11 0                 ! SOURCE_TYPE, SURVEY_TYPE, NTX, NRXG
+ 100 0    0 45 270 1000     !  Tx 1
+  80 0  -20 45 270 1000     !  tx2
+  60 0  -40 45 270 1000     !  tx3
+  40 0  -60 45 270 1000     !  tx4
+  20 0  -80 45 270 1000     !  tx5
+   0 0 -100 45 270 1000     !  tx6
+ -20 0 -120 45 270 1000     !  tx7
+ -40 0 -140 45 270 1000     !  tx8
+ -60 0 -160 45 270 1000     !  tx9
+ -80 0 -180 45 270 1000     !  tx10
+-100 0 -200 45 270 1000     ! SDE, SDN, SDZ, SXDIP, SXAZ, SXMNT(11) tx11
+-18 0 -18 1000 2 2          ! RXOE, RXON, RXOZ, RXMNT, CMP, UNITS
+2 2 4 0                   ! NLAYER, NSHEET, NLITH, GND_LEVEL
+20 -1 1 1 0 0 0           ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(1) - Lyr1
+300 -1 1 1 0 0 0          ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(3) - Lyr3
+-1 200 1 1 0 0 1          ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(6) - plate1
+-1 220 1 1 0 0 1          ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(7) - plate 2
+1 40                     ! LITH(1), THICK
+2                        ! LITH(2)
+10 2 1 11                ! CELLW, KACC, SOLVER, OUTPUT
+4 -60 0 -70              ! LITH[plate 2], CNTR_East, CNTR_North, PLTOP(1) 
+200 100 30 65 0          ! STRLNG, PLWDTH, STRANG, DIP, PLUNGE(1)
+3 -30 0 -60              ! LITH[plate1], CNTR_East, CNTR_North, PLTOP(2) 
+200 100 30 65 0          ! STRLNG, PLWDTH, STRANG, DIP, PLUNGE(2)
+! END

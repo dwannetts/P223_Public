@@ -1,0 +1,92 @@
+Time-domain IP & MIP MARCO - 28 Jun 18:34:34
+1 1 0 0                  ! TDFD, PRFL, STEP, ISTOP
+1 4 2650 32 1            ! DO3D, NSX, OFFTIME, NCHNL, KRXW
+0 0
+0.01 10
+2559.01 10
+2560 0                   ! TXON, TXAMP(4)
+0.1 5
+8 12
+18 22
+27 33
+47 53
+97 103
+197 203
+297 303
+497 503
+997 1003
+1997 2003
+2550 2555
+2560.05 2560.15
+2560.1 2560.3
+2560.2 2560.4
+2560.4 2560.6
+2560.5 2561.5
+2561.5 2562.5
+2562.5 2563.5
+2564.5 2565.5
+2568 2572
+2578 2582
+2587 2593
+2608 2612
+2657 2663
+2757 2763
+2857 2863
+3057 3063
+3557 3563
+4057 4063
+4557 4563
+5097 5103                ! TOPN, TCLS(32)
+2 1 1 2                  ! SOURCE_TYPE, SURVEY_TYPE, NTX, NRXG
+4                        ! N_VRTX(1) Tx 1
+-250 0 0
+-250 200 0
+250 200 0
+250 0 0                  ! SXE, SXN, SXZ(1,4)
+8 3 1 2                  ! NRX, RX_TYPE, CMP, UNITS(1) Group 1
+-150 0 0
+-200 0 0
+-100 0 0
+-150 0 0
+-50 0 0
+-100 0 0
+0 0 0
+-50 0 0
+50 0 0
+0 0 0
+100 0 0
+50 0 0
+150 0 0
+100 0 0
+200 0 0                  ! RXE, RXN, RXZ(1, 8, 1)
+150 0 0                  ! RXE, RXN, RXZ(1, 8, 2)
+11 1 0 1                 ! NRX, RX_TYPE, CMP, UNITS(2) Group 2
+0 0 0 100
+0 0 -10 100
+0 0 -20 100
+0 0 -30 100
+0 0 -40 100
+0 0 -50 100
+0 0 -60 100
+0 0 -70 100
+0 0 -80 100
+0 0 -90 100
+0 0 -100 100             ! RXE, RXN, RXZ, RXMNT(2, 11)
+2                        ! NEVENTS
+1 1
+1 2                      ! TX_INDEX, RXG_INDEX(2)
+3 1 7 0                  ! NLAYER, NPRISM, NLITH, GND_LEVEL
+20 -1 1 1 0 0 1          ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(1) - Lyr1
+100 -1 1 1 0 0 1         ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(2) - Lyr2
+1000 -1 1 1 0 0 1        ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(3) - Lyr3
+3000 -1 1 1 0 0 1        ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(4) - Lyr4
+1 -1 1 1 0 0 1           ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(5) - Prism1
+0.5 -1 1 1 0 0 1         ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(6) - prism2
+40 -1 1 1 0.3 0.01 0.4   ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(7) - IP_lyr
+1 20                     ! LITHL[Lyr1], THICK(1)
+2 60                     ! LITHL[Lyr2], THICK(2)
+3                        ! LITHL[Lyr3] (3)
+2 1 10                   ! KACC, SOLVER, OUTPUT
+7 0 0 -20                ! LITHP[IP_lyr], PRISM_EAST, PRISM_NORTH, PRISM_TOP(1)
+200 300 40               ! PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z(1)
+20 20 20                 ! CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z(1)

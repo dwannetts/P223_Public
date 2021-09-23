@@ -1,0 +1,93 @@
+Check signs for borehole components for loop source on 100 ohm-m halfspace
+1 1 0 0                                 ! TDFD, PRFL, STEP, ISTOP
+0 4 80 10 1                             ! DO3D, NSX, OFFTIME, NCHNL, KRXW
+0 0
+0.2 1
+20 1
+20.2 0                      ! TXON, TXAMP(4)
+20.295 20.305
+20.485 20.515
+20.675 20.725
+21.15 21.25
+23.05 23.35
+24.95 25.45
+29.7 30.7
+39.2 41.2
+48.7 51.7
+67.7 72.7                   ! TOPN, TCLS(10)
+1 1 1 5                     ! SOURCE_TYPE, SURVEY_TYPE, NTX, NRXG
+4                           ! N_VRTX(1) Tx 1
+100 100 0
+100 -100 0
+-100 -100 0
+-100 100 0                  ! SXE, SXN, SXZ(1,4)
+13 1 2 1                    ! NRX, RX_TYPE, CMP, UNITS(1) vertical
+0 0 0 90 0 1
+0 0 -20 90 0 1
+0 0 -40 90 0 1
+0 0 -60 90 0 1
+0 0 -80 90 0 1
+0 0 -100 90 0 1
+0 0 -120 90 0 1
+0 0 -140 90 0 1
+0 0 -160 90 0 1
+0 0 -180 90 0 1
+0 0 -200 90 0 1
+0 0 -220 90 0 1
+0 0 -240 90 0 1             ! RXE, RXN, RXZ, RXDIP, RXAZ, RXMNT(1, 13)
+13 1 2 1                    ! NRX, RX_TYPE, CMP, UNITS(2) north 45
+0 240 0 45 0 1
+0 220  -20 45 180 1
+0 200  -40 45 180 1
+0 180  -60 45 180 1
+0 160  -80 45 180 1
+0 140 -100 45 180 1
+0 120 -120 45 180 1
+0 100 -140 45 180 1
+0  80 -160 45 180 1
+0  60 -180 45 180 1
+0  40 -200 45 180 1
+0  20 -220 45 180 1
+0   0 -240 45 180 1             ! RXE, RXN, RXZ, RXDIP, RXAZ, RXMNT(2, 13)
+13 1 2 1                    ! NRX, RX_TYPE, CMP, UNITS(3) East 45
+240 0    0 45 270 1
+220 0  -20 45 270 1
+200 0  -40 45 270 1
+180 0  -60 45 270 1
+160 0  -80 45 270 1
+140 0 -100 45 270 1
+120 0 -120 45 270 1
+100 0 -140 45 270 1
+ 80 0 -160 45 270 1
+ 60 0 -180 45 270 1
+ 40 0 -200 45 270 1
+ 20 0 -220 45 270 1
+  0 0 -240 45 270 1            ! RXE, RXN, RXZ, RXDIP, RXAZ, RXMNT(3, 13)
+4 1 2 1                     ! NRX, RX_TYPE, CMP, UNITS(4) surface
+  0  75 0 90 0 1
+  0 -75 0 90 0 1
+ 75   0 0 90 0 1
+-75   0 0 90 0 1              ! RXE, RXN, RXZ, RXDIP, RXAZ, RXMNT(4, 4)
+4 1 0 1                     ! NRX, RX_TYPE, CMP, UNITS(5) surface 2
+  0  75 0 1
+  0 -75 0 1
+ 75   0 0 1
+-75   0 0 1                   ! RXE, RXN, RXZ, RXMNT(5, 4)
+5                           ! NEVENTS
+1 1
+1 2                                     
+1 3
+1 4
+1 5                         ! TX_INDEX, RXG_INDEX(2)
+1 0 9 0                     ! NLAYER, NPRISM, NLITH, GND_LEVEL
+20 -1 1 1 0 0 0             ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(1) - Lyr1
+1 -1 1 1 0 0 0              ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(2) - Lyr2
+300 -1 1 1 0 0 0            ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(3) - Lyr3
+10 -1 1 1 0 0 0             ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(4) - Lyr4
+1000 -1 1 1 0 0 1           ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(5) - HS
+-1 200 1 1 0 0 1            ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(6) - plate1
+-1 220 1 1 0 0 1            ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(7) - plate 2
+0.5 40 1 1 0 0 1            ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(8) - prism 1
+100 -1 1 1 0 0 1            ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(9) - hs100
+9                           ! LITHL[hs100] (1)
+! END

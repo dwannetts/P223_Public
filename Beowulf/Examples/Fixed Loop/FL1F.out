@@ -1,0 +1,47 @@
+
+            Beowulf task started at 16:17 on 07 JAN 2013
+
+      ######################################################################
+      #                                                                    #
+      #                 Beowulf - Version 1.0.4   01 January, 2012         #        
+      #                 ----------------------------------------           #        
+      #                                                                    #
+      #      Develped by:  CSIRO Electromagnetic Modelling Group           #
+      #                    Art Raiche, Fred Sugeng & Glenn Wilson          #
+      #                                                                    #
+      #              For:  AMIRA project P223F                             #
+      #                                                                    #
+      ######################################################################
+
+-------------------------------------------------------------------------------
+
+  TDFD = 1;   ISYS = 1;   ISTOP = 0
+
+
+         Receiver channel origin INPUT is shifted by    0.000 ms from signal origin.
+
+         Receiver Window Specifications (ms - referenced to signal origin)
+         ----------------------------------------------------------------
+
+                                                             Referenced
+       Window     Open       Close       Width     Centre      Centre
+       ------     ----       -----       -----     ------      ------
+
+
+  SURVEY_TYPE = 0
+
+
+  NLAYER =  0;   NLITH =  0
+
+
+                          LITHOLOGY PROPERTIES
+                          --------------------
+
+                      Relative   Relative     Cole-Cole Parameters
+        Resistivity      S   MU   EP   Dielectric    CHRG      CTAU   CFREQ
+
+
+
+  LAYERED EARTH INPUT DATA
+  ------------------------
+

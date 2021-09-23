@@ -1,0 +1,31 @@
+#!/bin/sh
+# Arjuna $1{.cfl | .inv}
+#
+# Shell script to run $1 takes a single arguement which is the name of the 
+# cfl.  If the program is used in inversion mode, then the .inv file must 
+# have the same name as the .cfl
+
+# make a job directory ...
+clear
+mkdir -p "$1"
+cd "$1"
+
+# copy command line arguments to job directory ...
+test -f ../"$1".cfl && cp ../"$1".cfl Arjuna.cfl
+test -f ../"$1".inv && cp ../"$1".inv Arjuna.inv
+
+# run the program ...
+~/bin/Arjuna.x
+
+# copy output back to parent directory ...
+test -f Arjuna.out && cp Arjuna.out ../"$1".out
+test -f Arjuna.mv1 && cp Arjuna.mv1 ../"$1".mv1
+test -f Arjuna.mf1 && cp Arjuna.mf1 ../"$1".mf1
+test -f Arjuna.amx && cp Arjuna.amx ../"$1".amx
+test -f Arjuna.frq && cp Arjuna.frq ../"$1".frq
+test -f Arjuna.log && cp Arjuna.log ../"$1".log
+test -f fort.7 && cp fort.7 ../"$1".flayer
+
+# ... and kill the job directory
+cd ..
+rm -rf "$1"

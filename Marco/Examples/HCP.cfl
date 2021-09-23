@@ -1,0 +1,86 @@
+Horizontal co-planar loops over ice and seawater for new Tx cnvention
+2 1 0 0               ! TDFD, PRFL, STEP, ISTOP
+1                     ! NFRQ
+9800 1                ! FREQ, CURNT(1)
+3 2 65 0              ! SOURCE_TYPE, SURVEY_TYPE, NTX, NRXG
+-30 0 3 90 0 1         !
+-29 0 3 90 0 1         !
+-28 0 3 90 0 1         !
+-27 0 3 90 0 1         !
+-26 0 3 90 0 1         !
+-25 0 3 90 0 1         !
+-24 0 3 90 0 1         !
+-23 0 3 90 0 1         !
+-22 0 3 90 0 1         !
+-21 0 3 90 0 1         !
+-20 0 3 90 0 1         !
+-19 0 3 90 0 1         !
+-18 0 3 90 0 1         !
+-17 0 3 90 0 1         !
+-16 0 3 90 0 1         !
+-15 0 3 90 0 1         !
+-14 0 3 90 0 1         !
+-13 0 3 90 0 1         !
+-12 0 3 90 0 1         !
+-11 0 3 90 0 1         !
+-10 0 3 90 0 1         !
+-9 0 3 90 0 1          !
+-8 0 3 90 0 1          !
+-7 0 3 90 0 1          !
+-6 0 3 90 0 1          !
+-5 0 3 90 0 1          !
+-4 0 3 90 0 1          !
+-3 0 3 90 0 1          !
+-2 0 3 90 0 1          !
+-1 0 3 90 0 1          !
+0 0 3 90 0 1           !
+1 0 3 90 0 1           !
+2 0 3 90 0 1           !
+3 0 3 90 0 1           !
+4 0 3 90 0 1           !
+5 0 3 90 0 1           !
+6 0 3 90 0 1           !
+7 0 3 90 0 1           !
+8 0 3 90 0 1           !
+9 0 3 90 0 1           !
+10 0 3 90 0 1          !
+11 0 3 90 0 1          !
+12 0 3 90 0 1          !
+13 0 3 90 0 1          !
+14 0 3 90 0 1          !
+15 0 3 90 0 1          !
+16 0 3 90 0 1          !
+17 0 3 90 0 1          !
+18 0 3 90 0 1          !
+19 0 3 90 0 1          !
+20 0 3 90 0 1          !
+21 0 3 90 0 1          !
+22 0 3 90 0 1          !
+23 0 3 90 0 1          !
+24 0 3 90 0 1          !
+25 0 3 90 0 1          !
+26 0 3 90 0 1          !
+27 0 3 90 0 1          !
+28 0 3 90 0 1          !
+29 0 3 90 0 1          !
+30 0 3 90 0 1          !
+31 0 3 90 0 1          !
+32 0 3 90 0 1          !
+33 0 3 90 0 1          !
+34 0 3 90 0 1          ! SDE, SDN, SDZ, SXDIP, SXAZ, SXMNT(65)
+-3.66 0 0 1 1 1       ! RXOE, RXON, RXOZ, RXMNT, CMP, UNITS
+2 2 4 0               ! NLAYER, NPRISM, NLITH, GND_LEVEL
+0.38 -1 1 1 0 0 1     ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(1) - Seawater
+16.7 -1 1 1 0 0 1     ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(2) - ice_summer
+333.3 -1 1 1 0 0 1    ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(3) - ice_winter
+3 -1 1 1 0 0 1        ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(4) - sea_brackish
+2 0.4                 ! LITHL[ice_summer], THICK(1)
+1                     ! LITHL[Seawater] (2)
+2 1 10                ! KACC, SOLVER, OUTPUT
+2 0 0 -0.4            ! LITHP[ice_summer], PRISM_EAST, PRISM_NORTH, PRISM_TOP(1)
+20 100 1              ! PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z(1)
+4 10 0.5              ! CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z(1)
+2 0 0 -1.4            ! LITHP[ice_summer], PRISM_EAST, PRISM_NORTH, PRISM_TOP(2)
+10 100 1              ! PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z(2)
+2 10 0.5              ! CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z(2)
+! END		     

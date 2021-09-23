@@ -1,0 +1,32 @@
+#!/bin/sh
+# Loki $1{.cfl | .inv}
+#
+# Shell script to run $1 takes a single arguement which is the name of the 
+# cfl.  If the program is used in inversion mode, then the .inv file must 
+# have the same name as the .cfl
+
+# make a job directory ...
+ulimit -s unlimited
+clear
+mkdir -p "$1"
+cd "$1"
+
+# copy command line arguments to job directory ...
+test -f ../"$1".cfl && cp ../"$1".cfl Loki.cfl
+test -f ../"$1".frq && cp ../"$1".frq Loki.frq
+test -f ../"$1".inv && cp ../"$1".inv Loki.inv
+
+# run the program ...
+~/bin/Loki.x
+
+# copy output back to parent directory ...
+test -f Loki.out && cp Loki.out ../"$1".out
+test -f Loki.mv1 && cp Loki.mv1 ../"$1".mv1
+test -f Loki.mf1 && cp Loki.mf1 ../"$1".mf1
+test -f Loki.amx && cp Loki.amx ../"$1".amx
+test -f Loki.frq && cp Loki.frq ../"$1".frq
+test -f Loki.log && cp Loki.log ../"$1".log
+
+# ... and kill the job directory
+cd ..
+rm -rf "$1"

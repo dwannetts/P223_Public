@@ -1,0 +1,63 @@
+SlimBoris (15 m cells) test going through conductive prisms at 45 degree dip from west to east
+2 1 0 0                    ! TDFD, PRFL, STEP, ISTOP
+9                          ! NFRQ
+35 300                     ! FREQ, CURNT(1)
+70 250                     ! FREQ, CURNT(2)
+140 200                    ! FREQ, CURNT(3)
+280 175                    ! FREQ, CURNT(4)
+560 150                    ! FREQ, CURNT(5)
+1120 125                   ! FREQ, CURNT(6)
+2240 100                   ! FREQ, CURNT(7)
+4480 75                    ! FREQ, CURNT(8)
+8960 50                    ! FREQ, CURNT(9)
+3 2 22 0                   ! SOURCE_TYPE, SURVEY_TYPE, NTX, NRXG
+900 1000 0 45 90 1         !  Tx 1
+910 1000 -10 45 90 1       !  Tx 2
+920 1000 -20 45 90 1       !  Tx 3
+930 1000 -30 45 90 1       !  Tx 4
+940 1000 -40 45 90 1       !  Tx 5
+950 1000 -50 45 90 1       !  Tx 6
+960 1000 -60 45 90 1       !  Tx 7
+970 1000 -70 45 90 1       !  Tx 8
+980 1000 -80 45 90 1       !  Tx 9
+990 1000 -90 45 90 1       !  Tx 10
+1000 1000 -100 45 90 1     !  Tx 11
+1010 1000 -110 45 90 1     !  Tx 12
+1020 1000 -120 45 90 1     !  Tx 13
+1030 1000 -130 45 90 1     !  Tx 14
+1040 1000 -140 45 90 1     !  Tx 15
+1050 1000 -150 45 90 1     !  Tx 16
+1060 1000 -160 45 90 1     !  Tx 17
+1070 1000 -170 45 90 1     !  Tx 18
+1080 1000 -180 45 90 1     !  Tx 19
+1090 1000 -190 45 90 1     !  Tx 20
+1100 1000 -200 45 90 1     !  Tx 21
+1110 1000 -210 45 90 1     ! SDE, SDN, SDZ, SXDIP, SXAZ, SXMNT(22) Tx 22
+5 0 -5 1000 2 1            ! RXOE, RXON, RXOZ, RXMNT, CMP, UNITS
+4 5 6 0                    ! NLAYER, NPRISM, NLITH, GND_LEVEL
+2000 -1 1 1 0 0 0          ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(2) - Sand
+50 -1 1 1 0.3 0.001 0.42   ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(5) - Clay
+20 -1 1 1 0 0 1            ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(13) - lyr1
+250 -1 1 1 0 0 1           ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(11) - host1
+ 1 -1 1 1 0 0 1            ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(9) - sulfide
+10 -1 1 1 0 0 1            ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(10) - halo
+1 10                       ! LITHL[Sand], THICK(1)
+2 20                       ! LITHL[Clay], THICK(2)
+3 60                       ! LITHL[lyr1], THICK(3)
+4                          ! LITHL[host1] (4)
+2 1 10                     ! KACC, SOLVER, OUTPUT
+5 1000 1000 -60            ! LITHP[sulfide], PRISM_EAST, PRISM_NORTH, PRISM_TOP(1)
+60 60 100                  ! PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z(1)
+15 15 15                   ! CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z(1)
+6 1000 1060 -60            ! LITHP[halo], PRISM_EAST, PRISM_NORTH, PRISM_TOP(2)
+180 60 100                 ! PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z(2)
+15 15 15                   ! CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z(2)
+6 1000 940 -60             ! LITHP[halo], PRISM_EAST, PRISM_NORTH, PRISM_TOP(3)
+180 60 100                 ! PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z(3)
+15 15 15                   ! CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z(3)
+6 940 1000 -60             ! LITHP[halo], PRISM_EAST, PRISM_NORTH, PRISM_TOP(4)
+60 60 100                  ! PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z(4)
+15 15 15                   ! CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z(4)
+6 1060 1000 -60            ! LITHP[halo], PRISM_EAST, PRISM_NORTH, PRISM_TOP(5)
+60 60 100                  ! PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z(5)
+15 15 15                   ! CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z(5)

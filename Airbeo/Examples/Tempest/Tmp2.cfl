@@ -1,0 +1,30 @@
+Inversion of 5 Tempest stations - (layer thicknesses) 0 weights 
+1 -1 1 0                 ! TDFD, DO1D, PRFL, ISTOP
+4 1 1 3 15 1 0           ! ISW, NSX, STEP, UNITS, NCHNL, KRXW, OFFTIME
+25 1                     ! FREQ, TXAMPL
+0.007 0.02
+0.033 0.047
+0.06 0.073
+0.087 0.127
+0.14 0.207
+0.22 0.34
+0.353 0.553
+0.567 0.873
+0.887 1.353
+1.367 2.1
+2.113 3.273
+3.287 5.113
+5.127 7.993
+8.007 12.393
+12.407 19.993            ! TOPN, TCLS(15)
+6 2 0 1                  ! TXCLN, CMP, KPPM, NRX
+45 106 0                 ! ZRX, XRX, YRX(1)
+1                      ! NPASS
+3 1 2 0                ! NLAYER, QLYR, NLITH, GND_LEVEL
+100 -1 1 1 0 0 0       ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(1) - basement
+10  -1 1 1 0 0 1       ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(10) -
+1 50.                  ! LITH, THICK
+2 50                   ! LITH,THICK
+1		       ! Basement
+90 1 0 0 2             ! MAXITS, CNVRG, NFIX, ISYS, INVPRT
+

@@ -1,0 +1,43 @@
+
+
+  SamAir task started at 13:54 on 14 JAN 2013
+
+
+
+      ######################################################################
+      #                                                                    #
+      #                 SamAir - Version 2.2.5   22 September 2007         #        
+      #                 ------------------------------------------         #        
+      #                                                                    #
+      #      Develped by:  CSIRO Electromagnetic Modelling Group           #
+      #                    Fred Sugeng, Glenn Wilson & Art Raiche          #
+      #                                                                    #
+      #              For:  AMIRA project P223F                             #
+      #                                                                    #
+      ######################################################################
+
+
+          INPUT DATA
+          ----------
+
+
+ SamAir Inversion - Dighem, Date : 25 July 2006, Time : 2:05PM, Project File : C:\CSIRO\WIP\AEM Inversion Studies\Program
+
+  TDFD =  2   DO3D = -2   PRFL =  1    ISTOP = 0
+
+          +------------------------------------------------+
+          +  Frequency-Domain Airborne System Information  +
+          +------------------------------------------------+
+
+  NFRQ =  5;  CMP = 1;  NPPF = 3
+  Data will be expressed as ppm 
+
+  Frequencies, Tx Angles and Receiver Offset(s)
+
+     Frequency  TXCLN  TXAZM   ZRX   XRX   YRX   CONFIG
+     ---------  -----  -----   ---   ---   ---   ------
+  1     380.      0.     0.    0.0   8.1   0.0    HCP
+  2     900.     90.     0.    0.0   8.1   0.0    VCA
+  3    5500.     90.     0.    0.0   8.1   0.0    VCA
+  4    7200.      0.     0.    0.0   8.1   0.0    HCP
+  5   56000.      0.     0.    0.0   6.3   0.0    HCP

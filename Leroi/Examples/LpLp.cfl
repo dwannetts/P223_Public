@@ -1,0 +1,86 @@
+Loop Loop configurations over 2 plates  Leroi Tests - 17 Apr 11:41:00
+1 1 0 0                                 ! TDFD, PRFL, STEP, ISTOP
+1 4 80 10 1                             ! DO3D, NSX, OFFTIME, NCHNL, KRXW
+0 0
+0.2 1
+20 1
+20.2 0                  ! TXON, TXAMP(4)
+20.295 20.305		
+20.485 20.515		
+20.675 20.725		
+21.15 21.25		
+23.05 23.35		
+24.95 25.45		
+29.7 30.7		
+39.2 41.2		
+48.7 51.7		
+67.7 72.7               ! TOPN, TCLS(10)
+1 1 5 1                 ! SOURCE_TYPE, SURVEY_TYPE, NTX, NRXG
+4                       ! N_VRTX(1) Tx 1
+-150  50 0		
+-250  50 0              ! SXE, SXN, SXZ(4,1)
+-250 -50 0		
+-150 -50 0		
+4                       ! N_VRTX(2) Tx 2
+ -50  50 0		
+ -50 -50 0		
+-150 -50 0		
+-150  50 0              ! SXE, SXN, SXZ(4,2)
+4                       ! N_VRTX(3) Tx 3
+ 50  50 0		
+ 50 -50 0		
+-50 -50 0		
+-50  50 0               ! SXE, SXN, SXZ(4,3)
+4                       ! N_VRTX(4) Tx 4
+150  50 0		
+150 -50 0		
+ 50 -50 0		
+ 50  50 0               ! SXE, SXN, SXZ(4,4)
+4                       ! N_VRTX(5) Tx 5
+250  50 0		
+250 -50 0		
+150 -50 0		
+150  50 0               ! SXE, SXN, SXZ(4,5)
+5 2 1 3                 ! NRX, RX_TYPE, CMP, UNITS(1) Group 1
+-150  50 0		! RXE, RXN, RXZ(1,1,1)
+-150 -50 0		! RXE, RXN, RXZ(1,1,2)
+-250 -50 0		! RXE, RXN, RXZ(1,1,3)
+-250  50 0              ! RXE, RXN, RXZ(1,1,4)
+ -50  50 0		! RXE, RXN, RXZ(2,1,1)
+ -50 -50 0		! RXE, RXN, RXZ(2,1,2)
+-150 -50 0		! RXE, RXN, RXZ(2,1,3)
+-150  50 0              ! RXE, RXN, RXZ(2,1,4)
+ 50  50 0		! RXE, RXN, RXZ(3,1,1)
+ 50 -50 0		! RXE, RXN, RXZ(3,1,2)
+-50 -50 0		! RXE, RXN, RXZ(3,1,3)
+-50  50 0               ! RXE, RXN, RXZ(3,1,4)
+150  50 0		! RXE, RXN, RXZ(4,1,1)
+150 -50 0		! RXE, RXN, RXZ(4,1,2)
+ 50 -50 0		! RXE, RXN, RXZ(4,1,3)
+ 50  50 0               ! RXE, RXN, RXZ(4,1,4)
+250  50 0		! RXE, RXN, RXZ(5,1,1)
+250 -50 0		! RXE, RXN, RXZ(5,1,2)
+150 -50 0		! RXE, RXN, RXZ(5,1,3)
+150  50 0               ! RXE, RXN, RXZ(5,1,4)
+5                       ! NEVENTS
+1 1
+2 1
+3 1
+4 1
+5 1                     ! TX_INDEX, RXG_INDEX(5)
+2 2 7 0                 ! NLAYER, NSHEET, NLITH, GND_LEVEL
+20 -1 1 1 0 0 0         ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(1) - Lyr1
+1 -1 1 1 0 0 0          ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(2) - Lyr2
+300 -1 1 1 0 0 0        ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(3) - Lyr3
+10 -1 1 1 0 0 0         ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(4) - Lyr4
+1000 -1 1 1 0 0 1       ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(5) - HS
+-1 200 1 1 0 0 1        ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(6) - plate1
+-1 220 1 1 0 0 1        ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(7) - plate 2
+1 40                    ! LITH(1), THICK
+3                       ! LITH(2)
+20 2 1 10               ! CELLW, KACC, SOLVER, OUTPUT
+7 -50 0 -60             ! LITH[plate 2], CNTR_East, CNTR_North, PLTOP(1) 
+200 100 30 65 0         ! STRLNG, PLWDTH, STRANG, DIP, PLUNGE(1)
+6 -30 0 -60             ! LITH[plate1], CNTR_East, CNTR_North, PLTOP(2) 
+200 100 30 65 0         ! STRLNG, PLWDTH, STRANG, DIP, PLUNGE(2)
+! END

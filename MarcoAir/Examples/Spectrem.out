@@ -1,0 +1,346 @@
+
+
+  MarcoAir task started at 13:54 on 14 JAN 2013
+
+
+
+      ######################################################################
+      #                                                                    #
+      #                 MarcoAir - Version 2.8.4   2 September 2007        #        
+      #                 -------------------------------------------        #        
+      #                                                                    #
+      #      Develped by:  CSIRO Electromagnetic Modelling Group           #
+      #                    Zonghou Xiong & Art Raiche                      #
+      #                                                                    #
+      #              For:  AMIRA project P223D                             #
+      #                                                                    #
+      ######################################################################
+
+          INPUT DATA
+          ----------
+
+ Single prism Spectrem response;  Model 1 top lyr mu rel = 1.5                                                           
+ 1 1  1 0                                ! TDFD, DO3D, PRFL, ISTOP                                                       
+ 1 4 1 1 8 1 0                           ! ISW, NSX, STEP, UNITS, NCHNL, KRXW, OFFTIME                                   
+ 0 0                                                                                                                     
+ 0.0001 -1000                                                                                                            
+ 6.8999 -1000                                                                                                            
+ 6.9 0                                   ! TXON, WAVEFORM(4)                                                             
+ 0.026 0.026                                                                                                             
+ 0.052 0.078                                                                                                             
+ 0.104 0.182                                                                                                             
+ 0.208 0.391                                                                                                             
+ 0.417 0.807                                                                                                             
+ 0.833 1.641                                                                                                             
+ 1.667 3.307                                                                                                             
+ 3.333 6.641                             ! TOPN, TCLS(8)                                                                 
+ 2 2 123                                 ! TXCLN, CMP, KPPM                                                              
+ 3                                                                                                                       
+ 400 1                                   ! TXAREA NTRN                                                                   
+ 36 123 0                                ! ZRX, XRX, YRX(1)                                                              
+ 14 2 0 0                                ! NSTAT, SURVEY, BAROMTRC, LINE_TAG                                             
+ -200.000   0.       120.                                                                                                
+ -162.412   13.6808  120.                                                                                                
+ -124.825   27.3616  120.                                                                                                
+ -87.2369   41.0424  120.                                                                                                
+ -49.6492   54.7232  130.                                                                                                
+ -12.0615   68.4040  140.                                                                                                
+  25.5262   82.0848  140.                                                                                                
+  63.1139   95.7656  140.                                                                                                
+  100.702   109.446  140.                                                                                                
+  138.289   123.127  130.                                                                                                
+  175.877   136.808  120.                                                                                                
+  213.465   150.489  120.                                                                                                
+  251.052   164.170  120.                                                                                                
+  288.640   177.850  120.                                                                                                
+ 2 1 3 50                     ! NLAYER, NPRISM, NLITH, GND_LVL                                                           
+    2. -1 1   1 .3 .001  .4   ! RES(1), SIG_T(1), RMU(1), REPS(1), CHRG(1), CTAU(1), CFREQ(1): LITH(1)                   
+  275. -1 1.5 1 .3 .0001 .3   ! RES(2), SIG_T(2), RMU(2), REPS(2), CHRG(2), CTAU(2), CFREQ(2): LITH(2)                   
+  300. -1 1   1  0. 0.   0.   ! RES(3), SIG_T(3), RMU(3), REPS(3), CHRG(3), CTAU(3), CFREQ(3): LITH(3)                   
+ 2 5.                         ! LITHL(1), THICK  (Overburden)                                                            
+ 3                            ! LITHL(2)         (Basement)                                                              
+ 2 1 11                       ! KACC, SOLVER, OUTPUT                                                                     
+ 1   0.  0. -10               ! LITHP(1), PRISM_EAST(1),  PRISM_NORTH(1),   PRISM_TOP(1)                                 
+    20 120 100                !         PRSM_SIZE_EW(1), PRSM_SIZE_NS(1), PRSM_SIZE_Z(1)                                 
+    10  15 12.5               !         CELL_SIZE_EW(1), CELL_SIZE_NS(1), CELL_SIZE_Z(1)                                 
+                                                                                                                         
+                                                                                                                         
+-------------------------------------------------------------------------------
+
+ Single prism Spectrem response;  Model 1 top lyr mu rel = 1.5
+
+  TDFD =  1   DO3D =  1   PRFL =  1    ISTOP = 0
+
+  ISW =   1   NSX =   4   STEP = 1    UNITS =   1  NCHNL =   8
+  KRXW =  1   OFFTYM =   0.000    
+
+
+         +----------------------------------------------
+         +    Time-Domain AEM Step System Input Data    
+         +        B output will be in nT
+         +----------------------------------------------
+
+
+                          Transmitter current
+           TXON (ms)      waveform in amps
+           ---------      -----------------
+
+      1        0.000         0.000    
+      2        0.000        -1000.    
+      3        6.900        -1000.    
+      4        6.900         0.000    
+
+         Receiver Window Specifications (ms)
+         -----------------------------------
+
+       Window     Open        Close      Width      Centre
+       ------     ----        -----      -----      ------
+          1       0.026       0.026      0.000       0.026
+          2       0.052       0.078      0.026       0.065
+          3       0.104       0.182      0.078       0.143
+          4       0.208       0.391      0.183       0.299
+          5       0.417       0.807      0.390       0.612
+          6       0.833       1.641      0.808       1.237
+          7       1.667       3.307      1.640       2.487
+          8       3.333       6.641      3.308       4.987
+
+  CMP =  2    KPPM = 123
+  Inclination angle of transmitter in level flight =  2.0 degrees (front up)
+
+  Tx area =     400 m^2;    NTRN = 1
+
+  Initial Rx offset relative to Tx:   36.0 Below,  123.0 Behind,   0.0 Left
+
+
+  NSTAT =  14   SURVEY = 2   BAROMTRC = 0   LINE_TAG = 0
+
+       14 transmitter positions along the flight path
+
+     Line   Stat     East       North       Alt      Bearing    Pitch   ZRX    XRX      YRX
+     ----   ----     ----       -----       ---      -------    -----   ---    ---      ---
+
+     1000     1      -200.0         0.0     120.0      70.0      0.0    36.0   123.0     0.0
+     1000     2      -162.4        13.7     120.0      70.0      0.0    36.0   123.0     0.0
+     1000     3      -124.8        27.4     120.0      70.0      0.0    36.0   123.0     0.0
+     1000     4       -87.2        41.0     120.0      70.0      0.0    36.0   123.0     0.0
+     1000     5       -49.6        54.7     130.0      70.0      0.0    36.0   123.0     0.0
+     1000     6       -12.1        68.4     140.0      70.0      0.0    36.0   123.0     0.0
+     1000     7        25.5        82.1     140.0      70.0      0.0    36.0   123.0     0.0
+     1000     8        63.1        95.8     140.0      70.0      0.0    36.0   123.0     0.0
+     1000     9       100.7       109.4     140.0      70.0      0.0    36.0   123.0     0.0
+     1000    10       138.3       123.1     130.0      70.0      0.0    36.0   123.0     0.0
+     1000    11       175.9       136.8     120.0      70.0      0.0    36.0   123.0     0.0
+     1000    12       213.5       150.5     120.0      70.0      0.0    36.0   123.0     0.0
+     1000    13       251.1       164.2     120.0      70.0      0.0    36.0   123.0     0.0
+     1000    14       288.6       177.8     120.0      70.0      0.0    36.0   123.0     0.0
+
+
+  NLAYER =  2;   NPLATE =  1;   NLITH =  3;   GND_LVL =   50.00
+
+
+                          LITHOLOGY PROPERTIES
+                          --------------------
+
+                                  Relative   Relative     Cole-Cole Parameters
+        Resistivity  Conductance     MU     Dielectric   CHRG    CTAU       CFREQ
+
+   1      2.000         -1.0       1.000      1.000      0.30   0.100E-02    0.40
+   2      275.0         -1.0       1.500      1.000      0.30   0.100E-03    0.30
+   3      300.0         -1.0       1.000      1.000      0.00    0.00        0.00
+
+
+                          LITHOLOGY PROPERTIES
+                          --------------------
+
+                                  Relative   Relative     Cole-Cole Parameters
+        Resistivity  Conductance     MU     Dielectric   CHRG    CTAU       CFREQ
+
+   1      2.000         -1.0       1.000      1.000      0.30   0.100E-02    0.40
+   2      275.0         -1.0       1.500      1.000      0.30   0.100E-03    0.30
+   3      300.0         -1.0       1.000      1.000      0.00    0.00        1.00
+
+
+  LAYERED EARTH INPUT DATA
+  ------------------------
+
+   1   2    5.0   J, LITH(J), THK(J)
+   2   3             Basement Lithology
+
+
+  INITIAL PARAMETERS FOR  1 PRISMS
+  ---------------------------------------
+  KACC = 2    SOLVER = 1    OUTPUT = 11
+
+  J, LITHP, PRISM_EAST, PRISM_NORTH, PRISM_TOP:   1   1         0.0         0.0       -10.0
+     PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z                   20.0       120.0       100.0
+     CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z                   10.0        15.0        12.5
+
+  The prism structure has two-fold symmetry about
+  East-North coordinates:   0.000       0.000    
+
+  It has been reduced to an equivalent single quadrant structure
+  to allow faster computation using a group symmetry option.
+
+
+         Description of PRISM  1
+         -----------------------
+
+  PRISM  1 extends:
+           from    0.0  to   10.0 - West to East
+           from    0.0  to   60.0 - South to North
+           from   60.0  to  160.0 - Below Air-Earth Interface
+
+  PRISM  1 is discretised into:
+             1 cells of length   10.0 m.  East-West
+             4 cells of length   15.0 m.  North-South
+             8 cells of length   12.5 m.  Vertically
+
+  PRISM  1 resistivity =   2.000     ohm-m
+           Relative MU =   1.00    Relative EPSILON =   1.00
+             PRSM_CHRG =   0.30    PRSM_CFR =  0.40    PRSM_TAU =  0.1000E-02
+
+  The frequency-domain results are directly computed from
+     1.000     Hz to   10.00     Hz, using  3 points per decade and from
+     10.00     Hz to  0.1000E+06 Hz, using  6 points per decade.
+
+  These are used to construct the frequency-domain spectrum from DC to  0.1000E+06 Hz
+  before transformation to the time domain.
+
+
+          +----------------------------------+
+          +  Layered Earth Model Parameters  +
+          +----------------------------------+
+
+ Layer  Thickness  Resistivity   MU-R   EPS-R   CHRG    CTAU      CFREQ
+ -----  ---------  -----------   ----   -----   ----    ----      -----
+   1        5.0      275.0       1.50   1.00    0.30   0.10E-03   0.30
+   2                 300.0       1.00   1.00    0.00    0.0       1.00
+
+  Marco_Air will compute 3D responses for a time-domain AEM system
+  using accuracy level:   2
+
+---------------------------------------------------------------------------
+                       END OF INPUT DATA DESCRIPTION
+---------------------------------------------------------------------------
+
+
+  TIME-DOMAIN MarcoAir OUTPUT
+  ----------------------------
+
+  The IN-LINE component is defined as the horizontal component along
+  the flight path.  It is positive in the forward flight direction.
+
+                     Vertical primary =  -15.03     nT  
+                      In-line primary =  -14.19     nT  
+                   Transverse primary =   0.000     nT  
+                        Total primary =   20.67     nT  
+
+  Each component is normalised to its corresponding primary field
+
+  The receiver is  36.0 metres below and 123.0 metres behind the transmitter.  
+
+
+ TITLE:  Single prism Spectrem response;  Model 1 top lyr mu rel = 1.5
+ -----
+
+          VERTICAL COMPONENT - ppm
+
+         TRANSMITTER POSITION      CHNL 1       CHNL 2       CHNL 3       CHNL 4       CHNL 5       CHNL 6       CHNL 7       CHNL 8 
+         EAST     NORTH    ALT     0.026        0.065        0.143        0.299        0.612        1.237        2.487        4.987
+
+  1      -200         0    120    0.5972E+05   0.2928E+05   0.1354E+05    5820.        2366.        912.6        331.1        112.1    
+  2      -162        14    120    0.5993E+05   0.2950E+05   0.1359E+05    5818.        2365.        912.4        331.0        112.1    
+  3      -125        27    120    0.6024E+05   0.2970E+05   0.1359E+05    5810.        2363.        911.9        330.9        112.1    
+  4       -87        41    120    0.6051E+05   0.2973E+05   0.1354E+05    5794.        2360.        911.4        330.8        112.1    
+  5       -50        55    130    0.5371E+05   0.2680E+05   0.1250E+05    5468.        2264.        884.4        323.8        110.4    
+  6       -12        68    140    0.4752E+05   0.2411E+05   0.1154E+05    5168.        2173.        858.6        316.9        108.7    
+  7        26        82    140    0.4708E+05   0.2381E+05   0.1147E+05    5157.        2172.        858.5        316.9        108.7    
+  8        63        96    140    0.4698E+05   0.2374E+05   0.1145E+05    5155.        2172.        858.5        316.9        108.7    
+  9       101       109    140    0.4730E+05   0.2394E+05   0.1150E+05    5163.        2173.        858.7        316.9        108.7    
+ 10       138       123    130    0.5341E+05   0.2655E+05   0.1243E+05    5460.        2263.        884.5        323.8        110.4    
+ 11       176       137    120    0.6020E+05   0.2941E+05   0.1346E+05    5783.        2359.        911.4        330.9        112.1    
+ 12       213       150    120    0.6002E+05   0.2941E+05   0.1350E+05    5797.        2362.        911.9        331.0        112.1    
+ 13       251       164    120    0.5979E+05   0.2927E+05   0.1350E+05    5803.        2363.        912.2        331.0        112.1    
+ 14       289       178    120    0.5964E+05   0.2911E+05   0.1346E+05    5804.        2364.        912.4        331.1        112.1    
+-------------------------------------------------------------------------------------
+
+
+          IN-LINE COMPONENT - ppm
+
+         TRANSMITTER POSITION      CHNL 1       CHNL 2       CHNL 3       CHNL 4       CHNL 5       CHNL 6       CHNL 7       CHNL 8 
+         EAST     NORTH    ALT     0.026        0.065        0.143        0.299        0.612        1.237        2.487        4.987
+
+  1      -200         0    120    0.2909E+05   0.1053E+05    3573.        1128.        344.0        100.8        28.00        7.281    
+  2      -162        14    120    0.2924E+05   0.1055E+05    3537.        1118.        342.6        100.6        27.96        7.274    
+  3      -125        27    120    0.2937E+05   0.1048E+05    3490.        1111.        342.1        100.7        27.99        7.280    
+  4       -87        41    120    0.2933E+05   0.1032E+05    3450.        1110.        343.4        101.1        28.10        7.310    
+  5       -50        55    130    0.2481E+05    9016.        3155.        1052.        332.0        99.24        27.95        7.363    
+  6       -12        68    140    0.2121E+05    8065.        2939.        1003.        321.7        97.34        27.72        7.378    
+  7        26        82    140    0.2144E+05    8301.        3027.        1024.        326.1        98.28        27.90        7.412    
+  8        63        96    140    0.2185E+05    8623.        3130.        1045.        330.3        99.08        28.04        7.431    
+  9       101       109    140    0.2204E+05    8820.        3202.        1061.        333.4        99.68        28.15        7.447    
+ 10       138       123    130    0.2549E+05    9908.        3527.        1142.        351.4        103.2        28.74        7.506    
+ 11       176       137    120    0.2925E+05   0.1085E+05    3804.        1217.        368.1        106.5        29.24        7.541    
+ 12       213       150    120    0.2885E+05   0.1047E+05    3701.        1202.        366.3        106.3        29.23        7.549    
+ 13       251       164    120    0.2872E+05   0.1023E+05    3607.        1185.        363.8        105.9        29.17        7.544    
+ 14       289       178    120    0.2870E+05   0.1012E+05    3540.        1169.        361.1        105.4        29.10        7.533    
+-------------------------------------------------------------------------------------
+
+
+     SCATTERED RESPONSE -  UNITS = ppm
+     ---------------------------------
+       The layered earth response is stripped from each component
+
+
+
+ TITLE:  Single prism Spectrem response;  Model 1 top lyr mu rel = 1.5
+ -----
+          SCATTERED VERTICAL COMPONENT - ppm
+
+         TRANSMITTER POSITION      CHNL 1       CHNL 2       CHNL 3       CHNL 4       CHNL 5       CHNL 6       CHNL 7       CHNL 8 
+         EAST     NORTH    ALT     0.026        0.065        0.143        0.299        0.612        1.237        2.487        4.987
+
+  1      -200         0    120     232.0        519.5        294.1        75.88        13.87        2.182       0.2967       0.2606E-01
+  2      -162        14    120     442.0        746.9        336.8        74.54        12.60        1.885       0.2283       0.8454E-02
+  3      -125        27    120     748.0        941.4        344.0        65.97        10.33        1.441       0.1361      -0.1321E-01
+  4       -87        41    120     1020.        971.3        296.0        49.73        7.164       0.8893       0.3695E-01  -0.3240E-01
+  5       -50        55    130     734.2        569.3        155.3        24.01        3.232       0.3402      -0.1583E-01  -0.2770E-01
+  6       -12        68    140     184.3        123.4        30.93        4.440       0.4887       0.1342E-01  -0.2008E-01  -0.1047E-01
+  7        26        82    140    -258.8       -173.9       -44.39       -6.423      -0.9366      -0.1289      -0.6269E-02   0.5377E-02
+  8        63        96    140    -354.7       -237.4       -59.43       -8.226       -1.103      -0.1248       0.5703E-02   0.1120E-01
+  9       101       109    140    -35.29       -37.20       -8.407      -0.3569       0.5284E-01   0.2465E-01   0.1036E-01   0.4068E-02
+ 10       138       123    130     431.8        312.7        90.39        16.14        2.567       0.3694       0.3378E-01  -0.5097E-02
+ 11       176       137    120     716.0        650.2        208.3        38.65        6.217       0.9157       0.9581E-01  -0.5843E-02
+ 12       213       150    120     533.7        652.9        251.9        52.71        8.996        1.400       0.1791       0.8560E-02
+ 13       251       164    120     307.5        515.7        247.1        59.42        10.83        1.757       0.2498       0.2405E-01
+ 14       289       178    120     155.5        353.1        213.7        59.87        11.74        1.972       0.2975       0.3577E-01
+-------------------------------------------------------------------------------------
+
+          SCATTERED IN-LINE COMPONENT - ppm
+
+         TRANSMITTER POSITION      CHNL 1       CHNL 2       CHNL 3       CHNL 4       CHNL 5       CHNL 6       CHNL 7       CHNL 8 
+         EAST     NORTH    ALT     0.026        0.065        0.143        0.299        0.612        1.237        2.487        4.987
+
+  1      -200         0    120     303.1        354.8        68.51       -12.60       -7.960       -2.408      -0.6232      -0.1508    
+  2      -162        14    120     458.4        373.2        32.31       -22.64       -9.412       -2.609      -0.6582      -0.1585    
+  3      -125        27    120     581.5        303.1       -14.80       -29.92       -9.853       -2.564      -0.6337      -0.1518    
+  4       -87        41    120     544.0        145.0       -54.53       -30.55       -8.617       -2.134      -0.5161      -0.1223    
+  5       -50        55    130     204.7       -20.89       -52.22       -18.30       -4.604       -1.087      -0.2533      -0.5787E-01
+  6       -12        68    140     74.89        17.53      -0.8019      -0.4586      -0.1076      -0.2980E-01  -0.9728E-02  -0.3337E-02
+  7        26        82    140     302.1        253.3        87.72        20.22        4.329       0.9057       0.1785       0.3095E-01
+  8        63        96    140     709.8        575.7        190.7        41.27        8.458        1.704       0.3186       0.4996E-01
+  9       101       109    140     904.1        772.5        262.5        57.14        11.62        2.308       0.4247       0.6523E-01
+ 10       138       123    130     881.1        871.3        319.3        72.22        14.76        2.918       0.5390       0.8552E-01
+ 11       176       137    120     469.3        673.6        299.7        75.82        16.14        3.253       0.6238       0.1091    
+ 12       213       150    120     70.51        298.3        196.6        61.41        14.34        3.024       0.6104       0.1170    
+ 13       251       164    120    -68.57        57.66        103.1        44.35        11.80        2.630       0.5538       0.1120    
+ 14       289       178    120    -81.36       -52.56        35.28        28.36        9.118        2.191       0.4803       0.1007    
+-------------------------------------------------------------------------------------
+
+
+
+  MarcoAir forward model completed at 13:54 on 14 JAN 2013
+
+  Computation time =       3.78 seconds.
+
+

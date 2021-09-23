@@ -1,0 +1,99 @@
+Early time Sirotem surface and downhole coincident loops with sulphide and halo
+1 1 0 0          ! TDFD, PRFL, STEP, ISTOP
+1 4 22 32 -1     ! DO3D, NSX, OFFTIME, NCHNL, KRXW
+22.1             ! Reference time for windows
+0 0		 
+0.2 1		 
+20 1		 
+20.2 0           ! TXON, TXAMP(4)
+0.016 0.056	 
+0.065 0.105	 
+0.114 0.154	 
+0.163 0.203	 
+0.212 0.252	 
+0.261 0.351	 
+0.359 0.449	 
+0.457 0.547	 
+0.555 0.645	 
+0.653 0.743	 
+0.75 0.94	 
+0.946 1.136	 
+1.142 1.332	 
+1.338 1.528	 
+1.534 1.724	 
+1.728 2.118	 
+2.12 2.51	 
+2.512 2.902	 
+2.904 3.294	 
+3.296 3.686	 
+3.689 4.469	 
+4.473 5.253	 
+5.257 6.037	 
+6.041 6.821	 
+6.825 7.605	 
+7.611 9.171	 
+9.179 10.739	 
+10.747 12.307	 
+12.315 13.875	 
+13.883 15.443	 
+15.45 18.58	 
+18.586 21.716    ! TOPN, TCLS(32)
+1 4 4 0          ! SOURCE_TYPE, SURVEY_TYPE, NTX, NRXG
+4                ! N_VRTX(1) Tx 1
+700 900 0	 
+700 1100 0	 
+900 1100 0	 
+900 900 0        ! SXE, SXN, SXZ(1,4)
+4                ! N_VRTX(2) Tx 2
+900 900 0	 
+900 1100 0	 
+1100 1100 0	 
+1100 900 0       ! SXE, SXN, SXZ(2,4)
+4                ! N_VRTX(3) Tx 3
+1100 900 0	 
+1100 1100 0	 
+1300 1100 0	 
+1300 900 0       ! SXE, SXN, SXZ(3,4)
+4                ! N_VRTX(4) Tx 4
+800 800 0
+1200 800 0
+1100 800 -200
+900 800 -150                ! SXE, SXN, SXZ(4,4)
+3                           ! UNITS
+4 5 15 0                    ! NLAYER, NPRISM, NLITH, GND_LEVEL
+1000 -1 1 1 0 0 0           ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(1) - Basement
+2000 -1 1 1 0 0 0           ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(2) - Sand
+10000 -1 1.2 1 0 0 0        ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(3) - E4
+80 -1 1.01 1.2 0 0 0        ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(4) - Siltstone
+50 -1 1 1 0.3 0.001 0.42    ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(5) - Clay
+200 -1 1 1 0 0 0            ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(6) - kimberlite
+1 200 1 1 0 0 0             ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(7) - E0
+-1 120 1 1 0.4 0.003 0.22   ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(8) - Plate 2
+0.1 -1 1 1 0 0 1            ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(9) - sulfide
+10 -1 1 1 0 0 1             ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(10) - halo
+250 -1 1 1 0 0 1            ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(11) - host1
+1400 -1 1 1 0 0 1           ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(12) - host2
+20 -1 1 1 0 0 1             ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(13) - lyr1
+300 -1 1 1 0 0 1            ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(14) - lyr2
+1 -1 1 1 0 0 1              ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(15) - conductor1
+2 10                        ! LITHL[Sand], THICK(1)
+5 20                        ! LITHL[Clay], THICK(2)
+13 60                       ! LITHL[lyr1], THICK(3)
+11                          ! LITHL[host1] (4)
+2 1 10                      ! KACC, SOLVER, OUTPUT
+9 1000 1000 -60             ! LITHP[sulfide], PRISM_EAST, PRISM_NORTH, PRISM_TOP(1)
+60 60 100                   ! PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z(1)
+25 25 25                    ! CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z(1)
+10 1000 1060 -60            ! LITHP[halo], PRISM_EAST, PRISM_NORTH, PRISM_TOP(2)
+180 60 100                  ! PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z(2)
+25 25 25                    ! CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z(2)
+10 1000 940 -60             ! LITHP[halo], PRISM_EAST, PRISM_NORTH, PRISM_TOP(3)
+180 60 100                  ! PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z(3)
+25 25 25                    ! CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z(3)
+10 940 1000 -60             ! LITHP[halo], PRISM_EAST, PRISM_NORTH, PRISM_TOP(4)
+60 60 100                   ! PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z(4)
+25 25 25                    ! CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z(4)
+10 1060 1000 -60            ! LITHP[halo], PRISM_EAST, PRISM_NORTH, PRISM_TOP(5)
+60 60 100                   ! PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z(5)
+25 25 25                    ! CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z(5)
+! END

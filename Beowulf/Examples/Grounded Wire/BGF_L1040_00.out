@@ -1,0 +1,577 @@
+
+  ------------------------------------------------------------------------------
+  | Program:  Beowulf                                 
+  | Version:  4.7.1                                   
+  | Date:     01 August, 2018                         
+  |
+  | Authors:  CSIRO Electromagnetic Modelling Group   
+  |           Art Raiche, Fred Sugeng and Glenn Wilson
+  | Project:  AMIRA P223F                             
+  |
+  | Compiler: GCC version 9.1.0
+  | Options:  -march=broadwell -mmmx -mno-3dnow -msse -msse2 -msse3 -mssse3 -mno-sse4a -mcx16 -msahf -mmovbe -maes -mno-sha -mpclmul -mpopcnt -mabm -mno-lwp -mfma -mno-fma4 -mno-xop -mbmi -mno-sgx -mbmi2 -mno-pconfig -mno-wbnoinvd -mno-tbm -mavx -mavx2 -msse4.2 -msse4.1 -mlzcnt -mrtm -mhle -mrdrnd -mf16c -mfsgsbase -mrdseed -mprfchw -madx -mfxsr -mxsave -mxsaveopt -mno-avx512f -mno-avx512er -mno-avx512cd -mno-avx512pf -mno-prefetchwt1 -mno-clflushopt -mno-xsavec -mno-xsaves -mno-avx512dq -mno-avx512bw -mno-avx512vl -mno-avx512ifma -mno-avx512vbmi -mno-avx5124fmaps -mno-avx5124vnniw -mno-clwb -mno-mwaitx -mno-clzero -mno-pku -mno-rdpid -mno-gfni -mno-shstk -mno-avx512vbmi2 -mno-avx512vnni -mno-vaes -mno-vpclmulqdq -mno-avx512bitalg -mno-movdiri -mno-movdir64b -mno-waitpkg -mno-cldemote -mno-ptwrite --param l1-cache-size=32 --param l1-cache-line-size=64 --param l2-cache-size=35840 -mtune=broadwell -O3 -fwhole-program
+  |
+  | Started:  14/01/2020 at 15:22:26
+  ------------------------------------------------------------------------------
+
+
+  TDFD = 2;   ISYS = 0;   ISTOP = 0
+
+          +----------------------------------------------+
+          +  Frequency-Domain Ground System Information  +
+          +----------------------------------------------+
+
+  NFRQ =  5
+
+           Frequency      Transmitter current in amps
+           ---------      ---------------------------
+
+      1    1.000             1.000    
+      2    10.00             1.000    
+      3    100.0             1.000    
+      4    1000.             1.000    
+      5   0.1000E+05         1.000    
+
+
+  SURVEY_TYPE = 1
+
+  NLINES =  1;   MRXL =   8;   NTX =  1;   SOURCE_TYPE = 1;   MXVRTX = 6;   NTRN =  1
+
+  Vertex Locations for Loop Sources
+  ---------------------------------
+
+  Transmitter  1 has  4 vertices:
+
+            Easting      Northing      Elevation
+            -------      --------      ---------
+    1       -100.00        100.00          0.00
+    2        100.00        100.00          0.00
+    3        100.00       -100.00          0.00
+    4       -100.00       -100.00          0.00
+
+
+  Line     1040;   Tx Index  1;   Rx Type = 1;   NRX =  4;   Units =  3
+
+        CMP =  13;   KNORM = 0;   IPLT = 1;   IDH = 0;   SV_AZM =    0.0;   RXMNT =   1000.    
+
+          Magnetic Dipole Receivers
+          -------------------------
+
+         Easting     Northing   Elevation
+         -------     --------   ---------
+   1         0.0         0.0         0.0
+   2         0.0        70.0         0.0
+   3         0.0       130.0         0.0
+   4         0.0       200.0         0.0
+
+
+  NLAYER =  3;   NLITH =  3
+
+
+                          LITHOLOGY PROPERTIES
+                          --------------------
+
+                      Relative   Relative     Cole-Cole Parameters
+        Resistivity      S   MU   EP   Dielectric    CHRG      CTAU   CFREQ
+
+   1    100.00       -1.0000        150.00        1.0000        1.0000        0.0000        0.0000    
+   2   0.50000       -1.0000        220.00        1.0000        1.0000        0.0000        0.0000    
+   3    500.00       -1.0000        200.00        1.0000        1.0000        0.0000        0.0000    
+
+
+  LAYERED EARTH INPUT DATA
+  ------------------------
+
+   1   1   35.0   J, LITHL(J), THK(J)
+   2   2   10.0   J, LITHL(J), THK(J)
+   3   3             Basement Lithology
+
+  -------------------
+  Primary fields (T):     1.0000E+00    1.0000E+00    1.0000E+00    1.0000E+00
+
+
+  Before computation begins, Beowulf may transform array and model coordinates
+  from GPS coordinates where elevation increases positive upwards to a
+  body-centred system where depth increases positive downwards.
+  In this system, the dip of magnetic dipole transmitters and receivers
+  = 0 for vertical dipoles and 90 for horizontal dipoles.
+
+  The computational horizontal origin remains unchanged.
+
+  Transformed transmitter and receiver locations for Line   1040
+  Survey aximuth =   0.degrees clockwise from North.
+
+  Transformed Vertex Locations for Loop Sources
+  ---------------------------------------------
+
+      Transmitter  1 has  4 vertices.
+
+         Easting   Northing
+
+    1    -100.00     100.00      -0.00
+    2     100.00     100.00      -0.00
+    3     100.00    -100.00      -0.00
+    4    -100.00    -100.00      -0.00
+
+
+  Transformed Locations for Magnetic Dipole Receivers in Line   1040
+  ------------------------------------------------------------------
+
+        Easting   Northing      Depth   Moment
+        -------   --------      -----   ------
+   1       0.00       0.00      -0.00   1000.    
+   2       0.00      70.00      -0.00   1000.    
+   3       0.00     130.00      -0.00   1000.    
+   4       0.00     200.00      -0.00   1000.    
+
+
+  Plot points for receivers on Line   1040
+
+            East        North     Elev
+            ----        -----     ----
+
+   1          0.0          0.0      0.0
+   2          0.0         70.0      0.0
+   3          0.0        130.0      0.0
+   4          0.0        200.0      0.0
+
+
+          +------------------------------------------+
+          +  Initial Layered Earth Model Parameters  +
+          +------------------------------------------+
+
+                    Depth
+ Layer  Thickness   to Top    Resistivity   MU-R   EPS-R   CHRG    CFREQ    CTAU
+ -----  ---------   ------    -----------   ----   -----   ----    -----    ----
+   1       35.0        0.0      100.0     150.00   1.00    0.00    1.00      0.0    
+   2       10.0       35.0     0.5000     220.00   1.00    0.00    1.00      0.0    
+   3                  45.0      500.0     200.00   1.00    0.00    1.00      0.0    
+
+
+
+---------------------------------------------------------------------------
+                       END OF INPUT DATA DESCRIPTION
+---------------------------------------------------------------------------
+
+
+  -----------------------------------------------------
+  Inversion Controls for Layer Parameters using Beowulf
+  -----------------------------------------------------
+
+  NFIX =  0   MAXITS = 90   CNVRG = 1   INVPRT = 2
+
+  The inversion will finish if the RMS error is less than  0.1 percent
+  or for some other as yet undisclosed reason.
+  A maximum of 90 iterations will be allowed.
+  The inversion sequence will use 2 numerical derivative steps
+  Values in percent:  5  3
+
+  All parameters will be allowed to vary during inversion
+
+  FD_ORDER = 2
+
+  Inversion controls and data for Line 1040
+  KMP =  13    CMP =  13
+
+       Frequency Domain Data Floors
+       ----------------------------
+
+       Freq     In-phase   Quadrature
+
+   1       1.  0.1000E-01  0.1000E-01
+   2      10.  0.1000E-01  0.1000E-01
+   3     100.  0.1000E-01  0.1000E-01
+   4    1000.  0.1000E-01  0.1000E-01
+   5   10000.  0.1000E-01  0.1000E-01
+
+
+  SURVEY DATA
+  -----------
+
+
+  Line 1040    Magnetic dipole Rx    Survey azimuth =   0 degrees    Units = microvolts
+
+
+         Z Inphase - Vertical Component Survey Data for Line 1040
+         ------------------------------------------------------
+
+             RECEIVER POSITIONS               FREQUENCIES
+         East        North     Elev      1.00        10.00       100.00      1000.00     10000.00
+
+  1         0.0         0.0      0.0    11.27        11.37        11.28        10.67        9.369    
+  2         0.0        70.0      0.0    18.47        18.52        18.62        17.88        16.61    
+  3         0.0       130.0      0.0   -9.470       -9.506       -9.724       -9.522       -9.496    
+  4         0.0       200.0      0.0   -1.428       -1.474       -1.488       -1.435       -1.398    
+
+
+         Z Quadrature - Vertical Component Survey Data for Line 1040
+         ---------------------------------------------------------
+
+             RECEIVER POSITIONS               FREQUENCIES
+         East        North     Elev      1.00        10.00       100.00      1000.00     10000.00
+
+  1         0.0         0.0      0.0  -0.7680E-01  -0.4230E-01  -0.2636      -0.5833       -1.485    
+  2         0.0        70.0      0.0  -0.5310E-01  -0.3520E-01  -0.2525      -0.5038       -1.557    
+  3         0.0       130.0      0.0   -0.000        0.000      -0.1360E-01  -0.6090E-01   0.2056    
+  4         0.0       200.0      0.0   0.1570E-01   -0.000       0.1030E-01   0.1520E-01   0.9890E-01
+
+
+         X Inphase - Radial Component Survey Data for Line 1040
+         ----------------------------------------------------
+
+             RECEIVER POSITIONS               FREQUENCIES
+         East        North     Elev      1.00        10.00       100.00      1000.00     10000.00
+
+  1         0.0         0.0      0.0    0.000        0.000        0.000        0.000        0.000    
+  2         0.0        70.0      0.0  -0.1080E-01  -0.7440E-01  -0.1374       0.2350       0.8549    
+  3         0.0       130.0      0.0  -0.2020E-01  -0.6980E-01  -0.1157       0.2626       0.9342    
+  4         0.0       200.0      0.0  -0.2440E-01   -0.000       0.4190E-01   0.1114       0.3281    
+
+         X Quadrature - Radial Component Survey Data for Line 1040
+         -------------------------------------------------------
+
+             RECEIVER POSITIONS               FREQUENCIES
+         East        North     Elev      1.00        10.00       100.00      1000.00     10000.00
+
+  1         0.0         0.0      0.0    0.000        0.000        0.000        0.000        0.000    
+  2         0.0        70.0      0.0   0.3670E-01   0.2270E-01   0.8030E-01   0.2535       0.6774    
+  3         0.0       130.0      0.0   0.3860E-01   0.2130E-01   0.1002       0.2772       0.7228    
+  4         0.0       200.0      0.0   0.1210E-01    0.000       0.8170E-01   0.9980E-01   0.2039    
+
+
+ =========================================================================
+  BEGIN INVERSION - TITLE = Generate 3 lines of closed loop data over 3 layers for magnetic and electric dipole receivers (Use Leroi!)
+  ---------------
+
+
+  ---------------------------------------------------------------
+  Begin Inversion for Station  1 of Line 1040.  NDATA = 10
+  Maximum iterations = 90   Derivative step =  5 percent.
+
+   0 iterations completed:  RMS error =    0.04 percent.  RSVT =   0.100
+
+  Convergence within RMS error threshold of   0.10 has been achieved.
+
+   1 Iterations completed:  RMS error =    0.02 percent.  RSVT =   0.050
+
+
+  ==================================================
+
+  Final Model After  1 Iterations:  RMS error =   0.02
+
+  Layer  Resistivity  Depth  Thickness  Conductance   ResImport   ThkImport
+  -----  -----------  -----  ---------  -----------   ---------   ---------
+    1      99.98       35.0     35.0       0.350        1.00        1.00
+    2     0.4999       45.0     10.0      20.015        0.71        0.94
+    B      500.0                                                    0.00
+
+
+  Data and Misfit Final - (East, North, Elevation) =       0.000    ,      0.000    ,      0.000    
+
+
+         Z Inphase (Vertical) Component data for Station   1 of Line 1040
+         -----------------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:    11.27        11.37        11.28        10.67        9.369    
+  Model data:     11.27        11.37        11.28        10.67        9.369    
+  Misfit (%):     -0.0          0.0          0.0          0.0         -0.0
+
+
+         Z Quadrature (Vertical) Component data for Station   1 of Line 1040
+         ---------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:  -0.7680E-01  -0.4230E-01  -0.2636      -0.5833       -1.485    
+  Model data:   -0.7680E-01  -0.4230E-01  -0.2636      -0.5834       -1.485    
+  Misfit (%):      0.0          0.0         -0.0          0.0          0.0
+
+
+         X Inphase (Radial) Component data for Station   1 of Line 1040
+         ---------------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:    0.000        0.000        0.000        0.000        0.000    
+  Model data:     0.000        0.000        0.000        0.000        0.000    
+  Misfit (%):      0.0          0.0          0.0          0.0          0.0
+
+
+         X Quadrature (Radial) Component data for Station   1 of Line 1040
+         -------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:    0.000        0.000        0.000        0.000        0.000    
+  Model data:     0.000        0.000        0.000        0.000        0.000    
+  Misfit (%):      0.0          0.0          0.0          0.0          0.0
+
+
+  ---------------------------------------------------------------
+  Begin Inversion for Station  2 of Line 1040.  NDATA = 20
+  Maximum iterations = 90   Derivative step =  5 percent.
+
+   0 iterations completed:  RMS error =    0.04 percent.  RSVT =   0.100
+
+  Convergence within RMS error threshold of   0.10 has been achieved.
+
+   1 Iterations completed:  RMS error =    0.03 percent.  RSVT =   0.050
+
+
+  ==================================================
+
+  Final Model After  1 Iterations:  RMS error =   0.03
+
+  Layer  Resistivity  Depth  Thickness  Conductance   ResImport   ThkImport
+  -----  -----------  -----  ---------  -----------   ---------   ---------
+    1      99.97       35.0     35.0       0.350        1.00        1.00
+    2     0.5000       45.0     10.0      19.999        1.00        1.00
+    B      500.0                                                    0.00
+
+
+  Data and Misfit Final - (East, North, Elevation) =       0.000    ,      70.00    ,      0.000    
+
+
+         Z Inphase (Vertical) Component data for Station   2 of Line 1040
+         -----------------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:    18.47        18.52        18.62        17.88        16.61    
+  Model data:     18.47        18.52        18.62        17.88        16.60    
+  Misfit (%):      0.0          0.0         -0.0         -0.0          0.0
+
+
+         Z Quadrature (Vertical) Component data for Station   2 of Line 1040
+         ---------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:  -0.5310E-01  -0.3520E-01  -0.2525      -0.5038       -1.557    
+  Model data:   -0.5306E-01  -0.3518E-01  -0.2526      -0.5038       -1.557    
+  Misfit (%):     -0.1         -0.0          0.0          0.0          0.0
+
+
+         X Inphase (Radial) Component data for Station   2 of Line 1040
+         ---------------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:  -0.1080E-01  -0.7440E-01  -0.1374       0.2350       0.8549    
+  Model data:   -0.1080E-01  -0.7436E-01  -0.1374       0.2350       0.8550    
+  Misfit (%):     -0.0         -0.1          0.0         -0.0         -0.0
+
+
+         X Quadrature (Radial) Component data for Station   2 of Line 1040
+         -------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:   0.3670E-01   0.2270E-01   0.8030E-01   0.2535       0.6774    
+  Model data:    0.3671E-01   0.2269E-01   0.8027E-01   0.2536       0.6775    
+  Misfit (%):     -0.0          0.0          0.0         -0.0         -0.0
+
+
+  ---------------------------------------------------------------
+  Begin Inversion for Station  3 of Line 1040.  NDATA = 18
+  Maximum iterations = 90   Derivative step =  5 percent.
+
+   0 iterations completed:  RMS error =    0.08 percent.  RSVT =   0.100
+
+  Convergence within RMS error threshold of   0.10 has been achieved.
+
+   1 Iterations completed:  RMS error =    0.04 percent.  RSVT =   0.050
+
+
+  ==================================================
+
+  Final Model After  1 Iterations:  RMS error =   0.04
+
+  Layer  Resistivity  Depth  Thickness  Conductance   ResImport   ThkImport
+  -----  -----------  -----  ---------  -----------   ---------   ---------
+    1      99.99       35.0     35.0       0.350        1.00        1.00
+    2     0.5001       45.0     10.0      19.993        0.99        1.00
+    B      500.0                                                    0.00
+
+
+  Data and Misfit Final - (East, North, Elevation) =       0.000    ,      130.0    ,      0.000    
+
+
+         Z Inphase (Vertical) Component data for Station   3 of Line 1040
+         -----------------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:   -9.470       -9.506       -9.724       -9.522       -9.496    
+  Model data:    -9.470       -9.505       -9.724       -9.521       -9.496    
+  Misfit (%):      0.0         -0.0          0.0         -0.0          0.0
+
+
+         Z Quadrature (Vertical) Component data for Station   3 of Line 1040
+         ---------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:   -0.000        0.000      -0.1360E-01  -0.6090E-01   0.2056    
+  Model data:   -0.9850E-02   0.1643E-02  -0.1359E-01  -0.6092E-01   0.2056    
+  Misfit (%):      0.0          0.0         -0.1          0.0         -0.0
+
+
+         X Inphase (Radial) Component data for Station   3 of Line 1040
+         ---------------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:  -0.2020E-01  -0.6980E-01  -0.1157       0.2626       0.9342    
+  Model data:   -0.2020E-01  -0.6976E-01  -0.1157       0.2626       0.9342    
+  Misfit (%):      0.0         -0.1         -0.0          0.0          0.0
+
+
+         X Quadrature (Radial) Component data for Station   3 of Line 1040
+         -------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:   0.3860E-01   0.2130E-01   0.1002       0.2772       0.7228    
+  Model data:    0.3864E-01   0.2129E-01   0.1002       0.2772       0.7228    
+  Misfit (%):     -0.1          0.1         -0.0         -0.0         -0.0
+
+
+  ---------------------------------------------------------------
+  Begin Inversion for Station  4 of Line 1040.  NDATA = 17
+  Maximum iterations = 90   Derivative step =  5 percent.
+
+   0 iterations completed:  RMS error =    0.52 percent.  RSVT =   0.100
+
+  Model Description After  1 Iterations:  RMS error =   0.27  RSVT =  0.050
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      99.85       35.0     35.0       0.350
+    2     0.4990       44.9     10.0      19.981
+    B      500.0    
+
+
+  Model Description After  2 Iterations:  RMS error =   0.27  RSVT =  0.100
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      99.84       34.9     34.9       0.350
+    2     0.4991       44.9     10.0      19.967
+    B      500.0    
+
+
+  Model Description After  3 Iterations:  RMS error =   0.26  RSVT =  0.050
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      99.81       35.0     35.0       0.350
+    2     0.4974       44.9     10.0      20.016
+    B      500.0    
+
+
+  Model Description After  4 Iterations:  RMS error =   0.26  RSVT =  0.100
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      99.80       34.9     34.9       0.350
+    2     0.4975       44.9     10.0      20.001
+    B      500.0    
+
+
+  Model Description After  5 Iterations:  RMS error =   0.25  RSVT =  0.400
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      99.80       34.9     34.9       0.350
+    2     0.4975       44.9     10.0      20.008
+    B      500.0    
+
+
+  Model Description After  6 Iterations:  RMS error =   0.25  RSVT =  0.200
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      99.78       35.0     35.0       0.350
+    2     0.4975       44.9     10.0      20.006
+    B      500.0    
+
+
+  Model Description After  7 Iterations:  RMS error =   0.24  RSVT =  0.100
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      99.75       34.9     34.9       0.350
+    2     0.4972       44.9     10.0      20.017
+    B      500.0    
+
+
+  Model Description After  8 Iterations:  RMS error =   0.24  RSVT =  0.400
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      99.75       34.9     34.9       0.350
+    2     0.4972       44.9     10.0      20.019
+    B      500.0    
+
+  No further error reduction can occur using a  5 percent derivative step.
+
+  Predicted residual decrease < 1 percent of RMS error.
+  Test derivative step =  3 percent.
+
+  Model Description After 10 Iterations:  RMS error =   0.24  RSVT =  0.050
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      99.72       34.9     34.9       0.350
+    2     0.4967       44.9     10.0      20.036
+    B      500.0    
+
+
+  Error reduction after last 2 iterations < 0.5 percent.
+
+  11 Iterations completed:  RMS error =    0.24 percent.  RSVT =   0.200
+  Inversion terminated
+
+
+  ==================================================
+
+  Final Model After 11 Iterations:  RMS error =   0.24
+
+  Layer  Resistivity  Depth  Thickness  Conductance   ResImport   ThkImport
+  -----  -----------  -----  ---------  -----------   ---------   ---------
+    1      99.71       34.9     34.9       0.350        1.00        1.00
+    2     0.4966       44.9     10.0      20.043        1.00        1.00
+    B      500.0                                                    0.00
+
+
+  Data and Misfit Final - (East, North, Elevation) =       0.000    ,      200.0    ,      0.000    
+
+
+         Z Inphase (Vertical) Component data for Station   4 of Line 1040
+         -----------------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:   -1.428       -1.474       -1.488       -1.435       -1.398    
+  Model data:    -1.427       -1.472       -1.487       -1.434       -1.397    
+  Misfit (%):     -0.1         -0.1         -0.1         -0.1         -0.1
+
+
+         Z Quadrature (Vertical) Component data for Station   4 of Line 1040
+         ---------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:   0.1570E-01   -0.000       0.1030E-01   0.1520E-01   0.9890E-01
+  Model data:    0.1573E-01  -0.2198E-03   0.1028E-01   0.1510E-01   0.9889E-01
+  Misfit (%):     -0.2          0.0          0.2          0.6          0.0
+
+
+         X Inphase (Radial) Component data for Station   4 of Line 1040
+         ---------------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:  -0.2440E-01   -0.000       0.4190E-01   0.1114       0.3281    
+  Model data:   -0.2441E-01  -0.5944E-02   0.4199E-01   0.1115       0.3285    
+  Misfit (%):      0.0          0.0         -0.2         -0.1         -0.1
+
+
+         X Quadrature (Radial) Component data for Station   4 of Line 1040
+         -------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:   0.1210E-01    0.000       0.8170E-01   0.9980E-01   0.2039    
+  Model data:    0.1206E-01   0.3081E-03   0.8209E-01   0.9990E-01   0.2040    
+  Misfit (%):      0.3          0.0         -0.5         -0.1         -0.0
+
+  Beowulf inversion run completed at 15:22:26 on 14/01/2020 using         0.10 secs
+

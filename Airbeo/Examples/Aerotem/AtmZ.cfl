@@ -1,0 +1,40 @@
+Inversion of 5 Aerotem stations - layer thicknesses - static starting model
+1 -1 1 0              ! TDFD, DO3D, PRFL, ISTOP (0=Run, 1=Print)
+-1 5 0 2 20 1 2.1693  ! ISW, NSX, STEP, UNITS, NCHNL, KRXW, OFFTIME
+0.0000 0.0000
+0.2910 126.00
+0.5820 252.00
+0.8730 126.00
+1.1640 0.0000
+0.71427	0.74073
+0.76717	0.79363
+0.82007	0.84653
+0.87297	0.89943
+0.92597	0.95243
+0.97887	1.00533
+1.03177	1.05823
+1.08467	1.11113
+1.19047	1.21693
+1.21697	1.24343
+1.24337	1.26983
+1.26987	1.29633
+1.32277	1.34923
+1.37567	1.40213
+1.42857	1.45503
+1.48147	1.50793
+1.50789	1.61371
+1.61378	1.82542
+1.82536	2.24864
+2.24872	3.09528
+0. 13 0 1                    ! TXCLN, CMP, KPPM, NRX
+19.6  8                      ! TXAREA, NTRN
+0.0 0.0 0.0                  ! BRD_BELOW, BRD_BHND BRD_PERP
+1                      ! NPASS
+3 1 2 0                ! NLAYER, QLYR, NLITH, GND_LEVEL
+100 -1 1 1 0 0 0       ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(1) - basement
+10  -1 1 1 0 0 1       ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(10) -
+1 50.                  ! LITH, THICK
+2 50                   ! LITH,THICK
+1		       ! Basement
+90 1 0 2 2             ! MAXITS, CNVRG, NFIX, MV1PRT, OUTPRT
+

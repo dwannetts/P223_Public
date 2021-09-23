@@ -1,0 +1,40 @@
+/ 0450        File version number
+/ PROGRAM_NAME=Airbeo - Version 4.7.0     16 March 2007                    
+/ TITLE: Inversion of 5 Tempest stations - (layer thicknesses) - In-line component only.
+/ UNITS=fT   NSTAT=005   NCH=015   NCMP=1
+/ TIMES(ms)=       0.1350E-01   0.4000E-01   0.6650E-01   0.1070       0.1735       0.2800       0.4530       0.7200        1.120        1.734        2.693        4.200        6.560        10.20        16.20    
+/ CHNL_WDTH(ms)=   0.1300E-01   0.1400E-01   0.1300E-01   0.4000E-01   0.6700E-01   0.1200       0.2000       0.3060       0.4660       0.7330        1.160        1.826        2.866        4.386        7.586    
+/ SURVEY=TD_AEM  PP=RX_POS
+/ LAYERS=03
+/ LINE_HEADER
+/ Station  EastTx  NorthTx  AltTx  Txcln  EastRx  NorthRx  AltRx  CHX001  CHX002  CHX003  CHX004  CHX005  CHX006  CHX007  CHX008  CHX009  CHX010  CHX011  CHX012  CHX013  CHX014  CHX015  WEX001  WEX002  WEX003  WEX004  WEX005  WEX006  WEX007  WEX008  WEX009  WEX010  WEX011  WEX012  WEX013  WEX014  WEX015
+/ MODEL_HEADER
+/  RES_01  RES_02  RES_03 THICK_01 THICK_02
+/
+/ FINAL_ITERATION  11    Station   1
+/ PERCENT_RMS_ERROR:     0.19   RSVT:   0.010
+/ FINAL_MODEL    98.07       0.4382        348.9        35.37        8.685    
+/ IMPORTANCE:      0.96  0.75  0.18  1.00  0.73
+/
+/ FINAL_ITERATION  11    Station   2
+/ PERCENT_RMS_ERROR:     0.18   RSVT:   0.010
+/ FINAL_MODEL    98.31       0.4435        353.8        35.34        8.794    
+/ IMPORTANCE:      0.95  0.75  0.17  1.00  0.73
+/
+/ FINAL_ITERATION  11    Station   3
+/ PERCENT_RMS_ERROR:     0.18   RSVT:   0.010
+/ FINAL_MODEL    98.39       0.4450        357.2        35.32        8.827    
+/ IMPORTANCE:      0.95  0.75  0.17  1.00  0.73
+/
+/ FINAL_ITERATION  11    Station   4
+/ PERCENT_RMS_ERROR:     0.19   RSVT:   0.010
+/ FINAL_MODEL    98.18       0.4419        352.5        35.35        8.762    
+/ IMPORTANCE:      0.95  0.75  0.18  1.00  0.73
+/
+/ FINAL_ITERATION  11    Station   5
+/ PERCENT_RMS_ERROR:     0.19   RSVT:   0.010
+/ FINAL_MODEL    98.07       0.4382        348.9        35.37        8.685    
+/ IMPORTANCE:      0.96  0.75  0.18  1.00  0.73
+/
+/ Airbeo inversion completed at 13:50 on 22 NOV 2012
+/ Computation time =       1.36 seconds.

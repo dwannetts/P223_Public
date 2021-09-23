@@ -1,0 +1,30 @@
+#!/bin/sh
+# Airbeo $1{.cfl | .inv}
+#
+# Shell script to run $1 takes a single arguement which is the name of the 
+# cfl.  If the program is used in inversion mode, then the .inv file must 
+# have the same name as the .cfl
+
+# make a job directory ...
+clear
+mkdir -p "$1"
+cd "$1"
+
+# copy command line arguments to job directory ...
+test -f ../"$1".cfl && cp ../"$1".cfl Airbeo.cfl
+test -f ../"$1".inv && cp ../"$1".inv Airbeo.inv
+
+# run the program ...
+~/bin/Airbeo.x
+
+# copy output back to parent directory ...
+test -f Airbeo.out && cp Airbeo.out ../"$1".out
+test -f Airbeo.mv1 && cp Airbeo.mv1 ../"$1".mv1
+test -f Airbeo.mf1 && cp Airbeo.mf1 ../"$1".mf1
+test -f Airbeo.amx && cp Airbeo.amx ../"$1".amx
+test -f Airbeo.frq && cp Airbeo.frq ../"$1".frq
+test -f Airbeo.log && cp Airbeo.log ../"$1".log
+
+# ... and kill the job directory
+cd ..
+rm -rf "$1"

@@ -1,0 +1,712 @@
+
+  ------------------------------------------------------------------------------
+  | Program:  Beowulf                                 
+  | Version:  4.7.1                                   
+  | Date:     01 August, 2018                         
+  |
+  | Authors:  CSIRO Electromagnetic Modelling Group   
+  |           Art Raiche, Fred Sugeng and Glenn Wilson
+  | Project:  AMIRA P223F                             
+  |
+  | Compiler: GCC version 7.3.0
+  | Options:  -march=broadwell -mmmx -mno-3dnow -msse -msse2 -msse3 -mssse3 -mno-sse4a -mcx16 -msahf -mmovbe -maes -mno-sha -mpclmul -mpopcnt -mabm -mno-lwp -mfma -mno-fma4 -mno-xop -mbmi -mno-sgx -mbmi2 -mno-tbm -mavx -mavx2 -msse4.2 -msse4.1 -mlzcnt -mrtm -mhle -mrdrnd -mf16c -mfsgsbase -mrdseed -mprfchw -madx -mfxsr -mxsave -mxsaveopt -mno-avx512f -mno-avx512er -mno-avx512cd -mno-avx512pf -mno-prefetchwt1 -mno-clflushopt -mno-xsavec -mno-xsaves -mno-avx512dq -mno-avx512bw -mno-avx512vl -mno-avx512ifma -mno-avx512vbmi -mno-avx5124fmaps -mno-avx5124vnniw -mno-clwb -mno-mwaitx -mno-clzero -mno-pku -mno-rdpid --param l1-cache-size=32 --param l1-cache-line-size=64 --param l2-cache-size=35840 -mtune=broadwell -O3 -fwhole-program
+  |
+  | Started:  05/09/2018 at 16:17:35
+  ------------------------------------------------------------------------------
+
+
+  TDFD = 1;   ISYS = 0;   ISTOP = 0
+
+          +-----------------------------------------+
+          +  Time-Domain Ground System Information  +
+          +-----------------------------------------+
+
+  STEP = 0;   NSX =   4;   NCHNL =  20;   KRXW = 1;   REFTYM =   8.533    ;   OFFTYM =   8.133    
+
+
+             TXON (ms)    Transmitter current (amps)
+             ---------    --------------------------
+
+      1        0.000         0.000    
+      2        1.500         1.000    
+      3        8.333         1.000    
+      4        8.533         0.000    
+
+
+         Receiver channel origin INPUT is shifted by    8.533 ms from signal origin.
+
+         Receiver Window Specifications (ms - referenced to signal origin)
+         ----------------------------------------------------------------
+
+                                                             Referenced
+       Window     Open       Close       Width     Centre      Centre
+       ------     ----       -----       -----     ------      ------
+          1       8.613       8.630      0.016       8.621      0.088
+          2       8.630       8.651      0.021       8.640      0.107
+          3       8.651       8.678      0.028       8.665      0.131
+          4       8.678       8.712      0.034       8.695      0.162
+          5       8.712       8.756      0.044       8.734      0.201
+          6       8.756       8.812      0.056       8.784      0.251
+          7       8.812       8.883      0.071       8.848      0.314
+          8       8.883       8.975      0.091       8.929      0.396
+          9       8.975       9.091      0.116       9.033      0.499
+         10       9.091       9.238      0.147       9.165      0.631
+         11       9.238       9.427      0.189       9.333      0.799
+         12       9.427       9.667      0.240       9.547      1.014
+         13       9.667       9.973      0.306       9.820      1.287
+         14       9.974      10.365      0.391      10.169      1.636
+         15      10.365      10.864      0.499      10.614      2.081
+         16      10.863      11.499      0.636      11.181      2.648
+         17      11.500      12.313      0.812      11.906      3.373
+         18      12.312      13.348      1.036      12.830      4.297
+         19      13.348      14.669      1.321      14.008      5.475
+         20      14.669      16.354      1.685      15.511      6.978
+
+
+  SURVEY_TYPE = 2
+  NTXL =  1;   MRXL =  4;   MRXTX = 1;   NTRN =  1
+
+  Moving Loop Tx Line  1;   NTX =  4;   Tx_length =  100.0;   Tx_width =  100.0
+  --------------------------------------------------------------------------
+  Initial position (E,N,Z) :    3140.00     500.00       0.00
+            Line_azimuth :  60.0
+       Station_intervals :       100.00       100.00       100.00
+
+  X,Y,Z Rx offsets for Line     1000:    0.0    0.0    0.0
+    CMP =   3:  UNITS = 11;   KNORM =  0;   IPLT = 2;   RXMNT =   1.000    
+
+
+  NLAYER =  3;   NLITH =  3
+
+
+                          LITHOLOGY PROPERTIES
+                          --------------------
+
+                      Relative   Relative     Cole-Cole Parameters
+        Resistivity      S   MU   EP   Dielectric    CHRG      CTAU   CFREQ
+
+   1    100.00       -1.0000        1.0000        1.0000        0.0000        0.0000        0.0000    
+   2    10.000       -1.0000        1.0000        1.0000        0.0000        0.0000        0.0000    
+   3    1000.0       -1.0000        1.0000        1.0000        0.0000        0.0000        1.0000    
+
+
+  LAYERED EARTH INPUT DATA
+  ------------------------
+
+   1   1   50.0   J, LITHL(J), THK(J)
+   2   2   50.0   J, LITHL(J), THK(J)
+   3   1             Basement Lithology
+
+
+  Before computation begins, Beowulf may transform array and model coordinates
+  from GPS coordimnates where elevation increases positive upwards to a
+  body-centred system where depth increases positive downwards.
+  In this system, the dip of magnetic dipole transmitters and receivers
+  = 0 for vertical dipoles and 90 for horizontal dipoles.
+
+  The computational horizontal origin remains unchanged.
+
+        Transformed Receiver & Transmitter Vertex Coordinates
+        -----------------------------------------------------
+
+                        Transmitter             Receiver               Plot Point
+    Line              East      North         East      North         East      North
+
+    1000   1   1     3158.3      568.3       3140.0      500.0       3140.0      500.0
+               2     3208.3      481.7
+               3     3121.7      431.7
+               4     3071.7      518.3
+
+           2   1     3244.9      618.3       3226.6      550.0       3226.6      550.0
+               2     3294.9      531.7
+               3     3208.3      481.7
+               4     3158.3      568.3
+
+           3   1     3331.5      668.3       3313.2      600.0       3313.2      600.0
+               2     3381.5      581.7
+               3     3294.9      531.7
+               4     3244.9      618.3
+
+           4   1     3418.1      718.3       3399.8      650.0       3399.8      650.0
+               2     3468.1      631.7
+               3     3381.5      581.7
+               4     3331.5      668.3
+
+
+          +------------------------------------------+
+          +  Initial Layered Earth Model Parameters  +
+          +------------------------------------------+
+
+                    Depth
+ Layer  Thickness   to Top    Resistivity   MU-R   EPS-R   CHRG    CFREQ    CTAU
+ -----  ---------   ------    -----------   ----   -----   ----    -----    ----
+   1       50.0        0.0      100.0       1.00   1.00    0.00    1.00      0.0    
+   2       50.0       50.0      10.00       1.00   1.00    0.00    1.00      0.0    
+   3                 100.0      100.0       1.00   1.00    0.00    1.00      0.0    
+
+
+
+---------------------------------------------------------------------------
+                       END OF INPUT DATA DESCRIPTION
+---------------------------------------------------------------------------
+
+
+  -----------------------------------------------------
+  Inversion Controls for Layer Parameters using Beowulf
+  -----------------------------------------------------
+
+  NFIX =  0   MAXITS = 90   CNVRG = 1   INVPRT = 2
+
+  The inversion will finish if the RMS error is less than  0.1 percent
+  or for some other as yet undisclosed reason.
+  A maximum of 90 iterations will be allowed.
+  The inversion sequence will use 2 numerical derivative steps
+  Values in percent:  5  3
+
+  All parameters will be allowed to vary during inversion
+
+  FD_ORDER = 0
+
+  Inversion controls and data for Line 1000
+  KMP =   3    CMP =   3
+  Time-Domain Data Floor =  0.5000E-01
+
+
+  SURVEY DATA
+  -----------
+
+
+  Line 1000    Survey azimuth =  60 degrees    Units = nanoteslas / sec    Plot point: Tx-Rx_MID
+
+         Z : Vertical Component Survey Data for Line 1000
+         -----------------------------------------------
+
+          RECEIVER POSITIONS            CHNL 1       CHNL 2       CHNL 3       CHNL 4       CHNL 5       CHNL 6       CHNL 7       CHNL 8       CHNL 9      CHNL 10      CHNL 11      CHNL 12      CHNL 13      CHNL 14      CHNL 15      CHNL 16      CHNL 17      CHNL 18      CHNL 19      CHNL 20 
+        Easting    Northing     Elev   0.8621E-02   0.8640E-02   0.8665E-02   0.8695E-02   0.8734E-02   0.8784E-02   0.8848E-02   0.8929E-02   0.9033E-02   0.9165E-02   0.9333E-02   0.9547E-02   0.9820E-02   0.1017E-01   0.1061E-01   0.1118E-01   0.1191E-01   0.1283E-01   0.1401E-01   0.1551E-01
+
+  1      3140.0       500.0      0.0    2099.        1838.        1647.        1500.        1368.        1235.        1094.        943.3        786.3        630.6        483.4        352.5        243.6        158.7        97.52        56.44        30.76        15.81        7.726        3.556    
+  2      3226.6       550.0      0.0    1974.        1558.        1278.        1095.        965.0        861.3        769.3        678.3        584.3        488.0        392.2        301.6        221.0        153.4        100.6        62.24        36.22        19.82        10.26        4.993    
+  3      3313.2       600.0      0.0    3258.        2838.        2487.        2196.        1943.        1717.        1514.        1322.        1131.        940.0        752.1        574.8        418.1        287.5        186.9        114.4        65.89        35.71        18.32        8.843    
+  4      3399.8       650.0      0.0    5503.        5160.        4810.        4451.        4066.        3633.        3156.        2648.        2128.        1631.        1183.        809.7        521.4        315.1        179.0        96.00        48.51        23.27        10.68        4.634    
+
+
+ =========================================================================
+  BEGIN INVERSION - TITLE = Invert central loop line - Model: 4 layers
+  ---------------
+
+
+  ---------------------------------------------------------------
+  Begin Inversion for Station  1 of Line 1000.  NDATA = 20
+  Maximum iterations = 90   Derivative step =  5 percent.
+
+   0 iterations completed:  RMS error =  110.19 percent.  RSVT =   0.100
+
+  Model Description After  1 Iterations:  RMS error =  80.57  RSVT =  0.050
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      93.70       37.6     37.6       0.402
+    2      5.422      107.9     70.3      12.961
+    B      97.94    
+
+
+  Model Description After  2 Iterations:  RMS error =  51.31  RSVT =  0.025
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      106.3       49.8     49.8       0.468
+    2      1.492       79.1     29.3      19.636
+    B      108.3    
+
+
+  Model Description After  3 Iterations:  RMS error =   5.70  RSVT =  0.013
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      113.3       42.2     42.2       0.372
+    2     0.8458       63.0     20.8      24.611
+    B      110.8    
+
+
+  Model Description After  4 Iterations:  RMS error =   1.94  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      114.6       41.8     41.8       0.365
+    2     0.7407       60.2     18.4      24.835
+    B      111.6    
+
+
+  Model Description After  5 Iterations:  RMS error =   1.88  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      114.5       41.9     41.9       0.366
+    2     0.7261       59.9     18.0      24.858
+    B      112.3    
+
+
+  Model Description After  6 Iterations:  RMS error =   1.88  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      114.1       41.9     41.9       0.367
+    2     0.7243       59.9     18.0      24.862
+    B      112.8    
+
+
+  Model Description After  7 Iterations:  RMS error =   1.88  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      113.8       41.9     41.9       0.368
+    2     0.7241       59.9     18.0      24.863
+    B      113.4    
+
+
+  Model Description After  8 Iterations:  RMS error =   1.88  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      113.4       41.9     41.9       0.369
+    2     0.7241       59.9     18.0      24.863
+    B      113.9    
+
+
+  Model Description After  9 Iterations:  RMS error =   1.88  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      113.0       41.9     41.9       0.371
+    2     0.7240       59.9     18.0      24.864
+    B      114.5    
+
+
+  Model Description After 10 Iterations:  RMS error =   1.88  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      112.7       41.9     41.9       0.372
+    2     0.7239       59.9     18.0      24.864
+    B      115.0    
+
+
+  Error reduction after last 2 iterations < 0.5 percent.
+  No further error reduction can occur using a  5 percent derivative step.
+  Test derivative step =  3 percent.
+
+  Error reduction after last 2 iterations < 0.5 percent.
+
+  12 Iterations completed:  RMS error =    1.87 percent.  RSVT =   0.010
+  Inversion terminated
+
+
+  ==================================================
+
+  Final Model After 12 Iterations:  RMS error =   1.87
+
+  Layer  Resistivity  Depth  Thickness  Conductance   ResImport   ThkImport
+  -----  -----------  -----  ---------  -----------   ---------   ---------
+    1      111.9       41.9     41.9       0.374        0.09        1.00
+    2     0.7255       59.9     18.0      24.875        1.00        1.00
+    B      116.1                                                    0.04
+
+
+  Data and Misfit Final - (East, North, Elevation) =   3140.0    500.0    0.0
+
+         Z : Vertical Component data for Station   1 of Line 1000
+         ---------------------------------------------------------
+
+                   CHNL 1       CHNL 2       CHNL 3       CHNL 4       CHNL 5       CHNL 6       CHNL 7       CHNL 8       CHNL 9       CHNL 10      CHNL 11      CHNL 12      CHNL 13      CHNL 14      CHNL 15      CHNL 16      CHNL 17      CHNL 18      CHNL 19      CHNL 20 
+
+  Survey data:    2099.        1838.        1647.        1500.        1368.        1235.        1094.        943.3        786.3        630.6        483.4        352.5        243.6        158.7        97.52        56.44        30.76        15.81        7.726        3.556    
+  Model data:     1985.        1836.        1686.        1542.        1400.        1254.        1103.        946.1        785.0        626.8        478.8        348.0        240.1        156.4        96.31        55.96        30.67        15.88        7.830        3.643    
+  Misfit (%):        5.6          0.1         -2.4         -2.8         -2.3         -1.6         -0.8         -0.3          0.2          0.6          1.0          1.3          1.4          1.4          1.2          0.9          0.3         -0.5         -1.3         -2.4
+
+
+  ---------------------------------------------------------------
+  Begin Inversion for Station  2 of Line 1000.  NDATA = 20
+  Maximum iterations = 90   Derivative step =  5 percent.
+
+   0 iterations completed:  RMS error =  104.82 percent.  RSVT =   0.100
+
+  Model Description After  1 Iterations:  RMS error =  81.09  RSVT =  0.050
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      94.92       43.0     43.0       0.453
+    2      5.495      116.9     73.9      13.449
+    B      96.11    
+
+
+  Model Description After  2 Iterations:  RMS error =  52.06  RSVT =  0.025
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      108.6       53.3     53.3       0.491
+    2      1.592       88.9     35.6      22.380
+    B      104.1    
+
+
+  Model Description After  3 Iterations:  RMS error =   8.62  RSVT =  0.013
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      113.7       45.7     45.7       0.402
+    2     0.9328       74.8     29.1      31.165
+    B      105.3    
+
+
+  Model Description After  4 Iterations:  RMS error =   5.70  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      112.2       45.2     45.2       0.403
+    2     0.8307       71.9     26.8      32.209
+    B      105.9    
+
+
+  Model Description After  5 Iterations:  RMS error =   5.67  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      106.9       45.2     45.2       0.423
+    2     0.8258       71.9     26.6      32.263
+    B      106.8    
+
+
+  Model Description After  6 Iterations:  RMS error =   5.65  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      100.8       45.3     45.3       0.449
+    2     0.8231       71.8     26.5      32.229
+    B      107.8    
+
+
+  Model Description After  7 Iterations:  RMS error =   5.61  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      93.56       45.4     45.4       0.485
+    2     0.8196       71.7     26.4      32.184
+    B      109.0    
+
+
+  Model Description After  8 Iterations:  RMS error =   5.55  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      84.49       45.5     45.5       0.539
+    2     0.8145       71.7     26.2      32.118
+    B      110.4    
+
+
+  Model Description After  9 Iterations:  RMS error =   5.43  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      72.00       45.7     45.7       0.635
+    2     0.8052       71.5     25.8      31.993
+    B      112.3    
+
+
+  Model Description After 10 Iterations:  RMS error =   4.99  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      50.69       46.4     46.4       0.914
+    2     0.7797       71.0     24.7      31.646
+    B      115.5    
+
+  No further error reduction can occur using a  5 percent derivative step.
+  Test derivative step =  3 percent.
+
+  Error reduction after last 2 iterations < 0.5 percent.
+
+  12 Iterations completed:  RMS error =    4.95 percent.  RSVT =   0.050
+  Inversion terminated
+
+
+  ==================================================
+
+  Final Model After 12 Iterations:  RMS error =   4.95
+
+  Layer  Resistivity  Depth  Thickness  Conductance   ResImport   ThkImport
+  -----  -----------  -----  ---------  -----------   ---------   ---------
+    1      50.72       46.5     46.5       0.917        0.69        1.00
+    2     0.7773       71.1     24.6      31.700        0.99        0.98
+    B      115.5                                                    0.03
+
+
+  Data and Misfit Final - (East, North, Elevation) =   3226.6    550.0    0.0
+
+         Z : Vertical Component data for Station   2 of Line 1000
+         ---------------------------------------------------------
+
+                   CHNL 1       CHNL 2       CHNL 3       CHNL 4       CHNL 5       CHNL 6       CHNL 7       CHNL 8       CHNL 9       CHNL 10      CHNL 11      CHNL 12      CHNL 13      CHNL 14      CHNL 15      CHNL 16      CHNL 17      CHNL 18      CHNL 19      CHNL 20 
+
+  Survey data:    1974.        1558.        1278.        1095.        965.0        861.3        769.3        678.3        584.3        488.0        392.2        301.6        221.0        153.4        100.6        62.24        36.22        19.82        10.26        4.993    
+  Model data:     1682.        1504.        1337.        1182.        1041.        909.9        791.7        683.0        579.6        479.7        383.7        294.1        215.3        149.5        98.48        61.27        35.98        19.92        10.45        5.163    
+  Misfit (%):       15.9          3.5         -4.5         -7.6         -7.5         -5.5         -2.9         -0.7          0.8          1.7          2.2          2.5          2.6          2.5          2.1          1.6          0.7         -0.5         -1.8         -3.4
+
+
+  ---------------------------------------------------------------
+  Begin Inversion for Station  3 of Line 1000.  NDATA = 20
+  Maximum iterations = 90   Derivative step =  5 percent.
+
+   0 iterations completed:  RMS error =  119.39 percent.  RSVT =   0.100
+
+  Model Description After  1 Iterations:  RMS error =  93.39  RSVT =  0.050
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      90.76       31.5     31.5       0.347
+    2      5.517      100.5     69.0      12.504
+    B      93.35    
+
+
+  Model Description After  2 Iterations:  RMS error =  69.55  RSVT =  0.025
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      99.56       41.5     41.5       0.417
+    2      1.529       74.1     32.5      21.267
+    B      103.9    
+
+
+  Model Description After  3 Iterations:  RMS error =  17.80  RSVT =  0.013
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      103.6       34.1     34.1       0.329
+    2     0.7708       59.4     25.3      32.877
+    B      105.6    
+
+
+  Model Description After  4 Iterations:  RMS error =   2.28  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      104.1       32.6     32.6       0.313
+    2     0.6245       56.1     23.5      37.639
+    B      105.9    
+
+
+  Model Description After  5 Iterations:  RMS error =   2.14  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      103.5       32.5     32.5       0.314
+    2     0.6140       55.6     23.1      37.577
+    B      106.1    
+
+
+  Model Description After  6 Iterations:  RMS error =   2.14  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      102.8       32.5     32.5       0.316
+    2     0.6135       55.6     23.1      37.599
+    B      106.2    
+
+
+  Model Description After  7 Iterations:  RMS error =   2.13  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      102.1       32.5     32.5       0.318
+    2     0.6133       55.6     23.1      37.596
+    B      106.4    
+
+
+  Model Description After  8 Iterations:  RMS error =   2.13  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      101.4       32.5     32.5       0.321
+    2     0.6132       55.6     23.1      37.594
+    B      106.6    
+
+
+  Model Description After  9 Iterations:  RMS error =   2.13  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      100.6       32.5     32.5       0.323
+    2     0.6130       55.6     23.0      37.591
+    B      106.8    
+
+
+  Model Description After 10 Iterations:  RMS error =   2.13  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      99.87       32.5     32.5       0.326
+    2     0.6129       55.6     23.0      37.588
+    B      107.0    
+
+
+  Error reduction after last 2 iterations < 0.5 percent.
+  No further error reduction can occur using a  5 percent derivative step.
+  Test derivative step =  3 percent.
+
+  Error reduction after last 2 iterations < 0.5 percent.
+
+  12 Iterations completed:  RMS error =    2.12 percent.  RSVT =   0.010
+  Inversion terminated
+
+
+  ==================================================
+
+  Final Model After 12 Iterations:  RMS error =   2.12
+
+  Layer  Resistivity  Depth  Thickness  Conductance   ResImport   ThkImport
+  -----  -----------  -----  ---------  -----------   ---------   ---------
+    1      98.39       32.5     32.5       0.331        0.05        1.00
+    2     0.6136       55.6     23.1      37.603        1.00        1.00
+    B      107.4                                                    0.01
+
+
+  Data and Misfit Final - (East, North, Elevation) =   3313.2    600.0    0.0
+
+         Z : Vertical Component data for Station   3 of Line 1000
+         ---------------------------------------------------------
+
+                   CHNL 1       CHNL 2       CHNL 3       CHNL 4       CHNL 5       CHNL 6       CHNL 7       CHNL 8       CHNL 9       CHNL 10      CHNL 11      CHNL 12      CHNL 13      CHNL 14      CHNL 15      CHNL 16      CHNL 17      CHNL 18      CHNL 19      CHNL 20 
+
+  Survey data:    3258.        2838.        2487.        2196.        1943.        1717.        1514.        1322.        1131.        940.0        752.1        574.8        418.1        287.5        186.9        114.4        65.89        35.71        18.32        8.843    
+  Model data:     3046.        2785.        2517.        2255.        2005.        1766.        1543.        1334.        1132.        935.5        745.8        568.7        413.2        284.2        184.9        113.5        65.67        35.80        18.49        8.996    
+  Misfit (%):        6.7          1.9         -1.2         -2.7         -3.2         -2.8         -1.9         -0.9         -0.1          0.5          0.8          1.1          1.2          1.2          1.1          0.8          0.3         -0.3         -0.9         -1.7
+
+
+  ---------------------------------------------------------------
+  Begin Inversion for Station  4 of Line 1000.  NDATA = 20
+  Maximum iterations = 90   Derivative step =  5 percent.
+
+   0 iterations completed:  RMS error =  128.46 percent.  RSVT =   0.100
+
+  Model Description After  1 Iterations:  RMS error = 102.06  RSVT =  0.050
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      88.32       26.2     26.2       0.296
+    2      5.618       92.1     65.9      11.736
+    B      91.28    
+
+
+  Model Description After  2 Iterations:  RMS error =  58.98  RSVT =  0.025
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      92.80       26.7     26.7       0.288
+    2      1.762       59.4     32.8      18.592
+    B      102.5    
+
+
+  Model Description After  3 Iterations:  RMS error =  13.35  RSVT =  0.013
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      96.09       24.8     24.8       0.258
+    2     0.7703       43.0     18.2      23.666
+    B      107.0    
+
+
+  Model Description After  4 Iterations:  RMS error =   1.60  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      97.35       24.0     24.0       0.247
+    2     0.5846       38.2     14.1      24.162
+    B      108.9    
+
+
+  Model Description After  5 Iterations:  RMS error =   0.54  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      97.80       24.2     24.2       0.248
+    2     0.5371       37.2     12.9      24.088
+    B      110.0    
+
+
+  Model Description After  6 Iterations:  RMS error =   0.39  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      97.92       24.3     24.3       0.248
+    2     0.5244       36.9     12.6      24.072
+    B      110.5    
+
+
+  Model Description After  7 Iterations:  RMS error =   0.38  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      97.94       24.3     24.3       0.248
+    2     0.5214       36.8     12.6      24.068
+    B      110.8    
+
+
+  Model Description After  8 Iterations:  RMS error =   0.38  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      97.93       24.3     24.3       0.248
+    2     0.5208       36.8     12.5      24.068
+    B      111.0    
+
+
+  Model Description After  9 Iterations:  RMS error =   0.38  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      97.92       24.3     24.3       0.248
+    2     0.5207       36.8     12.5      24.069
+    B      111.3    
+
+
+  Model Description After 10 Iterations:  RMS error =   0.38  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      97.91       24.3     24.3       0.248
+    2     0.5207       36.8     12.5      24.070
+    B      111.5    
+
+
+  Error reduction after last 2 iterations < 0.5 percent.
+  No further error reduction can occur using a  5 percent derivative step.
+  Test derivative step =  3 percent.
+
+  Error reduction after last 2 iterations < 0.5 percent.
+
+  12 Iterations completed:  RMS error =    0.37 percent.  RSVT =   0.010
+  Inversion terminated
+
+
+  ==================================================
+
+  Final Model After 12 Iterations:  RMS error =   0.37
+
+  Layer  Resistivity  Depth  Thickness  Conductance   ResImport   ThkImport
+  -----  -----------  -----  ---------  -----------   ---------   ---------
+    1      97.89       24.3     24.3       0.248        0.05        1.00
+    2     0.5208       36.8     12.5      24.071        0.99        0.99
+    B      111.9                                                    0.08
+
+
+  Data and Misfit Final - (East, North, Elevation) =   3399.8    650.0    0.0
+
+         Z : Vertical Component data for Station   4 of Line 1000
+         ---------------------------------------------------------
+
+                   CHNL 1       CHNL 2       CHNL 3       CHNL 4       CHNL 5       CHNL 6       CHNL 7       CHNL 8       CHNL 9       CHNL 10      CHNL 11      CHNL 12      CHNL 13      CHNL 14      CHNL 15      CHNL 16      CHNL 17      CHNL 18      CHNL 19      CHNL 20 
+
+  Survey data:    5503.        5160.        4810.        4451.        4066.        3633.        3156.        2648.        2128.        1631.        1183.        809.7        521.4        315.1        179.0        96.00        48.51        23.27        10.68        4.634    
+  Model data:     5458.        5147.        4816.        4465.        4081.        3647.        3167.        2654.        2131.        1631.        1182.        808.0        519.8        313.9        178.3        95.66        48.40        23.27        10.71        4.674    
+  Misfit (%):        0.8          0.2         -0.1         -0.3         -0.4         -0.4         -0.3         -0.2         -0.2         -0.0          0.0          0.2          0.3          0.4          0.4          0.4          0.2         -0.0         -0.3         -0.9
+
+  Beowulf inversion run completed at 16:17:38 on 05/09/2018 using         3.46 secs
+

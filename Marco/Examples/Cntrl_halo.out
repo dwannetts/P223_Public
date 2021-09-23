@@ -1,0 +1,513 @@
+
+      ######################################################################
+      #                                                                    #
+      #                 Marco - Version 4.4.1 10 June, 2003                #
+      #                 -----------------------------------                #
+      #                                                                    #
+      #      Develped by:  CSIRO Electromagnetic Modelling Group           #
+      #                    Zonghou Xiong and Art Raiche                    #
+      #                                                                    #
+      #              For:  AMIRA project P223D                             #
+      #                                                                    #
+      ######################################################################
+
+-------------------------------------------------------------------------------
+
+ 25 Hz EM37 Central loop over sulphide and halo model                                                                    
+
+  TDFD = 1;   PRFL = 1;   STEP = 0;   ISTOP = 0
+
+          +-----------------------------------------+
+          +  Time-Domain Ground System Information  +
+          +-----------------------------------------+
+
+  DO3D =  1;   NSX =   4;   NCHNL =  20
+  KRXW =-1;    OFFTYM =   8.000    
+
+
+             TXON (ms)    Transmitter current (amps)
+             ---------    --------------------------
+
+      1        0.000         0.000    
+      2        0.100         1.000    
+      3        7.900         1.000    
+      4        8.000         0.000    
+
+         Receiver channel origin INPUT is shifted by    8.000 ms from signal origin.
+
+         Receiver Window Specifications (ms - referenced to signal origin)
+         ----------------------------------------------------------------
+
+                                                             Referenced
+       Window     Open       Close       Width     Centre      Centre
+       ------     ----       -----       -----     ------      ------
+          1       8.080       8.097      0.017       8.089      0.089
+          2       8.097       8.121      0.024       8.109      0.109
+          3       8.122       8.158      0.037       8.140      0.140
+          4       8.158       8.196      0.037       8.177      0.177
+          5       8.196       8.245      0.049       8.220      0.220
+          6       8.244       8.316      0.072       8.280      0.280
+          7       8.316       8.394      0.077       8.355      0.355
+          8       8.384       8.483      0.099       8.433      0.433
+          9       8.492       8.634      0.142       8.563      0.563
+         10       8.634       8.790      0.156       8.712      0.712
+         11       8.790       8.962      0.172       8.876      0.876
+         12       8.962       9.212      0.250       9.087      1.087
+         13       9.211       9.589      0.378       9.400      1.400
+         14       9.589       9.955      0.367       9.772      1.772
+         15      10.010      10.410      0.400      10.210      2.210
+         16      10.460      11.180      0.720      10.820      2.820
+         17      11.180      11.960      0.780      11.570      3.570
+         18      11.960      12.960      1.000      12.460      4.460
+         19      12.957      14.377      1.420      13.667      5.667
+         20      14.380      15.940      1.560      15.160      7.160
+
+
+  SOURCE_TYPE = 1;   SURVEY_TYPE = 3;   NTX = 10;   NRXG =10
+
+
+  Vertex Locations for Loop Sources
+  ---------------------------------
+
+  Transmitter  1 has  4 vertices.
+
+            Easting      Northing      Elevation
+            -------      --------      ---------
+    1        550.00       1050.00          0.00
+    2        650.00       1050.00          0.00
+    3        650.00        950.00          0.00
+    4        550.00        950.00          0.00
+
+  Transmitter  2 has  4 vertices.
+
+            Easting      Northing      Elevation
+            -------      --------      ---------
+    1        650.00       1050.00          0.00
+    2        750.00       1050.00          0.00
+    3        750.00        950.00          0.00
+    4        650.00        950.00          0.00
+
+  Transmitter  3 has  4 vertices.
+
+            Easting      Northing      Elevation
+            -------      --------      ---------
+    1        750.00       1050.00          0.00
+    2        850.00       1050.00          0.00
+    3        850.00        950.00          0.00
+    4        750.00        950.00          0.00
+
+  Transmitter  4 has  4 vertices.
+
+            Easting      Northing      Elevation
+            -------      --------      ---------
+    1        850.00       1050.00          0.00
+    2        950.00       1050.00          0.00
+    3        950.00        950.00          0.00
+    4        850.00        950.00          0.00
+
+  Transmitter  5 has  4 vertices.
+
+            Easting      Northing      Elevation
+            -------      --------      ---------
+    1        950.00       1050.00          0.00
+    2       1050.00       1050.00          0.00
+    3       1050.00        950.00          0.00
+    4        950.00        950.00          0.00
+
+  Transmitter  6 has  4 vertices.
+
+            Easting      Northing      Elevation
+            -------      --------      ---------
+    1        550.00        850.00          0.00
+    2        650.00        850.00          0.00
+    3        650.00        750.00          0.00
+    4        550.00        750.00          0.00
+
+  Transmitter  7 has  4 vertices.
+
+            Easting      Northing      Elevation
+            -------      --------      ---------
+    1        650.00        850.00          0.00
+    2        750.00        850.00          0.00
+    3        750.00        750.00          0.00
+    4        650.00        750.00          0.00
+
+  Transmitter  8 has  4 vertices.
+
+            Easting      Northing      Elevation
+            -------      --------      ---------
+    1        750.00        850.00          0.00
+    2        850.00        850.00          0.00
+    3        850.00        750.00          0.00
+    4        750.00        750.00          0.00
+
+  Transmitter  9 has  4 vertices.
+
+            Easting      Northing      Elevation
+            -------      --------      ---------
+    1        850.00        850.00          0.00
+    2        950.00        850.00          0.00
+    3        950.00        750.00          0.00
+    4        850.00        750.00          0.00
+
+  Transmitter 10 has  4 vertices.
+
+            Easting      Northing      Elevation
+            -------      --------      ---------
+    1        950.00        850.00          0.00
+    2       1050.00        850.00          0.00
+    3       1050.00        750.00          0.00
+    4        950.00        750.00          0.00
+
+  Fixed Offset for Magnetic Dipole Receiver
+  -----------------------------------------
+     East        North     Vertical   Moment    CMP  UNITS
+       0.00       0.00       0.00       1.00     1     1
+
+
+  NLAYER =  4;   NPRISM =  5;   NLITH = 15;   GND_LVL =    0.00
+
+
+                          LITHOLOGY PROPERTIES
+                          --------------------
+
+                                  Relative   Relative     Cole-Cole Parameters
+        Resistivity  Conductance     MU     Dielectric   CHRG    CTAU       CFREQ
+
+   1      1000.         -1.0       1.000      1.000      0.00    0.00        1.00
+   2      2000.         -1.0       1.000      1.000      0.00    0.00        1.00
+   3     0.1000E+05     -1.0       1.200      1.000      0.00    0.00        1.00
+   4      80.00         -1.0       1.010      1.200      0.00    0.00        1.00
+   5      50.00         -1.0       1.000      1.000      0.30   0.100E-02    0.42
+   6      200.0         -1.0       1.000      1.000      0.00    0.00        1.00
+   7      1.000        200.0       1.000      1.000      0.00    0.00        1.00
+   8      1.000        120.0       1.000      1.000      0.40   0.300E-02    0.22
+   9     0.1000         -1.0       1.000      1.000      0.00    0.00        1.00
+  10      10.00         -1.0       1.000      1.000      0.00    0.00        1.00
+  11      250.0         -1.0       1.000      1.000      0.00    0.00        1.00
+  12      1400.         -1.0       1.000      1.000      0.00    0.00        1.00
+  13      20.00         -1.0       1.000      1.000      0.00    0.00        1.00
+  14      300.0         -1.0       1.000      1.000      0.00    0.00        1.00
+  15      1.000         -1.0       1.000      1.000      0.00    0.00        1.00
+
+
+   Layered host specification
+   --------------------------
+   1   2   10.0   J, LITHL(J), THK(J)
+   2   5   20.0   J, LITHL(J), THK(J)
+   3  13   60.0   J, LITHL(J), THK(J)
+   4  11             Basement Lithology
+
+
+  Initial parameters for  5 prisms
+  ---------------------------------------
+  KACC = 2    SOLVER = 1    OUTPUT = 10
+
+  J, LITHP, PRISM_EAST, PRISM_NORTH, PRISM_TOP:   1   9      1000.0      1000.0       -60.0
+     PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z                   60.0        60.0       100.0
+     CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z                   25.0        25.0        25.0
+
+  J, LITHP, PRISM_EAST, PRISM_NORTH, PRISM_TOP:   2  10      1000.0      1060.0       -60.0
+     PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z                  180.0        60.0       100.0
+     CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z                   25.0        25.0        25.0
+
+  J, LITHP, PRISM_EAST, PRISM_NORTH, PRISM_TOP:   3  10      1000.0       940.0       -60.0
+     PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z                  180.0        60.0       100.0
+     CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z                   25.0        25.0        25.0
+
+  J, LITHP, PRISM_EAST, PRISM_NORTH, PRISM_TOP:   4  10       940.0      1000.0       -60.0
+     PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z                   60.0        60.0       100.0
+     CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z                   25.0        25.0        25.0
+
+  J, LITHP, PRISM_EAST, PRISM_NORTH, PRISM_TOP:   5  10      1060.0      1000.0       -60.0
+     PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z                   60.0        60.0       100.0
+     CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z                   25.0        25.0        25.0
+
+  Prism structire has changed due either prisms crossing layer boundaries
+  or no contrast in at least 1 layer.
+
+  The prism structure has two-fold symmetry about
+  East-North coordinates:   1000.       1000.    
+
+  It has been reduced to an equivalent single quadrant structure
+  to allow faster computation using a group symmetry option.
+
+
+         Description of PRISM  1
+         -----------------------
+
+  PRISM  1 extends:
+           from    0.0  to   30.0 - West to East
+           from    0.0  to   30.0 - South to North
+           from   60.0  to   90.0 - Below Air-Earth Interface
+
+  PRISM  1 is discretised into:
+             1 cells of length   30.0 m.  East-West
+             1 cells of length   30.0 m.  North-South
+             1 cells of length   30.0 m.  Vertically
+
+  PRISM  1 resistivity =  0.1000     ohm-m
+           Relative MU =   1.00    Relative EPSILON =   1.00
+             PRSM_CHRG =   0.00    PRSM_CFR =  1.00    PRSM_TAU =   0.000    
+
+
+         Description of PRISM  2
+         -----------------------
+
+  PRISM  2 extends:
+           from    0.0  to   30.0 - West to East
+           from    0.0  to   30.0 - South to North
+           from   90.0  to  160.0 - Below Air-Earth Interface
+
+  PRISM  2 is discretised into:
+             1 cells of length   30.0 m.  East-West
+             1 cells of length   30.0 m.  North-South
+             2 cells of length   35.0 m.  Vertically
+
+  PRISM  2 resistivity =  0.1000     ohm-m
+           Relative MU =   1.00    Relative EPSILON =   1.00
+             PRSM_CHRG =   0.00    PRSM_CFR =  1.00    PRSM_TAU =   0.000    
+
+
+         Description of PRISM  3
+         -----------------------
+
+  PRISM  3 extends:
+           from    0.0  to   90.0 - West to East
+           from   30.0  to   90.0 - South to North
+           from   60.0  to   90.0 - Below Air-Earth Interface
+
+  PRISM  3 is discretised into:
+             3 cells of length   30.0 m.  East-West
+             2 cells of length   30.0 m.  North-South
+             1 cells of length   30.0 m.  Vertically
+
+  PRISM  3 resistivity =   10.00     ohm-m
+           Relative MU =   1.00    Relative EPSILON =   1.00
+             PRSM_CHRG =   0.00    PRSM_CFR =  1.00    PRSM_TAU =   0.000    
+
+
+         Description of PRISM  4
+         -----------------------
+
+  PRISM  4 extends:
+           from    0.0  to   90.0 - West to East
+           from   30.0  to   90.0 - South to North
+           from   90.0  to  160.0 - Below Air-Earth Interface
+
+  PRISM  4 is discretised into:
+             3 cells of length   30.0 m.  East-West
+             2 cells of length   30.0 m.  North-South
+             2 cells of length   35.0 m.  Vertically
+
+  PRISM  4 resistivity =   10.00     ohm-m
+           Relative MU =   1.00    Relative EPSILON =   1.00
+             PRSM_CHRG =   0.00    PRSM_CFR =  1.00    PRSM_TAU =   0.000    
+
+
+         Description of PRISM  5
+         -----------------------
+
+  PRISM  5 extends:
+           from   30.0  to   90.0 - West to East
+           from    0.0  to   30.0 - South to North
+           from   60.0  to   90.0 - Below Air-Earth Interface
+
+  PRISM  5 is discretised into:
+             2 cells of length   30.0 m.  East-West
+             1 cells of length   30.0 m.  North-South
+             1 cells of length   30.0 m.  Vertically
+
+  PRISM  5 resistivity =   10.00     ohm-m
+           Relative MU =   1.00    Relative EPSILON =   1.00
+             PRSM_CHRG =   0.00    PRSM_CFR =  1.00    PRSM_TAU =   0.000    
+
+
+         Description of PRISM  6
+         -----------------------
+
+  PRISM  6 extends:
+           from   30.0  to   90.0 - West to East
+           from    0.0  to   30.0 - South to North
+           from   90.0  to  160.0 - Below Air-Earth Interface
+
+  PRISM  6 is discretised into:
+             2 cells of length   30.0 m.  East-West
+             1 cells of length   30.0 m.  North-South
+             2 cells of length   35.0 m.  Vertically
+
+  PRISM  6 resistivity =   10.00     ohm-m
+           Relative MU =   1.00    Relative EPSILON =   1.00
+             PRSM_CHRG =   0.00    PRSM_CFR =  1.00    PRSM_TAU =   0.000    
+
+
+  Before computation begins, Marco transforms array and model coordinates from
+  "real world" coordimnates where elevation increases positive upwards to a
+  body- centred system where depth increases positive downwards.  The new 
+  vertical origin is at the air-earth interface.  If the model is symmetric
+  the new horizontal origin is over the centre of the model region.  Otherwise
+  the origin is over the top of the first prism specified
+  In the "real world" coordimnates the new computation origin is located at:
+
+   EAST:     -1000.00;    NORTH:     -1000.00;    ELEVATION:     0.00
+
+  Transformed Vertex Locations for Loop Sources
+  ---------------------------------------------
+
+      Transmitter  1 has  4 vertices.
+
+         Easting   Northing     Depth
+
+    1    -450.00      50.00       0.00
+    2    -350.00      50.00       0.00
+    3    -350.00     -50.00       0.00
+    4    -450.00     -50.00       0.00
+
+      Transmitter  2 has  4 vertices.
+
+         Easting   Northing     Depth
+
+    1    -350.00      50.00       0.00
+    2    -250.00      50.00       0.00
+    3    -250.00     -50.00       0.00
+    4    -350.00     -50.00       0.00
+
+      Transmitter  3 has  4 vertices.
+
+         Easting   Northing     Depth
+
+    1    -250.00      50.00       0.00
+    2    -150.00      50.00       0.00
+    3    -150.00     -50.00       0.00
+    4    -250.00     -50.00       0.00
+
+      Transmitter  4 has  4 vertices.
+
+         Easting   Northing     Depth
+
+    1    -150.00      50.00       0.00
+    2     -50.00      50.00       0.00
+    3     -50.00     -50.00       0.00
+    4    -150.00     -50.00       0.00
+
+      Transmitter  5 has  4 vertices.
+
+         Easting   Northing     Depth
+
+    1     -50.00      50.00       0.00
+    2      50.00      50.00       0.00
+    3      50.00     -50.00       0.00
+    4     -50.00     -50.00       0.00
+
+      Transmitter  6 has  4 vertices.
+
+         Easting   Northing     Depth
+
+    1    -450.00    -150.00       0.00
+    2    -350.00    -150.00       0.00
+    3    -350.00    -250.00       0.00
+    4    -450.00    -250.00       0.00
+
+      Transmitter  7 has  4 vertices.
+
+         Easting   Northing     Depth
+
+    1    -350.00    -150.00       0.00
+    2    -250.00    -150.00       0.00
+    3    -250.00    -250.00       0.00
+    4    -350.00    -250.00       0.00
+
+      Transmitter  8 has  4 vertices.
+
+         Easting   Northing     Depth
+
+    1    -250.00    -150.00       0.00
+    2    -150.00    -150.00       0.00
+    3    -150.00    -250.00       0.00
+    4    -250.00    -250.00       0.00
+
+      Transmitter  9 has  4 vertices.
+
+         Easting   Northing     Depth
+
+    1    -150.00    -150.00       0.00
+    2     -50.00    -150.00       0.00
+    3     -50.00    -250.00       0.00
+    4    -150.00    -250.00       0.00
+
+      Transmitter 10 has  4 vertices.
+
+         Easting   Northing     Depth
+
+    1     -50.00    -150.00       0.00
+    2      50.00    -150.00       0.00
+    3      50.00    -250.00       0.00
+    4     -50.00    -250.00       0.00
+
+
+  Transformed Locations for Central Loop Magnetic Dipole Receivers
+  -----------------------------------------------------------------
+   1    -400.00       0.00       0.00    0.0    0.0        1.
+   2    -300.00       0.00       0.00    0.0    0.0        1.
+   3    -200.00       0.00       0.00    0.0    0.0        1.
+   4    -100.00       0.00       0.00    0.0    0.0        1.
+   5       0.00       0.00       0.00    0.0    0.0        1.
+   6    -400.00    -200.00       0.00    0.0    0.0        1.
+   7    -300.00    -200.00       0.00    0.0    0.0        1.
+   8    -200.00    -200.00       0.00    0.0    0.0        1.
+   9    -100.00    -200.00       0.00    0.0    0.0        1.
+  10       0.00    -200.00       0.00    0.0    0.0        1.
+
+
+          +----------------------------------+
+          +  Layered Earth Model Parameters  +
+          +----------------------------------+
+
+ Layer  Thickness  Resistivity   MU-R   EPS-R   CHRG    CTAU      CFREQ
+ -----  ---------  -----------   ----   -----   ----    ----      -----
+   1       10.0      2000.       1.00   1.00    0.00    0.0       1.00
+   2       20.0      50.00       1.00   1.00    0.30   0.10E-02   0.42
+   3       60.0      20.00       1.00   1.00    0.00    0.0       1.00
+   4                 250.0       1.00   1.00    0.00    0.0       1.00
+
+  Marco will compute 3D responses for a time-domain system
+  using accuracy level:  2
+
+---------------------------------------------------------------------------
+                       END OF INPUT DATA DESCRIPTION
+---------------------------------------------------------------------------
+
+  The time-domain results will be constructed using frequency-domain
+  output computed at 3 points per decade, from  1.0 Hz to 10 Hz
+  and at 6 points per decade, from 10 Hz to  0.1000E+06 Hz.
+
+  Marco will start by computing new frequency-domain responses in the specified 
+  range to construct the spectrum from DC to the appropriate upper limit.
+
+  25 Hz EM37 Central loop over sulphide and halo model                                                                    
+
+
+  Time-domain output for a central loop survey.
+  For each loop centre position, the output is printed in NANOTESLAS /SEC.
+
+
+      PROFILE OUTPUT:  VERTICAL COMPONENT     
+      STANDARD OUTPUT - LAYERED EARTH + SCATTERED FIELDS
+
+          RECEIVER POSITIONS            CHNL 1       CHNL 2       CHNL 3       CHNL 4       CHNL 5       CHNL 6       CHNL 7       CHNL 8       CHNL 9      CHNL 10      CHNL 11      CHNL 12      CHNL 13      CHNL 14      CHNL 15      CHNL 16      CHNL 17      CHNL 18      CHNL 19      CHNL 20 
+       Northing     Easting     Elev   0.8850E-01   0.1090       0.1400       0.1770       0.2200       0.2800       0.3550       0.4330       0.5630       0.7120       0.8760        1.087        1.400        1.772        2.210        2.820        3.570        4.460        5.667        7.160    
+
+  1     1000.00      600.00     0.00    3255.        2425.        1652.        1104.        737.4        453.4        266.4        166.0        85.11        44.45        24.34        12.76        5.803        2.599        1.182       0.4733       0.1711       0.5762E-01   0.1126E-01  -0.2021E-02
+  2     1000.00      700.00     0.00    3254.        2423.        1650.        1102.        734.6        451.0        264.8        165.4        85.50        45.29        25.22        13.43        6.184        2.765        1.250       0.4928       0.1768       0.5893E-01   0.1172E-01  -0.1950E-02
+  3     1000.00      800.00     0.00    3221.        2391.        1624.        1085.        728.2        453.6        272.6        174.4        93.37        50.76        28.60        15.21        6.877        2.998        1.319       0.5139       0.1808       0.6089E-01   0.1181E-01  -0.1623E-02
+  4     1000.00      900.00     0.00    3096.        2333.        1638.        1147.        809.6        533.7        336.8        221.2        119.0        63.47        34.45        17.59        7.528        3.189        1.346       0.5271       0.1807       0.6275E-01   0.1132E-01  -0.1117E-02
+  5     1000.00     1000.00     0.00    3002.        2324.        1707.        1258.        928.7        637.0        411.4        270.7        142.2        72.56        37.39        18.25        7.417        3.112        1.278       0.5079       0.1715       0.6064E-01   0.9921E-02  -0.1090E-02
+  6      800.00      600.00     0.00    3255.        2425.        1652.        1104.        737.6        453.7        266.7        166.2        85.25        44.47        24.27        12.66        5.717        2.547        1.157       0.4646       0.1682       0.5696E-01   0.1102E-01  -0.2041E-02
+  7      800.00      700.00     0.00    3255.        2424.        1652.        1104.        737.0        453.0        266.0        165.8        85.06        44.54        24.48        12.90        5.900        2.648        1.204       0.4800       0.1731       0.5802E-01   0.1143E-01  -0.2014E-02
+  8      800.00      800.00     0.00    3253.        2422.        1648.        1100.        733.9        450.8        265.0        165.7        85.86        45.59        25.44        13.57        6.247        2.789        1.258       0.4947       0.1772       0.5900E-01   0.1171E-01  -0.1938E-02
+  9      800.00      900.00     0.00    3238.        2407.        1636.        1092.        729.6        450.8        267.8        169.6        89.68        48.46        27.31        14.59        6.661        2.928        1.301       0.5073       0.1798       0.6013E-01   0.1180E-01  -0.1759E-02
+ 10      800.00     1000.00     0.00    3221.        2391.        1624.        1085.        728.2        453.6        272.6        174.4        93.37        50.76        28.60        15.21        6.877        2.998        1.319       0.5139       0.1808       0.6087E-01   0.1181E-01  -0.1626E-02
+
+
+  Computation time =       7.62 seconds.
+

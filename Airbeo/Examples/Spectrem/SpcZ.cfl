@@ -1,0 +1,28 @@
+Inversion of 5 Spectrem stations - (layer thicknesses) vertical component only
+1 -1 1 0          ! TDFD, DO1D, PRFL, ISTOP
+1 4 1 1 8 1 0     ! ISW, NSX, STEP, UNITS, NCHNL, KRXW, OFFTIME
+0 0
+0.0001 -1000
+6.8999 -1000
+6.9 0             ! TXON, WAVEFORM(4)
+0.026 0.026
+0.052 0.078
+0.104 0.182
+0.208 0.391
+0.417 0.807
+0.833 1.641
+1.667 3.307
+3.333 6.641            ! TOPN, TCLS(8)
+2 13 123                ! TXCLN, CMP, KPPM
+3		       ! NPPF: ppm output
+400 1                  ! TXAREA NTRN
+36 123 0               ! ZRX, XRX, YRX(1)
+1                      ! NPASS
+3 1 2 0                ! NLAYER, QLYR, NLITH, GND_LEVEL
+100 -1 1 1 0 0 0       ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(1) - basement
+10  -1 1 1 0 0 1       ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(10) -
+1 50.                  ! LITH, THICK
+2 50                   ! LITH,THICK
+1		       ! Basement
+90 1 0 1 2             ! MAXITS, CNVRG, NFIX, MV1PRT, OUTPRT
+

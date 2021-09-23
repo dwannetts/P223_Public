@@ -1,0 +1,840 @@
+
+  ------------------------------------------------------------------------------
+  | Program:  Beowulf                                 
+  | Version:  4.7.1                                   
+  | Date:     01 August, 2018                         
+  |
+  | Authors:  CSIRO Electromagnetic Modelling Group   
+  |           Art Raiche, Fred Sugeng and Glenn Wilson
+  | Project:  AMIRA P223F                             
+  |
+  | Compiler: GCC version 9.1.0
+  | Options:  -march=broadwell -mmmx -mno-3dnow -msse -msse2 -msse3 -mssse3 -mno-sse4a -mcx16 -msahf -mmovbe -maes -mno-sha -mpclmul -mpopcnt -mabm -mno-lwp -mfma -mno-fma4 -mno-xop -mbmi -mno-sgx -mbmi2 -mno-pconfig -mno-wbnoinvd -mno-tbm -mavx -mavx2 -msse4.2 -msse4.1 -mlzcnt -mrtm -mhle -mrdrnd -mf16c -mfsgsbase -mrdseed -mprfchw -madx -mfxsr -mxsave -mxsaveopt -mno-avx512f -mno-avx512er -mno-avx512cd -mno-avx512pf -mno-prefetchwt1 -mno-clflushopt -mno-xsavec -mno-xsaves -mno-avx512dq -mno-avx512bw -mno-avx512vl -mno-avx512ifma -mno-avx512vbmi -mno-avx5124fmaps -mno-avx5124vnniw -mno-clwb -mno-mwaitx -mno-clzero -mno-pku -mno-rdpid -mno-gfni -mno-shstk -mno-avx512vbmi2 -mno-avx512vnni -mno-vaes -mno-vpclmulqdq -mno-avx512bitalg -mno-movdiri -mno-movdir64b -mno-waitpkg -mno-cldemote -mno-ptwrite --param l1-cache-size=32 --param l1-cache-line-size=64 --param l2-cache-size=35840 -mtune=broadwell -O3 -fwhole-program
+  |
+  | Started:  14/01/2020 at 15:22:22
+  ------------------------------------------------------------------------------
+
+
+  TDFD = 2;   ISYS = 0;   ISTOP = 0
+
+          +----------------------------------------------+
+          +  Frequency-Domain Ground System Information  +
+          +----------------------------------------------+
+
+  NFRQ =  5
+
+           Frequency      Transmitter current in amps
+           ---------      ---------------------------
+
+      1    1.000             1.000    
+      2    10.00             1.000    
+      3    100.0             1.000    
+      4    1000.             1.000    
+      5   0.1000E+05         1.000    
+
+
+  SURVEY_TYPE = 1
+
+  NLINES =  1;   MRXL =   8;   NTX =  1;   SOURCE_TYPE = 1;   MXVRTX = 6;   NTRN =  1
+
+  Vertex Locations for Loop Sources
+  ---------------------------------
+
+  Transmitter  1 has  4 vertices:
+
+            Easting      Northing      Elevation
+            -------      --------      ---------
+    1       -100.00        100.00          0.00
+    2        100.00        100.00          0.00
+    3        100.00       -100.00          0.00
+    4       -100.00       -100.00          0.00
+
+
+  Line     1180;   Tx Index  1;   Rx Type = 1;   NRX =  6;   Units =  3
+
+        CMP =  13;   KNORM = 0;   IPLT = 1;   IDH = 1;   SV_AZM =    0.0;   RXMNT =   1000.    
+
+          Magnetic Dipole Receivers
+          -------------------------
+
+         Easting     Northing   Elevation    Dip    Azimuth
+         -------     --------   ---------    ---    -------
+   1         0.0         0.0        20.0      0.0      0.0
+   2         0.0         0.0        40.0      0.0      0.0
+   3         0.0         0.0        60.0      0.0      0.0
+   4         0.0       120.0        20.0     60.0      0.0
+   5         0.0       120.0        20.0     60.0      0.0
+   6         0.0       120.0        60.0     60.0      0.0
+
+
+  NLAYER =  3;   NLITH =  3
+
+
+                          LITHOLOGY PROPERTIES
+                          --------------------
+
+                      Relative   Relative     Cole-Cole Parameters
+        Resistivity      S   MU   EP   Dielectric    CHRG      CTAU   CFREQ
+
+   1    100.00       -1.0000        150.00        1.0000        1.0000        0.0000        0.0000    
+   2   0.50000       -1.0000        220.00        1.0000        1.0000        0.0000        0.0000    
+   3    500.00       -1.0000        200.00        1.0000        1.0000        0.0000        0.0000    
+
+
+  LAYERED EARTH INPUT DATA
+  ------------------------
+
+   1   1   35.0   J, LITHL(J), THK(J)
+   2   2   10.0   J, LITHL(J), THK(J)
+   3   3             Basement Lithology
+
+  -------------------
+  Primary fields (T):     1.0000E+00    1.0000E+00    1.0000E+00    1.0000E+00    1.0000E+00    1.0000E+00
+
+
+  Before computation begins, Beowulf may transform array and model coordinates
+  from GPS coordinates where elevation increases positive upwards to a
+  body-centred system where depth increases positive downwards.
+  In this system, the dip of magnetic dipole transmitters and receivers
+  = 0 for vertical dipoles and 90 for horizontal dipoles.
+
+  The computational horizontal origin remains unchanged.
+
+  Transformed transmitter and receiver locations for Line   1180
+  Survey aximuth =   0.degrees clockwise from North.
+
+  Transformed Vertex Locations for Loop Sources
+  ---------------------------------------------
+
+      Transmitter  1 has  4 vertices.
+
+         Easting   Northing
+
+    1    -100.00     100.00      -0.00
+    2     100.00     100.00      -0.00
+    3     100.00    -100.00      -0.00
+    4    -100.00    -100.00      -0.00
+
+
+  Transformed Locations for Magnetic Dipole Receivers in Line   1180
+  ------------------------------------------------------------------
+
+        Easting   Northing      Depth   Moment
+        -------   --------      -----   ------
+   1       0.00       0.00     -20.00   1000.    
+   2       0.00       0.00     -40.00   1000.    
+   3       0.00       0.00     -60.00   1000.    
+   4       0.00     120.00     -20.00   1000.    
+   5       0.00     120.00     -20.00   1000.    
+   6       0.00     120.00     -60.00   1000.    
+
+
+  Plot points for receivers on Line   1180
+
+            East        North     Elev
+            ----        -----     ----
+
+   1          0.0          0.0     20.0
+   2          0.0          0.0     40.0
+   3          0.0          0.0     60.0
+   4          0.0        120.0     20.0
+   5          0.0        120.0     20.0
+   6          0.0        120.0     60.0
+
+
+          +------------------------------------------+
+          +  Initial Layered Earth Model Parameters  +
+          +------------------------------------------+
+
+                    Depth
+ Layer  Thickness   to Top    Resistivity   MU-R   EPS-R   CHRG    CFREQ    CTAU
+ -----  ---------   ------    -----------   ----   -----   ----    -----    ----
+   1       35.0        0.0      100.0     150.00   1.00    0.00    1.00      0.0    
+   2       10.0       35.0     0.5000     220.00   1.00    0.00    1.00      0.0    
+   3                  45.0      500.0     200.00   1.00    0.00    1.00      0.0    
+
+
+
+---------------------------------------------------------------------------
+                       END OF INPUT DATA DESCRIPTION
+---------------------------------------------------------------------------
+
+
+  -----------------------------------------------------
+  Inversion Controls for Layer Parameters using Beowulf
+  -----------------------------------------------------
+
+  NFIX =  0   MAXITS = 90   CNVRG = 1   INVPRT = 2
+
+  The inversion will finish if the RMS error is less than  0.1 percent
+  or for some other as yet undisclosed reason.
+  A maximum of 90 iterations will be allowed.
+  The inversion sequence will use 2 numerical derivative steps
+  Values in percent:  5  3
+
+  All parameters will be allowed to vary during inversion
+
+  FD_ORDER = 2
+
+  Inversion controls and data for Line 1180
+  KMP =  13    CMP =  13
+
+       Frequency Domain Data Floors
+       ----------------------------
+
+       Freq     In-phase   Quadrature
+
+   1       1.  0.1000E-01  0.1000E-01
+   2      10.  0.1000E-01  0.1000E-01
+   3     100.  0.1000E-01  0.1000E-01
+   4    1000.  0.1000E-01  0.1000E-01
+   5   10000.  0.1000E-01  0.1000E-01
+
+
+  SURVEY DATA
+  -----------
+
+
+  Line 1180    Magnetic dipole Rx    Survey azimuth =   0 degrees    Units = microvolts
+
+
+         A Inphase - Axial Component Survey Data for Line 1180
+         -------------------------------------------------------
+
+             RECEIVER POSITIONS               FREQUENCIES
+         East        North     Elev      1.00        10.00       100.00      1000.00     10000.00
+
+  1         0.0         0.0     20.0    0.000        0.000        0.000        0.000        0.000    
+  2         0.0         0.0     40.0    0.000        0.000        0.000        0.000        0.000    
+  3         0.0         0.0     60.0    0.000        0.000        0.000        0.000        0.000    
+  4         0.0       120.0     20.0   -5.257       -5.270       -5.350       -5.388       -5.585    
+  5         0.0       120.0     20.0   -5.257       -5.270       -5.350       -5.388       -5.585    
+  6         0.0       120.0     60.0   0.9482       0.9408       0.9140       0.8249       0.5941    
+
+
+         A Quadrature - Axial Component Survey Data for Line 1180
+         ------------------------------------------------------
+
+             RECEIVER POSITIONS               FREQUENCIES
+         East        North     Elev      1.00        10.00       100.00      1000.00     10000.00
+
+  1         0.0         0.0     20.0    0.000        0.000        0.000        0.000        0.000    
+  2         0.0         0.0     40.0    0.000        0.000        0.000        0.000        0.000    
+  3         0.0         0.0     60.0    0.000        0.000        0.000        0.000        0.000    
+  4         0.0       120.0     20.0  -0.1230E-01   -0.000      -0.4900E-01  -0.1106      -0.1328    
+  5         0.0       120.0     20.0  -0.1230E-01   -0.000      -0.4900E-01  -0.1106      -0.1328    
+  6         0.0       120.0     60.0   -0.000       -0.000      -0.4640E-01  -0.1060      -0.2291    
+
+
+         U Inphase - Slope Component Survey Data for Line 1180
+         ---------------------------------------------------
+
+             RECEIVER POSITIONS               FREQUENCIES
+         East        North     Elev      1.00        10.00       100.00      1000.00     10000.00
+
+  1         0.0         0.0     20.0    10.73        10.79        10.77        10.24        9.175    
+  2         0.0         0.0     40.0    9.345        9.387        9.391        8.962        8.106    
+  3         0.0         0.0     60.0    7.626        7.652        7.659        7.322        6.648    
+  4         0.0       120.0     20.0   -3.035       -3.043       -3.089       -3.111       -3.225    
+  5         0.0       120.0     20.0   -3.035       -3.043       -3.089       -3.111       -3.225    
+  6         0.0       120.0     60.0   0.5474       0.5432       0.5277       0.4763       0.3430    
+
+
+         U Quadrature - Slope Component Survey Data for Line 1180
+         ------------------------------------------------------
+
+             RECEIVER POSITIONS               FREQUENCIES
+         East        North     Elev      1.00        10.00       100.00      1000.00     10000.00
+
+  1         0.0         0.0     20.0  -0.5600E-01  -0.3360E-01  -0.1878      -0.4692       -1.225    
+  2         0.0         0.0     40.0  -0.4110E-01  -0.2620E-01  -0.1460      -0.3679      -0.9782    
+  3         0.0         0.0     60.0  -0.3040E-01  -0.2050E-01  -0.1155      -0.2874      -0.7666    
+  4         0.0       120.0     20.0   -0.000       -0.000      -0.2830E-01  -0.6390E-01  -0.7670E-01
+  5         0.0       120.0     20.0   -0.000       -0.000      -0.2830E-01  -0.6390E-01  -0.7670E-01
+  6         0.0       120.0     60.0   -0.000       -0.000      -0.2680E-01  -0.6120E-01  -0.1323    
+
+
+ =========================================================================
+  BEGIN INVERSION - TITLE = Generate 3 lines of closed loop data over 3 layers for magnetic and electric dipole receivers (Use Leroi!)
+  ---------------
+
+
+  ---------------------------------------------------------------
+  Begin Inversion for Station  1 of Line 1180.  NDATA = 10
+  Maximum iterations = 90   Derivative step =  5 percent.
+
+   0 iterations completed:  RMS error =  200.00 percent.  RSVT =   0.100
+
+  Model Description After  1 Iterations:  RMS error = 177.30  RSVT =  0.050
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      4901.      399.5    399.5       0.082
+    2     0.4272      417.6     18.1      42.449
+    B      503.5    
+
+
+  Model Description After  2 Iterations:  RMS error = 174.30  RSVT =  0.025
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1     0.3100E+05  532.2    532.2       0.017
+    2     0.3983      551.9     19.7      49.440
+    B      503.2    
+
+
+  Model Description After  3 Iterations:  RMS error = 173.43  RSVT =  0.013
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1     0.1606E+06  762.6    762.6       0.005
+    2     0.3793      782.9     20.3      53.520
+    B      503.0    
+
+
+  Model Description After  4 Iterations:  RMS error = 173.21  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1     0.7532E+06 1140.5   1140.5       0.002
+    2     0.3814     1159.1     18.5      48.616
+    B      503.3    
+
+
+  Model Description After  5 Iterations:  RMS error = 173.15  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1     0.3416E+07 1697.3   1697.3       0.000
+    2     0.3868     1714.1     16.8      43.510
+    B      503.6    
+
+
+  Model Description After  6 Iterations:  RMS error = 173.14  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1     0.1543E+08 4720.0   4720.0       0.000
+    2      1.125     4723.6      3.7       3.257
+    B      510.6    
+
+  No further error reduction can occur using a  5 percent derivative step.
+  Test derivative step =  3 percent.
+
+  No significant error reduction during internal iterations.
+  ICNT =  5;  RSVT =    6.400    
+  Inversion terminated
+
+  An alternative starting guess might achieve better results.
+
+
+  ==================================================
+
+  Final Model After  8 Iterations:  RMS error = 173.14
+
+  Layer  Resistivity  Depth  Thickness  Conductance   ResImport   ThkImport
+  -----  -----------  -----  ---------  -----------   ---------   ---------
+    1     0.1543E+08 4720.0   4720.0       0.000        1.00        1.00
+    2      1.125     4723.6      3.7       3.257        0.68        0.71
+    B      510.6                                                    0.15
+
+
+  Data and Misfit Final - (East, North, Elevation) =       0.000    ,      0.000    ,      20.00    
+
+
+         A Inphase (Axial) Component data for Station   1 of Line 1180
+         --------------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:    0.000        0.000        0.000        0.000        0.000    
+  Model data:     0.000        0.000        0.000        0.000        0.000    
+  Misfit (%):      0.0          0.0          0.0          0.0          0.0
+
+
+         A Quadrature (Axial) Component data for Station   1 of Line 1180
+         ------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:    0.000        0.000        0.000        0.000        0.000    
+  Model data:     0.000        0.000        0.000        0.000        0.000    
+  Misfit (%):      0.0          0.0          0.0          0.0          0.0
+
+
+         U Inphase (Slope) Component data for Station   1 of Line 1180
+         --------------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:    10.73        10.79        10.77        10.24        9.175    
+  Model data:    -10.70       -10.70       -10.70       -10.70       -10.70    
+  Misfit (%):    200.0        200.0        200.0        200.0        199.4
+
+
+         U Quadrature (Slope) Component data for Station   1 of Line 1180
+         ------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:  -0.5600E-01  -0.3360E-01  -0.1878      -0.4692       -1.225    
+  Model data:    0.6612E-07   0.2998E-06   0.2944E-05   0.2965E-04   0.5752E-03
+  Misfit (%):   -141.4       -141.4       -141.4       -141.4       -141.5
+
+
+  ---------------------------------------------------------------
+  Begin Inversion for Station  2 of Line 1180.  NDATA = 10
+  Maximum iterations = 90   Derivative step =  5 percent.
+
+   0 iterations completed:  RMS error =  200.00 percent.  RSVT =   0.100
+
+  Model Description After  1 Iterations:  RMS error = 176.40  RSVT =  0.050
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      7380.      354.3    354.3       0.048
+    2     0.4336      369.6     15.4      35.445
+    B      503.7    
+
+
+  Model Description After  2 Iterations:  RMS error = 174.03  RSVT =  0.025
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1     0.4487E+05  509.9    509.9       0.011
+    2     0.3991      527.3     17.4      43.582
+    B      503.1    
+
+
+  Model Description After  3 Iterations:  RMS error = 173.37  RSVT =  0.013
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1     0.2297E+06  653.4    653.4       0.003
+    2     0.3396      679.3     25.8      76.086
+    B      501.6    
+
+
+  Model Description After  4 Iterations:  RMS error = 173.20  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1     0.1083E+07  935.4    935.4       0.001
+    2     0.3277      963.0     27.6      84.157
+    B      501.5    
+
+
+  Model Description After  5 Iterations:  RMS error = 173.16  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1     0.5007E+07 1357.9   1357.9       0.000
+    2     0.3284     1386.5     28.6      87.034
+    B      501.5    
+
+
+  Model Description After  6 Iterations:  RMS error = 173.15  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1     0.2251E+08 6126.0   6126.0       0.000
+    2      86.70     6142.8     16.8       0.194
+    B      501.6    
+
+
+  Model Description After  7 Iterations:  RMS error = 173.14  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1     0.9493E+08 1071.2   1071.2       0.000
+    2      1087.     1075.8      4.7       0.004
+    B     0.6347E-06
+
+  No further error reduction can occur using a  5 percent derivative step.
+  Test derivative step =  3 percent.
+
+  No significant error reduction during internal iterations.
+  ICNT =  5;  RSVT =    6.400    
+  Inversion terminated
+
+  An alternative starting guess might achieve better results.
+
+
+  ==================================================
+
+  Final Model After  9 Iterations:  RMS error = 173.14
+
+  Layer  Resistivity  Depth  Thickness  Conductance   ResImport   ThkImport
+  -----  -----------  -----  ---------  -----------   ---------   ---------
+    1     0.9493E+08 1071.2   1071.2       0.000        1.00        1.00
+    2      1087.     1075.8      4.7       0.004        1.00        0.99
+    B     0.6347E-06                                                0.01
+
+
+  Data and Misfit Final - (East, North, Elevation) =       0.000    ,      0.000    ,      40.00    
+
+
+         A Inphase (Axial) Component data for Station   2 of Line 1180
+         --------------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:    0.000        0.000        0.000        0.000        0.000    
+  Model data:     0.000        0.000        0.000        0.000        0.000    
+  Misfit (%):      0.0          0.0          0.0          0.0          0.0
+
+
+         A Quadrature (Axial) Component data for Station   2 of Line 1180
+         ------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:    0.000        0.000        0.000        0.000        0.000    
+  Model data:     0.000        0.000        0.000        0.000        0.000    
+  Misfit (%):      0.0          0.0          0.0          0.0          0.0
+
+
+         U Inphase (Slope) Component data for Station   2 of Line 1180
+         --------------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:    9.345        9.387        9.391        8.962        8.106    
+  Model data:    -9.323       -9.323       -9.323       -9.323       -9.325    
+  Misfit (%):    200.0        200.0        200.0        200.0        199.5
+
+
+         U Quadrature (Slope) Component data for Station   2 of Line 1180
+         ------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:  -0.4110E-01  -0.2620E-01  -0.1460      -0.3679      -0.9782    
+  Model data:   -0.1179E-06  -0.2227E-06   0.2060E-06   0.3563E-05   0.7192E-04
+  Misfit (%):   -141.4       -141.4       -141.4       -141.4       -141.4
+
+
+  ---------------------------------------------------------------
+  Begin Inversion for Station  3 of Line 1180.  NDATA = 10
+  Maximum iterations = 90   Derivative step =  5 percent.
+
+   0 iterations completed:  RMS error =  200.00 percent.  RSVT =   0.100
+
+  Model Description After  1 Iterations:  RMS error = 176.14  RSVT =  0.050
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      8703.      361.7    361.7       0.042
+    2     0.4354      376.1     14.4      33.000
+    B      503.8    
+
+
+  Model Description After  2 Iterations:  RMS error = 173.96  RSVT =  0.025
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1     0.5277E+05  532.8    532.8       0.010
+    2     0.4003      548.9     16.1      40.181
+    B      503.2    
+
+
+  Model Description After  3 Iterations:  RMS error = 173.35  RSVT =  0.013
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1     0.2708E+06  691.7    691.7       0.003
+    2     0.3439      715.4     23.7      69.036
+    B      501.5    
+
+
+  Model Description After  4 Iterations:  RMS error = 173.20  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1     0.1285E+07 1009.1   1009.1       0.001
+    2     0.3425     1033.3     24.2      70.686
+    B      501.5    
+
+
+  Model Description After  5 Iterations:  RMS error = 173.16  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1     0.6015E+07 1495.6   1495.6       0.000
+    2     0.3704     1519.8     24.2      65.372
+    B      501.5    
+
+
+  Model Description After  6 Iterations:  RMS error = 173.16  RSVT =  0.010
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1     0.2677E+08 4280.8   4280.8       0.000
+    2      10.88     4317.4     36.6       3.363
+    B      500.7    
+
+  No further error reduction can occur using a  5 percent derivative step.
+  Test derivative step =  3 percent.
+
+  Model Description After  8 Iterations:  RMS error = 173.15  RSVT =  1.600
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1     0.2670E+08 4632.5   4632.5       0.000
+    2      10.75     4669.5     37.1       3.449
+    B      499.5    
+
+
+  Predicted residual decrease < 1 percent of RMS error.
+  Inversion terminated
+
+  An alternative starting guess might achieve better results.
+
+
+  ==================================================
+
+  Final Model After  9 Iterations:  RMS error = 173.15
+
+  Layer  Resistivity  Depth  Thickness  Conductance   ResImport   ThkImport
+  -----  -----------  -----  ---------  -----------   ---------   ---------
+    1     0.2670E+08 4632.5   4632.5       0.000        1.00        0.97
+    2      10.75     4669.5     37.1       3.449        0.17        0.17
+    B      499.5                                                    0.03
+
+
+  Data and Misfit Final - (East, North, Elevation) =       0.000    ,      0.000    ,      60.00    
+
+
+         A Inphase (Axial) Component data for Station   3 of Line 1180
+         --------------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:    0.000        0.000        0.000        0.000        0.000    
+  Model data:     0.000        0.000        0.000        0.000        0.000    
+  Misfit (%):      0.0          0.0          0.0          0.0          0.0
+
+
+         A Quadrature (Axial) Component data for Station   3 of Line 1180
+         ------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:    0.000        0.000        0.000        0.000        0.000    
+  Model data:     0.000        0.000        0.000        0.000        0.000    
+  Misfit (%):      0.0          0.0          0.0          0.0          0.0
+
+
+         U Inphase (Slope) Component data for Station   3 of Line 1180
+         --------------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:    7.626        7.652        7.659        7.322        6.648    
+  Model data:    -7.608       -7.608       -7.608       -7.608       -7.609    
+  Misfit (%):    200.0        200.0        200.0        200.0        199.5
+
+
+         U Quadrature (Slope) Component data for Station   3 of Line 1180
+         ------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:  -0.3040E-01  -0.2050E-01  -0.1155      -0.2874      -0.7666    
+  Model data:    0.4852E-07   0.1261E-06   0.1210E-05   0.1220E-04   0.3829E-03
+  Misfit (%):   -141.4       -141.4       -141.4       -141.4       -141.5
+
+
+  ---------------------------------------------------------------
+  Begin Inversion for Station  4 of Line 1180.  NDATA = 17
+  Maximum iterations = 90   Derivative step =  5 percent.
+
+   0 iterations completed:  RMS error =  137.20 percent.  RSVT =   0.100
+  No further error reduction can occur using a  5 percent derivative step.
+  Test derivative step =  3 percent.
+
+  No significant error reduction during internal iterations.
+  ICNT =  5;  RSVT =    6.400    
+  Inversion terminated
+
+  An alternative starting guess might achieve better results.
+
+
+  ==================================================
+
+  Final Model After  2 Iterations:  RMS error = 137.20
+
+  Layer  Resistivity  Depth  Thickness  Conductance   ResImport   ThkImport
+  -----  -----------  -----  ---------  -----------   ---------   ---------
+    1      100.0       35.0     35.0       0.350        1.00        1.00
+    2     0.5000       45.0     10.0      20.000        0.46        0.89
+    B      500.0                                                    0.00
+
+
+  Data and Misfit Final - (East, North, Elevation) =       0.000    ,      120.0    ,      20.00    
+
+
+         A Inphase (Axial) Component data for Station   4 of Line 1180
+         --------------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:   -5.257       -5.270       -5.350       -5.388       -5.585    
+  Model data:    -5.254       -5.267       -5.347       -5.386       -5.583    
+  Misfit (%):     -0.1         -0.1         -0.1         -0.0         -0.0
+
+
+         A Quadrature (Axial) Component data for Station   4 of Line 1180
+         ------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:  -0.1230E-01   -0.000      -0.4900E-01  -0.1106      -0.1328    
+  Model data:   -0.1218E-01  -0.6170E-02  -0.4968E-01  -0.1105      -0.1330    
+  Misfit (%):     -1.0          0.0          1.4         -0.1          0.1
+
+
+         U Inphase (Slope) Component data for Station   4 of Line 1180
+         --------------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:   -3.035       -3.043       -3.089       -3.111       -3.225    
+  Model data:     3.034        3.041        3.087        3.110        3.223    
+  Misfit (%):   -200.0       -200.0       -200.0       -200.0       -200.0
+
+
+         U Quadrature (Slope) Component data for Station   4 of Line 1180
+         ------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:   -0.000       -0.000      -0.2830E-01  -0.6390E-01  -0.7670E-01
+  Model data:    0.7033E-02   0.3562E-02   0.2869E-01   0.6382E-01   0.7679E-01
+  Misfit (%):      0.0          0.0       -200.0       -200.0       -200.0
+
+
+  ---------------------------------------------------------------
+  Begin Inversion for Station  5 of Line 1180.  NDATA = 17
+  Maximum iterations = 90   Derivative step =  5 percent.
+
+   0 iterations completed:  RMS error =  137.20 percent.  RSVT =   0.100
+  No further error reduction can occur using a  5 percent derivative step.
+  Test derivative step =  3 percent.
+
+  No significant error reduction during internal iterations.
+  ICNT =  5;  RSVT =    6.400    
+  Inversion terminated
+
+  An alternative starting guess might achieve better results.
+
+
+  ==================================================
+
+  Final Model After  2 Iterations:  RMS error = 137.20
+
+  Layer  Resistivity  Depth  Thickness  Conductance   ResImport   ThkImport
+  -----  -----------  -----  ---------  -----------   ---------   ---------
+    1      100.0       35.0     35.0       0.350        1.00        1.00
+    2     0.5000       45.0     10.0      20.000        0.46        0.89
+    B      500.0                                                    0.00
+
+
+  Data and Misfit Final - (East, North, Elevation) =       0.000    ,      120.0    ,      20.00    
+
+
+         A Inphase (Axial) Component data for Station   5 of Line 1180
+         --------------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:   -5.257       -5.270       -5.350       -5.388       -5.585    
+  Model data:    -5.254       -5.267       -5.347       -5.386       -5.583    
+  Misfit (%):     -0.1         -0.1         -0.1         -0.0         -0.0
+
+
+         A Quadrature (Axial) Component data for Station   5 of Line 1180
+         ------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:  -0.1230E-01   -0.000      -0.4900E-01  -0.1106      -0.1328    
+  Model data:   -0.1218E-01  -0.6170E-02  -0.4968E-01  -0.1105      -0.1330    
+  Misfit (%):     -1.0          0.0          1.4         -0.1          0.1
+
+
+         U Inphase (Slope) Component data for Station   5 of Line 1180
+         --------------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:   -3.035       -3.043       -3.089       -3.111       -3.225    
+  Model data:     3.034        3.041        3.087        3.110        3.223    
+  Misfit (%):   -200.0       -200.0       -200.0       -200.0       -200.0
+
+
+         U Quadrature (Slope) Component data for Station   5 of Line 1180
+         ------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:   -0.000       -0.000      -0.2830E-01  -0.6390E-01  -0.7670E-01
+  Model data:    0.7033E-02   0.3562E-02   0.2869E-01   0.6382E-01   0.7679E-01
+  Misfit (%):      0.0          0.0       -200.0       -200.0       -200.0
+
+
+  ---------------------------------------------------------------
+  Begin Inversion for Station  6 of Line 1180.  NDATA = 16
+  Maximum iterations = 90   Derivative step =  5 percent.
+
+   0 iterations completed:  RMS error =  141.42 percent.  RSVT =   0.100
+
+  Model Description After  1 Iterations:  RMS error = 141.42  RSVT =  0.050
+
+  Layer  Resistivity  Depth  Thickness  Conductance
+  -----  -----------  -----  ---------  -----------
+    1      457.6      131.0    131.0       0.286
+    2     0.4977      141.4     10.4      20.919
+    B      500.0    
+
+  No further error reduction can occur using a  5 percent derivative step.
+  Test derivative step =  3 percent.
+
+  No significant error reduction during internal iterations.
+  ICNT =  5;  RSVT =    6.400    
+  Inversion terminated
+
+  An alternative starting guess might achieve better results.
+
+
+  ==================================================
+
+  Final Model After  3 Iterations:  RMS error = 141.42
+
+  Layer  Resistivity  Depth  Thickness  Conductance   ResImport   ThkImport
+  -----  -----------  -----  ---------  -----------   ---------   ---------
+    1      457.6      131.0    131.0       0.286        1.00        1.00
+    2     0.4977      141.4     10.4      20.919        0.01        0.00
+    B      500.0                                                    0.00
+
+
+  Data and Misfit Final - (East, North, Elevation) =       0.000    ,      120.0    ,      60.00    
+
+
+         A Inphase (Axial) Component data for Station   6 of Line 1180
+         --------------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:   0.9482       0.9408       0.9140       0.8249       0.5941    
+  Model data:    0.9408       0.9400       0.9303       0.8904       0.7714    
+  Misfit (%):      0.8          0.1         -1.8         -7.6        -25.7
+
+
+         A Quadrature (Axial) Component data for Station   6 of Line 1180
+         ------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:   -0.000       -0.000      -0.4640E-01  -0.1060      -0.2291    
+  Model data:   -0.2079E-02  -0.3259E-02  -0.1797E-01  -0.5339E-01  -0.1392    
+  Misfit (%):      0.0          0.0        -80.8        -62.7        -47.4
+
+
+         U Inphase (Slope) Component data for Station   6 of Line 1180
+         --------------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:   0.5474       0.5432       0.5277       0.4763       0.3430    
+  Model data:   -0.5432      -0.5427      -0.5371      -0.5141      -0.4453    
+  Misfit (%):    200.0        200.0        200.0        199.9        198.3
+
+
+         U Quadrature (Slope) Component data for Station   6 of Line 1180
+         ------------------------------------------------------
+  Frequencies      1.0         10.0        100.0       1000.0      10000.0
+
+  Survey data:   -0.000       -0.000      -0.2680E-01  -0.6120E-01  -0.1323    
+  Model data:    0.1200E-02   0.1881E-02   0.1037E-01   0.3082E-01   0.8036E-01
+  Misfit (%):      0.0          0.0       -182.9       -189.9       -194.3
+
+  Beowulf inversion run completed at 15:22:23 on 14/01/2020 using         0.58 secs
+

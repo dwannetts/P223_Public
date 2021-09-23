@@ -1,0 +1,197 @@
+
+
+  Airbeo task started at 13:50 on 22 NOV 2012
+
+
+
+      ######################################################################
+      #                                                                    #
+      #                 Airbeo - Version 4.7.0     16 March 2007           #        
+      #                 ---------------------------------------            #        
+      #                                                                    #
+      #      Develped by:  CSIRO Electromagnetic Modelling Group           #
+      #                    Art Raiche, Fred Sugeng & Glenn Wilson          #
+      #                                                                    #
+      #              For:  AMIRA project P223F                             #
+      #                                                                    #
+      ######################################################################
+
+          INPUT DATA
+          ----------
+
+ Forward model used to generate inversion data for Spectrem                                                              
+ 1 0 1 0           ! TDFD, DO1D, PRFL, ISTOP                                                                             
+ 1 4 1 1 8 1 0     ! ISW, NSX, STEP, UNITS, NCHNL, KRXW, OFFTIME                                                         
+ 0 0                                                                                                                     
+ 0.0001 -1000                                                                                                            
+ 6.8999 -1000                                                                                                            
+ 6.9 0             ! TXON, WAVEFORM(4)                                                                                   
+ 0.026 0.026                                                                                                             
+ 0.052 0.078                                                                                                             
+ 0.104 0.182                                                                                                             
+ 0.208 0.391                                                                                                             
+ 0.417 0.807                                                                                                             
+ 0.833 1.641                                                                                                             
+ 1.667 3.307                                                                                                             
+ 3.333 6.641            ! TOPN, TCLS(8)                                                                                  
+ 2 2 123                ! TXCLN, CMP, KPPM                                                                               
+ 3		       ! NPPF: ppm output                                                                                            
+ 400 1                  ! TXAREA NTRN                                                                                    
+ 36 123 0               ! ZRX, XRX, YRX(1)                                                                               
+ 5 2 0 1                   ! NSTAT, SURVEY, BAROMTRC, LINE_TAG                                                           
+ 4000 6025 7900 105                                                                                                      
+ 4000 6050 7900 115                                                                                                      
+ 4000 6075 7900 120                                                                                                      
+ 4000 6100 7900 112                                                                                                      
+ 4000 6125 7900 105     ! EAST, NORTH, ALT(41)                                                                           
+ 3 1 3 0                ! NLAYER, QLYR, NLITH, GND_LEVEL                                                                 
+ 100 -1 1 1 0 0 0      ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(1) - overburden                                        
+ 0.5 -1 1 1 0 0 0      ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(2) - conductive layer                                  
+ 500 -1 1 1 0 0 0      ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(3) - basement                                          
+ 1 35                  ! LITH(1), THK(1)                                                                                 
+ 2 10		      ! LITH(2), THK(2)                                                                                           
+ 3		      ! Basement                                                                                                     
+                                                                                                                         
+-------------------------------------------------------------------------------
+
+ Forward model used to generate inversion data for Spectrem
+
+  TDFD =  1   DO1D =  0   PRFL =  1    ISTOP = 0
+  ISW =   1   NSX =   4   STEP = 1    UNITS =   1  NCHNL =   8
+  KRXW =  1   OFFTYM =   0.000    
+
+
+         +----------------------------------------------
+         +    Time-Domain AEM Step System Input Data    
+         +        B output will be in nT
+         +----------------------------------------------
+
+
+                          Transmitter current
+           TXON (ms)      waveform in amps
+           ---------      -----------------
+
+      1        0.000         0.000    
+      2        0.000        -1000.    
+      3        6.900        -1000.    
+      4        6.900         0.000    
+
+         Receiver Window Specifications (ms)
+         -----------------------------------
+
+       Window     Open        Close      Width      Centre
+       ------     ----        -----      -----      ------
+          1       0.026       0.026      0.000       0.026
+          2       0.052       0.078      0.026       0.065
+          3       0.104       0.182      0.078       0.143
+          4       0.208       0.391      0.183       0.299
+          5       0.417       0.807      0.390       0.612
+          6       0.833       1.641      0.808       1.237
+          7       1.667       3.307      1.640       2.487
+          8       3.333       6.641      3.308       4.987
+
+  CMP =  2    KPPM = 123
+  Inclination angle of transmitter in level flight =  2.0 degrees (front up)
+
+  Tx area =     400 m^2;    NTRN = 1
+
+  Initial Rx offset relative to Tx:   36.0 Below,  123.0 Behind,   0.0 Left
+
+
+  NSTAT =   5   SURVEY = 2   BAROMTRC = 0   LINE_TAG = 1
+
+        5 transmitter positions along the flight path
+
+     Line   Stat     East       North       Alt      Bearing    Pitch   ZRX    XRX      YRX
+     ----   ----     ----       -----       ---      -------    -----   ---    ---      ---
+
+     4000     1      6025.0      7900.0     105.0      90.0      0.0    36.0   123.0     0.0
+     4000     2      6050.0      7900.0     115.0      90.0      0.0    36.0   123.0     0.0
+     4000     3      6075.0      7900.0     120.0      90.0      0.0    36.0   123.0     0.0
+     4000     4      6100.0      7900.0     112.0      90.0      0.0    36.0   123.0     0.0
+     4000     5      6125.0      7900.0     105.0      90.0      0.0    36.0   123.0     0.0
+
+
+  NLAYER =  3;   NLITH =  3;   GND_LVL =    0.00
+
+
+                          LITHOLOGY PROPERTIES
+                          --------------------
+
+                                  Relative   Relative     Cole-Cole Parameters
+        Resistivity  Conductance     MU     Dielectric   CHRG    CTAU       CFREQ
+
+   1      100.0         -1.0       1.000      1.000      0.00    0.00        0.00
+   2     0.5000         -1.0       1.000      1.000      0.00    0.00        0.00
+   3      500.0         -1.0       1.000      1.000      0.00    0.00        0.00
+
+
+  LAYERED EARTH INPUT DATA
+  ------------------------
+
+   1   1   35.0   J, LITH(J), THK(J)
+   2   2   10.0   J, LITH(J), THK(J)
+   3   3             Basement Lithology
+
+
+        Model Description
+        =================
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      100.0       35.0     35.0     0.3500    
+   2     0.5000       45.0     10.0      20.00    
+   3      500.0    
+
+
+  TIME-DOMAIN Airbeo OUTPUT
+  ----------------------------
+
+  The IN-LINE component is defined as the horizontal component along
+  the flight path.  It is positive in the forward flight direction.
+
+                     Vertical primary =  -15.03     nT  
+                      In-line primary =  -14.19     nT  
+                   Transverse primary =   0.000     nT  
+                        Total primary =   20.67     nT  
+
+  Each component is normalised to its corresponding primary field
+
+  The receiver is  36.0 metres below and 123.0 metres behind the transmitter.  
+
+
+ TITLE:  Forward model used to generate inversion data for Spectrem
+ -----
+
+          VERTICAL COMPONENT - ppm
+
+         TRANSMITTER POSITION      CHNL 1       CHNL 2       CHNL 3       CHNL 4       CHNL 5       CHNL 6       CHNL 7       CHNL 8 
+         EAST     NORTH    ALT     0.026        0.065        0.143        0.299        0.612        1.237        2.487        4.987
+
+  1      6025      7900    105    0.1629E+06   0.1563E+06   0.1489E+06   0.1362E+06   0.1141E+06   0.8110E+05   0.4393E+05   0.1648E+05
+  2      6050      7900    115    0.1414E+06   0.1356E+06   0.1291E+06   0.1181E+06   0.9909E+05   0.7090E+05   0.3904E+05   0.1502E+05
+  3      6075      7900    120    0.1316E+06   0.1262E+06   0.1202E+06   0.1100E+06   0.9241E+05   0.6637E+05   0.3684E+05   0.1436E+05
+  4      6100      7900    112    0.1475E+06   0.1415E+06   0.1348E+06   0.1233E+06   0.1034E+06   0.7379E+05   0.4043E+05   0.1544E+05
+  5      6125      7900    105    0.1629E+06   0.1563E+06   0.1489E+06   0.1362E+06   0.1141E+06   0.8110E+05   0.4393E+05   0.1648E+05
+-------------------------------------------------------------------------------------
+
+
+          IN-LINE COMPONENT - ppm
+
+         TRANSMITTER POSITION      CHNL 1       CHNL 2       CHNL 3       CHNL 4       CHNL 5       CHNL 6       CHNL 7       CHNL 8 
+         EAST     NORTH    ALT     0.026        0.065        0.143        0.299        0.612        1.237        2.487        4.987
+
+  1      6025      7900    105    0.1566E+06   0.1466E+06   0.1350E+06   0.1164E+06   0.8779E+05   0.5261E+05   0.2220E+05    5973.    
+  2      6050      7900    115    0.1235E+06   0.1159E+06   0.1071E+06   0.9287E+05   0.7087E+05   0.4334E+05   0.1887E+05    5279.    
+  3      6075      7900    120    0.1101E+06   0.1034E+06   0.9574E+05   0.8325E+05   0.6387E+05   0.3944E+05   0.1743E+05    4969.    
+  4      6100      7900    112    0.1325E+06   0.1242E+06   0.1147E+06   0.9928E+05   0.7550E+05   0.4590E+05   0.1980E+05    5476.    
+  5      6125      7900    105    0.1566E+06   0.1466E+06   0.1350E+06   0.1164E+06   0.8779E+05   0.5261E+05   0.2220E+05    5973.    
+-------------------------------------------------------------------------------------
+
+
+
+  Airbeo forward model completed at 13:50 on 22 NOV 2012
+
+  Computation time =       0.02 seconds.
+
+

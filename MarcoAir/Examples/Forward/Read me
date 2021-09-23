@@ -1,0 +1,15 @@
+==========================================================================
+
+		Read me
+
+Files in this directory are part of the LeroiAir test suite.
+
+Input files (*.cfl) model particular systems over the same model, which is
+a 10 S vertical target 75 m below the surface of a 50 m thick 100 ohm m
+regolith.
+
+All examples can be run using the shell script 'run.sh'.
+
+Results can be checked using the shell script 'verify.sh'.
+
+==========================================================================

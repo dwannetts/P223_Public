@@ -1,0 +1,11 @@
+<map id="egtrx_boss" name="egtrx_boss">
+<area shape="rect" id="node2" href="$Leroi_8f90.html#a8e7ce2c7dc3e5ee45a8adefc6e6bba97" title="set_kfg" alt="" coords="149,5,214,32"/>
+<area shape="rect" id="node3" href="$Leroi_8f90.html#a10fd9ada0ec15151a8112666c09a245d" title="egtrx_cspl" alt="" coords="140,56,223,83"/>
+<area shape="rect" id="node9" href="$Leroi_8f90.html#a8ec0c93946d1a3d78ce1cabd3de6558d" title="rplt2xyz" alt="" coords="147,107,215,133"/>
+<area shape="rect" id="node10" href="$Leroi_8f90.html#a6bbebe0c58cc288fcd56628de8860916" title="egtrx_dir" alt="" coords="145,157,217,184"/>
+<area shape="rect" id="node4" href="$Leroi_8f90.html#a5489646b1d19d3a2a814c56265bd78fb" title="egtrx_hnk" alt="" coords="271,31,349,57"/>
+<area shape="rect" id="node8" href="$Leroi_8f90.html#a836d1cb8acb3544a3a9fa63433efc1b6" title="cubspl" alt="" coords="280,81,340,108"/>
+<area shape="rect" id="node5" href="$Leroi_8f90.html#aed79c3eb3332f2cd1b4c25c6c825e360" title="egtrx_ker" alt="" coords="397,31,473,57"/>
+<area shape="rect" id="node6" href="$Leroi_8f90.html#a2ffa10f72b064e2c52fb28da1b335098" title="edsx_coef" alt="" coords="521,31,604,57"/>
+<area shape="rect" id="node7" href="$Leroi_8f90.html#a58ae4aba68186ebcf3cfb74fa1361584" title="propagate" alt="" coords="652,31,731,57"/>
+</map>

@@ -1,0 +1,117 @@
+25 Hz EM37 Central loop over sulphide and halo model
+1 1 0 0            ! TDFD, PRFL, STEP, ISTOP
+1 4 8 20 -1        ! DO3D, NSX, OFFTIME, NCHNL, KRXW
+8.                 ! Reference time for windows
+0 0
+0.1 1
+7.9 1
+8 0                ! TXON, TXAMP(4)
+0.08 0.097
+0.097 0.121
+0.1215 0.1585
+0.1585 0.1955
+0.1955 0.2445
+0.244 0.316
+0.3165 0.3935
+0.3835 0.4825
+0.492 0.634
+0.634 0.79
+0.79 0.962
+0.962 1.212
+1.211 1.589
+1.5885 1.9555
+2.01 2.41
+2.46 3.18
+3.18 3.96
+3.96 4.96
+4.957 6.377
+6.38 7.94          ! TOPN, TCLS(20)
+1 3 10 0           ! SOURCE_TYPE, SURVEY_TYPE, NTX, NRXG
+4                  ! N_VRTX(1)
+550 1050 0
+650 1050 0
+650 950 0
+550 950 0          ! SXE, SXN, SXZ(1,4)
+4                  ! N_VRTX(2)
+650 1050 0
+750 1050 0
+750 950 0
+650 950 0          ! SXE, SXN, SXZ(2,4)
+4                  ! N_VRTX(3)
+750 1050 0
+850 1050 0
+850 950 0
+750 950 0          ! SXE, SXN, SXZ(3,4)
+4                  ! N_VRTX(4)
+850 1050 0
+950 1050 0
+950 950 0
+850 950 0          ! SXE, SXN, SXZ(4,4)
+4                  ! N_VRTX(5)
+950 1050 0
+1050 1050 0
+1050 950 0
+950 950 0          ! SXE, SXN, SXZ(5,4)
+4                  ! N_VRTX(6)
+550 850 0
+650 850 0
+650 750 0
+550 750 0          ! SXE, SXN, SXZ(6,4)
+4                  ! N_VRTX(7)
+650 850 0
+750 850 0
+750 750 0
+650 750 0          ! SXE, SXN, SXZ(7,4)
+4                  ! N_VRTX(8)
+750 850 0
+850 850 0
+850 750 0
+750 750 0          ! SXE, SXN, SXZ(8,4)
+4                  ! N_VRTX(9)
+850 850 0
+950 850 0
+950 750 0
+850 750 0          ! SXE, SXN, SXZ(9,4)
+4                  ! N_VRTX(10)
+950 850 0
+1050 850 0
+1050 750 0
+950 750 0                    ! SXE, SXN, SXZ(10,4)
+0 0 0 1 1 1                  ! RXOE, RXON, RXOZ, RXMNT, CMP, UNITS
+4 5 15 0                     ! NLAYER, NPRISM, NLITH, GND_LEVEL
+1000 -1 1 1 0 0 0            ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(1) - Basement
+2000 -1 1 1 0 0 0            ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(2) - Sand
+10000 -1 1.2 1 0 0 0         ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(3) - E4
+80 -1 1.01 1.2 0 0 0         ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(4) - Siltstone
+50 -1 1 1 0.3 0.001 0.42     ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(5) - Clay
+200 -1 1 1 0 0 0             ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(6) - kimberlite
+1 200 1 1 0 0 0              ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(7) - E0
+-1 120 1 1 0.4 0.003 0.22    ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(8) - Plate 2
+0.1 -1 1 1 0 0 1             ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(9) - sulfide
+10 -1 1 1 0 0 1              ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(10) - halo
+250 -1 1 1 0 0 1             ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(11) - host1
+1400 -1 1 1 0 0 1            ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(12) - host2
+20 -1 1 1 0 0 1              ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(13) - lyr1
+300 -1 1 1 0 0 1             ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(14) - lyr2
+1 -1 1 1 0 0 1               ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(15) - conductor1
+2 10                         ! LITHL[Sand], THICK(1)
+5 20                         ! LITHL[Clay], THICK(2)
+13 60                        ! LITHL[lyr1], THICK(3)
+11                           ! LITHL[host1] (4)
+2 1 10                       ! KACC, SOLVER, OUTPUT
+9 1000 1000 -60              ! LITHP[sulfide], PRISM_EAST, PRISM_NORTH, PRISM_TOP(1)
+60 60 100                    ! PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z(1)
+25 25 25                     ! CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z(1)
+10 1000 1060 -60             ! LITHP[halo], PRISM_EAST, PRISM_NORTH, PRISM_TOP(2)
+180 60 100                   ! PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z(2)
+25 25 25                     ! CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z(2)
+10 1000 940 -60              ! LITHP[halo], PRISM_EAST, PRISM_NORTH, PRISM_TOP(3)
+180 60 100                   ! PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z(3)
+25 25 25                     ! CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z(3)
+10 940 1000 -60              ! LITHP[halo], PRISM_EAST, PRISM_NORTH, PRISM_TOP(4)
+60 60 100                    ! PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z(4)
+25 25 25                     ! CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z(4)
+10 1060 1000 -60             ! LITHP[halo], PRISM_EAST, PRISM_NORTH, PRISM_TOP(5)
+60 60 100                    ! PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z(5)
+25 25 25                     ! CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z(5)
+! END

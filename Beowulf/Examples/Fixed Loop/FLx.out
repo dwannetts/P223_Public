@@ -1,0 +1,236 @@
+
+            Beowulf task started at 16:17 on 07 JAN 2013
+
+      ######################################################################
+      #                                                                    #
+      #                 Beowulf - Version 1.0.4   01 January, 2012         #        
+      #                 ----------------------------------------           #        
+      #                                                                    #
+      #      Develped by:  CSIRO Electromagnetic Modelling Group           #
+      #                    Art Raiche, Fred Sugeng & Glenn Wilson          #
+      #                                                                    #
+      #              For:  AMIRA project P223F                             #
+      #                                                                    #
+      ######################################################################
+
+-------------------------------------------------------------------------------
+
+  TDFD = 1;   ISYS = 0;   ISTOP = 0
+
+          +-----------------------------------------+
+          +  Time-Domain Ground System Information  +
+          +-----------------------------------------+
+
+  STEP = 0;   NSX =   4;   NCHNL =  20;   KRXW = 2;   REFTYM =   30.00    ;   OFFTYM =   30.00    
+
+
+             TXON (ms)    Transmitter current (amps)
+             ---------    --------------------------
+
+      1        0.000         0.000    
+      2        0.400         10.00    
+      3       29.600         10.00    
+      4       30.000         0.000    
+
+
+         Receiver channel origin INPUT is shifted by   30.000 ms from signal origin.
+
+         Receiver Window Specifications (ms - referenced to signal origin)
+         ----------------------------------------------------------------
+
+                                                             Referenced
+       Window     Open       Close       Width     Centre      Centre
+       ------     ----       -----       -----     ------      ------
+          1      30.315      30.659      0.344      30.487      0.487
+          2      30.707      31.051      0.344      30.879      0.879
+          3      31.099      31.443      0.344      31.271      1.271
+          4      31.491      31.835      0.344      31.663      1.663
+          5      31.883      32.227      0.344      32.055      2.055
+          6      32.275      33.011      0.736      32.643      2.643
+          7      33.059      33.795      0.736      33.427      3.427
+          8      33.843      34.579      0.736      34.211      4.211
+          9      34.627      35.363      0.736      34.995      4.995
+         10      35.411      36.147      0.736      35.779      5.779
+         11      36.195      37.715      1.520      36.955      6.955
+         12      37.763      39.283      1.520      38.523      8.523
+         13      39.331      40.851      1.520      40.091     10.091
+         14      40.899      42.419      1.520      41.659     11.659
+         15      42.467      43.987      1.520      43.227     13.227
+         16      44.035      47.123      3.088      45.579     15.579
+         17      47.171      50.259      3.088      48.715     18.715
+         18      50.307      53.395      3.088      51.851     21.851
+         19      53.443      56.531      3.088      54.987     24.987
+         20      56.579      59.667      3.088      58.123     28.123
+
+
+  SURVEY_TYPE = 1
+
+  NLINES =  2;   MRXL =   6;   NTX =  1;   SOURCE_TYPE = 1;   MXVRTX = 6;   NTRN =  1
+
+  Vertex Locations for Loop Sources
+  ---------------------------------
+
+  Transmitter  1 has  4 vertices:
+
+            Easting      Northing      Elevation
+            -------      --------      ---------
+    1       -100.00        100.00          0.00
+    2        100.00        100.00          0.00
+    3        100.00       -100.00          0.00
+    4       -100.00       -100.00          0.00
+
+
+  Line     1040;   Tx Index  1;   Rx Type = 1;   NRX =  3;   Units =  3
+
+        CMP =   1;   KNORM = 0;   IPLT = 1;   IDH = 0;   SV_AZM =    0.0;   RXMNT =   1000.    
+
+          Magnetic Dipole Receivers
+          -------------------------
+
+         Easting     Northing   Elevation
+         -------     --------   ---------
+   1         0.0        70.0         0.0
+   2         0.0       130.0         0.0
+   3         0.0       200.0         0.0
+
+
+  Line     1180;   Tx Index  1;   Rx Type = 1;   NRX =  6;   Units =  3
+
+        CMP =   1;   KNORM = 0;   IPLT = 1;   IDH = 1;   SV_AZM =    0.0;   RXMNT =   1000.    
+
+          Magnetic Dipole Receivers
+          -------------------------
+
+         Easting     Northing   Elevation    Dip    Azimuth
+         -------     --------   ---------    ---    -------
+   1         0.0         0.0        20.0      0.0      0.0
+   2         0.0         0.0        40.0      0.0      0.0
+   3         0.0         0.0        60.0      0.0      0.0
+   4         0.0       120.0        20.0     60.0      0.0
+   5         0.0       120.0        20.0     60.0      0.0
+   6         0.0       120.0        60.0     60.0      0.0
+
+
+  NLAYER =  3;   NLITH =  3
+
+
+                          LITHOLOGY PROPERTIES
+                          --------------------
+
+                      Relative   Relative     Cole-Cole Parameters
+        Resistivity      S   MU   EP   Dielectric    CHRG      CTAU   CFREQ
+
+   1    100.00       -1.0000        1.0000        1.0000        0.0000        0.0000        0.0000    
+   2    10.000       -1.0000        1.0000        1.0000        0.0000        0.0000        0.0000    
+   3    1000.0       -1.0000        1.0000        1.0000        0.0000        0.0000        1.0000    
+
+
+  LAYERED EARTH INPUT DATA
+  ------------------------
+
+   1   1   50.0   J, LITHL(J), THK(J)
+   2   2   50.0   J, LITHL(J), THK(J)
+   3   1             Basement Lithology
+
+
+  Before computation begins, Beowulf may transform array and model coordinates
+  from GPS coordimnates where elevation increases positive upwards to a
+  body-centred system where depth increases positive downwards.
+  In this system, the dip of magnetic dipole transmitters and receivers
+  = 0 for vertical dipoles and 90 for horizontal dipoles.
+
+  The computational horizontal origin remains unchanged.
+
+  Transformed transmitter and receiver locations for Line   1040
+  Survey aximuth =   0.degrees clockwise from North.
+
+  Transformed Vertex Locations for Loop Sources
+  ---------------------------------------------
+
+      Transmitter  1 has  4 vertices.
+
+         Easting   Northing
+
+    1    -100.00     100.00       0.00
+    2     100.00     100.00       0.00
+    3     100.00    -100.00       0.00
+    4    -100.00    -100.00       0.00
+
+
+  Transformed Locations for Magnetic Dipole Receivers in Line   1040
+  ------------------------------------------------------------------
+
+        Easting   Northing      Depth   Moment
+        -------   --------      -----   ------
+   1       0.00      70.00       0.00   1000.    
+   2       0.00     130.00       0.00   1000.    
+   3       0.00     200.00       0.00   1000.    
+
+  Transformed transmitter and receiver locations for Line   1180
+  Survey aximuth =   0.degrees clockwise from North.
+
+  Transformed Vertex Locations for Loop Sources
+  ---------------------------------------------
+
+      Transmitter  1 has  4 vertices.
+
+         Easting   Northing
+
+    1    -100.00     100.00       0.00
+    2     100.00     100.00       0.00
+    3     100.00    -100.00       0.00
+    4    -100.00    -100.00       0.00
+
+
+  Transformed Locations for Magnetic Dipole Receivers in Line   1180
+  ------------------------------------------------------------------
+
+        Easting   Northing      Depth   Moment
+        -------   --------      -----   ------
+   1       0.00       0.00     -20.00   1000.    
+   2       0.00       0.00     -40.00   1000.    
+   3       0.00       0.00     -60.00   1000.    
+   4       0.00     120.00     -20.00   1000.    
+   5       0.00     120.00     -20.00   1000.    
+   6       0.00     120.00     -60.00   1000.    
+
+
+  Plot points for receivers on Line   1040
+
+            East        North     Elev
+            ----        -----     ----
+
+   1          0.0         70.0      0.0
+   2          0.0        130.0      0.0
+   3          0.0        200.0      0.0
+
+
+  Plot points for receivers on Line   1180
+
+            East        North     Elev
+            ----        -----     ----
+
+   1          0.0          0.0     20.0
+   2          0.0          0.0     40.0
+   3          0.0          0.0     60.0
+   4          0.0        120.0     20.0
+   5          0.0        120.0     20.0
+   6          0.0        120.0     60.0
+
+
+          +------------------------------------------+
+          +  Initial Layered Earth Model Parameters  +
+          +------------------------------------------+
+
+                    Depth
+ Layer  Thickness   to Top    Resistivity   MU-R   EPS-R   CHRG    CFREQ    CTAU
+ -----  ---------   ------    -----------   ----   -----   ----    -----    ----
+   1       50.0        0.0      100.0       1.00   1.00    0.00    1.00      0.0    
+   2       50.0       50.0      10.00       1.00   1.00    0.00    1.00      0.0    
+   3                 100.0      100.0       1.00   1.00    0.00    1.00      0.0    
+
+
+
+---------------------------------------------------------------------------
+                       END OF INPUT DATA DESCRIPTION
+---------------------------------------------------------------------------

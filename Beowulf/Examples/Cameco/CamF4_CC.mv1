@@ -1,0 +1,1963 @@
+/ 0100        File version number
+/ PROGRAM_NAME: Beowulf - Version 1.0.4   01 January, 2012                  
+/ TITLE: 3 Moving Loop lines, each with 3 receivers - Model: 4 layers
+/ Time-Domain Survey_Type = MOVING_LOOP    Source_Type = CLOSED_LOOP
+/ NCH=020    REFTYM(ms)=   8.533    
+/ TIMES(ms)=       0.8810E-01   0.1069       0.1313       0.1619       0.2006       0.2506       0.3144       0.3956       0.4994       0.6313       0.7994        1.014        1.287        1.636        2.081        2.648        3.373        4.297        5.475        6.978    
+/ CHNL_WDTH(ms)=   0.1620E-01   0.2130E-01   0.2750E-01   0.3370E-01   0.4380E-01   0.5620E-01   0.7130E-01   0.9120E-01   0.1163       0.1475       0.1888       0.2400       0.3063       0.3913       0.4988       0.6363       0.8125        1.036        1.321        1.685    
+/ NSTAT =  36   NLINES =  9
+/ LINE_HEADER    STATION    LINE_ID 1000    HID: 110    NCTD: 1
+/ Data_Type  EAST  NORTH  ELEV    CHZ001  CHZ002  CHZ003  CHZ004  CHZ005  CHZ006  CHZ007  CHZ008  CHZ009  CHZ010  CHZ011  CHZ012  CHZ013  CHZ014  CHZ015  CHZ016  CHZ017  CHZ018  CHZ019  CHZ020
+/ LINE_HEADER    STATION    LINE_ID 1100    HID: 110    NCTD: 2
+/ Data_Type  EAST  NORTH  ELEV    CHX001  CHX002  CHX003  CHX004  CHX005  CHX006  CHX007  CHX008  CHX009  CHX010  CHX011  CHX012  CHX013  CHX014  CHX015  CHX016  CHX017  CHX018  CHX019  CHX020  CHZ001  CHZ002  CHZ003  CHZ004  CHZ005  CHZ006  CHZ007  CHZ008  CHZ009  CHZ010  CHZ011  CHZ012  CHZ013  CHZ014  CHZ015  CHZ016  CHZ017  CHZ018  CHZ019  CHZ020
+/ LINE_HEADER    STATION    LINE_ID 1150    HID: 110    NCTD: 2
+/ Data_Type  EAST  NORTH  ELEV    CHX001  CHX002  CHX003  CHX004  CHX005  CHX006  CHX007  CHX008  CHX009  CHX010  CHX011  CHX012  CHX013  CHX014  CHX015  CHX016  CHX017  CHX018  CHX019  CHX020  CHZ001  CHZ002  CHZ003  CHZ004  CHZ005  CHZ006  CHZ007  CHZ008  CHZ009  CHZ010  CHZ011  CHZ012  CHZ013  CHZ014  CHZ015  CHZ016  CHZ017  CHZ018  CHZ019  CHZ020
+/ LINE_HEADER    STATION    LINE_ID 2000    HID: 110    NCTD: 1
+/ Data_Type  EAST  NORTH  ELEV    CHZ001  CHZ002  CHZ003  CHZ004  CHZ005  CHZ006  CHZ007  CHZ008  CHZ009  CHZ010  CHZ011  CHZ012  CHZ013  CHZ014  CHZ015  CHZ016  CHZ017  CHZ018  CHZ019  CHZ020
+/ LINE_HEADER    STATION    LINE_ID 2110    HID: 110    NCTD: 1
+/ Data_Type  EAST  NORTH  ELEV    CHZ001  CHZ002  CHZ003  CHZ004  CHZ005  CHZ006  CHZ007  CHZ008  CHZ009  CHZ010  CHZ011  CHZ012  CHZ013  CHZ014  CHZ015  CHZ016  CHZ017  CHZ018  CHZ019  CHZ020
+/ LINE_HEADER    STATION    LINE_ID 2150    HID: 110    NCTD: 1
+/ Data_Type  EAST  NORTH  ELEV    CHZ001  CHZ002  CHZ003  CHZ004  CHZ005  CHZ006  CHZ007  CHZ008  CHZ009  CHZ010  CHZ011  CHZ012  CHZ013  CHZ014  CHZ015  CHZ016  CHZ017  CHZ018  CHZ019  CHZ020
+/ LINE_HEADER    STATION    LINE_ID 3000    HID: 110    NCTD: 1
+/ Data_Type  EAST  NORTH  ELEV    CHZ001  CHZ002  CHZ003  CHZ004  CHZ005  CHZ006  CHZ007  CHZ008  CHZ009  CHZ010  CHZ011  CHZ012  CHZ013  CHZ014  CHZ015  CHZ016  CHZ017  CHZ018  CHZ019  CHZ020
+/ LINE_HEADER    STATION    LINE_ID 3110    HID: 110    NCTD: 2
+/ Data_Type  EAST  NORTH  ELEV    CHX001  CHX002  CHX003  CHX004  CHX005  CHX006  CHX007  CHX008  CHX009  CHX010  CHX011  CHX012  CHX013  CHX014  CHX015  CHX016  CHX017  CHX018  CHX019  CHX020  CHZ001  CHZ002  CHZ003  CHZ004  CHZ005  CHZ006  CHZ007  CHZ008  CHZ009  CHZ010  CHZ011  CHZ012  CHZ013  CHZ014  CHZ015  CHZ016  CHZ017  CHZ018  CHZ019  CHZ020
+/ LINE_HEADER    STATION    LINE_ID 3150    HID: 110    NCTD: 2
+/ Data_Type  EAST  NORTH  ELEV    CHX001  CHX002  CHX003  CHX004  CHX005  CHX006  CHX007  CHX008  CHX009  CHX010  CHX011  CHX012  CHX013  CHX014  CHX015  CHX016  CHX017  CHX018  CHX019  CHX020  CHZ001  CHZ002  CHZ003  CHZ004  CHZ005  CHZ006  CHZ007  CHZ008  CHZ009  CHZ010  CHZ011  CHZ012  CHZ013  CHZ014  CHZ015  CHZ016  CHZ017  CHZ018  CHZ019  CHZ020
+/ LAYERS=04
+/ MODEL_HEADER
+/   RES_1  RES_2  RES_3  RES_4  THK_1  THK_2  THK_3
+
+  Station   1    Line 1000    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    73.12   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:     7.55   RSVT:   0.050
+/
+/ MODEL_01        20.70       101.85         0.56       499.89        15.91        30.90        12.97
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     1.18   RSVT:   0.025
+/
+/ MODEL_02        23.50       107.76         0.54       499.81        14.94        29.84        12.95
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:     0.34   RSVT:   0.013
+/
+/ MODEL_03        25.55       113.97         0.56       499.01        14.86        29.63        13.53
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     0.16   RSVT:   0.010
+/
+/ MODEL_04        26.59       117.76         0.58       498.32        14.92        29.32        14.18
+/
+/ FINAL_ITERATION  05
+/ PERCENT_RMS_ERROR:    0.10   RSVT:  0.010
+
+/ FINAL_MODEL        26.76       118.41         0.59       498.19        14.94        29.27        14.33
+/ IMPORTANCE          0.84         0.49         0.98         0.02         0.52         0.92         0.97
+
+  SURVEY_DATA       3140.0       500.0      0.0    2099.        1838.        1647.        1500.        1368.        1235.        1094.        943.3        786.3        630.6        483.4        352.5        243.6        158.7        97.52        56.44        30.76        15.81        7.726        3.556    
+  MODEL_DATA        3140.0       500.0      0.0    2096.        1840.        1648.        1499.        1366.        1233.        1094.        944.1        787.5        631.4        483.8        352.5        243.5        158.7        97.52        56.48        30.79        15.83        7.731        3.552    
+
+  Station   2    Line 1000    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    81.16   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    11.59   RSVT:   0.050
+/
+/ MODEL_01        20.70       102.00         0.54       499.65        16.97        33.98        14.07
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     0.83   RSVT:   0.025
+/
+/ MODEL_02        22.23       106.03         0.52       499.29        16.75        33.07        15.39
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:     0.23   RSVT:   0.013
+/
+/ MODEL_03        23.11       109.28         0.55       498.96        17.04        32.36        16.67
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     0.11   RSVT:   0.010
+/
+/ MODEL_04        23.27       109.83         0.56       498.89        17.08        32.26        16.92
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     0.10   RSVT:   0.010
+/
+/ MODEL_05        23.28       109.90         0.56       498.87        17.08        32.25        16.96
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     0.10   RSVT:   0.010
+/
+/ MODEL_06        23.28       109.92         0.56       498.85        17.08        32.25        16.96
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     0.10   RSVT:   0.010
+/
+/ MODEL_07        23.27       109.93         0.56       498.83        17.07        32.26        16.97
+/
+/ FINAL_ITERATION  09
+/ PERCENT_RMS_ERROR:    0.10   RSVT:  0.100
+
+/ FINAL_MODEL        23.27       109.93         0.56       498.83        17.07        32.26        16.97
+/ IMPORTANCE          0.88         0.42         0.98         0.01         0.53         0.92         0.98
+
+  SURVEY_DATA       3226.6       550.0      0.0    1974.        1558.        1278.        1095.        965.0        861.3        769.3        678.3        584.3        488.0        392.2        301.6        221.0        153.4        100.6        62.24        36.22        19.82        10.26        4.993    
+  MODEL_DATA        3226.6       550.0      0.0    1973.        1558.        1279.        1097.        965.0        860.1        767.5        677.3        584.2        488.4        392.7        302.0        221.2        153.4        100.6        62.23        36.22        19.82        10.26        4.988    
+
+  Station   3    Line 1000    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    50.35   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    11.98   RSVT:   0.050
+/
+/ MODEL_01        20.31       100.96         0.46       499.55        13.40        23.48        14.85
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     0.41   RSVT:   0.025
+/
+/ MODEL_02        17.47        95.56         0.51       499.11        13.84        21.05        18.49
+/
+/ FINAL_ITERATION  03
+/ PERCENT_RMS_ERROR:    0.07   RSVT:  0.013
+
+/ FINAL_MODEL        17.97        96.46         0.51       499.08        13.70        21.08        18.59
+/ IMPORTANCE          0.90         0.29         1.00         0.00         0.60         0.86         1.00
+
+  SURVEY_DATA       3313.2       600.0      0.0    3258.        2838.        2487.        2196.        1943.        1717.        1514.        1322.        1131.        940.0        752.1        574.8        418.1        287.5        186.9        114.4        65.89        35.71        18.32        8.843    
+  MODEL_DATA        3313.2       600.0      0.0    3260.        2835.        2486.        2197.        1944.        1717.        1513.        1320.        1130.        939.7        752.3        575.0        418.4        287.8        187.0        114.5        65.94        35.73        18.32        8.831    
+
+  Station   4    Line 1000    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     1.30   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.050
+/
+/ MODEL_01        20.01       100.03         0.50       500.00        10.07        15.17        12.00
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.025
+/
+/ MODEL_02        20.01       100.03         0.50       499.99        10.08        15.17        12.01
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.013
+/
+/ MODEL_03        19.99       100.02         0.50       499.96        10.08        15.16        12.04
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.010
+/
+/ MODEL_04        20.01       100.10         0.50       499.86        10.08        15.16        12.06
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.010
+/
+/ MODEL_05        20.06       100.30         0.50       499.62        10.07        15.16        12.06
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.010
+/
+/ MODEL_06        20.10       100.49         0.50       499.39        10.07        15.16        12.07
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.010
+/
+/ MODEL_07        20.15       100.68         0.50       499.16        10.06        15.16        12.08
+/
+/ ITERATION  08
+/ PERCENT_RMS_ERROR:     0.23   RSVT:   0.010
+/
+/ MODEL_08        20.19       100.86         0.50       498.94        10.06        15.16        12.08
+/
+/ ITERATION  09
+/ PERCENT_RMS_ERROR:     0.23   RSVT:   0.010
+/
+/ MODEL_09        20.23       101.05         0.50       498.72        10.06        15.16        12.09
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     0.23   RSVT:   0.010
+/
+/ MODEL_10        20.27       101.22         0.50       498.51        10.05        15.16        12.09
+/
+/ FINAL_ITERATION  12
+/ PERCENT_RMS_ERROR:    0.23   RSVT:  0.010
+
+/ FINAL_MODEL        20.35       101.57         0.51       498.09        10.05        15.16        12.10
+/ IMPORTANCE          0.19         0.04         0.99         0.01         0.53         0.85         0.98
+
+  SURVEY_DATA       3399.8       650.0      0.0    5503.        5160.        4810.        4451.        4066.        3633.        3156.        2648.        2128.        1631.        1183.        809.7        521.4        315.1        179.0        96.00        48.51        23.27        10.68        4.634    
+  MODEL_DATA        3399.8       650.0      0.0    5529.        5166.        4805.        4440.        4056.        3625.        3152.        2645.        2127.        1631.        1184.        810.6        522.2        315.7        179.5        96.22        48.60        23.28        10.66        4.608    
+
+  Station   5    Line 1100    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    86.53   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    65.86   RSVT:   0.050
+/
+/ MODEL_01        20.36       101.13         0.58       500.01        13.81        25.03        15.25
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:    55.90   RSVT:   0.025
+/
+/ MODEL_02        19.97       100.52         0.46       500.15        15.80        28.60        12.54
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:    55.88   RSVT:   0.800
+/
+/ MODEL_03        19.97       100.52         0.46       500.15        15.78        28.57        12.54
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:    55.36   RSVT:   0.400
+/
+/ MODEL_04        20.04       100.67         0.46       500.15        15.81        28.61        12.52
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:    50.58   RSVT:   0.200
+/
+/ MODEL_05        20.50       101.60         0.47       500.19        15.85        28.47        12.34
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:    45.57   RSVT:   0.100
+/
+/ MODEL_06        20.80       102.83         0.48       500.70        15.87        28.28        11.95
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:    39.43   RSVT:   0.050
+/
+/ MODEL_07        21.92       104.61         0.50       500.71        15.10        29.22        11.65
+/
+/ ITERATION  08
+/ PERCENT_RMS_ERROR:    18.52   RSVT:   0.025
+/
+/ MODEL_08        26.56       111.97         0.52       500.63        15.34        29.17        12.02
+/
+/ ITERATION  09
+/ PERCENT_RMS_ERROR:     8.55   RSVT:   0.013
+/
+/ MODEL_09        28.50       118.53         0.52       500.90        15.85        28.90        12.33
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     2.84   RSVT:   0.010
+/
+/ MODEL_10        29.46       121.52         0.53       501.16        15.94        28.89        12.66
+/
+/ ITERATION  11
+/ PERCENT_RMS_ERROR:     1.63   RSVT:   0.010
+/
+/ MODEL_11        29.15       120.76         0.53       501.15        15.92        28.89        12.76
+/
+/ ITERATION  12
+/ PERCENT_RMS_ERROR:     1.27   RSVT:   0.010
+/
+/ MODEL_12        29.19       121.17         0.53       501.29        15.88        28.92        12.81
+/
+/ FINAL_ITERATION  14
+/ PERCENT_RMS_ERROR:    1.22   RSVT:  0.050
+
+/ FINAL_MODEL        29.20       121.17         0.53       501.29        15.87        28.93        12.81
+/ IMPORTANCE          0.59         0.42         0.90         0.01         0.98         1.00         0.90
+
+  SURVEY_DATA       3187.6       527.5      0.0   -575.2       -491.9       -438.3       -405.2       -380.3       -358.0       -333.4       -304.5       -270.6       -232.1       -190.4       -148.0       -108.1       -73.30       -45.95       -26.43       -13.94       -6.724       -3.012       -1.232       -5.972       -20.83       -27.14       -24.69       -15.36      -0.9218        15.51        32.59        48.16        60.41        67.61        68.75        63.77        53.94        41.60        29.21        18.70        10.94        5.901        2.948    
+  MODEL_DATA        3187.6       527.5      0.0   -548.4       -475.4       -428.8       -399.5       -376.9       -356.2       -332.7       -304.6       -270.9       -232.5       -190.7       -148.2       -108.1       -73.23       -45.84       -26.32       -13.86       -6.662       -2.971       -1.207       -5.877       -21.20       -27.20       -24.56       -15.24      -0.9220        15.52        32.72        48.46        60.84        68.11        69.24        64.19        54.25        41.81        29.33        18.76        10.97        5.909        2.948    
+
+  Station   6    Line 1100    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    92.23   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    85.95   RSVT:   0.050
+/
+/ MODEL_01        20.43       101.34         0.52       499.95        14.60        27.12        15.13
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:    60.62   RSVT:   0.025
+/
+/ MODEL_02        20.11        99.82         0.51       499.44        13.66        31.63        15.03
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:    25.21   RSVT:   0.013
+/
+/ MODEL_03        19.63        98.72         0.49       499.56        13.22        34.06        14.18
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     4.72   RSVT:   0.010
+/
+/ MODEL_04        22.02       107.01         0.54       499.48        13.99        34.75        16.22
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     1.30   RSVT:   0.010
+/
+/ MODEL_05        24.08       112.69         0.59       499.67        15.14        33.75        17.71
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     1.01   RSVT:   0.010
+/
+/ MODEL_06        24.11       112.78         0.59       499.64        15.26        33.61        18.03
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     0.99   RSVT:   0.010
+/
+/ MODEL_07        24.10       112.76         0.60       499.62        15.26        33.61        18.08
+/
+/ ITERATION  09
+/ PERCENT_RMS_ERROR:     0.99   RSVT:   0.050
+/
+/ MODEL_09        24.10       112.75         0.60       499.62        15.26        33.61        18.08
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     0.99   RSVT:   0.025
+/
+/ MODEL_10        24.09       112.73         0.60       499.62        15.26        33.60        18.08
+/
+/ FINAL_ITERATION  11
+/ PERCENT_RMS_ERROR:    0.99   RSVT:  0.013
+
+/ FINAL_MODEL        24.10       112.70         0.60       499.62        15.28        33.59        18.09
+/ IMPORTANCE          0.85         0.53         0.95         0.00         0.63         0.95         0.94
+
+  SURVEY_DATA       3274.2       577.5      0.0   -646.2       -495.2       -394.1       -332.4       -293.6       -267.8       -246.9       -227.2       -205.6       -181.3       -154.2       -125.5       -96.81       -70.09       -47.29       -29.49       -16.91       -8.888       -4.307       -1.915        103.8        73.38        45.30        26.86        19.66        20.09        25.12        32.84        41.03        48.20        53.04        54.61        52.39        46.59        38.23        28.80        19.87        12.55        7.277        3.895    
+  MODEL_DATA        3274.2       577.5      0.0   -632.0       -490.1       -395.6       -336.8       -298.1       -270.9       -248.6       -228.3       -206.6       -182.3       -155.2       -126.2       -97.32       -70.37       -47.43       -29.54       -16.93       -8.892       -4.307       -1.912        106.7        73.46        44.66        26.62        19.96        20.34        24.99        32.45        40.68        48.17        53.30        55.06        52.90        47.06        38.60        29.07        20.04        12.67        7.349        3.938    
+
+  Station   7    Line 1100    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    54.87   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    25.20   RSVT:   0.050
+/
+/ MODEL_01        20.29       100.90         0.45       499.87        12.87        22.05        13.35
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     6.67   RSVT:   0.025
+/
+/ MODEL_02        20.28       100.86         0.44       499.79        13.22        22.30        15.25
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:     3.15   RSVT:   0.013
+/
+/ MODEL_03        18.64        97.42         0.46       499.76        13.54        21.57        15.95
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     2.92   RSVT:   0.050
+/
+/ MODEL_04        18.73        97.59         0.46       499.75        13.50        21.60        16.15
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     2.79   RSVT:   0.025
+/
+/ MODEL_05        18.59        97.31         0.47       499.75        13.50        21.54        16.39
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     2.41   RSVT:   0.013
+/
+/ MODEL_06        18.13        96.43         0.47       499.76        13.74        21.27        16.69
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     2.32   RSVT:   0.050
+/
+/ MODEL_07        18.18        96.52         0.48       499.76        13.72        21.29        16.78
+/
+/ ITERATION  08
+/ PERCENT_RMS_ERROR:     2.11   RSVT:   0.025
+/
+/ MODEL_08        18.16        96.46         0.48       499.76        13.70        21.26        17.02
+/
+/ ITERATION  09
+/ PERCENT_RMS_ERROR:     1.88   RSVT:   0.013
+/
+/ MODEL_09        18.20        96.54         0.49       499.78        13.82        21.11        17.25
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     1.87   RSVT:   0.025
+/
+/ MODEL_10        18.31        96.74         0.49       499.78        13.78        21.14        17.29
+/
+/ FINAL_ITERATION  12
+/ PERCENT_RMS_ERROR:    1.39   RSVT:  0.010
+
+/ FINAL_MODEL        18.84        97.69         0.50       500.00        14.70        20.19        17.92
+/ IMPORTANCE          0.91         0.31         1.00         0.00         0.67         0.88         1.00
+
+  SURVEY_DATA       3360.8       627.5      0.0   -626.2       -538.6       -473.2       -425.1       -387.5       -357.8       -333.7       -312.5       -290.5       -264.8       -233.7       -197.4       -158.1       -118.7       -82.86       -53.28       -31.41       -16.90       -8.343       -3.770       -238.3       -215.0       -192.2       -169.5       -146.0       -121.7       -96.99       -70.82       -43.47       -16.20        8.658        28.71        41.72        46.85        44.69        37.43        27.88        18.66        11.27        6.226    
+  MODEL_DATA        3360.8       627.5      0.0   -626.0       -535.8       -470.4       -423.5       -386.9       -358.3       -334.8       -314.2       -292.4       -266.6       -235.3       -198.6       -158.9       -119.0       -82.92       -53.18       -31.25       -16.75       -8.234       -3.702       -227.4       -208.5       -188.9       -168.2       -145.7       -121.9       -97.38       -71.16       -43.59       -16.04        9.077        29.29        42.34        47.39        45.09        37.66        27.96        18.66        11.24        6.189    
+
+  Station   8    Line 1100    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     4.94   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:     0.71   RSVT:   0.050
+/
+/ MODEL_01        20.01       100.03         0.50       500.00        10.07        15.16        11.97
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     0.64   RSVT:   0.025
+/
+/ MODEL_02        20.01       100.03         0.50       500.00        10.08        15.19        11.99
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     0.63   RSVT:   0.050
+/
+/ MODEL_04        20.01       100.03         0.50       500.00        10.08        15.19        12.00
+/
+/ FINAL_ITERATION  05
+/ PERCENT_RMS_ERROR:    0.63   RSVT:  3.200
+
+/ FINAL_MODEL        20.01       100.03         0.50       500.00        10.08        15.19        12.00
+/ IMPORTANCE          0.08         0.04         1.00         0.00         0.55         0.84         1.00
+
+  SURVEY_DATA       3447.4       677.5      0.0   -559.3       -553.0       -551.2       -553.0       -555.6       -554.8       -545.9       -524.1       -485.9       -430.7       -360.8       -282.5       -204.8       -135.9       -82.35       -45.22       -22.63       -10.27       -4.349       -1.664       -648.3       -601.9       -552.3       -498.3       -438.0       -368.2       -290.3       -207.4       -124.4       -49.26        11.08        51.19        69.57        69.51        57.71        41.44        26.35        15.02        7.825        3.756    
+  MODEL_DATA        3447.4       677.5      0.0   -572.9       -560.7       -554.9       -554.7       -556.4       -555.4       -546.6       -524.9       -486.9       -431.7       -361.9       -283.4       -205.6       -136.5       -82.75       -45.45       -22.74       -10.31       -4.352       -1.657       -647.6       -601.0       -551.2       -497.4       -437.6       -368.1       -290.5       -207.6       -124.6       -49.29        11.20        51.45        69.94        69.93        58.10        41.75        26.56        15.15        7.895        3.789    
+
+  Station   9    Line 1150    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    79.31   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    71.85   RSVT:   0.050
+/
+/ MODEL_01        20.35       100.52         0.59       500.13        10.00        15.49        12.49
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:    57.11   RSVT:   0.025
+/
+/ MODEL_02        20.77       101.58         0.62       500.27        11.07        18.40        13.59
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:    31.77   RSVT:   0.013
+/
+/ MODEL_03        15.85        78.38         0.81       479.96        10.72        28.09        19.79
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     5.93   RSVT:   0.010
+/
+/ MODEL_04        28.23       119.25         0.82       480.40         9.72        32.92        20.79
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     3.63   RSVT:   0.020
+/
+/ MODEL_05        28.19       119.06         0.83       480.42         9.76        32.77        20.95
+/
+/ FINAL_ITERATION  07
+/ PERCENT_RMS_ERROR:    3.63   RSVT:  3.200
+
+/ FINAL_MODEL        28.19       119.06         0.83       480.42         9.76        32.77        20.95
+/ IMPORTANCE          0.27         0.33         0.96         0.00         0.37         0.97         0.93
+
+  SURVEY_DATA       3205.0       537.5      0.0   -222.4       -180.9       -155.5       -142.7       -137.2       -135.6       -134.5       -132.5       -128.2       -120.8       -109.6       -94.62       -76.79       -57.81       -39.99       -25.19       -14.39       -7.436       -3.509       -1.509       -140.9       -127.0       -119.2       -112.9       -104.6       -94.20       -81.42       -66.45       -49.78       -32.38       -15.49      -0.7351        10.20        16.39        17.84        15.77        11.91        7.902        4.661        2.503    
+  MODEL_DATA        3205.0       537.5      0.0   -224.2       -187.5       -164.0       -149.7       -140.8       -135.7       -132.5       -130.0       -126.2       -119.4       -108.8       -94.20       -76.63       -57.81       -40.12       -25.40       -14.62       -7.629       -3.642       -1.585       -156.3       -141.4       -129.8       -119.1       -107.4       -95.11       -81.85       -66.93       -50.34       -32.78       -15.67      -0.7094        10.35        16.59        18.04        15.98        12.12        8.103        4.827        2.620    
+
+  Station  10    Line 1150    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    82.38   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    78.07   RSVT:   0.050
+/
+/ MODEL_01        20.28       100.46         0.54       500.11        10.25        15.87        12.20
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:    67.95   RSVT:   0.025
+/
+/ MODEL_02        23.63       106.78         0.66       500.62        10.83        19.62        15.74
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:     4.00   RSVT:   0.013
+/
+/ MODEL_03        25.37       111.59         0.54       500.95        14.54        34.57        16.01
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     1.49   RSVT:   0.010
+/
+/ MODEL_04        24.25       107.50         0.55       501.26        16.80        32.94        16.49
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     0.79   RSVT:   0.010
+/
+/ MODEL_05        24.89       108.32         0.55       501.46        17.97        31.71        16.72
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     0.51   RSVT:   0.010
+/
+/ MODEL_06        25.04       108.31         0.56       501.55        18.46        31.17        16.83
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     0.51   RSVT:   0.010
+/
+/ MODEL_07        25.09       108.35         0.56       501.57        18.62        30.99        16.89
+/
+/ ITERATION  08
+/ PERCENT_RMS_ERROR:     0.51   RSVT:   0.080
+/
+/ MODEL_08        25.06       108.27         0.56       501.57        18.63        30.99        16.86
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     0.50   RSVT:   0.050
+/
+/ MODEL_10        25.06       108.29         0.56       501.57        18.63        30.99        16.88
+/
+/ FINAL_ITERATION  11
+/ PERCENT_RMS_ERROR:    0.50   RSVT:  3.200
+
+/ FINAL_MODEL        25.06       108.29         0.56       501.57        18.63        30.99        16.88
+/ IMPORTANCE          0.90         0.42         1.00         0.00         0.75         0.93         1.00
+
+  SURVEY_DATA       3291.6       587.5      0.0   -305.5       -231.3       -176.3       -141.4       -122.3       -112.4       -107.0       -103.8       -100.2       -95.19       -87.98       -78.31       -66.36       -52.86       -39.17       -26.70       -16.61       -9.393       -4.829       -2.266       -116.8       -86.77       -74.33       -69.84       -65.91       -61.20       -54.37       -45.93       -35.99       -25.18       -14.07       -3.660        4.983        10.94        13.71        13.55        11.34        8.298        5.364        3.126    
+  MODEL_DATA        3291.6       587.5      0.0   -304.0       -231.7       -177.3       -142.5       -123.1       -112.4       -106.6       -103.1       -99.66       -94.91       -87.88       -78.31       -66.42       -52.93       -39.23       -26.75       -16.64       -9.418       -4.845       -2.274       -116.4       -86.69       -74.38       -69.74       -65.64       -60.87       -54.12       -45.90       -36.09       -25.31       -14.17       -3.683        5.025        11.03        13.81        13.65        11.42        8.361        5.409        3.156    
+
+  Station  11    Line 1150    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    62.40   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    43.69   RSVT:   0.050
+/
+/ MODEL_01        20.00       100.14         0.46       500.04        10.78        16.55        12.61
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:    16.84   RSVT:   0.025
+/
+/ MODEL_02        20.11       100.48         0.46       500.04        12.08        19.76        15.26
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:     3.01   RSVT:   0.013
+/
+/ MODEL_03        18.65        97.62         0.45       499.98        13.26        22.02        15.81
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     2.14   RSVT:   0.010
+/
+/ MODEL_04        17.98        95.71         0.46       500.09        14.14        21.07        16.03
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     1.96   RSVT:   0.010
+/
+/ MODEL_05        18.64        95.19         0.46       500.46        15.55        19.75        16.21
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     1.63   RSVT:   0.010
+/
+/ MODEL_06        18.97        94.16         0.46       500.70        16.53        18.73        16.37
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     1.42   RSVT:   0.010
+/
+/ MODEL_07        19.20        93.23         0.47       500.86        17.20        18.04        16.49
+/
+/ ITERATION  08
+/ PERCENT_RMS_ERROR:     1.28   RSVT:   0.010
+/
+/ MODEL_08        19.37        92.44         0.47       501.05        17.68        17.54        16.61
+/
+/ ITERATION  09
+/ PERCENT_RMS_ERROR:     1.17   RSVT:   0.010
+/
+/ MODEL_09        19.51        91.77         0.47       501.13        18.05        17.16        16.71
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     1.07   RSVT:   0.010
+/
+/ MODEL_10        19.63        91.19         0.47       501.22        18.34        16.86        16.81
+/
+/ FINAL_ITERATION  12
+/ PERCENT_RMS_ERROR:    0.90   RSVT:  0.010
+
+/ FINAL_MODEL        19.82        90.38         0.48       501.32        18.70        16.46        17.05
+/ IMPORTANCE          0.98         0.18         1.00         0.00         0.74         0.68         1.00
+
+  SURVEY_DATA       3378.2       637.5      0.0   -144.8       -119.5       -101.9       -90.85       -84.75       -82.20       -82.34       -84.85       -88.39       -91.54       -92.51       -89.94       -82.94       -71.53       -57.00       -41.49       -27.33       -16.25       -8.695       -4.224       -234.7       -204.3       -181.8       -164.2       -148.7       -135.0       -122.2       -109.5       -95.41       -79.37       -61.36       -42.23       -23.77       -7.860        3.592        9.872        11.47        10.00        7.215        4.529    
+  MODEL_DATA        3378.2       637.5      0.0   -147.6       -120.4       -101.4       -89.76       -83.65       -81.38       -81.95       -84.89       -88.76       -92.08       -93.13       -90.54       -83.48       -71.96       -57.29       -41.65       -27.38       -16.23       -8.655       -4.187       -231.9       -200.9       -178.9       -162.2       -147.5       -134.7       -122.5       -110.1       -96.15       -80.02       -61.86       -42.56       -23.92       -7.869        3.674        9.985        11.56        10.06        7.235        4.527    
+
+  Station  12    Line 1150    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     6.29   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:     3.77   RSVT:   0.050
+/
+/ MODEL_01        20.02       100.04         0.50       500.01        10.02        15.06        11.97
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     2.76   RSVT:   0.025
+/
+/ MODEL_02        20.38       100.52         0.51       499.99         9.86        15.15        12.01
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     2.71   RSVT:   0.050
+/
+/ MODEL_04        20.39       100.54         0.51       499.99         9.86        15.17        12.05
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     2.68   RSVT:   0.025
+/
+/ MODEL_05        20.57       100.80         0.51       500.00         9.78        15.22        12.12
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     2.66   RSVT:   0.800
+/
+/ MODEL_06        20.57       100.80         0.51       500.00         9.77        15.21        12.13
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     2.57   RSVT:   0.400
+/
+/ MODEL_07        20.57       100.80         0.51       500.00         9.78        15.21        12.13
+/
+/ ITERATION  08
+/ PERCENT_RMS_ERROR:     2.57   RSVT:   0.200
+/
+/ MODEL_08        20.57       100.80         0.51       500.00         9.78        15.23        12.14
+/
+/ ITERATION  09
+/ PERCENT_RMS_ERROR:     2.55   RSVT:   0.100
+/
+/ MODEL_09        20.57       100.80         0.51       500.00         9.78        15.22        12.15
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     2.54   RSVT:   0.050
+/
+/ MODEL_10        20.58       100.82         0.51       500.00         9.77        15.22        12.17
+/
+/ FINAL_ITERATION  11
+/ PERCENT_RMS_ERROR:    2.52   RSVT:  1.600
+
+/ FINAL_MODEL        20.58       100.82         0.51       500.00         9.77        15.22        12.17
+/ IMPORTANCE          0.66         0.21         1.00         0.01         0.81         0.91         1.00
+
+  SURVEY_DATA       3464.8       687.5      0.0   -5.486       -12.61       -22.12       -34.34       -49.30       -67.21       -87.04       -107.1       -125.1       -137.6       -141.3       -134.0       -116.0       -90.59       -63.45       -39.60       -22.05       -10.96       -4.945       -2.017       -313.8       -301.5       -289.9       -278.4       -266.0       -250.4       -230.3       -204.3       -172.0       -134.0       -92.96       -52.98       -19.42        3.931        15.64        18.05        14.92        10.17        5.945        3.134    
+  MODEL_DATA        3464.8       687.5      0.0   -5.893       -11.70       -20.56       -32.51       -47.43       -65.66       -85.99       -106.7       -125.3       -138.3       -142.3       -135.1       -116.9       -91.31       -63.88       -39.81       -22.12       -10.96       -4.934       -2.005       -319.6       -306.0       -293.3       -281.4       -268.8       -253.3       -233.1       -207.1       -174.4       -135.9       -94.23       -53.64       -19.59        4.053        15.86        18.26        15.06        10.25        5.982        3.148    
+
+  Station  13    Line 2000    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    73.12   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:     7.55   RSVT:   0.050
+/
+/ MODEL_01        20.70       101.85         0.56       499.89        15.91        30.90        12.97
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     1.18   RSVT:   0.025
+/
+/ MODEL_02        23.50       107.76         0.54       499.81        14.94        29.84        12.95
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:     0.34   RSVT:   0.013
+/
+/ MODEL_03        25.55       113.97         0.56       499.01        14.86        29.63        13.53
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     0.16   RSVT:   0.010
+/
+/ MODEL_04        26.59       117.76         0.58       498.32        14.92        29.32        14.18
+/
+/ FINAL_ITERATION  05
+/ PERCENT_RMS_ERROR:    0.10   RSVT:  0.010
+
+/ FINAL_MODEL        26.76       118.41         0.59       498.19        14.94        29.27        14.33
+/ IMPORTANCE          0.84         0.49         0.98         0.02         0.52         0.92         0.97
+
+  SURVEY_DATA       3140.0      1000.0      0.0    2099.        1838.        1647.        1500.        1368.        1235.        1094.        943.3        786.3        630.6        483.4        352.5        243.6        158.7        97.52        56.44        30.76        15.81        7.726        3.556    
+  MODEL_DATA        3140.0      1000.0      0.0    2096.        1840.        1648.        1499.        1366.        1233.        1094.        944.1        787.5        631.4        483.8        352.5        243.5        158.7        97.52        56.48        30.79        15.83        7.731        3.552    
+
+  Station  14    Line 2000    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    81.16   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    11.59   RSVT:   0.050
+/
+/ MODEL_01        20.70       102.00         0.54       499.65        16.97        33.98        14.07
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     0.83   RSVT:   0.025
+/
+/ MODEL_02        22.23       106.03         0.52       499.29        16.75        33.07        15.39
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:     0.23   RSVT:   0.013
+/
+/ MODEL_03        23.11       109.28         0.55       498.96        17.04        32.36        16.67
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     0.11   RSVT:   0.010
+/
+/ MODEL_04        23.27       109.83         0.56       498.89        17.08        32.26        16.92
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     0.10   RSVT:   0.010
+/
+/ MODEL_05        23.28       109.90         0.56       498.87        17.08        32.25        16.96
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     0.10   RSVT:   0.010
+/
+/ MODEL_06        23.28       109.92         0.56       498.85        17.08        32.25        16.96
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     0.10   RSVT:   0.010
+/
+/ MODEL_07        23.27       109.93         0.56       498.83        17.07        32.26        16.97
+/
+/ FINAL_ITERATION  09
+/ PERCENT_RMS_ERROR:    0.10   RSVT:  0.100
+
+/ FINAL_MODEL        23.27       109.93         0.56       498.83        17.07        32.26        16.97
+/ IMPORTANCE          0.88         0.42         0.98         0.01         0.53         0.92         0.98
+
+  SURVEY_DATA       3226.6      1050.0      0.0    1974.        1558.        1278.        1095.        965.0        861.3        769.3        678.3        584.3        488.0        392.2        301.6        221.0        153.4        100.6        62.24        36.22        19.82        10.26        4.993    
+  MODEL_DATA        3226.6      1050.0      0.0    1973.        1558.        1279.        1097.        965.0        860.1        767.5        677.3        584.2        488.4        392.7        302.0        221.2        153.4        100.6        62.23        36.22        19.82        10.26        4.988    
+
+  Station  15    Line 2000    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    50.35   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    11.98   RSVT:   0.050
+/
+/ MODEL_01        20.31       100.96         0.46       499.55        13.40        23.48        14.85
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     0.41   RSVT:   0.025
+/
+/ MODEL_02        17.47        95.56         0.51       499.11        13.84        21.05        18.49
+/
+/ FINAL_ITERATION  03
+/ PERCENT_RMS_ERROR:    0.07   RSVT:  0.013
+
+/ FINAL_MODEL        17.97        96.46         0.51       499.08        13.70        21.08        18.59
+/ IMPORTANCE          0.90         0.29         1.00         0.00         0.60         0.86         1.00
+
+  SURVEY_DATA       3313.2      1100.0      0.0    3258.        2838.        2487.        2196.        1943.        1717.        1514.        1322.        1131.        940.0        752.1        574.8        418.1        287.5        186.9        114.4        65.89        35.71        18.32        8.843    
+  MODEL_DATA        3313.2      1100.0      0.0    3260.        2835.        2486.        2197.        1944.        1717.        1513.        1320.        1130.        939.7        752.3        575.0        418.4        287.8        187.0        114.5        65.94        35.73        18.32        8.831    
+
+  Station  16    Line 2000    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     1.30   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.050
+/
+/ MODEL_01        20.01       100.03         0.50       500.00        10.07        15.17        12.00
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.025
+/
+/ MODEL_02        20.01       100.03         0.50       499.99        10.08        15.17        12.01
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.013
+/
+/ MODEL_03        19.99       100.02         0.50       499.96        10.08        15.16        12.04
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.010
+/
+/ MODEL_04        20.01       100.10         0.50       499.86        10.08        15.16        12.06
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.010
+/
+/ MODEL_05        20.06       100.30         0.50       499.62        10.07        15.16        12.06
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.010
+/
+/ MODEL_06        20.10       100.49         0.50       499.39        10.07        15.16        12.07
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.010
+/
+/ MODEL_07        20.15       100.68         0.50       499.16        10.06        15.16        12.08
+/
+/ ITERATION  08
+/ PERCENT_RMS_ERROR:     0.23   RSVT:   0.010
+/
+/ MODEL_08        20.19       100.86         0.50       498.94        10.06        15.16        12.08
+/
+/ ITERATION  09
+/ PERCENT_RMS_ERROR:     0.23   RSVT:   0.010
+/
+/ MODEL_09        20.23       101.05         0.50       498.72        10.06        15.16        12.09
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     0.23   RSVT:   0.010
+/
+/ MODEL_10        20.27       101.22         0.50       498.51        10.05        15.16        12.09
+/
+/ FINAL_ITERATION  12
+/ PERCENT_RMS_ERROR:    0.23   RSVT:  0.010
+
+/ FINAL_MODEL        20.35       101.57         0.51       498.09        10.05        15.16        12.10
+/ IMPORTANCE          0.19         0.04         0.99         0.01         0.53         0.85         0.98
+
+  SURVEY_DATA       3399.8      1150.0      0.0    5503.        5160.        4810.        4451.        4066.        3633.        3156.        2648.        2128.        1631.        1183.        809.7        521.4        315.1        179.0        96.00        48.51        23.27        10.68        4.634    
+  MODEL_DATA        3399.8      1150.0      0.0    5529.        5166.        4805.        4440.        4056.        3625.        3152.        2645.        2127.        1631.        1184.        810.6        522.2        315.7        179.5        96.22        48.60        23.28        10.66        4.608    
+
+  Station  17    Line 2110    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:   113.33   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    93.19   RSVT:   0.050
+/
+/ MODEL_01        20.36       101.09         0.57       500.06        13.65        24.62        15.11
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:    81.93   RSVT:   0.025
+/
+/ MODEL_02        20.08       100.55         0.51       500.05        15.21        29.14        14.98
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:    61.26   RSVT:   0.013
+/
+/ MODEL_03        23.31       105.91         0.52       500.10        14.82        30.01        13.20
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:    48.68   RSVT:   0.050
+/
+/ MODEL_05        23.63       106.82         0.55       500.22        14.82        29.67        12.63
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:    36.85   RSVT:   0.025
+/
+/ MODEL_06        24.38       108.31         0.55       500.25        14.84        29.23        12.53
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:    31.31   RSVT:   0.013
+/
+/ MODEL_07        25.09       110.98         0.55       500.11        15.42        28.81        12.52
+/
+/ ITERATION  08
+/ PERCENT_RMS_ERROR:    20.21   RSVT:   0.010
+/
+/ MODEL_08        26.79       116.19         0.55       499.98        15.88        28.58        12.83
+/
+/ ITERATION  09
+/ PERCENT_RMS_ERROR:    10.82   RSVT:   0.010
+/
+/ MODEL_09        27.73       118.64         0.56       499.99        15.81        28.67        13.23
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     6.52   RSVT:   0.010
+/
+/ MODEL_10        28.14       119.72         0.57       500.03        15.79        28.70        13.50
+/
+/ ITERATION  11
+/ PERCENT_RMS_ERROR:     4.37   RSVT:   0.010
+/
+/ MODEL_11        28.31       120.22         0.57       500.07        15.80        28.69        13.66
+/
+/ ITERATION  12
+/ PERCENT_RMS_ERROR:     3.61   RSVT:   0.010
+/
+/ MODEL_12        28.36       120.40         0.57       500.10        15.82        28.67        13.75
+/
+/ ITERATION  13
+/ PERCENT_RMS_ERROR:     3.45   RSVT:   0.010
+/
+/ MODEL_13        28.36       120.45         0.57       500.12        15.85        28.63        13.81
+/
+/ FINAL_ITERATION  14
+/ PERCENT_RMS_ERROR:    3.45   RSVT:  0.640
+
+/ FINAL_MODEL        28.36       120.45         0.57       500.12        15.85        28.63        13.81
+/ IMPORTANCE          0.43         0.29         0.93         0.01         0.98         1.00         0.94
+
+  SURVEY_DATA       3187.6      1027.5      0.0   -5.972       -20.83       -27.14       -24.69       -15.36      -0.9218        15.51        32.59        48.16        60.41        67.61        68.75        63.77        53.94        41.60        29.21        18.70        10.94        5.901        2.948    
+  MODEL_DATA        3187.6      1027.5      0.0   -6.857       -21.41       -27.20       -24.66       -15.50       -1.298        15.16        32.51        48.44        60.96        68.31        69.44        64.35        54.37        41.88        29.37        18.79        10.99        5.927        2.960    
+
+  Station  18    Line 2110    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:   118.60   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:   117.33   RSVT:   0.200
+/
+/ MODEL_01        19.99        99.98         0.48       500.03         9.81        14.48        10.91
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:   116.06   RSVT:   0.100
+/
+/ MODEL_02        20.24       100.76         0.54       500.09        12.17        20.25        12.75
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:    58.89   RSVT:   0.050
+/
+/ MODEL_03        20.42       101.46         0.38       500.13        16.27        31.66        12.53
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:    24.47   RSVT:   0.025
+/
+/ MODEL_04        21.02        98.84         0.39       499.40        16.03        33.55        12.20
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     5.25   RSVT:   0.013
+/
+/ MODEL_05        23.65       104.28         0.46       499.98        19.58        30.28        13.28
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     0.80   RSVT:   0.010
+/
+/ MODEL_06        26.23       106.37         0.49       500.27        21.53        28.72        14.66
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     0.32   RSVT:   0.010
+/
+/ MODEL_07        26.35       106.36         0.50       500.27        21.61        28.60        14.80
+/
+/ ITERATION  08
+/ PERCENT_RMS_ERROR:     0.27   RSVT:   0.010
+/
+/ MODEL_08        26.35       106.32         0.50       500.26        21.63        28.58        14.84
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     0.27   RSVT:   0.050
+/
+/ MODEL_10        26.35       106.32         0.50       500.26        21.63        28.58        14.84
+/
+/ FINAL_ITERATION  11
+/ PERCENT_RMS_ERROR:    0.27   RSVT:  0.050
+
+/ FINAL_MODEL        26.35       106.32         0.50       500.26        21.63        28.58        14.84
+/ IMPORTANCE          0.93         0.41         0.89         0.00         0.72         0.89         0.88
+
+  SURVEY_DATA       3274.2      1077.5      0.0    103.8        73.38        45.30        26.86        19.66        20.09        25.12        32.84        41.03        48.20        53.04        54.61        52.39        46.59        38.23        28.80        19.87        12.55        7.277        3.895    
+  MODEL_DATA        3274.2      1077.5      0.0    104.2        73.27        45.14        26.85        19.75        20.09        25.10        32.81        41.03        48.25        53.14        54.74        52.54        46.74        38.36        28.91        19.94        12.60        7.298        3.903    
+
+  Station  19    Line 2110    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    67.57   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    38.85   RSVT:   0.050
+/
+/ MODEL_01        20.24       100.72         0.49       499.99        12.34        20.82        13.62
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     7.86   RSVT:   0.025
+/
+/ MODEL_02        20.25       100.70         0.45       499.90        12.97        22.47        15.46
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:     3.31   RSVT:   0.013
+/
+/ MODEL_03        20.47       101.23         0.46       499.92        12.92        22.08        16.04
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     3.09   RSVT:   0.010
+/
+/ MODEL_04        22.24       105.59         0.47       500.28        14.02        21.03        16.46
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     2.38   RSVT:   0.010
+/
+/ MODEL_05        24.41       109.94         0.47       500.65        15.15        19.87        16.84
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     1.28   RSVT:   0.010
+/
+/ MODEL_06        25.49       111.73         0.48       500.85        15.59        19.32        17.05
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     1.01   RSVT:   0.010
+/
+/ MODEL_07        26.13       112.71         0.48       500.97        15.84        19.04        17.17
+/
+/ ITERATION  08
+/ PERCENT_RMS_ERROR:     0.86   RSVT:   0.010
+/
+/ MODEL_08        26.58       113.38         0.48       501.06        16.02        18.85        17.25
+/
+/ ITERATION  09
+/ PERCENT_RMS_ERROR:     0.75   RSVT:   0.010
+/
+/ MODEL_09        26.92       113.86         0.48       501.12        16.14        18.71        17.32
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     0.68   RSVT:   0.010
+/
+/ MODEL_10        27.19       114.24         0.49       501.17        16.24        18.60        17.37
+/
+/ FINAL_ITERATION  12
+/ PERCENT_RMS_ERROR:    0.56   RSVT:  0.010
+
+/ FINAL_MODEL        27.56       114.74         0.49       501.24        16.37        18.46        17.48
+/ IMPORTANCE          0.04         0.02         1.00         0.00         0.65         0.76         1.00
+
+  SURVEY_DATA       3360.8      1127.5      0.0   -238.3       -215.0       -192.2       -169.5       -146.0       -121.7       -96.99       -70.82       -43.47       -16.20        8.658        28.71        41.72        46.85        44.69        37.43        27.88        18.66        11.27        6.226    
+  MODEL_DATA        3360.8      1127.5      0.0   -234.2       -214.8       -192.5       -169.1       -146.0       -122.0       -97.37       -71.13       -43.61       -16.23        8.717        28.81        41.85        46.96        44.76        37.44        27.83        18.58        11.19        6.162    
+
+  Station  20    Line 2110    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     6.88   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:     1.00   RSVT:   0.050
+/
+/ MODEL_01        20.01       100.03         0.50       500.01        10.06        15.14        11.97
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     0.70   RSVT:   0.025
+/
+/ MODEL_02        20.01       100.03         0.50       500.01        10.07        15.17        12.00
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     0.57   RSVT:   0.050
+/
+/ MODEL_04        20.01       100.03         0.50       500.01        10.07        15.18        12.02
+/
+/ FINAL_ITERATION  05
+/ PERCENT_RMS_ERROR:    0.57   RSVT:  0.400
+
+/ FINAL_MODEL        20.01       100.03         0.50       500.01        10.07        15.18        12.02
+/ IMPORTANCE          0.03         0.02         1.00         0.00         0.54         0.84         1.00
+
+  SURVEY_DATA       3447.4      1177.5      0.0   -648.3       -601.9       -552.3       -498.3       -438.0       -368.2       -290.3       -207.4       -124.4       -49.26        11.08        51.19        69.57        69.51        57.71        41.44        26.35        15.02        7.825        3.756    
+  MODEL_DATA        3447.4      1177.5      0.0   -648.2       -601.5       -551.5       -497.7       -437.8       -368.3       -290.6       -207.7       -124.7       -49.31        11.20        51.47        69.96        69.94        58.11        41.75        26.57        15.16        7.895        3.790    
+
+  Station  21    Line 2150    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    88.67   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    62.77   RSVT:   0.050
+/
+/ MODEL_01        20.36       101.04         0.63       500.28        12.07        20.22        13.78
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:    43.84   RSVT:   0.025
+/
+/ MODEL_02        21.05       103.09         0.62       500.46        15.73        32.51        15.36
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:    22.51   RSVT:   0.013
+/
+/ MODEL_03        23.76       110.53         0.68       500.37        14.23        30.38        17.00
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     3.27   RSVT:   0.010
+/
+/ MODEL_04        24.54       112.00         0.67       499.71        13.51        30.75        16.62
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     3.07   RSVT:   0.010
+/
+/ MODEL_05        25.33       114.81         0.66       499.75        13.45        30.76        16.38
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     2.83   RSVT:   0.010
+/
+/ MODEL_06        25.73       116.26         0.66       499.76        13.39        30.80        16.23
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     2.70   RSVT:   0.010
+/
+/ MODEL_07        26.00       117.22         0.66       499.76        13.33        30.84        16.13
+/
+/ ITERATION  08
+/ PERCENT_RMS_ERROR:     2.62   RSVT:   0.010
+/
+/ MODEL_08        26.20       117.91         0.65       499.75        13.27        30.89        16.07
+/
+/ ITERATION  09
+/ PERCENT_RMS_ERROR:     2.57   RSVT:   0.010
+/
+/ MODEL_09        26.35       118.45         0.65       499.74        13.21        30.95        16.04
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     2.53   RSVT:   0.010
+/
+/ MODEL_10        26.47       118.89         0.65       499.72        13.14        31.00        16.02
+/
+/ FINAL_ITERATION  12
+/ PERCENT_RMS_ERROR:    2.34   RSVT:  0.010
+
+/ FINAL_MODEL        26.59       119.30         0.65       499.69        13.04        31.10        15.96
+/ IMPORTANCE          0.04         0.03         0.92         0.00         0.56         0.95         0.89
+
+  SURVEY_DATA       3205.0      1037.5      0.0   -140.9       -127.0       -119.2       -112.9       -104.6       -94.20       -81.42       -66.45       -49.78       -32.38       -15.49      -0.7351        10.20        16.39        17.84        15.77        11.91        7.902        4.661        2.503    
+  MODEL_DATA        3205.0      1037.5      0.0   -143.7       -128.4       -119.4       -112.3       -103.5       -93.18       -80.81       -66.21       -49.75       -32.39       -15.47      -0.6708        10.30        16.51        17.97        15.92        12.05        8.027        4.758        2.568    
+
+  Station  22    Line 2150    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    94.63   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    74.38   RSVT:   0.050
+/
+/ MODEL_01        20.40       101.14         0.60       500.28        12.32        20.85        13.62
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:    49.77   RSVT:   0.025
+/
+/ MODEL_02        21.18       103.43         0.56       500.46        16.67        36.05        15.86
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:    11.67   RSVT:   0.013
+/
+/ MODEL_03        22.31       106.62         0.55       500.45        16.22        34.17        16.47
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     1.13   RSVT:   0.010
+/
+/ MODEL_04        23.35       109.62         0.56       500.48        16.03        33.47        17.03
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     0.83   RSVT:   0.010
+/
+/ MODEL_05        23.99       111.63         0.57       500.70        16.90        32.62        17.21
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     0.64   RSVT:   0.010
+/
+/ MODEL_06        24.19       112.17         0.57       500.82        17.34        32.15        17.32
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     0.60   RSVT:   0.010
+/
+/ MODEL_07        24.30       112.44         0.57       500.87        17.55        31.93        17.39
+/
+/ ITERATION  08
+/ PERCENT_RMS_ERROR:     0.60   RSVT:   0.010
+/
+/ MODEL_08        24.35       112.56         0.57       500.90        17.64        31.83        17.44
+/
+/ ITERATION  09
+/ PERCENT_RMS_ERROR:     0.60   RSVT:   0.010
+/
+/ MODEL_09        24.36       112.61         0.58       500.90        17.66        31.81        17.48
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     0.59   RSVT:   0.020
+/
+/ MODEL_10        24.33       112.52         0.58       500.90        17.66        31.81        17.46
+/
+/ FINAL_ITERATION  12
+/ PERCENT_RMS_ERROR:    0.59   RSVT:  0.080
+
+/ FINAL_MODEL        24.31       112.48         0.57       500.90        17.67        31.81        17.43
+/ IMPORTANCE          0.84         0.45         1.00         0.00         0.67         0.92         1.00
+
+  SURVEY_DATA       3291.6      1087.5      0.0   -116.8       -86.77       -74.33       -69.84       -65.91       -61.20       -54.37       -45.93       -35.99       -25.18       -14.07       -3.660        4.983        10.94        13.71        13.55        11.34        8.298        5.364        3.126    
+  MODEL_DATA        3291.6      1087.5      0.0   -116.8       -86.84       -74.53       -69.88       -65.67       -60.80       -54.01       -45.79       -36.02       -25.27       -14.15       -3.683        5.013        11.01        13.79        13.64        11.42        8.364        5.416        3.163    
+
+  Station  23    Line 2150    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    62.96   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    44.71   RSVT:   0.050
+/
+/ MODEL_01        20.16       100.41         0.48       500.04        10.87        17.08        12.90
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:    12.41   RSVT:   0.025
+/
+/ MODEL_02        20.40       101.00         0.44       500.09        12.24        20.97        15.57
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:     4.40   RSVT:   0.013
+/
+/ MODEL_03        20.24       100.69         0.45       500.12        12.71        22.17        15.76
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     2.36   RSVT:   0.010
+/
+/ MODEL_04        15.57        89.16         0.45       500.32        14.61        20.91        15.99
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     1.57   RSVT:   0.010
+/
+/ MODEL_05        16.66        91.01         0.46       500.35        14.43        20.96        16.12
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     1.52   RSVT:   0.010
+/
+/ MODEL_06        16.83        91.33         0.46       500.38        14.49        20.87        16.22
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     1.45   RSVT:   0.010
+/
+/ MODEL_07        16.92        91.51         0.46       500.40        14.56        20.78        16.32
+/
+/ ITERATION  08
+/ PERCENT_RMS_ERROR:     1.39   RSVT:   0.010
+/
+/ MODEL_08        17.00        91.68         0.46       500.42        14.62        20.69        16.42
+/
+/ ITERATION  09
+/ PERCENT_RMS_ERROR:     1.34   RSVT:   0.010
+/
+/ MODEL_09        17.09        91.85         0.47       500.44        14.68        20.62        16.51
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     1.28   RSVT:   0.010
+/
+/ MODEL_10        17.17        92.00         0.47       500.46        14.74        20.55        16.60
+/
+/ FINAL_ITERATION  12
+/ PERCENT_RMS_ERROR:    1.17   RSVT:  0.010
+
+/ FINAL_MODEL        17.35        92.33         0.47       500.49        14.79        20.44        16.83
+/ IMPORTANCE          0.90         0.29         1.00         0.00         0.63         0.84         1.00
+
+  SURVEY_DATA       3378.2      1137.5      0.0   -234.7       -204.3       -181.8       -164.2       -148.7       -135.0       -122.2       -109.5       -95.41       -79.37       -61.36       -42.23       -23.77       -7.860        3.592        9.872        11.47        10.00        7.215        4.529    
+  MODEL_DATA        3378.2      1137.5      0.0   -238.1       -201.9       -178.1       -161.2       -146.8       -134.3       -122.4       -110.1       -96.23       -80.13       -61.95       -42.62       -23.96       -7.882        3.681        10.00        11.58        10.08        7.245        4.532    
+
+  Station  24    Line 2150    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     5.28   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:     1.21   RSVT:   0.050
+/
+/ MODEL_01        20.01       100.02         0.50       500.01        10.04        15.09        11.97
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     0.59   RSVT:   0.025
+/
+/ MODEL_02        20.02       100.06         0.50       500.02        10.10        15.25        12.01
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:     0.56   RSVT:   0.013
+/
+/ MODEL_03        20.02       100.06         0.50       500.02        10.11        15.26        12.02
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     0.51   RSVT:   0.050
+/
+/ MODEL_05        20.02       100.06         0.50       500.02        10.11        15.26        12.03
+/
+/ FINAL_ITERATION  06
+/ PERCENT_RMS_ERROR:    0.51   RSVT:  3.200
+
+/ FINAL_MODEL        20.02       100.06         0.50       500.02        10.11        15.26        12.03
+/ IMPORTANCE          0.06         0.03         1.00         0.00         0.54         0.84         1.00
+
+  SURVEY_DATA       3464.8      1187.5      0.0   -313.8       -301.5       -289.9       -278.4       -266.0       -250.4       -230.3       -204.3       -172.0       -134.0       -92.96       -52.98       -19.42        3.931        15.64        18.05        14.92        10.17        5.945        3.134    
+  MODEL_DATA        3464.8      1187.5      0.0   -316.6       -302.6       -289.7       -277.9       -265.3       -249.8       -229.9       -204.1       -171.8       -134.0       -92.96       -53.00       -19.43        3.963        15.72        18.16        15.02        10.26        5.999        3.164    
+
+  Station  25    Line 3000    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    73.12   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:     7.55   RSVT:   0.050
+/
+/ MODEL_01        20.70       101.85         0.56       499.89        15.91        30.90        12.97
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     1.18   RSVT:   0.025
+/
+/ MODEL_02        23.50       107.76         0.54       499.81        14.94        29.84        12.95
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:     0.34   RSVT:   0.013
+/
+/ MODEL_03        25.55       113.97         0.56       499.01        14.86        29.63        13.53
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     0.16   RSVT:   0.010
+/
+/ MODEL_04        26.59       117.76         0.58       498.32        14.92        29.32        14.18
+/
+/ FINAL_ITERATION  05
+/ PERCENT_RMS_ERROR:    0.10   RSVT:  0.010
+
+/ FINAL_MODEL        26.76       118.41         0.59       498.19        14.94        29.27        14.33
+/ IMPORTANCE          0.84         0.49         0.98         0.02         0.52         0.92         0.97
+
+  SURVEY_DATA       3140.0      1500.0      0.0    2099.        1838.        1647.        1500.        1368.        1235.        1094.        943.3        786.3        630.6        483.4        352.5        243.6        158.7        97.52        56.44        30.76        15.81        7.726        3.556    
+  MODEL_DATA        3140.0      1500.0      0.0    2096.        1840.        1648.        1499.        1366.        1233.        1094.        944.1        787.5        631.4        483.8        352.5        243.5        158.7        97.52        56.48        30.79        15.83        7.731        3.552    
+
+  Station  26    Line 3000    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    81.16   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    11.59   RSVT:   0.050
+/
+/ MODEL_01        20.70       102.00         0.54       499.65        16.97        33.98        14.07
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     0.83   RSVT:   0.025
+/
+/ MODEL_02        22.23       106.03         0.52       499.29        16.75        33.07        15.39
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:     0.23   RSVT:   0.013
+/
+/ MODEL_03        23.11       109.28         0.55       498.96        17.04        32.36        16.67
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     0.11   RSVT:   0.010
+/
+/ MODEL_04        23.27       109.83         0.56       498.89        17.08        32.26        16.92
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     0.10   RSVT:   0.010
+/
+/ MODEL_05        23.28       109.90         0.56       498.87        17.08        32.25        16.96
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     0.10   RSVT:   0.010
+/
+/ MODEL_06        23.28       109.92         0.56       498.85        17.08        32.25        16.96
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     0.10   RSVT:   0.010
+/
+/ MODEL_07        23.27       109.93         0.56       498.83        17.07        32.26        16.97
+/
+/ FINAL_ITERATION  09
+/ PERCENT_RMS_ERROR:    0.10   RSVT:  0.100
+
+/ FINAL_MODEL        23.27       109.93         0.56       498.83        17.07        32.26        16.97
+/ IMPORTANCE          0.88         0.42         0.98         0.01         0.53         0.92         0.98
+
+  SURVEY_DATA       3226.6      1550.0      0.0    1974.        1558.        1278.        1095.        965.0        861.3        769.3        678.3        584.3        488.0        392.2        301.6        221.0        153.4        100.6        62.24        36.22        19.82        10.26        4.993    
+  MODEL_DATA        3226.6      1550.0      0.0    1973.        1558.        1279.        1097.        965.0        860.1        767.5        677.3        584.2        488.4        392.7        302.0        221.2        153.4        100.6        62.23        36.22        19.82        10.26        4.988    
+
+  Station  27    Line 3000    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    50.35   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    11.98   RSVT:   0.050
+/
+/ MODEL_01        20.31       100.96         0.46       499.55        13.40        23.48        14.85
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     0.41   RSVT:   0.025
+/
+/ MODEL_02        17.47        95.56         0.51       499.11        13.84        21.05        18.49
+/
+/ FINAL_ITERATION  03
+/ PERCENT_RMS_ERROR:    0.07   RSVT:  0.013
+
+/ FINAL_MODEL        17.97        96.46         0.51       499.08        13.70        21.08        18.59
+/ IMPORTANCE          0.90         0.29         1.00         0.00         0.60         0.86         1.00
+
+  SURVEY_DATA       3313.2      1600.0      0.0    3258.        2838.        2487.        2196.        1943.        1717.        1514.        1322.        1131.        940.0        752.1        574.8        418.1        287.5        186.9        114.4        65.89        35.71        18.32        8.843    
+  MODEL_DATA        3313.2      1600.0      0.0    3260.        2835.        2486.        2197.        1944.        1717.        1513.        1320.        1130.        939.7        752.3        575.0        418.4        287.8        187.0        114.5        65.94        35.73        18.32        8.831    
+
+  Station  28    Line 3000    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     1.30   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.050
+/
+/ MODEL_01        20.01       100.03         0.50       500.00        10.07        15.17        12.00
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.025
+/
+/ MODEL_02        20.01       100.03         0.50       499.99        10.08        15.17        12.01
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.013
+/
+/ MODEL_03        19.99       100.02         0.50       499.96        10.08        15.16        12.04
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.010
+/
+/ MODEL_04        20.01       100.10         0.50       499.86        10.08        15.16        12.06
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.010
+/
+/ MODEL_05        20.06       100.30         0.50       499.62        10.07        15.16        12.06
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.010
+/
+/ MODEL_06        20.10       100.49         0.50       499.39        10.07        15.16        12.07
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     0.24   RSVT:   0.010
+/
+/ MODEL_07        20.15       100.68         0.50       499.16        10.06        15.16        12.08
+/
+/ ITERATION  08
+/ PERCENT_RMS_ERROR:     0.23   RSVT:   0.010
+/
+/ MODEL_08        20.19       100.86         0.50       498.94        10.06        15.16        12.08
+/
+/ ITERATION  09
+/ PERCENT_RMS_ERROR:     0.23   RSVT:   0.010
+/
+/ MODEL_09        20.23       101.05         0.50       498.72        10.06        15.16        12.09
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     0.23   RSVT:   0.010
+/
+/ MODEL_10        20.27       101.22         0.50       498.51        10.05        15.16        12.09
+/
+/ FINAL_ITERATION  12
+/ PERCENT_RMS_ERROR:    0.23   RSVT:  0.010
+
+/ FINAL_MODEL        20.35       101.57         0.51       498.09        10.05        15.16        12.10
+/ IMPORTANCE          0.19         0.04         0.99         0.01         0.53         0.85         0.98
+
+  SURVEY_DATA       3399.8      1650.0      0.0    5503.        5160.        4810.        4451.        4066.        3633.        3156.        2648.        2128.        1631.        1183.        809.7        521.4        315.1        179.0        96.00        48.51        23.27        10.68        4.634    
+  MODEL_DATA        3399.8      1650.0      0.0    5529.        5166.        4805.        4440.        4056.        3625.        3152.        2645.        2127.        1631.        1184.        810.6        522.2        315.7        179.5        96.22        48.60        23.28        10.66        4.608    
+
+  Station  29    Line 3110    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    86.53   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    65.86   RSVT:   0.050
+/
+/ MODEL_01        20.36       101.13         0.58       500.01        13.81        25.03        15.25
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:    55.90   RSVT:   0.025
+/
+/ MODEL_02        19.97       100.52         0.46       500.15        15.80        28.60        12.54
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:    55.88   RSVT:   0.800
+/
+/ MODEL_03        19.97       100.52         0.46       500.15        15.78        28.57        12.54
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:    55.36   RSVT:   0.400
+/
+/ MODEL_04        20.04       100.67         0.46       500.15        15.81        28.61        12.52
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:    50.58   RSVT:   0.200
+/
+/ MODEL_05        20.50       101.60         0.47       500.19        15.85        28.47        12.34
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:    45.57   RSVT:   0.100
+/
+/ MODEL_06        20.80       102.83         0.48       500.70        15.87        28.28        11.95
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:    39.43   RSVT:   0.050
+/
+/ MODEL_07        21.92       104.61         0.50       500.71        15.10        29.22        11.65
+/
+/ ITERATION  08
+/ PERCENT_RMS_ERROR:    18.52   RSVT:   0.025
+/
+/ MODEL_08        26.56       111.97         0.52       500.63        15.34        29.17        12.02
+/
+/ ITERATION  09
+/ PERCENT_RMS_ERROR:     8.55   RSVT:   0.013
+/
+/ MODEL_09        28.50       118.53         0.52       500.90        15.85        28.90        12.33
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     2.84   RSVT:   0.010
+/
+/ MODEL_10        29.46       121.52         0.53       501.16        15.94        28.89        12.66
+/
+/ ITERATION  11
+/ PERCENT_RMS_ERROR:     1.63   RSVT:   0.010
+/
+/ MODEL_11        29.15       120.76         0.53       501.15        15.92        28.89        12.76
+/
+/ ITERATION  12
+/ PERCENT_RMS_ERROR:     1.27   RSVT:   0.010
+/
+/ MODEL_12        29.19       121.17         0.53       501.29        15.88        28.92        12.81
+/
+/ FINAL_ITERATION  14
+/ PERCENT_RMS_ERROR:    1.22   RSVT:  0.050
+
+/ FINAL_MODEL        29.20       121.17         0.53       501.29        15.87        28.93        12.81
+/ IMPORTANCE          0.59         0.42         0.90         0.01         0.98         1.00         0.90
+
+  SURVEY_DATA       3187.6      1527.5      0.0   -575.2       -491.9       -438.3       -405.2       -380.3       -358.0       -333.4       -304.5       -270.6       -232.1       -190.4       -148.0       -108.1       -73.30       -45.95       -26.43       -13.94       -6.724       -3.012       -1.232       -5.972       -20.83       -27.14       -24.69       -15.36      -0.9218        15.51        32.59        48.16        60.41        67.61        68.75        63.77        53.94        41.60        29.21        18.70        10.94        5.901        2.948    
+  MODEL_DATA        3187.6      1527.5      0.0   -548.4       -475.4       -428.8       -399.5       -376.9       -356.2       -332.7       -304.6       -270.9       -232.5       -190.7       -148.2       -108.1       -73.23       -45.84       -26.32       -13.86       -6.662       -2.971       -1.207       -5.877       -21.20       -27.20       -24.56       -15.24      -0.9220        15.52        32.72        48.46        60.84        68.11        69.24        64.19        54.25        41.81        29.33        18.76        10.97        5.909        2.948    
+
+  Station  30    Line 3110    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    92.23   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    85.95   RSVT:   0.050
+/
+/ MODEL_01        20.43       101.34         0.52       499.95        14.60        27.12        15.13
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:    60.62   RSVT:   0.025
+/
+/ MODEL_02        20.11        99.82         0.51       499.44        13.66        31.63        15.03
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:    25.21   RSVT:   0.013
+/
+/ MODEL_03        19.63        98.72         0.49       499.56        13.22        34.06        14.18
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     4.72   RSVT:   0.010
+/
+/ MODEL_04        22.02       107.01         0.54       499.48        13.99        34.75        16.22
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     1.30   RSVT:   0.010
+/
+/ MODEL_05        24.08       112.69         0.59       499.67        15.14        33.75        17.71
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     1.01   RSVT:   0.010
+/
+/ MODEL_06        24.11       112.78         0.59       499.64        15.26        33.61        18.03
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     0.99   RSVT:   0.010
+/
+/ MODEL_07        24.10       112.76         0.60       499.62        15.26        33.61        18.08
+/
+/ ITERATION  09
+/ PERCENT_RMS_ERROR:     0.99   RSVT:   0.050
+/
+/ MODEL_09        24.10       112.75         0.60       499.62        15.26        33.61        18.08
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     0.99   RSVT:   0.025
+/
+/ MODEL_10        24.09       112.73         0.60       499.62        15.26        33.60        18.08
+/
+/ FINAL_ITERATION  11
+/ PERCENT_RMS_ERROR:    0.99   RSVT:  0.013
+
+/ FINAL_MODEL        24.10       112.70         0.60       499.62        15.28        33.59        18.09
+/ IMPORTANCE          0.85         0.53         0.95         0.00         0.63         0.95         0.94
+
+  SURVEY_DATA       3274.2      1577.5      0.0   -646.2       -495.2       -394.1       -332.4       -293.6       -267.8       -246.9       -227.2       -205.6       -181.3       -154.2       -125.5       -96.81       -70.09       -47.29       -29.49       -16.91       -8.888       -4.307       -1.915        103.8        73.38        45.30        26.86        19.66        20.09        25.12        32.84        41.03        48.20        53.04        54.61        52.39        46.59        38.23        28.80        19.87        12.55        7.277        3.895    
+  MODEL_DATA        3274.2      1577.5      0.0   -632.0       -490.1       -395.6       -336.8       -298.1       -270.9       -248.6       -228.3       -206.6       -182.3       -155.2       -126.2       -97.32       -70.37       -47.43       -29.54       -16.93       -8.892       -4.307       -1.912        106.7        73.46        44.66        26.62        19.96        20.34        24.99        32.45        40.68        48.17        53.30        55.06        52.90        47.06        38.60        29.07        20.04        12.67        7.349        3.938    
+
+  Station  31    Line 3110    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    54.87   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    25.20   RSVT:   0.050
+/
+/ MODEL_01        20.29       100.90         0.45       499.87        12.87        22.05        13.35
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     6.67   RSVT:   0.025
+/
+/ MODEL_02        20.28       100.86         0.44       499.79        13.22        22.30        15.25
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:     3.15   RSVT:   0.013
+/
+/ MODEL_03        18.64        97.42         0.46       499.76        13.54        21.57        15.95
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     2.92   RSVT:   0.050
+/
+/ MODEL_04        18.73        97.59         0.46       499.75        13.50        21.60        16.15
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     2.79   RSVT:   0.025
+/
+/ MODEL_05        18.59        97.31         0.47       499.75        13.50        21.54        16.39
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     2.41   RSVT:   0.013
+/
+/ MODEL_06        18.13        96.43         0.47       499.76        13.74        21.27        16.69
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     2.32   RSVT:   0.050
+/
+/ MODEL_07        18.18        96.52         0.48       499.76        13.72        21.29        16.78
+/
+/ ITERATION  08
+/ PERCENT_RMS_ERROR:     2.11   RSVT:   0.025
+/
+/ MODEL_08        18.16        96.46         0.48       499.76        13.70        21.26        17.02
+/
+/ ITERATION  09
+/ PERCENT_RMS_ERROR:     1.88   RSVT:   0.013
+/
+/ MODEL_09        18.20        96.54         0.49       499.78        13.82        21.11        17.25
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     1.87   RSVT:   0.025
+/
+/ MODEL_10        18.31        96.74         0.49       499.78        13.78        21.14        17.29
+/
+/ FINAL_ITERATION  12
+/ PERCENT_RMS_ERROR:    1.39   RSVT:  0.010
+
+/ FINAL_MODEL        18.84        97.69         0.50       500.00        14.70        20.19        17.92
+/ IMPORTANCE          0.91         0.31         1.00         0.00         0.67         0.88         1.00
+
+  SURVEY_DATA       3360.8      1627.5      0.0   -626.2       -538.6       -473.2       -425.1       -387.5       -357.8       -333.7       -312.5       -290.5       -264.8       -233.7       -197.4       -158.1       -118.7       -82.86       -53.28       -31.41       -16.90       -8.343       -3.770       -238.3       -215.0       -192.2       -169.5       -146.0       -121.7       -96.99       -70.82       -43.47       -16.20        8.658        28.71        41.72        46.85        44.69        37.43        27.88        18.66        11.27        6.226    
+  MODEL_DATA        3360.8      1627.5      0.0   -626.0       -535.8       -470.4       -423.5       -386.9       -358.3       -334.8       -314.2       -292.4       -266.6       -235.3       -198.6       -158.9       -119.0       -82.92       -53.18       -31.25       -16.75       -8.234       -3.702       -227.4       -208.5       -188.9       -168.2       -145.7       -121.9       -97.38       -71.16       -43.59       -16.04        9.077        29.29        42.34        47.39        45.09        37.66        27.96        18.66        11.24        6.189    
+
+  Station  32    Line 3110    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     4.94   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:     0.71   RSVT:   0.050
+/
+/ MODEL_01        20.01       100.03         0.50       500.00        10.07        15.16        11.97
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     0.64   RSVT:   0.025
+/
+/ MODEL_02        20.01       100.03         0.50       500.00        10.08        15.19        11.99
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     0.63   RSVT:   0.050
+/
+/ MODEL_04        20.01       100.03         0.50       500.00        10.08        15.19        12.00
+/
+/ FINAL_ITERATION  05
+/ PERCENT_RMS_ERROR:    0.63   RSVT:  3.200
+
+/ FINAL_MODEL        20.01       100.03         0.50       500.00        10.08        15.19        12.00
+/ IMPORTANCE          0.08         0.04         1.00         0.00         0.55         0.84         1.00
+
+  SURVEY_DATA       3447.4      1677.5      0.0   -559.3       -553.0       -551.2       -553.0       -555.6       -554.8       -545.9       -524.1       -485.9       -430.7       -360.8       -282.5       -204.8       -135.9       -82.35       -45.22       -22.63       -10.27       -4.349       -1.664       -648.3       -601.9       -552.3       -498.3       -438.0       -368.2       -290.3       -207.4       -124.4       -49.26        11.08        51.19        69.57        69.51        57.71        41.44        26.35        15.02        7.825        3.756    
+  MODEL_DATA        3447.4      1677.5      0.0   -572.9       -560.7       -554.9       -554.7       -556.4       -555.4       -546.6       -524.9       -486.9       -431.7       -361.9       -283.4       -205.6       -136.5       -82.75       -45.45       -22.74       -10.31       -4.352       -1.657       -647.6       -601.0       -551.2       -497.4       -437.6       -368.1       -290.5       -207.6       -124.6       -49.29        11.20        51.45        69.94        69.93        58.10        41.75        26.56        15.15        7.895        3.789    
+
+  Station  33    Line 3150    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    79.31   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    71.85   RSVT:   0.050
+/
+/ MODEL_01        20.35       100.52         0.59       500.13        10.00        15.49        12.49
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:    57.11   RSVT:   0.025
+/
+/ MODEL_02        20.77       101.58         0.62       500.27        11.07        18.40        13.59
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:    31.77   RSVT:   0.013
+/
+/ MODEL_03        15.85        78.38         0.81       479.96        10.72        28.09        19.79
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     5.93   RSVT:   0.010
+/
+/ MODEL_04        28.23       119.25         0.82       480.40         9.72        32.92        20.79
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     3.63   RSVT:   0.020
+/
+/ MODEL_05        28.19       119.06         0.83       480.42         9.76        32.77        20.95
+/
+/ FINAL_ITERATION  07
+/ PERCENT_RMS_ERROR:    3.63   RSVT:  3.200
+
+/ FINAL_MODEL        28.19       119.06         0.83       480.42         9.76        32.77        20.95
+/ IMPORTANCE          0.27         0.33         0.96         0.00         0.37         0.97         0.93
+
+  SURVEY_DATA       3205.0      1537.5      0.0   -222.4       -180.9       -155.5       -142.7       -137.2       -135.6       -134.5       -132.5       -128.2       -120.8       -109.6       -94.62       -76.79       -57.81       -39.99       -25.19       -14.39       -7.436       -3.509       -1.509       -140.9       -127.0       -119.2       -112.9       -104.6       -94.20       -81.42       -66.45       -49.78       -32.38       -15.49      -0.7351        10.20        16.39        17.84        15.77        11.91        7.902        4.661        2.503    
+  MODEL_DATA        3205.0      1537.5      0.0   -224.2       -187.5       -164.0       -149.7       -140.8       -135.7       -132.5       -130.0       -126.2       -119.4       -108.8       -94.20       -76.63       -57.81       -40.12       -25.40       -14.62       -7.629       -3.642       -1.585       -156.3       -141.4       -129.8       -119.1       -107.4       -95.11       -81.85       -66.93       -50.34       -32.78       -15.67      -0.7094        10.35        16.59        18.04        15.98        12.12        8.103        4.827        2.620    
+
+  Station  34    Line 3150    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    82.38   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    78.07   RSVT:   0.050
+/
+/ MODEL_01        20.28       100.46         0.54       500.11        10.25        15.87        12.20
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:    67.95   RSVT:   0.025
+/
+/ MODEL_02        23.63       106.78         0.66       500.62        10.83        19.62        15.74
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:     4.00   RSVT:   0.013
+/
+/ MODEL_03        25.37       111.59         0.54       500.95        14.54        34.57        16.01
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     1.49   RSVT:   0.010
+/
+/ MODEL_04        24.25       107.50         0.55       501.26        16.80        32.94        16.49
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     0.79   RSVT:   0.010
+/
+/ MODEL_05        24.89       108.32         0.55       501.46        17.97        31.71        16.72
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     0.51   RSVT:   0.010
+/
+/ MODEL_06        25.04       108.31         0.56       501.55        18.46        31.17        16.83
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     0.51   RSVT:   0.010
+/
+/ MODEL_07        25.09       108.35         0.56       501.57        18.62        30.99        16.89
+/
+/ ITERATION  08
+/ PERCENT_RMS_ERROR:     0.51   RSVT:   0.080
+/
+/ MODEL_08        25.06       108.27         0.56       501.57        18.63        30.99        16.86
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     0.50   RSVT:   0.050
+/
+/ MODEL_10        25.06       108.29         0.56       501.57        18.63        30.99        16.88
+/
+/ FINAL_ITERATION  11
+/ PERCENT_RMS_ERROR:    0.50   RSVT:  3.200
+
+/ FINAL_MODEL        25.06       108.29         0.56       501.57        18.63        30.99        16.88
+/ IMPORTANCE          0.90         0.42         1.00         0.00         0.75         0.93         1.00
+
+  SURVEY_DATA       3291.6      1587.5      0.0   -305.5       -231.3       -176.3       -141.4       -122.3       -112.4       -107.0       -103.8       -100.2       -95.19       -87.98       -78.31       -66.36       -52.86       -39.17       -26.70       -16.61       -9.393       -4.829       -2.266       -116.8       -86.77       -74.33       -69.84       -65.91       -61.20       -54.37       -45.93       -35.99       -25.18       -14.07       -3.660        4.983        10.94        13.71        13.55        11.34        8.298        5.364        3.126    
+  MODEL_DATA        3291.6      1587.5      0.0   -304.0       -231.7       -177.3       -142.5       -123.1       -112.4       -106.6       -103.1       -99.66       -94.91       -87.88       -78.31       -66.42       -52.93       -39.23       -26.75       -16.64       -9.418       -4.845       -2.274       -116.4       -86.69       -74.38       -69.74       -65.64       -60.87       -54.12       -45.90       -36.09       -25.31       -14.17       -3.683        5.025        11.03        13.81        13.65        11.42        8.361        5.409        3.156    
+
+  Station  35    Line 3150    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:    62.40   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:    43.69   RSVT:   0.050
+/
+/ MODEL_01        20.00       100.14         0.46       500.04        10.78        16.55        12.61
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:    16.84   RSVT:   0.025
+/
+/ MODEL_02        20.11       100.48         0.46       500.04        12.08        19.76        15.26
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:     3.01   RSVT:   0.013
+/
+/ MODEL_03        18.65        97.62         0.45       499.98        13.26        22.02        15.81
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     2.14   RSVT:   0.010
+/
+/ MODEL_04        17.98        95.71         0.46       500.09        14.14        21.07        16.03
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     1.96   RSVT:   0.010
+/
+/ MODEL_05        18.64        95.19         0.46       500.46        15.55        19.75        16.21
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     1.63   RSVT:   0.010
+/
+/ MODEL_06        18.97        94.16         0.46       500.70        16.53        18.73        16.37
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     1.42   RSVT:   0.010
+/
+/ MODEL_07        19.20        93.23         0.47       500.86        17.20        18.04        16.49
+/
+/ ITERATION  08
+/ PERCENT_RMS_ERROR:     1.28   RSVT:   0.010
+/
+/ MODEL_08        19.37        92.44         0.47       501.05        17.68        17.54        16.61
+/
+/ ITERATION  09
+/ PERCENT_RMS_ERROR:     1.17   RSVT:   0.010
+/
+/ MODEL_09        19.51        91.77         0.47       501.13        18.05        17.16        16.71
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     1.07   RSVT:   0.010
+/
+/ MODEL_10        19.63        91.19         0.47       501.22        18.34        16.86        16.81
+/
+/ FINAL_ITERATION  12
+/ PERCENT_RMS_ERROR:    0.90   RSVT:  0.010
+
+/ FINAL_MODEL        19.82        90.38         0.48       501.32        18.70        16.46        17.05
+/ IMPORTANCE          0.98         0.18         1.00         0.00         0.74         0.68         1.00
+
+  SURVEY_DATA       3378.2      1637.5      0.0   -144.8       -119.5       -101.9       -90.85       -84.75       -82.20       -82.34       -84.85       -88.39       -91.54       -92.51       -89.94       -82.94       -71.53       -57.00       -41.49       -27.33       -16.25       -8.695       -4.224       -234.7       -204.3       -181.8       -164.2       -148.7       -135.0       -122.2       -109.5       -95.41       -79.37       -61.36       -42.23       -23.77       -7.860        3.592        9.872        11.47        10.00        7.215        4.529    
+  MODEL_DATA        3378.2      1637.5      0.0   -147.6       -120.4       -101.4       -89.76       -83.65       -81.38       -81.95       -84.89       -88.76       -92.08       -93.13       -90.54       -83.48       -71.96       -57.29       -41.65       -27.38       -16.23       -8.655       -4.187       -231.9       -200.9       -178.9       -162.2       -147.5       -134.7       -122.5       -110.1       -96.15       -80.02       -61.86       -42.56       -23.92       -7.869        3.674        9.985        11.56        10.06        7.235        4.527    
+
+  Station  36    Line 3150    HID: 110    SVAZ:  60    Units: nT/s    PP: Tx-Rx_MID
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     6.29   RSVT:   0.100
+/
+/ MODEL_00        20.00       100.00         0.50       500.00        10.00        15.00        12.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:     3.77   RSVT:   0.050
+/
+/ MODEL_01        20.02       100.04         0.50       500.01        10.02        15.06        11.97
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     2.76   RSVT:   0.025
+/
+/ MODEL_02        20.38       100.52         0.51       499.99         9.86        15.15        12.01
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:     2.71   RSVT:   0.050
+/
+/ MODEL_04        20.39       100.54         0.51       499.99         9.86        15.17        12.05
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:     2.68   RSVT:   0.025
+/
+/ MODEL_05        20.57       100.80         0.51       500.00         9.78        15.22        12.12
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:     2.66   RSVT:   0.800
+/
+/ MODEL_06        20.57       100.80         0.51       500.00         9.77        15.21        12.13
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:     2.57   RSVT:   0.400
+/
+/ MODEL_07        20.57       100.80         0.51       500.00         9.78        15.21        12.13
+/
+/ ITERATION  08
+/ PERCENT_RMS_ERROR:     2.57   RSVT:   0.200
+/
+/ MODEL_08        20.57       100.80         0.51       500.00         9.78        15.23        12.14
+/
+/ ITERATION  09
+/ PERCENT_RMS_ERROR:     2.55   RSVT:   0.100
+/
+/ MODEL_09        20.57       100.80         0.51       500.00         9.78        15.22        12.15
+/
+/ ITERATION  10
+/ PERCENT_RMS_ERROR:     2.54   RSVT:   0.050
+/
+/ MODEL_10        20.58       100.82         0.51       500.00         9.77        15.22        12.17
+/
+/ FINAL_ITERATION  11
+/ PERCENT_RMS_ERROR:    2.52   RSVT:  1.600
+
+/ FINAL_MODEL        20.58       100.82         0.51       500.00         9.77        15.22        12.17
+/ IMPORTANCE          0.66         0.21         1.00         0.01         0.81         0.91         1.00
+
+  SURVEY_DATA       3464.8      1687.5      0.0   -5.486       -12.61       -22.12       -34.34       -49.30       -67.21       -87.04       -107.1       -125.1       -137.6       -141.3       -134.0       -116.0       -90.59       -63.45       -39.60       -22.05       -10.96       -4.945       -2.017       -313.8       -301.5       -289.9       -278.4       -266.0       -250.4       -230.3       -204.3       -172.0       -134.0       -92.96       -52.98       -19.42        3.931        15.64        18.05        14.92        10.17        5.945        3.134    
+  MODEL_DATA        3464.8      1687.5      0.0   -5.893       -11.70       -20.56       -32.51       -47.43       -65.66       -85.99       -106.7       -125.3       -138.3       -142.3       -135.1       -116.9       -91.31       -63.88       -39.81       -22.12       -10.96       -4.934       -2.005       -319.6       -306.0       -293.3       -281.4       -268.8       -253.3       -233.1       -207.1       -174.4       -135.9       -94.23       -53.64       -19.59        4.053        15.86        18.26        15.06        10.25        5.982        3.148    
+/
+/ Beowulf task completed at 09:03 on 13 APR 2015
+/ Computation time =      38.07 seconds.

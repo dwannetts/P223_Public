@@ -1,0 +1,143 @@
+CSAMT over a simple prism
+2 1 1 0                                 ! TDFD, PRFL, STEP, ISTOP
+7                                       ! NFRQ
+1 20                                    ! FREQ, CURNT(1)
+3 20                                    ! FREQ, CURNT(2)
+10 20                                   ! FREQ, CURNT(3)
+32 20                                   ! FREQ, CURNT(4)
+100 20                                  ! FREQ, CURNT(5)
+320 20                                  ! FREQ, CURNT(6)
+1000 20                                 ! FREQ, CURNT(7)
+2 1 2 3                                 ! SOURCE_TYPE, SURVEY_TYPE, NTX, NRXG
+2                                       ! N_VRTX(1) Tx 1
+-1500 0 0
+-2500 0 0                               ! SXE, SXN, SXZ(1,2)
+2                                       ! N_VRTX(2) Tx 2
+-2000 -500 0
+-2000 500 0                             ! SXE, SXN, SXZ(2,2)
+21 3 1 2                                ! NRX, RX_TYPE, CMP, UNITS(1) Group 1
+-950 0 0
+-1050 0 0
+-850 0 0
+-950 0 0
+-750 0 0
+-850 0 0
+-650 0 0
+-750 0 0
+-550 0 0
+-650 0 0
+-450 0 0
+-550 0 0
+-350 0 0
+-450 0 0
+-250 0 0
+-350 0 0
+-150 0 0
+-250 0 0
+-50 0 0
+-150 0 0
+50 0 0
+-50 0 0
+150 0 0
+50 0 0
+250 0 0
+150 0 0
+350 0 0
+250 0 0
+450 0 0
+350 0 0
+550 0 0
+450 0 0
+650 0 0
+550 0 0
+750 0 0
+650 0 0
+850 0 0
+750 0 0
+950 0 0
+850 0 0
+1050 0 0                                ! RXE, RXN, RXZ(1, 21, 1)
+950 0 0                                 ! RXE, RXN, RXZ(1, 21, 2)
+21 3 1 2                                ! NRX, RX_TYPE, CMP, UNITS(2) Group 2
+-1000 50 0
+-1000 -50 0
+-900 50 0
+-900 -50 0
+-800 50 0
+-800 -50 0
+-700 50 0
+-700 -50 0
+-600 50 0
+-600 -50 0
+-500 50 0
+-500 -50 0
+-400 50 0
+-400 -50 0
+-300 50 0
+-300 -50 0
+-200 50 0
+-200 -50 0
+-100 50 0
+-100 -50 0
+0 50 0
+0 -50 0
+100 50 0
+100 -50 0
+200 50 0
+200 -50 0
+300 50 0
+300 -50 0
+400 50 0
+400 -50 0
+500 50 0
+500 -50 0
+600 50 0
+600 -50 0
+700 50 0
+700 -50 0
+800 50 0
+800 -50 0
+900 50 0
+900 -50 0
+1000 50 0                               ! RXE, RXN, RXZ(2, 21, 1)
+1000 -50 0                              ! RXE, RXN, RXZ(2, 21, 2)
+21 1 1 1                                ! NRX, RX_TYPE, CMP, UNITS(3) Group 3
+-1000 0 0 1
+-900 0 0 1
+-800 0 0 1
+-700 0 0 1
+-600 0 0 1
+-500 0 0 1
+-400 0 0 1
+-300 0 0 1
+-200 0 0 1
+-100 0 0 1
+0 0 0 1
+100 0 0 1
+200 0 0 1
+300 0 0 1
+400 0 0 1
+500 0 0 1
+600 0 0 1
+700 0 0 1
+800 0 0 1
+900 0 0 1
+1000 0 0 1                              ! RXE, RXN, RXZ, RXMNT(3, 21)
+6                                       ! NEVENTS
+1 1
+1 2
+1 3
+2 1
+2 2                                     ! TX_INDEX, RXG_INDEX(4)
+2 3                                     ! TX_INDEX, RXG_INDEX(4)
+2 1 3 0                                 ! NLAYER, NPRISM, NLITH, GND_LEVEL
+50 -1 1 1 0.3 0.001 0.42                ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(5) - Clay
+250 -1 1 1 0 0 1                        ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(11) - host1
+1 -1 1 1 0 0 0                          ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(7) - E0
+1 20                                    ! LITHL[Clay], THICK(1)
+2                                       ! LITHL[host1] (2)
+2 1 10                                  ! KACC, SOLVER, OUTPUT
+3 0 0 -50                               ! LITHP[E0], PRISM_EAST, PRISM_NORTH, PRISM_TOP(1)
+400 200 200                             ! PRSM_SIZE_EW, PRSM_SIZE_NS, PRSM_SIZE_Z(1)
+25 25 25                                ! CELL_SIZE_EW, CELL_SIZE_NS, CELL_SIZE_Z(1)
+! END

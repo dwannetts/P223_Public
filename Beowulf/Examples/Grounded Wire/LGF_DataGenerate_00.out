@@ -1,0 +1,259 @@
+
+  ------------------------------------------------------------------------------
+  | Program:  Leroi                                   
+  | Version:  8.0.4                                   
+  | Date:     05 September, 2018                      
+  |
+  | Authors:  CSIRO Electromagnetic Modelling Group   
+  |           Art Raiche, Fred Sugeng and Glenn Wilson
+  | Project:  AMIRA P223F                             
+  |
+  | Compiler: GCC version 9.2.1 20191102
+  | Options:  -march=broadwell -mmmx -mno-3dnow -msse -msse2 -msse3 -mssse3 -mno-sse4a -mcx16 -msahf -mmovbe -maes -mno-sha -mpclmul -mpopcnt -mabm -mno-lwp -mfma -mno-fma4 -mno-xop -mbmi -mno-sgx -mbmi2 -mno-pconfig -mno-wbnoinvd -mno-tbm -mavx -mavx2 -msse4.2 -msse4.1 -mlzcnt -mrtm -mhle -mrdrnd -mf16c -mfsgsbase -mrdseed -mprfchw -madx -mfxsr -mxsave -mxsaveopt -mno-avx512f -mno-avx512er -mno-avx512cd -mno-avx512pf -mno-prefetchwt1 -mno-clflushopt -mno-xsavec -mno-xsaves -mno-avx512dq -mno-avx512bw -mno-avx512vl -mno-avx512ifma -mno-avx512vbmi -mno-avx5124fmaps -mno-avx5124vnniw -mno-clwb -mno-mwaitx -mno-clzero -mno-pku -mno-rdpid -mno-gfni -mno-shstk -mno-avx512vbmi2 -mno-avx512vnni -mno-vaes -mno-vpclmulqdq -mno-avx512bitalg -mno-movdiri -mno-movdir64b -mno-waitpkg -mno-cldemote -mno-ptwrite --param l1-cache-size=32 --param l1-cache-line-size=64 --param l2-cache-size=35840 -mtune=broadwell -O3 -fwhole-program -fdefault-real-8
+  |
+  | Started:  14/01/2020 at 15:17:31
+  ------------------------------------------------------------------------------
+
+
+ Generate 3 lines of closed loop data over 3 layers for magnetic and electric dipole receivers (Use Leroi!)
+
+  TDFD = 2;   DO3D =  0;   ISYS = 0;   PRFL =  1;   ISTOP = 0
+
+          +----------------------------------------------+
+          +  Frequency-Domain Ground System Information  +
+          +----------------------------------------------+
+
+  NFRQ =  5
+
+           Frequency      Transmitter current in amps
+           ---------      ---------------------------
+
+        1      1.00000           1.00000
+        2     10.00000           1.00000
+        3    100.00000           1.00000
+        4   1000.00000           1.00000
+        5  10000.00000           1.00000
+
+
+  SURVEY_TYPE = 1
+
+  NLINES =  3;   MRXL =   8;   NTX =  1;   SOURCE_TYPE = 1;   MXVRTX = 6;   NTRN =  1
+
+  Vertex Locations for Loop Sources
+  ---------------------------------
+
+  Transmitter  1 has  4 vertices:
+
+            Easting      Northing      Elevation
+            -------      --------      ---------
+    1       -100.00        100.00          0.00
+    2        100.00        100.00          0.00
+    3        100.00       -100.00          0.00
+    4       -100.00       -100.00          0.00
+
+
+  Line     1040;   Tx Index  1;   Rx Type = 1;   NRX =  4;   Units =  3
+
+        CMP =  13;   KNORM = 0;   IPLT = 1;   IDH = 0;   SV_AZM =    0.0;   RXMNT =   1000.    
+
+          Magnetic Dipole Receivers
+          -------------------------
+
+         Easting     Northing   Elevation
+         -------     --------   ---------
+   1         0.0         0.0         0.0
+   2         0.0        70.0         0.0
+   3         0.0       130.0         0.0
+   4         0.0       200.0         0.0
+
+
+  Line     1180;   Tx Index  1;   Rx Type = 1;   NRX =  6;   Units =  3
+
+        CMP =  13;   KNORM = 0;   IPLT = 1;   IDH = 1;   SV_AZM =    0.0;   RXMNT =   1000.    
+
+          Magnetic Dipole Receivers
+          -------------------------
+
+         Easting     Northing   Elevation    Dip    Azimuth
+         -------     --------   ---------    ---    -------
+   1         0.0         0.0        20.0      0.0      0.0
+   2         0.0         0.0        40.0      0.0      0.0
+   3         0.0         0.0        60.0      0.0      0.0
+   4         0.0       120.0        20.0     60.0      0.0
+   5         0.0       120.0        20.0     60.0      0.0
+   6         0.0       120.0        60.0     60.0      0.0
+
+
+  Line     2040;   Tx Index  1;   Rx Type = 2;   NRX =  4;   Units =  2
+
+           Electric Dipole Receiver Electrodes
+           -----------------------------------
+
+           East 1      North 1       East 2      North 2       Depth
+           ------      -------       ------      -------       -----
+   1       -50.00        70.00        50.00        70.00        -0.00
+   2       -50.00       120.00        50.00       120.00        -0.00
+   3       -50.00       200.00        50.00       200.00        -0.00
+   4       -50.00       300.00        50.00       300.00        -0.00
+
+
+  NLAYER =  3;   NPLATE =  0;   NLITH =  3
+
+
+                          LITHOLOGY PROPERTIES
+                          --------------------
+
+                                  Relative   Relative     Cole-Cole Parameters
+        Resistivity  Conductance     MU     Dielectric   CHRG    CTAU       CFREQ
+
+   1      100.0         -1.0     150.000      1.000      1.00    0.00        0.00
+   2     0.5000         -1.0     220.000      1.000      1.00    0.00        0.00
+   3      500.0         -1.0     200.000      1.000      1.00    0.00        0.00
+
+
+  LAYERED EARTH INPUT DATA
+  ------------------------
+
+   1   1   35.0   J, LITHL(J), THK(J)
+   2   2   10.0   J, LITHL(J), THK(J)
+   3   3             Basement Lithology
+
+  Generate 3 lines of closed loop data over 3 layers for magnetic and electric dipole receivers (Use Leroi!)
+
+  Frequency-domain model output for transmitter(s) with independent receiver lines.
+
+  Line 1040    Magnetic dipole Rx    Survey azimuth =   0 degrees    Units = microvolts
+
+
+         Z Inphase - Vertical Component Model Output for Line 1040
+         ------------------------------------------------------
+
+             RECEIVER POSITIONS               FREQUENCIES
+         East        North     Elev      1.00        10.00       100.00      1000.00     10000.00
+
+  1         0.0         0.0      0.0    11.27        11.37        11.28        10.67        9.369    
+  2         0.0        70.0      0.0    18.47        18.52        18.62        17.88        16.61    
+  3         0.0       130.0      0.0   -9.470       -9.506       -9.724       -9.522       -9.496    
+  4         0.0       200.0      0.0   -1.428       -1.474       -1.488       -1.435       -1.398    
+
+
+         Z Quadrature - Vertical Component Model Output for Line 1040
+         ---------------------------------------------------------
+
+             RECEIVER POSITIONS               FREQUENCIES
+         East        North     Elev      1.00        10.00       100.00      1000.00     10000.00
+
+  1         0.0         0.0      0.0  -0.7684E-01  -0.4235E-01  -0.2636      -0.5833       -1.485    
+  2         0.0        70.0      0.0  -0.5305E-01  -0.3517E-01  -0.2525      -0.5038       -1.557    
+  3         0.0       130.0      0.0  -0.9845E-02   0.1637E-02  -0.1362E-01  -0.6093E-01   0.2056    
+  4         0.0       200.0      0.0   0.1570E-01  -0.2414E-03   0.1033E-01   0.1517E-01   0.9885E-01
+
+
+         X Inphase - Radial Component Model Output for Line 1040
+         ----------------------------------------------------
+
+             RECEIVER POSITIONS               FREQUENCIES
+         East        North     Elev      1.00        10.00       100.00      1000.00     10000.00
+
+  1         0.0         0.0      0.0    0.000        0.000        0.000        0.000        0.000    
+  2         0.0        70.0      0.0  -0.1080E-01  -0.7435E-01  -0.1374       0.2350       0.8549    
+  3         0.0       130.0      0.0  -0.2021E-01  -0.6977E-01  -0.1157       0.2626       0.9342    
+  4         0.0       200.0      0.0  -0.2436E-01  -0.5950E-02   0.4193E-01   0.1114       0.3281    
+
+         X Quadrature - Radial Component Model Output for Line 1040
+         -------------------------------------------------------
+
+             RECEIVER POSITIONS               FREQUENCIES
+         East        North     Elev      1.00        10.00       100.00      1000.00     10000.00
+
+  1         0.0         0.0      0.0    0.000        0.000        0.000        0.000        0.000    
+  2         0.0        70.0      0.0   0.3670E-01   0.2269E-01   0.8031E-01   0.2535       0.6774    
+  3         0.0       130.0      0.0   0.3864E-01   0.2127E-01   0.1002       0.2772       0.7228    
+  4         0.0       200.0      0.0   0.1206E-01   0.3317E-03   0.8166E-01   0.9980E-01   0.2039    
+
+  Line 1180    Magnetic dipole Rx    Survey azimuth =   0 degrees    Units = microvolts
+
+
+         A Inphase - Axial Component Model Output for Line 1180
+         -------------------------------------------------------
+
+             RECEIVER POSITIONS               FREQUENCIES
+         East        North     Elev      1.00        10.00       100.00      1000.00     10000.00
+
+  1         0.0         0.0     20.0    0.000        0.000        0.000        0.000        0.000    
+  2         0.0         0.0     40.0    0.000        0.000        0.000        0.000        0.000    
+  3         0.0         0.0     60.0    0.000        0.000        0.000        0.000        0.000    
+  4         0.0       120.0     20.0   -5.257       -5.270       -5.350       -5.388       -5.585    
+  5         0.0       120.0     20.0   -5.257       -5.270       -5.350       -5.388       -5.585    
+  6         0.0       120.0     60.0   0.9482       0.9408       0.9140       0.8249       0.5941    
+
+
+         A Quadrature - Axial Component Model Output for Line 1180
+         ------------------------------------------------------
+
+             RECEIVER POSITIONS               FREQUENCIES
+         East        North     Elev      1.00        10.00       100.00      1000.00     10000.00
+
+  1         0.0         0.0     20.0    0.000        0.000        0.000        0.000        0.000    
+  2         0.0         0.0     40.0    0.000        0.000        0.000        0.000        0.000    
+  3         0.0         0.0     60.0    0.000        0.000        0.000        0.000        0.000    
+  4         0.0       120.0     20.0  -0.1225E-01  -0.6072E-02  -0.4899E-01  -0.1106      -0.1328    
+  5         0.0       120.0     20.0  -0.1225E-01  -0.6072E-02  -0.4899E-01  -0.1106      -0.1328    
+  6         0.0       120.0     60.0  -0.8618E-02  -0.7182E-02  -0.4639E-01  -0.1060      -0.2291    
+
+
+         U Inphase - Slope Component Model Output for Line 1180
+         ---------------------------------------------------
+
+             RECEIVER POSITIONS               FREQUENCIES
+         East        North     Elev      1.00        10.00       100.00      1000.00     10000.00
+
+  1         0.0         0.0     20.0    10.73        10.79        10.77        10.24        9.175    
+  2         0.0         0.0     40.0    9.345        9.387        9.391        8.962        8.106    
+  3         0.0         0.0     60.0    7.626        7.652        7.659        7.322        6.648    
+  4         0.0       120.0     20.0   -3.035       -3.043       -3.089       -3.111       -3.225    
+  5         0.0       120.0     20.0   -3.035       -3.043       -3.089       -3.111       -3.225    
+  6         0.0       120.0     60.0   0.5474       0.5432       0.5277       0.4763       0.3430    
+
+
+         U Quadrature - Slope Component Model Output for Line 1180
+         ------------------------------------------------------
+
+             RECEIVER POSITIONS               FREQUENCIES
+         East        North     Elev      1.00        10.00       100.00      1000.00     10000.00
+
+  1         0.0         0.0     20.0  -0.5600E-01  -0.3362E-01  -0.1878      -0.4692       -1.225    
+  2         0.0         0.0     40.0  -0.4109E-01  -0.2622E-01  -0.1460      -0.3679      -0.9782    
+  3         0.0         0.0     60.0  -0.3044E-01  -0.2045E-01  -0.1155      -0.2874      -0.7666    
+  4         0.0       120.0     20.0  -0.7073E-02  -0.3506E-02  -0.2828E-01  -0.6385E-01  -0.7667E-01
+  5         0.0       120.0     20.0  -0.7073E-02  -0.3506E-02  -0.2828E-01  -0.6385E-01  -0.7667E-01
+  6         0.0       120.0     60.0  -0.4975E-02  -0.4147E-02  -0.2679E-01  -0.6122E-01  -0.1323    
+
+  Line 2040    Electric dipole Rx    Units = millivolts
+
+
+  Inphase Model Output for Line 2040
+  -------------------------------
+
+             RECEIVER POSITIONS               FREQUENCIES
+         East        North     Elev      1.00        10.00       100.00      1000.00     10000.00
+
+  1         0.0        70.0     -0.0  -0.1394E-02  -0.9033E-02  -0.4787       -12.32       -346.2    
+  2         0.0       120.0     -0.0  -0.1649E-02  -0.1098E-01  -0.6729       -15.90       -449.3    
+  3         0.0       200.0     -0.0  -0.8230E-03  -0.6392E-02  -0.5094       -10.54       -236.6    
+  4         0.0       300.0     -0.0   0.6359E-04  -0.7220E-02  -0.2431       -6.584       -127.1    
+
+
+  Quadrature Model Output for Line 2040
+  ----------------------------------
+
+             RECEIVER POSITIONS               FREQUENCIES
+         East        North     Elev      1.00        10.00       100.00      1000.00     10000.00
+
+  1         0.0        70.0     -0.0  -0.3319       -3.336       -33.54       -319.2       -2894.    
+  2         0.0       120.0     -0.0  -0.4587       -4.601       -46.21       -441.5       -4027.    
+  3         0.0       200.0     -0.0  -0.1362       -1.353       -13.28       -123.7       -1003.    
+  4         0.0       300.0     -0.0  -0.5785E-01  -0.5644       -5.435       -49.78       -354.9    
+
+  Leroi forward model run completed at 15:17:31 on 14/01/2020 using         0.05 secs
+

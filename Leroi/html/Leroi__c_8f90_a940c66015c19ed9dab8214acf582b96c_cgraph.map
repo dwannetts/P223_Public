@@ -1,0 +1,28 @@
+<map id="hsboss" name="hsboss">
+<area shape="rect" id="node2" href="$Leroi_8f90.html#a5e91ef1c525aed4231141372759cca43" title="set_nrhs" alt="" coords="117,107,189,133"/>
+<area shape="rect" id="node3" href="$Leroi_8f90.html#a247cf958ed9d5aa90d05eee29e6a9582" title="hslpb" alt="" coords="127,157,180,184"/>
+<area shape="rect" id="node15" href="$Leroi_8f90.html#a918a25836d554d239ee900a00fbefbb6" title="hslpe" alt="" coords="127,208,180,235"/>
+<area shape="rect" id="node18" href="$Leroi_8f90.html#a1965f18ad74a78ddcda474fa4268445f" title="hslped" alt="" coords="123,259,183,285"/>
+<area shape="rect" id="node19" href="$Leroi_8f90.html#a48d6fa7ecaca60caaf9ecba957eaa3b1" title="hsmdb" alt="" coords="123,360,184,387"/>
+<area shape="rect" id="node24" href="$Leroi_8f90.html#a94e83e050e27be19cb6d665d80c080bf" title="hs_cdnt" alt="" coords="119,309,187,336"/>
+<area shape="rect" id="node4" href="$Leroi_8f90.html#a36d9dbba0b5eada45705f561c0035c54" title="colres_1d" alt="" coords="253,309,332,336"/>
+<area shape="rect" id="node5" href="$Leroi_8f90.html#a8e7ce2c7dc3e5ee45a8adefc6e6bba97" title="set_kfg" alt="" coords="260,259,325,285"/>
+<area shape="rect" id="node6" href="$Leroi_8f90.html#a8e78b7efe3dc41645eaf9123100f4fc1" title="hsgwb_hnk" alt="" coords="249,56,336,83"/>
+<area shape="rect" id="node10" href="$Leroi_8f90.html#ae6841c5477812a4e7255f7ed2da9a7c8" title="hsclb_hnk" alt="" coords="252,5,333,32"/>
+<area shape="rect" id="node12" href="$Leroi_8f90.html#a836d1cb8acb3544a3a9fa63433efc1b6" title="cubspl" alt="" coords="263,157,323,184"/>
+<area shape="rect" id="node13" href="$Leroi_8f90.html#ab28d8a79c971f683b68fae4db0553909" title="cdcubval" alt="" coords="255,208,330,235"/>
+<area shape="rect" id="node7" href="$Leroi_8f90.html#ad4730d65d0e42fe38f0f174339af3c71" title="hsgwb_ker" alt="" coords="397,56,481,83"/>
+<area shape="rect" id="node8" href="$Leroi_8f90.html#a2ffa10f72b064e2c52fb28da1b335098" title="edsx_coef" alt="" coords="533,81,615,108"/>
+<area shape="rect" id="node9" href="$Leroi_8f90.html#a58ae4aba68186ebcf3cfb74fa1361584" title="propagate" alt="" coords="665,245,744,272"/>
+<area shape="rect" id="node11" href="$Leroi_8f90.html#ab053f1c7997499ed6fca932a2f8cbecb" title="hsclb_ker" alt="" coords="400,5,479,32"/>
+<area shape="rect" id="node14" href="$Leroi_8f90.html#ab3d44a77ee1868f9a09dcac7e6bfcdce" title="interv" alt="" coords="412,208,467,235"/>
+<area shape="rect" id="node16" href="$Leroi_8f90.html#adae61b12e3735bac162cd8f39a3607d3" title="hslpe_hnk" alt="" coords="252,107,333,133"/>
+<area shape="rect" id="node17" href="$Leroi_8f90.html#ae58b6750741316da9a6a86b44785fa58" title="hslpe_ker" alt="" coords="400,107,479,133"/>
+<area shape="rect" id="node20" href="$Leroi_8f90.html#a485defa6db785c79bb6a092cd797ca0e" title="b_direct" alt="" coords="259,512,327,539"/>
+<area shape="rect" id="node21" href="$Leroi_8f90.html#aa0252ede97751947c4c840de4179175d" title="hsmdb_hnk" alt="" coords="248,461,337,488"/>
+<area shape="rect" id="node22" href="$Leroi_8f90.html#aa06a6e2460dd29bc7e4cd0f7378aa005" title="hsmdb_ker" alt="" coords="396,436,483,463"/>
+<area shape="rect" id="node23" href="$Leroi_8f90.html#a37f7ce2aa039b27d2452e812479745a7" title="mdsx_coef" alt="" coords="531,271,617,297"/>
+<area shape="rect" id="node25" href="$Leroi_8f90.html#a052539a8cd1f0d9736453c9fb65581ca" title="hs_cdnt_set_rx" alt="" coords="237,411,348,437"/>
+<area shape="rect" id="node26" href="$Leroi_8f90.html#a9418379c5cb3a81d71a2a66746f839da" title="hslplp_hnk" alt="" coords="251,360,335,387"/>
+<area shape="rect" id="node27" href="$Leroi_8f90.html#a6a948de64e256424bee5e99021fa129c" title="hslplp_ker" alt="" coords="399,360,480,387"/>
+</map>

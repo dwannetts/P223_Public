@@ -1,0 +1,28 @@
+#!/bin/sh
+# MarcoAir $1{.cfl | .inv}
+#
+# Shell script to run $1 takes a single arguement which is the name of the 
+# cfl.  If the program is used in inversion mode, then the .inv file must 
+# have the same name as the .cfl
+
+# make a job directory ...
+clear
+mkdir -p "$1"
+cd "$1"
+
+# copy command line arguments to job directory ...
+test -f ../"$1".cfl && cp ../"$1".cfl MarcoAir.cfl
+
+# run the program ...
+~/bin/MarcoAir.x
+
+# copy output back to parent directory ...
+test -f MarcoAir.out && cp MarcoAir.out ../"$1".out
+test -f MarcoAir.mv1 && cp MarcoAir.mv1 ../"$1".mv1
+test -f MarcoAir.mf1 && cp MarcoAir.mf1 ../"$1".mf1
+test -f MarcoAir.frq && cp MarcoAir.frq ../"$1".frq
+test -f MarcoAir.log && cp MarcoAir.log ../"$1".log
+
+# ... and kill the job directory
+cd ..
+rm -rf "$1"

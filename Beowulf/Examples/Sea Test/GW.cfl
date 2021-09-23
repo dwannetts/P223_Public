@@ -1,0 +1,51 @@
+Invert 4 lines of undersea grounded wire data over 3 layers for magnetic dipole receivers                            
+1 0 0                    ! TDFD, ISYS, ISTOP
+0 4 20 2 30 30           ! STEP, NSX, NCHNL, KRXW, REFTYM, OFFTIME
+0 0
+0.4 10
+29.6 10
+30 0                        ! TXON, TXAMP(4)
+0.487  0.879  1.271  1.663  2.055  2.643  3.427  4.211  4.995  5.779
+6.955  8.523  10.091 11.659 13.227 15.579 18.715 21.851 24.987 28.123  ! 20 Channel centres
+5*0.344  5*0.736  5*1.520  5*3.088                                     ! 20 Channel widths
+1                             ! SURVEY_TYPE
+4 4 1 2 2 1                   ! NLINES, MRXL, NTX, SOURCE_TYPE, MVRTX, NTRN
+2 -60.2                       ! N_VRTX(1) Tx 1  TxZ
+-500  0
+ 500  0
+1001 1 1 4 3             ! LINE IDTX, RX_TYPE, NRX, UNITS	X component inversion
+1 0 0 1 0 1000           ! CMP SV_AZM, KNORM, IPLT, IDH, RXMNT
+ 0  10  -60
+ 0  50  -60
+ 0 100  -60
+ 0 200  -60		! RXE, RXN RXZ for Line 1040
+1003 1 1 4 3            ! LINE IDTX, RX_TYPE, NRX, UNITS       Z component inversion
+3 0 0 1 0 1000          ! CMP SV_AZM, KNORM, IPLT, IDH, RXMNT
+ 0  10  -60
+ 0  50  -60
+ 0 100  -60
+ 0 200  -60		! RXE, RXN RXZ for Line 1040
+1013 1 1 4 3            ! LINE IDTX, RX_TYPE, NRX, UNITS      joint X,Z component inversion
+13 0 0 1 0 1000         ! CMP SV_AZM, KNORM, IPLT, IDH, RXMNT
+ 0  10  -60
+ 0  50  -60
+ 0 100  -60
+ 0 200  -60		! RXE, RXN RXZ for Line 1040
+2000 1 1 4 3            ! LINE IDTX, RX_TYPE, NRX, UNITS	X component inversion
+1  0 0 1 0 1000         ! CMP SV_AZM, KNORM, IPLT, IDH, RXMNT
+510   0 -60
+550   0 -60
+600   0 -60
+700   0 -60		! RXE, RXN RXZ for Line 1040
+4 3                        ! NLAYER, NLITH
+100 -1 1 1 0 0 0             ! RES, RMU, REPS, CHRG, CTAU, CFREQ(1)
+ 10 -1 1 1 0 0 0             ! RES, RMU, REPS, CHRG, CTAU, CFREQ(3)
+0.1 -1 1 1 0 0 0             ! RES, RMU, REPS, CHRG, CTAU, CFREQ(3) - Seawater
+3 60
+1 50                         ! LITH, THICK - Layer 1
+2 50                         ! LITH, THICK - Layer 2
+1                            ! LITH - basement
+2 90 1 2            ! NFIX, MAXITS, CNVRG, INVPRT
+1 1 1		    ! Fix conductivity of seawater (layer 1)
+1 1 2		    ! Fix depth of seawater	   (layer 1)
+

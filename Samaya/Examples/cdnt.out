@@ -1,0 +1,242 @@
+
+  ------------------------------------------------------------------------------
+  | Program:  Samaya                                  
+  | Version:  2.0.1                                   
+  | Date:     09 February, 2021                       
+  |
+  | Authors:  CSIRO Electromagnetic Modelling Group   
+  |           Art Raiche, Fred Sugeng and Glenn Wilson
+  | Contact:  David Annetts (david.annetts@csiro.au)  
+  | Project:  AMIRA P223F                             
+  | License:  GPL-2.0 (Full text at https://opensource.org/licenses/gpl-2.0.php)              
+  |
+  | Compiler: GCC version 9.3.0
+  | Options:  -march=cascadelake -mmmx -mno-3dnow -msse -msse2 -msse3 -mssse3 -mno-sse4a -mcx16 -msahf -mmovbe -maes -mno-sha -mpclmul -mpopcnt -mabm -mno-lwp -mfma -mno-fma4 -mno-xop -mbmi -mno-sgx -mbmi2 -mno-pconfig -mno-wbnoinvd -mno-tbm -mavx -mavx2 -msse4.2 -msse4.1 -mlzcnt -mno-rtm -mno-hle -mrdrnd -mf16c -mfsgsbase -mrdseed -mprfchw -madx -mfxsr -mxsave -mxsaveopt -mavx512f -mno-avx512er -mavx512cd -mno-avx512pf -mno-prefetchwt1 -mclflushopt -mxsavec -mxsaves -mavx512dq -mavx512bw -mavx512vl -mno-avx512ifma -mno-avx512vbmi -mno-avx5124fmaps -mno-avx5124vnniw -mclwb -mno-mwaitx -mno-clzero -mpku -mno-rdpid -mno-gfni -mno-shstk -mno-avx512vbmi2 -mavx512vnni -mno-vaes -mno-vpclmulqdq -mno-avx512bitalg -mno-avx512vpopcntdq -mno-movdiri -mno-movdir64b -mno-waitpkg -mno-cldemote -mno-ptwrite --param l1-cache-size=32 --param l1-cache-line-size=64 --param l2-cache-size=22528 -mtune=cascadelake -O3 -fwhole-program -fdefault-double-8 -fdefault-real-8 -fpre-include=/usr/include/finclude/math-vector-fortran.h
+  |
+  | Started:  2021-02-09T09:42:22
+  ------------------------------------------------------------------------------
+
+          INPUT DATA
+          ----------
+
+
+ Coincident loop over verical plate                                                                                      
+
+  TDFD = 1;   DO3D =  1;   ISYS = 0;   PRFL =  0;   ISTOP = 0
+
+          +-----------------------------------------+
+          +  Time-Domain Ground System Information  +
+          +-----------------------------------------+
+
+  STEP = 0;   NSX =   4;   NCHNL =  32;   KRXW = 1;   REFTYM =   0.000    ;   OFFTYM =   22.00    
+
+
+             TXON (ms)    Transmitter current (amps)
+             ---------    --------------------------
+
+      1        0.000         0.000    
+      2        0.200         10.00    
+      3       20.000         10.00    
+      4       20.200         0.000    
+
+
+         Receiver channel origin INPUT is shifted by    0.000 ms from signal origin.
+
+         Receiver Window Specifications (ms - referenced to signal origin)
+         ----------------------------------------------------------------
+
+                                                             Referenced
+       Window     Open       Close       Width     Centre      Centre
+       ------     ----       -----       -----     ------      ------
+          1      20.216      20.256      0.040      20.236     20.236
+          2      20.265      20.305      0.040      20.285     20.285
+          3      20.314      20.354      0.040      20.334     20.334
+          4      20.363      20.403      0.040      20.383     20.383
+          5      20.412      20.452      0.040      20.432     20.432
+          6      20.461      20.551      0.090      20.506     20.506
+          7      20.559      20.649      0.090      20.604     20.604
+          8      20.657      20.747      0.090      20.702     20.702
+          9      20.755      20.845      0.090      20.800     20.800
+         10      20.853      20.943      0.090      20.898     20.898
+         11      20.950      21.140      0.190      21.045     21.045
+         12      21.146      21.336      0.190      21.241     21.241
+         13      21.342      21.532      0.190      21.437     21.437
+         14      21.538      21.728      0.190      21.633     21.633
+         15      21.734      21.924      0.190      21.829     21.829
+         16      21.928      22.318      0.390      22.123     22.123
+         17      22.320      22.710      0.390      22.515     22.515
+         18      22.712      23.102      0.390      22.907     22.907
+         19      23.104      23.494      0.390      23.299     23.299
+         20      23.496      23.886      0.390      23.691     23.691
+         21      23.889      24.669      0.780      24.279     24.279
+         22      24.673      25.453      0.780      25.063     25.063
+         23      25.457      26.237      0.780      25.847     25.847
+         24      26.241      27.021      0.780      26.631     26.631
+         25      27.025      27.805      0.780      27.415     27.415
+         26      27.811      29.371      1.560      28.591     28.591
+         27      29.379      30.939      1.560      30.159     30.159
+         28      30.947      32.507      1.560      31.727     31.727
+         29      32.515      34.075      1.560      33.295     33.295
+         30      34.083      35.643      1.560      34.863     34.863
+         31      35.650      38.780      3.130      37.215     37.215
+         32      38.786      41.916      3.130      40.351     40.351
+
+
+  SURVEY_TYPE = 4
+
+  NLINES =  1;   MRXL =  5;   NTRN =  1
+
+  Moving Loop Tx Line  1;   NTX =  5;   Tx_length =  100.0;   Tx_width =  200.0
+  --------------------------------------------------------------------------
+  Initial position (E,N) :       90.0     -200.0
+            Line_azimuth :   0.0
+       Station_intervals :   100.0   100.0   100.0   100.0
+
+  Coincident loop survey - Line    10100;   UNITS =  3
+
+
+  NLAYER =  1;   NLITH =  7
+
+
+                          LITHOLOGY PROPERTIES
+                          --------------------
+
+                                  Relative   Relative     Cole-Cole Parameters
+        Resistivity  Conductance     MU     Dielectric   CHRG    CTAU       CFREQ
+
+   1      1.000         -1.0       1.000      1.000      0.00    0.00        1.00
+   2      1.000         -1.0       1.000      1.000      0.00    0.00        1.00
+   3      100.0         -1.0       1.000      1.000      0.00    0.00        1.00
+   4      1.000         50.0       1.000      1.000      0.00    0.00        1.00
+   5      20.00         30.0       1.000      1.000      0.40    1.17        0.20
+   6      5.000         42.0       1.000      1.000      0.00    0.00        1.00
+   7      1.000        200.0       1.000      1.000      0.20    1.20        0.40
+
+
+  LAYERED EARTH INPUT DATA
+  ------------------------
+
+   1   3             Basement Lithology
+
+
+  MESH AND LITHOLOGIES DESCRIPTION
+  --------------------------------
+
+  Number of node "slices" along North-South axis =  9
+  Number of node rows in each slice =   6
+  Number of node columns in each slice =   3
+  KACC = 2    SOLVER = 1    OUTPUT =  10
+
+
+
+  Before computation begins, Samaya may transform array and model coordinates
+  from GPS coordimnates where elevation increases positive upwards to a
+  body-centred system where depth increases positive downwards.
+  In this system, the dip of magnetic dipole transmitters and receivers
+  = 0 for vertical dipoles and 90 for horizontal dipoles.
+
+  The computational horizontal origin remains unchanged.
+
+        Transformed Coincident Loop Vertex Coordinates
+        ----------------------------------------------
+
+                        Transmitter             Plot Point
+    Line              East      North         East      North
+
+   10100   1   1     -150.0      100.0       -200.0        0.0
+               2     -150.0     -100.0
+               3     -250.0     -100.0
+               4     -250.0      100.0
+
+           2   1      -50.0      100.0       -100.0        0.0
+               2      -50.0     -100.0
+               3     -150.0     -100.0
+               4     -150.0      100.0
+
+           3   1       50.0      100.0          0.0        0.0
+               2       50.0     -100.0
+               3      -50.0     -100.0
+               4      -50.0      100.0
+
+           4   1      150.0      100.0        100.0        0.0
+               2      150.0     -100.0
+               3       50.0     -100.0
+               4       50.0      100.0
+
+           5   1      250.0      100.0        200.0        0.0
+               2      250.0     -100.0
+               3      150.0     -100.0
+               4      150.0      100.0
+
+
+          +----------------------------------+
+          +  Layered Earth Model Parameters  +
+          +----------------------------------+
+
+                    Depth
+ Layer  Thickness   to Top    Resistivity   MU-R   EPS-R   CHRG    CFREQ    CTAU
+ -----  ---------   ------    -----------   ----   -----   ----    -----    ----
+   1                   0.0      100.0       1.00   1.00    0.00    1.00      0.0    
+
+  Samaya will compute 3D responses for a time-domain system.
+
+
+---------------------------------------------------------------------------
+                       END OF INPUT DATA DESCRIPTION
+---------------------------------------------------------------------------
+
+  The frequency-domain results are directly computed from
+    0.1000     Hz to   10.00     Hz, using  3 points per decade and from
+     10.00     Hz to  0.1000E+07 Hz, using  6 points per decade.
+
+  These are used to construct the frequency-domain spectrum from DC to  0.1000     Hz
+  before transformation to the time domain.  The transformed result is folded over
+
+
+  Line 10100    Survey azimuth =  90 degrees    Units = microvolts    Plot point: Tx
+
+         Coincident Loop Model Outputfor Line 10100
+         --------------------------------------
+
+                   RECEIVER COORDINATES (Top to Bottom): Easting, Northing, Elevation
+
+        Window       -200.00      -100.00         0.00       100.00       200.00
+       Centres          0.00         0.00         0.00         0.00         0.00
+ Chnl   (ms)            0.00         0.00         0.00         0.00         0.00
+
+   1    20.236      0.6268E+06   0.6352E+06   0.5930E+06   0.6352E+06   0.6268E+06
+   2    20.285      0.1800E+06   0.1846E+06   0.1443E+06   0.1846E+06   0.1800E+06
+   3    20.334      0.8705E+05   0.8945E+05   0.5899E+05   0.8945E+05   0.8705E+05
+   4    20.383      0.5103E+05   0.5236E+05   0.2916E+05   0.5236E+05   0.5103E+05
+   5    20.432      0.3325E+05   0.3401E+05   0.1608E+05   0.3401E+05   0.3325E+05
+   6    20.506      0.1998E+05   0.2032E+05    7851.       0.2032E+05   0.1998E+05
+   7    20.604      0.1140E+05   0.1151E+05    3695.       0.1151E+05   0.1140E+05
+   8    20.702       7226.        7249.        2248.        7249.        7226.    
+   9    20.800       4914.        4908.        1653.        4908.        4914.    
+  10    20.898       3514.        3501.        1355.        3501.        3514.    
+  11    21.045       2312.        2301.        1100.        2301.        2312.    
+  12    21.241       1428.        1422.        860.8        1422.        1428.    
+  13    21.437       955.0        952.4        681.5        952.4        954.9    
+  14    21.633       676.9        675.6        540.3        675.6        676.9    
+  15    21.829       500.9        500.2        426.8        500.2        500.9    
+  16    22.123       341.8        341.5        311.8        341.5        341.8    
+  17    22.515       219.1        218.7        209.4        218.8        219.1    
+  18    22.907       150.1        149.8        145.4        149.8        150.1    
+  19    23.299       108.2        108.1        106.5        108.1        108.2    
+  20    23.691       80.89        80.79        80.30        80.79        80.89    
+  21    24.279       55.64        55.57        55.14        55.57        55.64    
+  22    25.063       35.95        35.92        35.56        35.92        35.95    
+  23    25.847       24.68        24.66        24.76        24.66        24.68    
+  24    26.631       17.82        17.80        17.69        17.80        17.82    
+  25    27.415       13.29        13.28        13.14        13.28        13.29    
+  26    28.591       9.118        9.115        9.130        9.115        9.118    
+  27    30.159       5.834        5.831        5.808        5.831        5.834    
+  28    31.727       3.975        3.974        3.958        3.974        3.975    
+  29    33.295       2.827        2.826        2.824        2.826        2.827    
+  30    34.863       2.082        2.082        2.082        2.082        2.082    
+  31    37.215       1.402        1.402        1.398        1.402        1.402    
+  32    40.351      0.8732       0.8731       0.8731       0.8731       0.8732    
+
+  Samaya forward model run completed: 2021-02-09T09:44:48
+  Runtime:       145.95 seconds
+

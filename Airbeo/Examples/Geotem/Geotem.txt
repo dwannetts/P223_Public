@@ -1,0 +1,53 @@
+  Data was generated for 5 stations of differing altitude using the following model
+  contained in GtmF.cfl  The results were generated in GtmF.out and GtmF.mf1 using
+  F1.bat; ie  
+
+  F1 GtmF GtmF
+
+             "True" Model
+             ============
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      100.0       35.0     35.0     0.3500    
+   2     0.5000       45.0     10.0      20.00    
+   3      500.0    
+
+
+  All two component inversions were tested using the seed model below.
+
+
+        Initial Model Before Inversion
+        ------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      100.0       50.0     50.0     0.5000    
+   2      10.00      100.0     50.0      5.000    
+   3      100.0    
+
+
+  The unweighted data were put into Gtm0.inv
+  GtmW.inv specified a data floor of 2.5 nT/s and ignored station 3.
+
+  The control files GtmT.cfl & GtmTc.cfl  specified inversion for 
+  resistivities and layer thicknesses.  GtmTc placed soft constraints
+  on the top layer resistivity and thicknesses.  All stations used the 
+  above starting model.
+
+   The output files (.out & .mz1) for GtmT, GtmTc used the data file Gtm0.inv.
+
+  The five inversion runs were generated using the batch command file 
+  V1.bat as follows:
+
+                     mz1     
+             cfl     out       inv
+                             
+        V1   GtmT    GtmT     Gtm0
+        V1   GtmTc   GtmTc    Gtm0
+       
+
+
+
+
+

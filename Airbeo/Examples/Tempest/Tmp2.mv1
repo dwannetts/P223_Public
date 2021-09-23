@@ -1,0 +1,40 @@
+/ 0450        File version number
+/ PROGRAM_NAME=Airbeo - Version 4.7.1  22 November, 2012                   
+/ TITLE: Inversion of 5 Tempest stations - (layer thicknesses) 0 weights
+/ UNITS=fT   NSTAT=005   NCH=015   NCMP=2
+/ TIMES(ms)=       0.1350E-01   0.4000E-01   0.6650E-01   0.1070       0.1735       0.2800       0.4530       0.7200        1.120        1.734        2.693        4.200        6.560        10.20        16.20    
+/ CHNL_WDTH(ms)=   0.1300E-01   0.1400E-01   0.1300E-01   0.4000E-01   0.6700E-01   0.1200       0.2000       0.3060       0.4660       0.7330        1.160        1.826        2.866        4.386        7.586    
+/ SURVEY=TD_AEM  PP=RX_POS
+/ LAYERS=03
+/ LINE_HEADER
+/ Station  EastTx  NorthTx  AltTx  Txcln  EastRx  NorthRx  AltRx  CHZ001  CHZ002  CHZ003  CHZ004  CHZ005  CHZ006  CHZ007  CHZ008  CHZ009  CHZ010  CHZ011  CHZ012  CHZ013  CHZ014  CHZ015  CHX001  CHX002  CHX003  CHX004  CHX005  CHX006  CHX007  CHX008  CHX009  CHX010  CHX011  CHX012  CHX013  CHX014  CHX015  WEZ001  WEZ002  WEZ003  WEZ004  WEZ005  WEZ006  WEZ007  WEZ008  WEZ009  WEZ010  WEZ011  WEZ012  WEZ013  WEZ014  WEZ015  WEX001  WEX002  WEX003  WEX004  WEX005  WEX006  WEX007  WEX008  WEX009  WEX010  WEX011  WEX012  WEX013  WEX014  WEX015
+/ MODEL_HEADER
+/  RES_01  RES_02  RES_03 THICK_01 THICK_02
+/
+/ FINAL_ITERATION  11    Station   1
+/ FINAL_PERCENT_RMS_ERROR:     0.15   RSVT:   0.010
+/ FINAL_MODEL    98.86       0.4573        381.2        35.25        9.084    
+/ IMPORTANCE:      0.95  0.75  0.17  1.00  0.73
+/
+/ FINAL_ITERATION  11    Station   2
+/ FINAL_PERCENT_RMS_ERROR:     0.14   RSVT:   0.010
+/ FINAL_MODEL    99.11       0.4632        385.9        35.21        9.206    
+/ IMPORTANCE:      0.94  0.75  0.17  1.00  0.73
+/
+/ FINAL_ITERATION  11    Station   3
+/ FINAL_PERCENT_RMS_ERROR:     0.14   RSVT:   0.010
+/ FINAL_MODEL    99.17       0.4648        389.2        35.19        9.241    
+/ IMPORTANCE:      0.94  0.75  0.17  1.00  0.73
+/
+/ FINAL_ITERATION  11    Station   4
+/ FINAL_PERCENT_RMS_ERROR:     0.15   RSVT:   0.010
+/ FINAL_MODEL    98.98       0.4612        384.9        35.22        9.165    
+/ IMPORTANCE:      0.94  0.75  0.17  1.00  0.73
+/
+/ FINAL_ITERATION  11    Station   5
+/ FINAL_PERCENT_RMS_ERROR:     0.15   RSVT:   0.010
+/ FINAL_MODEL    98.86       0.4573        381.2        35.25        9.084    
+/ IMPORTANCE:      0.95  0.75  0.17  1.00  0.73
+/
+/ Airbeo inversion completed at 12:42 on 12 JUL 2016
+/ Computation time =       1.66 seconds.

@@ -1,0 +1,363 @@
+/ 0100        File version number
+/ PROGRAM_NAME: Beowulf
+/ TITLE: Generate 3 lines of closed loop data over 3 layers for magnetic and electric dipole receivers (Use Leroi!)
+/ Frequency-Domain Survey_Type = FIXED_SOURCE    Source_Type = CLOSED_LOOP
+/ NFRQ=005
+/ FREQS(Hz) =    1.000        10.00        100.0        1000.       0.1000E+05
+/ NSTAT =  14   NLINES =  3
+/ LINE_HEADER    STATION    LINE_ID 1040    HID: 210    NCTD: 2
+/ Data_Type  EAST  NORTH  ELEV    RFX001  RFX002  RFX003  RFX004  RFX005  QFX001  QFX002  QFX003  QFX004  QFX005  RFZ001  RFZ002  RFZ003  RFZ004  RFZ005  QFZ001  QFZ002  QFZ003  QFZ004  QFZ005
+/ LINE_HEADER    STATION    LINE_ID 1180    HID: 211    NCTD: 2
+/ Data_Type  EAST  NORTH  ELEV    RFU001  RFU002  RFU003  RFU004  RFU005  QFU001  QFU002  QFU003  QFU004  QFU005  RFA001  RFA002  RFA003  RFA004  RFA005  QFA001  QFA002  QFA003  QFA004  QFA005
+/ LINE_HEADER    STATION    LINE_ID 2040    HID: 220    NCTD: 1
+/ Data_Type  EAST  NORTH  ELEV    RFE001  RFE002  RFE003  RFE004  RFE005  QFE001  QFE002  QFE003  QFE004  QFE005
+/ LAYERS=03
+/ MODEL_HEADER
+/   RES_1  RES_2  RES_3  THK_1  THK_2
+
+  Station   1    Line 1040    HID: 210    SVAZ:   0    Units: mu-V    PP: Rx
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     0.04   RSVT:   0.100
+/
+/ MODEL_00       100.00         0.50       500.00        35.00        10.00
+/
+/ FINAL_ITERATION  01
+/ FINAL_PERCENT_RMS_ERROR:    0.02   RSVT:  0.050
+
+/ FINAL_MODEL        99.98         0.50       500.00        35.03        10.01
+/ IMPORTANCE          1.00         0.71         0.00         1.00         0.94
+
+  SURVEY_DATA          0.0         0.0      0.0    0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        11.27        11.37        11.28        10.67        9.369      -0.7680E-01  -0.4230E-01  -0.2636      -0.5833       -1.485    
+  MODEL_DATA           0.0         0.0      0.0    0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        11.27        11.37        11.28        10.67        9.369      -0.7680E-01  -0.4230E-01  -0.2636      -0.5834       -1.485    
+
+  Station   2    Line 1040    HID: 210    SVAZ:   0    Units: mu-V    PP: Rx
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     0.04   RSVT:   0.100
+/
+/ MODEL_00       100.00         0.50       500.00        35.00        10.00
+/
+/ FINAL_ITERATION  01
+/ FINAL_PERCENT_RMS_ERROR:    0.03   RSVT:  0.050
+
+/ FINAL_MODEL        99.97         0.50       500.00        34.99        10.00
+/ IMPORTANCE          1.00         1.00         0.00         1.00         1.00
+
+  SURVEY_DATA          0.0        70.0      0.0  -0.1080E-01  -0.7440E-01  -0.1374       0.2350       0.8549       0.3670E-01   0.2270E-01   0.8030E-01   0.2535       0.6774        18.47        18.52        18.62        17.88        16.61      -0.5310E-01  -0.3520E-01  -0.2525      -0.5038       -1.557    
+  MODEL_DATA           0.0        70.0      0.0  -0.1080E-01  -0.7436E-01  -0.1374       0.2350       0.8550       0.3671E-01   0.2269E-01   0.8027E-01   0.2536       0.6775        18.47        18.52        18.62        17.88        16.60      -0.5306E-01  -0.3518E-01  -0.2526      -0.5038       -1.557    
+
+  Station   3    Line 1040    HID: 210    SVAZ:   0    Units: mu-V    PP: Rx
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     0.06   RSVT:   0.100
+/
+/ MODEL_00       100.00         0.50       500.00        35.00        10.00
+/
+/ FINAL_ITERATION  01
+/ FINAL_PERCENT_RMS_ERROR:    0.04   RSVT:  0.050
+
+/ FINAL_MODEL        99.99         0.50       500.00        35.00        10.00
+/ IMPORTANCE          1.00         0.99         0.00         1.00         1.00
+
+  SURVEY_DATA          0.0       130.0      0.0  -0.2020E-01  -0.6980E-01  -0.1157       0.2626       0.9342       0.3860E-01   0.2130E-01   0.1002       0.2772       0.7228       -9.470       -9.506       -9.724       -9.522       -9.496       -0.000        0.000      -0.1360E-01  -0.6090E-01   0.2056    
+  MODEL_DATA           0.0       130.0      0.0  -0.2021E-01  -0.6977E-01  -0.1157       0.2626       0.9342       0.3864E-01   0.2128E-01   0.1002       0.2772       0.7228       -9.470       -9.506       -9.724       -9.522       -9.496      -0.9849E-02   0.1642E-02  -0.1359E-01  -0.6092E-01   0.2056    
+
+  Station   4    Line 1040    HID: 210    SVAZ:   0    Units: mu-V    PP: Rx
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     0.12   RSVT:   0.100
+/
+/ MODEL_00       100.00         0.50       500.00        35.00        10.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:     0.10   RSVT:   0.050
+/
+/ MODEL_01       100.10         0.50       500.00        35.01        10.00
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:     0.10   RSVT:   0.025
+/
+/ MODEL_02       100.09         0.50       500.00        35.01        10.00
+/
+/ FINAL_ITERATION  03
+/ FINAL_PERCENT_RMS_ERROR:    0.10   RSVT:  0.013
+
+/ FINAL_MODEL       100.09         0.50       500.00        35.01        10.00
+/ IMPORTANCE          1.00         1.00         0.00         1.00         1.00
+
+  SURVEY_DATA          0.0       200.0      0.0  -0.2440E-01   -0.000       0.4190E-01   0.1114       0.3281       0.1210E-01    0.000       0.8170E-01   0.9980E-01   0.2039       -1.428       -1.474       -1.488       -1.435       -1.398       0.1570E-01   -0.000       0.1030E-01   0.1520E-01   0.9890E-01
+  MODEL_DATA           0.0       200.0      0.0  -0.2435E-01  -0.5978E-02   0.4189E-01   0.1114       0.3280       0.1207E-01   0.3192E-03   0.8173E-01   0.9976E-01   0.2038       -1.428       -1.474       -1.488       -1.435       -1.398       0.1569E-01  -0.2166E-03   0.1031E-01   0.1517E-01   0.9878E-01
+
+  Station   5    Line 1180    HID: 211    SVAZ:   0    Units: mu-V    PP: Rx
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:   200.00   RSVT:   0.100
+/
+/ MODEL_00       100.00         0.50       500.00        35.00        10.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:   177.30   RSVT:   0.050
+/
+/ MODEL_01      4900.95         0.43       503.52       399.47        18.13
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:   174.30   RSVT:   0.025
+/
+/ MODEL_02     31001.45         0.40       503.18       532.22        19.69
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:   173.43   RSVT:   0.013
+/
+/ MODEL_03    160598.98         0.38       503.05       762.59        20.30
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:   173.21   RSVT:   0.010
+/
+/ MODEL_04    753214.56         0.38       503.31      1140.32        18.55
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:   173.15   RSVT:   0.010
+/
+/ MODEL_05   3415647.50         0.39       503.63      1697.23        16.83
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:   173.14   RSVT:   0.010
+/
+/ MODEL_06  15429270.00         1.13       510.58      4722.61         3.66
+/
+/ FINAL_ITERATION  08
+/ FINAL_PERCENT_RMS_ERROR:  173.14   RSVT:  6.400
+
+/ FINAL_MODEL  15429270.00         1.13       510.58      4722.61         3.66
+/ IMPORTANCE          1.00         0.68         0.15         1.00         0.71
+
+  SURVEY_DATA          0.0         0.0     20.0    10.73        10.79        10.77        10.24        9.175      -0.5600E-01  -0.3360E-01  -0.1878      -0.4692       -1.225        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000    
+  MODEL_DATA           0.0         0.0     20.0   -10.70       -10.70       -10.70       -10.70       -10.70       0.6609E-07   0.2998E-06   0.2944E-05   0.2965E-04   0.5754E-03    0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000    
+
+  Station   6    Line 1180    HID: 211    SVAZ:   0    Units: mu-V    PP: Rx
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:   200.00   RSVT:   0.100
+/
+/ MODEL_00       100.00         0.50       500.00        35.00        10.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:   176.40   RSVT:   0.050
+/
+/ MODEL_01      7379.88         0.43       503.68       354.28        15.37
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:   174.03   RSVT:   0.025
+/
+/ MODEL_02     44870.44         0.40       503.09       509.94        17.39
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:   173.37   RSVT:   0.013
+/
+/ MODEL_03    229678.27         0.34       501.63       653.42        25.84
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:   173.20   RSVT:   0.010
+/
+/ MODEL_04   1082972.12         0.33       501.51       935.43        27.58
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:   173.16   RSVT:   0.010
+/
+/ MODEL_05   5006629.00         0.33       501.46      1357.92        28.59
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:   173.15   RSVT:   0.010
+/
+/ MODEL_06  22512916.00        86.69       501.59      6125.31        16.79
+/
+/ ITERATION  07
+/ PERCENT_RMS_ERROR:   173.15   RSVT:   0.010
+/
+/ MODEL_07  94928376.00      1058.20         0.00      1090.51         4.74
+/
+/ ITERATION  09
+/ PERCENT_RMS_ERROR:   173.15   RSVT:   3.200
+/
+/ MODEL_09  94943952.00      1058.19         0.00      1088.75         4.74
+/
+/ FINAL_ITERATION  10
+/ FINAL_PERCENT_RMS_ERROR:  173.15   RSVT:  6.400
+
+/ FINAL_MODEL  94943952.00      1058.19         0.00      1088.75         4.74
+/ IMPORTANCE          1.00         0.99         0.01         1.00         0.98
+
+  SURVEY_DATA          0.0         0.0     40.0    9.345        9.387        9.391        8.962        8.106      -0.4110E-01  -0.2620E-01  -0.1460      -0.3679      -0.9782        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000    
+  MODEL_DATA           0.0         0.0     40.0   -9.323       -9.323       -9.323       -9.323       -9.325      -0.1118E-06  -0.1992E-06   0.2211E-06   0.3581E-05   0.7762E-04    0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000    
+
+  Station   7    Line 1180    HID: 211    SVAZ:   0    Units: mu-V    PP: Rx
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:   200.00   RSVT:   0.100
+/
+/ MODEL_00       100.00         0.50       500.00        35.00        10.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:   176.14   RSVT:   0.050
+/
+/ MODEL_01      8703.37         0.44       503.83       361.73        14.37
+/
+/ ITERATION  02
+/ PERCENT_RMS_ERROR:   173.96   RSVT:   0.025
+/
+/ MODEL_02     52767.04         0.40       503.20       532.79        16.09
+/
+/ ITERATION  03
+/ PERCENT_RMS_ERROR:   173.35   RSVT:   0.013
+/
+/ MODEL_03    270756.72         0.34       501.55       691.68        23.74
+/
+/ ITERATION  04
+/ PERCENT_RMS_ERROR:   173.20   RSVT:   0.010
+/
+/ MODEL_04   1285189.50         0.34       501.51      1009.15        24.21
+/
+/ ITERATION  05
+/ PERCENT_RMS_ERROR:   173.16   RSVT:   0.010
+/
+/ MODEL_05   6015287.00         0.37       501.51      1495.68        24.21
+/
+/ ITERATION  06
+/ PERCENT_RMS_ERROR:   173.16   RSVT:   0.010
+/
+/ MODEL_06  26766282.00        10.88       500.67      4280.80        36.58
+/
+/ ITERATION  08
+/ PERCENT_RMS_ERROR:   173.15   RSVT:   1.600
+/
+/ MODEL_08  26699282.00        10.74       499.47      4632.48        37.05
+/
+/ FINAL_ITERATION  09
+/ FINAL_PERCENT_RMS_ERROR:  173.15   RSVT:  6.400
+
+/ FINAL_MODEL  26699282.00        10.74       499.47      4632.48        37.05
+/ IMPORTANCE          1.00         0.17         0.03         0.97         0.17
+
+  SURVEY_DATA          0.0         0.0     60.0    7.626        7.652        7.659        7.322        6.648      -0.3040E-01  -0.2050E-01  -0.1155      -0.2874      -0.7666        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000    
+  MODEL_DATA           0.0         0.0     60.0   -7.608       -7.608       -7.608       -7.608       -7.609       0.4852E-07   0.1261E-06   0.1210E-05   0.1220E-04   0.3829E-03    0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000    
+
+  Station   8    Line 1180    HID: 211    SVAZ:   0    Units: mu-V    PP: Rx
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:   137.20   RSVT:   0.100
+/
+/ MODEL_00       100.00         0.50       500.00        35.00        10.00
+/
+/ FINAL_ITERATION  02
+/ FINAL_PERCENT_RMS_ERROR:  137.20   RSVT:  6.400
+
+/ FINAL_MODEL       100.00         0.50       500.00        35.00        10.00
+/ IMPORTANCE          1.00         0.46         0.00         1.00         0.89
+
+  SURVEY_DATA          0.0       120.0     20.0   -3.035       -3.043       -3.089       -3.111       -3.225       -0.000       -0.000      -0.2830E-01  -0.6390E-01  -0.7670E-01   -5.257       -5.270       -5.350       -5.388       -5.585      -0.1230E-01   -0.000      -0.4900E-01  -0.1106      -0.1328    
+  MODEL_DATA           0.0       120.0     20.0    3.035        3.043        3.089        3.111        3.225       0.7036E-02   0.3548E-02   0.2866E-01   0.6380E-01   0.7666E-01   -5.257       -5.270       -5.350       -5.389       -5.586      -0.1219E-01  -0.6146E-02  -0.4964E-01  -0.1105      -0.1328    
+
+  Station   9    Line 1180    HID: 211    SVAZ:   0    Units: mu-V    PP: Rx
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:   137.20   RSVT:   0.100
+/
+/ MODEL_00       100.00         0.50       500.00        35.00        10.00
+/
+/ FINAL_ITERATION  02
+/ FINAL_PERCENT_RMS_ERROR:  137.20   RSVT:  6.400
+
+/ FINAL_MODEL       100.00         0.50       500.00        35.00        10.00
+/ IMPORTANCE          1.00         0.46         0.00         1.00         0.89
+
+  SURVEY_DATA          0.0       120.0     20.0   -3.035       -3.043       -3.089       -3.111       -3.225       -0.000       -0.000      -0.2830E-01  -0.6390E-01  -0.7670E-01   -5.257       -5.270       -5.350       -5.388       -5.585      -0.1230E-01   -0.000      -0.4900E-01  -0.1106      -0.1328    
+  MODEL_DATA           0.0       120.0     20.0    3.035        3.043        3.089        3.111        3.225       0.7036E-02   0.3548E-02   0.2866E-01   0.6380E-01   0.7666E-01   -5.257       -5.270       -5.350       -5.389       -5.586      -0.1219E-01  -0.6146E-02  -0.4964E-01  -0.1105      -0.1328    
+
+  Station  10    Line 1180    HID: 211    SVAZ:   0    Units: mu-V    PP: Rx
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:   141.42   RSVT:   0.100
+/
+/ MODEL_00       100.00         0.50       500.00        35.00        10.00
+/
+/ ITERATION  01
+/ PERCENT_RMS_ERROR:   141.42   RSVT:   0.050
+/
+/ MODEL_01       455.73         0.50       499.97       130.64        10.28
+/
+/ FINAL_ITERATION  03
+/ FINAL_PERCENT_RMS_ERROR:  141.42   RSVT:  6.400
+
+/ FINAL_MODEL       455.73         0.50       499.97       130.64        10.28
+/ IMPORTANCE          1.00         0.01         0.00         1.00         0.00
+
+  SURVEY_DATA          0.0       120.0     60.0   0.5474       0.5432       0.5277       0.4763       0.3430       -0.000       -0.000      -0.2680E-01  -0.6120E-01  -0.1323       0.9482       0.9408       0.9140       0.8249       0.5941       -0.000       -0.000      -0.4640E-01  -0.1060      -0.2291    
+  MODEL_DATA           0.0       120.0     60.0  -0.5422      -0.5418      -0.5361      -0.5131      -0.4442       0.1211E-02   0.1894E-02   0.1040E-01   0.3087E-01   0.8046E-01   0.9392       0.9384       0.9286       0.8886       0.7694      -0.2098E-02  -0.3281E-02  -0.1802E-01  -0.5347E-01  -0.1394    
+
+  Station  11    Line 2040    HID: 220    SVAZ:   0    Units: mV    PP: Rx
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     0.01   RSVT:   0.100
+/
+/ MODEL_00       100.00         0.50       500.00        35.00        10.00
+/
+/ FINAL_ITERATION  01
+/ FINAL_PERCENT_RMS_ERROR:    0.01   RSVT:  0.050
+
+/ FINAL_MODEL        99.98         0.50       500.00        34.99        10.00
+/ IMPORTANCE          1.00         0.07         0.00         1.00         0.20
+
+  SURVEY_DATA          0.0        70.0     -0.0   -0.000       -0.000      -0.4787       -12.32       -346.2      -0.3319       -3.336       -33.54       -319.2       -2894.    
+  MODEL_DATA           0.0        70.0     -0.0  -0.1394E-02  -0.9034E-02  -0.4787       -12.32       -346.2      -0.3319       -3.336       -33.54       -319.2       -2893.    
+
+  Station  12    Line 2040    HID: 220    SVAZ:   0    Units: mV    PP: Rx
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     0.07   RSVT:   0.100
+/
+/ MODEL_00       100.00         0.50       500.00        35.00        10.00
+/
+/ FINAL_ITERATION  01
+/ FINAL_PERCENT_RMS_ERROR:    0.01   RSVT:  0.050
+
+/ FINAL_MODEL       100.03         0.50       500.00        35.01         9.99
+/ IMPORTANCE          1.00         0.43         0.00         1.00         0.90
+
+  SURVEY_DATA          0.0       120.0     -0.0   -0.000      -0.1100E-01  -0.6729       -15.90       -449.3      -0.4587       -4.601       -46.21       -441.5       -4027.    
+  MODEL_DATA           0.0       120.0     -0.0  -0.1649E-02  -0.1100E-01  -0.6729       -15.90       -449.3      -0.4587       -4.601       -46.21       -441.5       -4027.    
+
+  Station  13    Line 2040    HID: 220    SVAZ:   0    Units: mV    PP: Rx
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     0.02   RSVT:   0.100
+/
+/ MODEL_00       100.00         0.50       500.00        35.00        10.00
+/
+/ FINAL_ITERATION  01
+/ FINAL_PERCENT_RMS_ERROR:    0.02   RSVT:  0.050
+
+/ FINAL_MODEL       100.04         0.50       500.00        35.01        10.00
+/ IMPORTANCE          1.00         0.64         0.00         0.99         0.76
+
+  SURVEY_DATA          0.0       200.0     -0.0   -0.000       -0.000      -0.5094       -10.54       -236.6      -0.1362       -1.353       -13.28       -123.7       -1003.    
+  MODEL_DATA           0.0       200.0     -0.0  -0.8232E-03  -0.6391E-02  -0.5094       -10.54       -236.6      -0.1362       -1.353       -13.28       -123.7       -1003.    
+
+  Station  14    Line 2040    HID: 220    SVAZ:   0    Units: mV    PP: Rx
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     0.03   RSVT:   0.100
+/
+/ MODEL_00       100.00         0.50       500.00        35.00        10.00
+/
+/ FINAL_ITERATION  01
+/ FINAL_PERCENT_RMS_ERROR:    0.03   RSVT:  0.050
+
+/ FINAL_MODEL       100.00         0.50       500.00        34.99        10.00
+/ IMPORTANCE          1.00         0.60         0.00         1.00         0.77
+
+  SURVEY_DATA          0.0       300.0     -0.0    0.000       -0.000      -0.2431       -6.584       -127.1      -0.5790E-01  -0.5644       -5.435       -49.78       -354.9    
+  MODEL_DATA           0.0       300.0     -0.0   0.6368E-04  -0.7220E-02  -0.2431       -6.584       -127.1      -0.5785E-01  -0.5644       -5.435       -49.78       -354.9    
+/
+/ Beowulf inversion run completed at 15:23:48 on 14/01/2020
+/ Runtime:         0.97 secs

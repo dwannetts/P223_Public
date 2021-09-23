@@ -1,0 +1,240 @@
+
+  ------------------------------------------------------------------------------
+  | Program:  Leroi                                   
+  | Version:  8.0.4                                   
+  | Date:     05 September, 2018                      
+  |
+  | Authors:  CSIRO Electromagnetic Modelling Group   
+  |           Art Raiche, Fred Sugeng and Glenn Wilson
+  | Project:  AMIRA P223F                             
+  |
+  | Compiler: GCC version 9.2.1 20191102
+  | Options:  -march=broadwell -mmmx -mno-3dnow -msse -msse2 -msse3 -mssse3 -mno-sse4a -mcx16 -msahf -mmovbe -maes -mno-sha -mpclmul -mpopcnt -mabm -mno-lwp -mfma -mno-fma4 -mno-xop -mbmi -mno-sgx -mbmi2 -mno-pconfig -mno-wbnoinvd -mno-tbm -mavx -mavx2 -msse4.2 -msse4.1 -mlzcnt -mrtm -mhle -mrdrnd -mf16c -mfsgsbase -mrdseed -mprfchw -madx -mfxsr -mxsave -mxsaveopt -mno-avx512f -mno-avx512er -mno-avx512cd -mno-avx512pf -mno-prefetchwt1 -mno-clflushopt -mno-xsavec -mno-xsaves -mno-avx512dq -mno-avx512bw -mno-avx512vl -mno-avx512ifma -mno-avx512vbmi -mno-avx5124fmaps -mno-avx5124vnniw -mno-clwb -mno-mwaitx -mno-clzero -mno-pku -mno-rdpid -mno-gfni -mno-shstk -mno-avx512vbmi2 -mno-avx512vnni -mno-vaes -mno-vpclmulqdq -mno-avx512bitalg -mno-movdiri -mno-movdir64b -mno-waitpkg -mno-cldemote -mno-ptwrite --param l1-cache-size=32 --param l1-cache-line-size=64 --param l2-cache-size=35840 -mtune=broadwell -O3 -fwhole-program -fdefault-real-8
+  |
+  | Started:  14/01/2020 at 11:38:33
+  ------------------------------------------------------------------------------
+
+
+ Generate 3 lines of closed loop data over 3 layers for magnetic and electric dipole receivers (Use Leroi!)
+
+  TDFD = 1;   DO3D =  0;   ISYS = 0;   PRFL =  1;   ISTOP = 0
+
+          +-----------------------------------------+
+          +  Time-Domain Ground System Information  +
+          +-----------------------------------------+
+
+  STEP = 0;   NSX =   4;   NCHNL =  20;   KRXW = 2;   REFTYM =   30.00    ;   OFFTYM =   30.00    
+
+
+             TXON (ms)    Transmitter current (amps)
+             ---------    --------------------------
+
+      1        0.000         0.000    
+      2        0.400         10.00    
+      3       29.600         10.00    
+      4       30.000         0.000    
+
+
+         Receiver channel origin INPUT is shifted by   30.000 ms from signal origin.
+
+         Receiver Window Specifications (ms - referenced to signal origin)
+         ----------------------------------------------------------------
+
+                                                             Referenced
+       Window     Open       Close       Width     Centre      Centre
+       ------     ----       -----       -----     ------      ------
+          1     30.3150     30.6590      0.3440     30.4870      0.4870
+          2     30.7070     31.0510      0.3440     30.8790      0.8790
+          3     31.0990     31.4430      0.3440     31.2710      1.2710
+          4     31.4910     31.8350      0.3440     31.6630      1.6630
+          5     31.8830     32.2270      0.3440     32.0550      2.0550
+          6     32.2750     33.0110      0.7360     32.6430      2.6430
+          7     33.0590     33.7950      0.7360     33.4270      3.4270
+          8     33.8430     34.5790      0.7360     34.2110      4.2110
+          9     34.6270     35.3630      0.7360     34.9950      4.9950
+         10     35.4110     36.1470      0.7360     35.7790      5.7790
+         11     36.1950     37.7150      1.5200     36.9550      6.9550
+         12     37.7630     39.2830      1.5200     38.5230      8.5230
+         13     39.3310     40.8510      1.5200     40.0910     10.0910
+         14     40.8990     42.4190      1.5200     41.6590     11.6590
+         15     42.4670     43.9870      1.5200     43.2270     13.2270
+         16     44.0350     47.1230      3.0880     45.5790     15.5790
+         17     47.1710     50.2590      3.0880     48.7150     18.7150
+         18     50.3070     53.3950      3.0880     51.8510     21.8510
+         19     53.4430     56.5310      3.0880     54.9870     24.9870
+         20     56.5790     59.6670      3.0880     58.1230     28.1230
+
+
+  SURVEY_TYPE = 1
+
+  NLINES =  3;   MRXL =   8;   NTX =  1;   SOURCE_TYPE = 1;   MXVRTX = 6;   NTRN =  1
+
+  Vertex Locations for Loop Sources
+  ---------------------------------
+
+  Transmitter  1 has  4 vertices:
+
+            Easting      Northing      Elevation
+            -------      --------      ---------
+    1       -100.00        100.00          0.00
+    2        100.00        100.00          0.00
+    3        100.00       -100.00          0.00
+    4       -100.00       -100.00          0.00
+
+
+  Line     1040;   Tx Index  1;   Rx Type = 1;   NRX =  4;   Units =  3
+
+        CMP =  13;   KNORM = 0;   IPLT = 1;   IDH = 0;   SV_AZM =    0.0;   RXMNT =   1000.    
+
+          Magnetic Dipole Receivers
+          -------------------------
+
+         Easting     Northing   Elevation
+         -------     --------   ---------
+   1         0.0         0.0         0.0
+   2         0.0        70.0         0.0
+   3         0.0       130.0         0.0
+   4         0.0       200.0         0.0
+
+
+  Line     1180;   Tx Index  1;   Rx Type = 1;   NRX =  6;   Units =  3
+
+        CMP =  13;   KNORM = 0;   IPLT = 1;   IDH = 1;   SV_AZM =    0.0;   RXMNT =   1000.    
+
+          Magnetic Dipole Receivers
+          -------------------------
+
+         Easting     Northing   Elevation    Dip    Azimuth
+         -------     --------   ---------    ---    -------
+   1         0.0         0.0        20.0      0.0      0.0
+   2         0.0         0.0        40.0      0.0      0.0
+   3         0.0         0.0        60.0      0.0      0.0
+   4         0.0       120.0        20.0     60.0      0.0
+   5         0.0       120.0        20.0     60.0      0.0
+   6         0.0       120.0        60.0     60.0      0.0
+
+
+  Line     2040;   Tx Index  1;   Rx Type = 2;   NRX =  4;   Units =  2
+
+           Electric Dipole Receiver Electrodes
+           -----------------------------------
+
+           East 1      North 1       East 2      North 2       Depth
+           ------      -------       ------      -------       -----
+   1       -50.00        70.00        50.00        70.00        -0.00
+   2       -50.00       120.00        50.00       120.00        -0.00
+   3       -50.00       200.00        50.00       200.00        -0.00
+   4       -50.00       300.00        50.00       300.00        -0.00
+
+
+  NLAYER =  3;   NPLATE =  0;   NLITH =  3
+
+
+                          LITHOLOGY PROPERTIES
+                          --------------------
+
+                                  Relative   Relative     Cole-Cole Parameters
+        Resistivity  Conductance     MU     Dielectric   CHRG    CTAU       CFREQ
+
+   1      100.0         -1.0     150.000      1.000      1.00    0.00        0.00
+   2     0.5000         -1.0     220.000      1.000      1.00    0.00        0.00
+   3      500.0         -1.0     200.000      1.000      1.00    0.00        0.00
+
+
+  LAYERED EARTH INPUT DATA
+  ------------------------
+
+   1   1   35.0   J, LITHL(J), THK(J)
+   2   2   10.0   J, LITHL(J), THK(J)
+   3   3             Basement Lithology
+
+
+  -------------------------
+  Waveform with derivatives
+     #                t          Delta_I            dI/dt        Delta_IxI            Input
+     1     0.000000E+00     0.000000E+00     0.000000E+00     0.000000E+00     0.000000E+00
+     2   400.000000E-06   400.000000E-06   -25.000000E+03   -10.000000E+00    10.000000E+00
+     3    29.600000E-03    29.200000E-03     0.000000E+00     0.000000E+00    10.000000E+00
+     4    30.000000E-03   400.000000E-06    25.000000E+03    10.000000E+00     0.000000E+00
+  -------------------------
+
+
+  The frequency-domain results are directly computed from
+    0.1000     Hz to   10.00     Hz, using  3 points per decade and from
+     10.00     Hz to  0.1000E+08 Hz, using  6 points per decade.
+
+  These are used to construct the frequency-domain spectrum from DC to  0.1000E+08 Hz
+  before transformation to the time domain.
+
+  Generate 3 lines of closed loop data over 3 layers for magnetic and electric dipole receivers (Use Leroi!)
+
+  Time-domain model output for transmitter(s) with independent receiver lines.
+  Channels are ordered from earliest time to latest time.
+
+  Line 1040    Magnetic dipole Rx    Survey azimuth =   0 degrees    Units = microvolts    Plot point: Rx
+
+         Z : Vertical Component Model Output for Line 1040
+         ----------------------------------------------
+
+          RECEIVER POSITIONS            CHNL 1       CHNL 2       CHNL 3       CHNL 4       CHNL 5       CHNL 6       CHNL 7       CHNL 8       CHNL 9      CHNL 10      CHNL 11      CHNL 12      CHNL 13      CHNL 14      CHNL 15      CHNL 16      CHNL 17      CHNL 18      CHNL 19      CHNL 20 
+        Easting    Northing     Elev   0.4870       0.8790        1.271        1.663        2.055        2.643        3.427        4.211        4.995        5.779        6.955        8.523        10.09        11.66        13.23        15.58        18.71        21.85        24.99        28.12    
+
+  1         0.0         0.0      0.0    1403.        2935.        7022.        2409.       -2607.       -2053.        151.0        151.0       -2.680        6.021        78.90        245.6        283.0        96.18       -125.0       -246.8       -113.5        52.02        84.15        49.92    
+  2         0.0        70.0      0.0    6585.        3379.        564.9       -453.4       -550.7       -390.1       -146.5       -37.66       -37.66       -72.82       -103.3       -65.66       -6.432        21.12        27.97        23.21        10.55      -0.2939       -2.648       0.1229    
+  3         0.0       130.0      0.0   -5153.       -1908.        2658.        2545.        786.9       -146.1       -209.4       -39.00        105.0        138.8        130.5        155.8        120.2        20.75       -70.75       -114.5       -56.81        13.39        28.47        14.97    
+  4         0.0       200.0      0.0    181.4       -612.1       -1882.       -498.6        965.1        692.1       -47.25       -48.00        3.288      -0.7665       -21.40       -62.52       -70.36       -18.43        41.45        71.77        30.74       -16.95       -25.35       -14.36    
+
+         X : Radial Component Model Output for Line 1040
+         --------------------------------------------
+
+          RECEIVER POSITIONS            CHNL 1       CHNL 2       CHNL 3       CHNL 4       CHNL 5       CHNL 6       CHNL 7       CHNL 8       CHNL 9      CHNL 10      CHNL 11      CHNL 12      CHNL 13      CHNL 14      CHNL 15      CHNL 16      CHNL 17      CHNL 18      CHNL 19      CHNL 20 
+        Easting    Northing     Elev   0.4870       0.8790        1.271        1.663        2.055        2.643        3.427        4.211        4.995        5.779        6.955        8.523        10.09        11.66        13.23        15.58        18.71        21.85        24.99        28.12    
+
+  1         0.0         0.0      0.0    0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000        0.000    
+  2         0.0        70.0      0.0   -2455.       -2865.       -1589.        287.3        1203.        669.0       -74.79       -43.70        9.611       -20.97       -32.76        19.73        49.10        41.01        18.07       -5.763       -10.50       -5.483       -4.395       -4.562    
+  3         0.0       130.0      0.0   -2021.       -2494.       -1594.        51.12        968.6        628.6        46.80        74.38        107.9        61.76       -4.524       -43.19       -48.49       -25.46        2.995        21.59        9.784       -8.256       -11.55       -7.535    
+  4         0.0       200.0      0.0   -52.74        405.8        279.4       -858.9       -1396.       -490.8        282.9        28.93       -154.0       -122.1       -4.868        66.23        81.17        52.02        7.555       -26.22       -13.50        10.79        14.54        8.680    
+
+  Line 1180    Magnetic dipole Rx    Survey azimuth =   0 degrees    Units = microvolts    Plot point: Rx
+
+         A : Axial Component Model Output for Line 1180
+         -------------------------------------------
+
+          RECEIVER POSITIONS            CHNL 1       CHNL 2       CHNL 3       CHNL 4       CHNL 5       CHNL 6       CHNL 7       CHNL 8       CHNL 9      CHNL 10      CHNL 11      CHNL 12      CHNL 13      CHNL 14      CHNL 15      CHNL 16      CHNL 17      CHNL 18      CHNL 19      CHNL 20 
+        Easting    Northing     Elev   0.4870       0.8790        1.271        1.663        2.055        2.643        3.427        4.211        4.995        5.779        6.955        8.523        10.09        11.66        13.23        15.58        18.71        21.85        24.99        28.12    
+
+  1         0.0         0.0     20.0  -0.4782E-06  -0.5622E-06  -0.7396E-06  -0.1949E-06   0.2958E-06   0.2274E-06  -0.4847E-08  -0.1186E-07  -0.3730E-09  -0.3251E-08  -0.8025E-08  -0.1758E-07  -0.1921E-07  -0.5056E-08   0.1092E-07   0.1898E-07   0.8168E-08  -0.4543E-08  -0.7021E-08  -0.4354E-08
+  2         0.0         0.0     40.0  -0.4823E-06  -0.4501E-06  -0.4070E-06  -0.8248E-07   0.1651E-06   0.1273E-06   0.4272E-08  -0.3757E-08   0.9420E-10  -0.1787E-08  -0.2820E-08  -0.5427E-08  -0.6184E-08  -0.1091E-08   0.4548E-08   0.7101E-08   0.2754E-08  -0.2068E-08  -0.3005E-08  -0.1975E-08
+  3         0.0         0.0     60.0  -0.4106E-06  -0.3398E-06  -0.2435E-06  -0.4210E-07   0.9278E-07   0.7396E-07   0.6693E-08  -0.4966E-09   0.2414E-09  -0.8505E-09  -0.5983E-09  -0.1240E-08  -0.1875E-08  -0.1105E-09   0.1871E-08   0.2631E-08   0.8358E-09  -0.1023E-08  -0.1380E-08  -0.9723E-09
+  4         0.0       120.0     20.0   -2631.       -1307.        792.1        1139.        625.8        117.3       -88.12       -18.94        52.70        63.25        55.37        64.45        48.42        9.188       -26.19       -43.58       -22.62        3.661        9.469        4.609    
+  5         0.0       120.0     20.0   -2631.       -1307.        792.1        1139.        625.8        117.3       -88.12       -18.94        52.70        63.25        55.37        64.45        48.42        9.188       -26.19       -43.58       -22.62        3.661        9.469        4.609    
+  6         0.0       120.0     60.0   -427.7       -293.1        119.7        300.4        263.3        95.84       -22.34       -5.967        15.17        15.81        11.39        12.44        9.087        2.434       -3.257       -6.284       -3.617       0.1407        1.026       0.3946    
+
+         U : Slope Component Model Output for Line 1180
+         -----------------------------------------------
+
+          RECEIVER POSITIONS            CHNL 1       CHNL 2       CHNL 3       CHNL 4       CHNL 5       CHNL 6       CHNL 7       CHNL 8       CHNL 9      CHNL 10      CHNL 11      CHNL 12      CHNL 13      CHNL 14      CHNL 15      CHNL 16      CHNL 17      CHNL 18      CHNL 19      CHNL 20 
+        Easting    Northing     Elev   0.4870       0.8790        1.271        1.663        2.055        2.643        3.427        4.211        4.995        5.779        6.955        8.523        10.09        11.66        13.23        15.58        18.71        21.85        24.99        28.12    
+
+  1         0.0         0.0     20.0    2331.        2741.        3606.        950.0       -1442.       -1109.        23.63        57.84        1.819        15.85        39.13        85.70        93.66        24.65       -53.24       -92.54       -39.82        22.15        34.23        21.23    
+  2         0.0         0.0     40.0    2352.        2195.        1985.        402.1       -805.1       -620.4       -20.83        18.32      -0.4593        8.712        13.75        26.46        30.15        5.321       -22.17       -34.62       -13.43        10.08        14.65        9.629    
+  3         0.0         0.0     60.0    2002.        1657.        1187.        205.3       -452.4       -360.6       -32.63        2.421       -1.177        4.147        2.917        6.047        9.141       0.5389       -9.120       -12.83       -4.075        4.986        6.728        4.741    
+  4         0.0       120.0     20.0    1954.        1630.        1090.        262.0       -286.8       -316.0       -108.9       -45.93       -22.59       -11.47       -6.257        11.86        21.82        11.59       -2.818       -12.07       -5.612        3.693        5.551        3.737    
+  5         0.0       120.0     20.0    1954.        1630.        1090.        262.0       -286.8       -316.0       -108.9       -45.93       -22.59       -11.47       -6.257        11.86        21.82        11.59       -2.818       -12.07       -5.612        3.693        5.551        3.737    
+  6         0.0       120.0     60.0    1235.        897.5        512.3        153.2       -60.30       -112.7       -58.12       -19.89       -2.253       0.6592       -4.031       -2.107        1.436       0.9400      -0.2690      -0.8653       0.1430E-01   0.9756        1.180        1.002    
+
+  Line 2040    Electric dipole Rx    Units = millivolts    Plot point: Rx
+
+         Electric Dipole Model Output for Line 2040
+         --------------------------------------
+
+          RECEIVER POSITIONS            CHNL 1       CHNL 2       CHNL 3       CHNL 4       CHNL 5       CHNL 6       CHNL 7       CHNL 8       CHNL 9      CHNL 10      CHNL 11      CHNL 12      CHNL 13      CHNL 14      CHNL 15      CHNL 16      CHNL 17      CHNL 18      CHNL 19      CHNL 20 
+        Easting    Northing     Elev   0.4870       0.8790        1.271        1.663        2.055        2.643        3.427        4.211        4.995        5.779        6.955        8.523        10.09        11.66        13.23        15.58        18.71        21.85        24.99        28.12    
+
+  1         0.0        70.0     -0.0    18.19        14.67        6.678      -0.2566       -3.734       -3.425      -0.3591       0.5365       0.4210E-01  -0.2475      -0.8714E-01  -0.4667E-01  -0.1298      -0.1023      -0.6553E-01   0.2012E-02   0.6558E-01   0.4200E-01   0.1480E-01   0.6365E-02
+  2         0.0       120.0     -0.0    24.10        16.30        5.415      -0.9902       -2.816       -2.204      -0.7115      -0.1071      -0.1704      -0.2821      -0.2160      -0.1510      -0.9678E-01   0.2984E-02   0.4282E-01   0.8032E-01   0.7899E-01   0.3247E-01  -0.8039E-03  -0.1270E-01
+  3         0.0       200.0     -0.0    5.091        2.237        2.932        4.182        4.299        2.189      -0.8010      -0.8465       0.1761       0.6068       0.2010      -0.1685      -0.1104      -0.4090E-01  -0.2426E-01  -0.3080E-02   0.2288E-01  -0.3589E-03  -0.1866E-01  -0.2964E-01
+  4         0.0       300.0     -0.0    2.687       0.8752       0.7917       0.4530       0.1436       0.5849        1.329       0.8056       0.3698E-01  -0.2481      -0.7533E-02   0.1828       0.7727E-01  -0.1446E-01  -0.2474E-01  -0.4518E-03   0.1950E-01   0.2432E-01   0.2207E-01   0.2388E-01
+
+  Leroi forward model run completed at 11:38:33 on 14/01/2020 using         0.47 secs
+

@@ -1,0 +1,219 @@
+
+  ------------------------------------------------------------------------------
+  | Program:  Samaya                                  
+  | Version:  2.0.1                                   
+  | Date:     09 February, 2021                       
+  |
+  | Authors:  CSIRO Electromagnetic Modelling Group   
+  |           Art Raiche, Fred Sugeng and Glenn Wilson
+  | Contact:  David Annetts (david.annetts@csiro.au)  
+  | Project:  AMIRA P223F                             
+  | License:  GPL-2.0 (Full text at https://opensource.org/licenses/gpl-2.0.php)              
+  |
+  | Compiler: GCC version 9.3.0
+  | Options:  -march=cascadelake -mmmx -mno-3dnow -msse -msse2 -msse3 -mssse3 -mno-sse4a -mcx16 -msahf -mmovbe -maes -mno-sha -mpclmul -mpopcnt -mabm -mno-lwp -mfma -mno-fma4 -mno-xop -mbmi -mno-sgx -mbmi2 -mno-pconfig -mno-wbnoinvd -mno-tbm -mavx -mavx2 -msse4.2 -msse4.1 -mlzcnt -mno-rtm -mno-hle -mrdrnd -mf16c -mfsgsbase -mrdseed -mprfchw -madx -mfxsr -mxsave -mxsaveopt -mavx512f -mno-avx512er -mavx512cd -mno-avx512pf -mno-prefetchwt1 -mclflushopt -mxsavec -mxsaves -mavx512dq -mavx512bw -mavx512vl -mno-avx512ifma -mno-avx512vbmi -mno-avx5124fmaps -mno-avx5124vnniw -mclwb -mno-mwaitx -mno-clzero -mpku -mno-rdpid -mno-gfni -mno-shstk -mno-avx512vbmi2 -mavx512vnni -mno-vaes -mno-vpclmulqdq -mno-avx512bitalg -mno-avx512vpopcntdq -mno-movdiri -mno-movdir64b -mno-waitpkg -mno-cldemote -mno-ptwrite --param l1-cache-size=32 --param l1-cache-line-size=64 --param l2-cache-size=22528 -mtune=cascadelake -O3 -fwhole-program -fdefault-double-8 -fdefault-real-8 -fpre-include=/usr/include/finclude/math-vector-fortran.h
+  |
+  | Started:  2021-02-09T09:42:22
+  ------------------------------------------------------------------------------
+
+          INPUT DATA
+          ----------
+
+
+ MT test over vertical plate (InPhase & Quadrature)                                                                      
+
+  TDFD = 2;   DO3D =  1;   ISYS = 6;   PRFL =  1;   ISTOP = 0
+
+          +----------------------------------------------+
+          +  Frequency-Domain Ground System Information  +
+          +----------------------------------------------+
+
+  NFRQ =  4
+
+           Frequency
+           ---------
+
+      1   0.1000E-01
+      2   0.1000    
+      3    1.000    
+      4    10.00    
+
+
+  SURVEY_TYPE = 6
+
+  Magnetotelluric Survey:   NHRX =   3,  NERX =  10,  IPM = 0
+
+
+   Magnetic Field Receivers
+   ------------------------
+
+  H-Field
+  receiver       East          North
+  --------       ----          -----
+
+     1           -500.0            0.0
+     2              0.0            0.0
+     3            500.0            0.0
+
+
+   Electric Field Receivers
+   ------------------------
+
+  H-Field
+   Index         East          North
+   -----         ----          -----
+
+     1           -500.0         -500.0
+     2           -250.0         -250.0
+     2              0.0            0.0
+     2            250.0          250.0
+     3            500.0          500.0
+     1            -10.0          -10.0
+     2            -10.0          -10.0
+     2            -10.0          -10.0
+     2            -10.0          -10.0
+     3            -10.0          -10.0
+
+
+  NLAYER =  1;   NLITH =  7
+
+
+                          LITHOLOGY PROPERTIES
+                          --------------------
+
+                                  Relative   Relative     Cole-Cole Parameters
+        Resistivity  Conductance     MU     Dielectric   CHRG    CTAU       CFREQ
+
+   1      1.000         -1.0       1.000      1.000      0.00    0.00        1.00
+   2      1.000         -1.0       1.000      1.000      0.00    0.00        1.00
+   3      100.0         -1.0       1.000      1.000      0.00    0.00        1.00
+   4      1.000         50.0       1.000      1.000      0.00    0.00        1.00
+   5      20.00         30.0       1.000      1.000      0.40    1.17        0.20
+   6      5.000         42.0       1.000      1.000      0.00    0.00        1.00
+   7      1.000        200.0       1.000      1.000      0.20    1.20        0.40
+
+
+  LAYERED EARTH INPUT DATA
+  ------------------------
+
+   1   3             Basement Lithology
+
+
+  MESH AND LITHOLOGIES DESCRIPTION
+  --------------------------------
+
+  Number of node "slices" along North-South axis =  9
+  Number of node rows in each slice =   6
+  Number of node columns in each slice =   3
+  KACC = 2    SOLVER = 1    OUTPUT =  10
+
+
+
+  Before computation begins, Samaya may transform array and model coordinates
+  from GPS coordimnates where elevation increases positive upwards to a
+  body-centred system where depth increases positive downwards.
+  In this system, the dip of magnetic dipole transmitters and receivers
+  = 0 for vertical dipoles and 90 for horizontal dipoles.
+
+  The computational horizontal origin remains unchanged.
+
+
+          +----------------------------------+
+          +  Layered Earth Model Parameters  +
+          +----------------------------------+
+
+                    Depth
+ Layer  Thickness   to Top    Resistivity   MU-R   EPS-R   CHRG    CFREQ    CTAU
+ -----  ---------   ------    -----------   ----   -----   ----    -----    ----
+   1                   0.0      100.0       1.00   1.00    0.00    1.00      0.0    
+
+  Samaya will compute 3D responses for a frequency-domain system.
+
+
+---------------------------------------------------------------------------
+                       END OF INPUT DATA DESCRIPTION
+---------------------------------------------------------------------------
+
+  Magnetotelluric Model Output
+
+  Impedances are expressed as Inphase and Quadrature.
+
+
+         FREQUENCY =   0.10000E-01 Hz.
+         ----------------------------
+
+                                                    Inphase                                               Quadrature
+         Receiver Positions                         -------                                               ----------
+         East        North        ZXX          ZXY          ZYX          ZYY           ZXX          ZXY          ZYX          ZYY
+                                  ---          ---          ---          ---           ---          ---          ---          ---
+   1      -500.0        10.0  -0.1093E-06   0.5234E-03  -0.2110E-17  -0.4266E-19     0.2728E-03   0.3932      -0.2108E-17  -0.4747E-19
+   2      -250.0        10.0  -0.1242E-03   0.5803E-03   0.3161E-16  -0.4490E-18    -0.9838E-01   0.4094       0.3160E-16  -0.4248E-18
+   3         0.0        10.0  -0.1242E-03   0.5803E-03  -0.2136E-17   0.3034E-19    -0.9838E-01   0.4094      -0.2134E-17   0.2869E-19
+   4       250.0        10.0   0.1187      -0.2025E-02   0.1224E-01  -0.3087E-01     0.1784E-03  -0.7657E-03   0.6117E-05  -0.1722E-04
+   5       500.0        10.0  -0.3754       0.4271E-01  -0.7720E-01  -0.7107        -0.7404E-03  -0.8859E-02  -0.4386E-04  -0.5089E-03
+   6       -10.0      -500.0   0.9705       0.3554E-02  -0.2023E-03    1.050         0.3289E-04   0.3801E-04   0.2620E-06   0.2346E-04
+   7       -10.0      -250.0   0.3688      -0.6784E-02   0.5459E-02  -0.9587E-01     0.1704E-03  -0.6680E-03   0.8374E-05  -0.3255E-04
+   8       -10.0         0.0   0.1189      -0.2887E-02   0.2582E-02  -0.3073E-01     0.1785E-03  -0.7662E-03   0.5242E-05  -0.2101E-04
+   9       -10.0       250.0  -0.9670      -0.7072E-02  -0.1121       0.1345         0.3204E-03  -0.1399E-02   0.1402E-04  -0.1834E-04
+  10       -10.0       500.0   -1.018       0.1717       0.8593        7.390        -0.8881E-03  -0.1066E-01   0.2381E-03   0.3000E-02
+
+
+         FREQUENCY =   0.10000     Hz.
+         ----------------------------
+
+                                                    Inphase                                               Quadrature
+         Receiver Positions                         -------                                               ----------
+         East        North        ZXX          ZXY          ZYX          ZYY           ZXX          ZXY          ZYX          ZYY
+                                  ---          ---          ---          ---           ---          ---          ---          ---
+   1      -500.0        10.0  -0.4612E-04   0.1648E-01  -0.6684E-16  -0.1265E-17     0.2739E-02    3.943      -0.6664E-16  -0.4704E-17
+   2      -250.0        10.0  -0.8586E-02   0.4077E-01   0.9990E-15  -0.1186E-16    -0.9803        4.080       0.9882E-15   0.3618E-16
+   3         0.0        10.0  -0.8586E-02   0.4077E-01  -0.6761E-16   0.7972E-18    -0.9803        4.080      -0.6665E-16  -0.2446E-17
+   4       250.0        10.0   0.1240      -0.2402E-01   0.1215E-01  -0.3051E-01     0.5336E-02  -0.2253E-01  -0.3043E-04   0.1943E-03
+   5       500.0        10.0  -0.3964      -0.2120      -0.7839E-01  -0.7251        -0.2220E-01  -0.2719      -0.1291E-02  -0.1575E-01
+   6       -10.0      -500.0   0.9704       0.2708E-02  -0.2024E-03    1.050         0.8992E-04  -0.5335E-03   0.2329E-05   0.7298E-04
+   7       -10.0      -250.0   0.3725      -0.2229E-01   0.5411E-02  -0.9566E-01     0.3969E-02  -0.1652E-01   0.1040E-04  -0.2546E-04
+   8       -10.0         0.0   0.1242      -0.2488E-01   0.2556E-02  -0.3062E-01     0.5335E-02  -0.2253E-01   0.1057E-04  -0.3819E-04
+   9       -10.0       250.0  -0.9553      -0.5681E-01  -0.1114       0.1315         0.1094E-01  -0.4932E-01   0.5876E-03  -0.2634E-02
+  10       -10.0       500.0   -1.049      -0.2073       0.8730        7.555        -0.3155E-01  -0.3913       0.1321E-01   0.1628    
+
+
+         FREQUENCY =    1.0000     Hz.
+         ----------------------------
+
+                                                    Inphase                                               Quadrature
+         Receiver Positions                         -------                                               ----------
+         East        North        ZXX          ZXY          ZYX          ZYY           ZXX          ZXY          ZYX          ZYY
+                                  ---          ---          ---          ---           ---          ---          ---          ---
+   1      -500.0        10.0  -0.5806E-02   0.4972      -0.2132E-14  -0.9062E-16     0.2781E-01    39.80      -0.2110E-14  -0.3398E-14
+   2      -250.0        10.0   -1.339        5.950       0.2974E-13   0.6879E-14     -8.080        33.59       0.2175E-13   0.4179E-13
+   3         0.0        10.0   -1.339        5.950      -0.2036E-14  -0.5035E-15     -8.080        33.59      -0.1449E-14  -0.2828E-14
+   4       250.0        10.0   0.2835      -0.6929       0.9938E-02  -0.2124E-01     0.1175      -0.4850      -0.1380E-02   0.6269E-02
+   5       500.0        10.0  -0.3830       0.2068E-01  -0.7712E-01  -0.7058         -1.419       -17.15      -0.8014E-01  -0.9683    
+   6       -10.0      -500.0   0.9702      -0.2096E-01  -0.2029E-03    1.050         0.1281E-03  -0.2254E-01   0.2234E-04   0.1371E-03
+   7       -10.0      -250.0   0.4866      -0.5011       0.4410E-02  -0.9148E-01     0.8470E-01  -0.3483      -0.5002E-03   0.2196E-02
+   8       -10.0         0.0   0.2836      -0.6936       0.2078E-02  -0.2862E-01     0.1175      -0.4849      -0.2094E-03   0.8997E-03
+   9       -10.0       250.0  -0.6008       -1.546      -0.9128E-01   0.4640E-01     0.2538       -1.087       0.1419E-01  -0.6183E-01
+  10       -10.0       500.0   -1.037       0.3190E-01   0.8678        7.447         -2.076       -25.15       0.8870        10.73    
+
+
+         FREQUENCY =    10.000     Hz.
+         ----------------------------
+
+                                                    Inphase                                               Quadrature
+         Receiver Positions                         -------                                               ----------
+         East        North        ZXX          ZXY          ZYX          ZYY           ZXX          ZXY          ZYX          ZYY
+                                  ---          ---          ---          ---           ---          ---          ---          ---
+   1      -500.0        10.0  -0.6304       -5.796      -0.6285E-13   0.9599E-13     0.2345        399.6      -0.7214E-13  -0.3479E-11
+   2      -250.0        10.0   -6.791        31.87       0.1442E-12   0.3611E-11     -7.941        30.38       0.1529E-13   0.4107E-11
+   3         0.0        10.0   -6.791        31.87      -0.1022E-13  -0.2731E-12     -7.941        30.38      -0.4196E-15  -0.2727E-12
+   4       250.0        10.0   0.9347       -3.429       0.1023E-02   0.1604E-01     0.6322E-01   0.7174E-01  -0.6606E-03   0.3798E-02
+   5       500.0        10.0    1.044        17.15       0.2553E-02   0.2498        -0.4195E-01  -0.3638      -0.2192E-02  -0.1728E-01
+   6       -10.0      -500.0   0.9705      -0.7287      -0.2265E-03    1.038        -0.2381E-02  -0.7882       0.2036E-03   0.1008E-02
+   7       -10.0      -250.0   0.9534       -2.460       0.4885E-03  -0.7506E-01     0.4559E-01   0.6030E-01  -0.2041E-03   0.1625E-03
+   8       -10.0         0.0   0.9347       -3.429       0.2300E-03  -0.2087E-01     0.6321E-01   0.7180E-01  -0.7685E-04  -0.2488E-03
+   9       -10.0       250.0   0.8475       -7.634      -0.8926E-02  -0.3010         0.1326      -0.2372       0.7283E-02  -0.2664E-01
+  10       -10.0       500.0    1.062        25.24      -0.2729E-01   -3.299        -0.6357E-01   -1.197       0.2644E-01   0.2773    
+
+  Samaya forward model run completed: 2021-02-09T09:42:33
+  Runtime:        11.90 seconds
+

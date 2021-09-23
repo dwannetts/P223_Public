@@ -1,0 +1,13 @@
+<map id="colres_1d" name="colres_1d">
+<area shape="rect" id="node2" href="$Leroi_8f90.html#a94e83e050e27be19cb6d665d80c080bf" title="hs_cdnt" alt="" coords="132,5,200,32"/>
+<area shape="rect" id="node9" href="$Leroi_8f90.html#a247cf958ed9d5aa90d05eee29e6a9582" title="hslpb" alt="" coords="139,56,193,83"/>
+<area shape="rect" id="node10" href="$Leroi_8f90.html#a918a25836d554d239ee900a00fbefbb6" title="hslpe" alt="" coords="139,107,193,133"/>
+<area shape="rect" id="node11" href="$Leroi_8f90.html#a1965f18ad74a78ddcda474fa4268445f" title="hslped" alt="" coords="136,157,196,184"/>
+<area shape="rect" id="node12" href="$Leroi_8f90.html#a48d6fa7ecaca60caaf9ecba957eaa3b1" title="hsmdb" alt="" coords="135,208,197,235"/>
+<area shape="rect" id="node3" href="$Leroi_8f90.html#a940c66015c19ed9dab8214acf582b96c" title="hsboss" alt="" coords="248,107,312,133"/>
+<area shape="rect" id="node4" href="$Leroi_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="main" alt="" coords="845,107,896,133"/>
+<area shape="rect" id="node5" href="$Leroi_8f90.html#a9b871caa6fa2f7ceadf6860a0a16a07b" title="hsboss_td" alt="" coords="360,107,443,133"/>
+<area shape="rect" id="node6" href="$Leroi_8f90.html#a38a723748e0c805e5dfbd851b9c62b3e" title="get_fwd_modl" alt="" coords="491,157,593,184"/>
+<area shape="rect" id="node7" href="$Leroi_8f90.html#a2ce05aab7ca8a8111b718d33c0f7029c" title="forjac" alt="" coords="641,157,696,184"/>
+<area shape="rect" id="node8" href="$Leroi_8f90.html#a8f13594331f001917eefb525bce81f61" title="nlsq2" alt="" coords="744,157,797,184"/>
+</map>

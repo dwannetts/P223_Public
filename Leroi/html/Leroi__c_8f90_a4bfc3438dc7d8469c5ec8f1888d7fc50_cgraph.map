@@ -1,0 +1,11 @@
+<map id="mgt_boss" name="mgt_boss">
+<area shape="rect" id="node2" href="$Leroi_8f90.html#a8e7ce2c7dc3e5ee45a8adefc6e6bba97" title="set_kfg" alt="" coords="137,5,202,32"/>
+<area shape="rect" id="node3" href="$Leroi_8f90.html#afd2db4ed971ee6e92ca6da7bece2caff" title="mgt_cspl" alt="" coords="132,56,207,83"/>
+<area shape="rect" id="node9" href="$Leroi_8f90.html#a8ec0c93946d1a3d78ce1cabd3de6558d" title="rplt2xyz" alt="" coords="135,107,203,133"/>
+<area shape="rect" id="node10" href="$Leroi_8f90.html#a96acb0ecb10b6c9a318ee0aa7cc60bdc" title="mgtdir" alt="" coords="140,157,199,184"/>
+<area shape="rect" id="node4" href="$Leroi_8f90.html#a8765868cf7e593af1ecbeadd492b6b49" title="mgt_hnk" alt="" coords="255,31,327,57"/>
+<area shape="rect" id="node8" href="$Leroi_8f90.html#a836d1cb8acb3544a3a9fa63433efc1b6" title="cubspl" alt="" coords="261,81,321,108"/>
+<area shape="rect" id="node5" href="$Leroi_8f90.html#ad35190cbd2113592b83c9f1e721b8d07" title="mgt_ker" alt="" coords="375,31,444,57"/>
+<area shape="rect" id="node6" href="$Leroi_8f90.html#a2ffa10f72b064e2c52fb28da1b335098" title="edsx_coef" alt="" coords="492,31,575,57"/>
+<area shape="rect" id="node7" href="$Leroi_8f90.html#a58ae4aba68186ebcf3cfb74fa1361584" title="propagate" alt="" coords="623,31,701,57"/>
+</map>

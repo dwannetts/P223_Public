@@ -1,0 +1,79 @@
+/ 0100        File version number
+/ PROGRAM_NAME: Beowulf
+/ TITLE: Generate 3 lines of closed loop data over 3 layers for magnetic and electric dipole receivers (Use Leroi!)
+/ Frequency-Domain Survey_Type = FIXED_SOURCE    Source_Type = CLOSED_LOOP
+/ NFRQ=005
+/ FREQS(Hz) =    1.000        10.00        100.0        1000.       0.1000E+05
+/ NSTAT =   4   NLINES =  1
+/ LINE_HEADER    STATION    LINE_ID 2040    HID: 220    NCTD: 1
+/ Data_Type  EAST  NORTH  ELEV    RFE001  RFE002  RFE003  RFE004  RFE005  QFE001  QFE002  QFE003  QFE004  QFE005
+/ LAYERS=03
+/ MODEL_HEADER
+/   RES_1  RES_2  RES_3  THK_1  THK_2
+
+  Station   1    Line 2040    HID: 220    SVAZ:   0    Units: mV    PP: Rx
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     0.01   RSVT:   0.100
+/
+/ MODEL_00       100.00         0.50       500.00        35.00        10.00
+/
+/ FINAL_ITERATION  01
+/ FINAL_PERCENT_RMS_ERROR:    0.01   RSVT:  0.050
+
+/ FINAL_MODEL        99.98         0.50       500.00        34.99        10.00
+/ IMPORTANCE          1.00         0.07         0.00         1.00         0.20
+
+  SURVEY_DATA          0.0        70.0     -0.0   -0.000       -0.000      -0.4787       -12.32       -346.2      -0.3319       -3.336       -33.54       -319.2       -2894.    
+  MODEL_DATA           0.0        70.0     -0.0  -0.1394E-02  -0.9034E-02  -0.4787       -12.32       -346.2      -0.3319       -3.336       -33.54       -319.2       -2893.    
+
+  Station   2    Line 2040    HID: 220    SVAZ:   0    Units: mV    PP: Rx
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     0.07   RSVT:   0.100
+/
+/ MODEL_00       100.00         0.50       500.00        35.00        10.00
+/
+/ FINAL_ITERATION  01
+/ FINAL_PERCENT_RMS_ERROR:    0.01   RSVT:  0.050
+
+/ FINAL_MODEL       100.03         0.50       500.00        35.01         9.99
+/ IMPORTANCE          1.00         0.43         0.00         1.00         0.90
+
+  SURVEY_DATA          0.0       120.0     -0.0   -0.000      -0.1100E-01  -0.6729       -15.90       -449.3      -0.4587       -4.601       -46.21       -441.5       -4027.    
+  MODEL_DATA           0.0       120.0     -0.0  -0.1649E-02  -0.1100E-01  -0.6729       -15.90       -449.3      -0.4587       -4.601       -46.21       -441.5       -4027.    
+
+  Station   3    Line 2040    HID: 220    SVAZ:   0    Units: mV    PP: Rx
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     0.02   RSVT:   0.100
+/
+/ MODEL_00       100.00         0.50       500.00        35.00        10.00
+/
+/ FINAL_ITERATION  01
+/ FINAL_PERCENT_RMS_ERROR:    0.02   RSVT:  0.050
+
+/ FINAL_MODEL       100.04         0.50       500.00        35.01        10.00
+/ IMPORTANCE          1.00         0.64         0.00         0.99         0.76
+
+  SURVEY_DATA          0.0       200.0     -0.0   -0.000       -0.000      -0.5094       -10.54       -236.6      -0.1362       -1.353       -13.28       -123.7       -1003.    
+  MODEL_DATA           0.0       200.0     -0.0  -0.8232E-03  -0.6391E-02  -0.5094       -10.54       -236.6      -0.1362       -1.353       -13.28       -123.7       -1003.    
+
+  Station   4    Line 2040    HID: 220    SVAZ:   0    Units: mV    PP: Rx
+/
+/ ITERATION  00
+/ PERCENT_RMS_ERROR:     0.03   RSVT:   0.100
+/
+/ MODEL_00       100.00         0.50       500.00        35.00        10.00
+/
+/ FINAL_ITERATION  01
+/ FINAL_PERCENT_RMS_ERROR:    0.03   RSVT:  0.050
+
+/ FINAL_MODEL       100.00         0.50       500.00        34.99        10.00
+/ IMPORTANCE          1.00         0.60         0.00         1.00         0.77
+
+  SURVEY_DATA          0.0       300.0     -0.0    0.000       -0.000      -0.2431       -6.584       -127.1      -0.5790E-01  -0.5644       -5.435       -49.78       -354.9    
+  MODEL_DATA           0.0       300.0     -0.0   0.6368E-04  -0.7220E-02  -0.2431       -6.584       -127.1      -0.5785E-01  -0.5644       -5.435       -49.78       -354.9    
+/
+/ Beowulf inversion run completed at 15:22:44 on 14/01/2020
+/ Runtime:         0.05 secs

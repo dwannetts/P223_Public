@@ -1,0 +1,29 @@
+
+ FATAL ERROR
+ ----- -----
+
+
+  UNITS must be 1, 2 or 3
+
+ FATAL ERROR
+ ----- -----
+
+
+  The value for ISW is outside the permitted range.  The allowed 
+  absolute values are: 1, 10, 11, 30, 31, 130, 131, or 4.
+
+
+ FATAL ERROR
+ ----- -----
+
+
+  The value for KRXW is outside the permitted range.
+  The allowed values are: 1 or 2.
+
+
+ WARNING
+ -------
+
+
+  CMP must be 11, 13, 2, 3 for time-domain forward modelling, .
+  It has been reset to 2

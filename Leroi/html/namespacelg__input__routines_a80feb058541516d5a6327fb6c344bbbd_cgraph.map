@@ -1,0 +1,6 @@
+<map id="lg_input_routines::read_system_and_survey_data" name="lg_input_routines::read_system_and_survey_data">
+<area shape="rect" id="node2" href="$Leroi_8f90.html#a78d7005f266cbaf5c3ec23db494d00ba" title="write_log_file" alt="" coords="412,49,509,76"/>
+<area shape="rect" id="node3" href="$Leroi_8f90.html#ab7ca289c09589698d4ff1bd15e1a16e6" title="set_time_order" alt="" coords="256,24,364,50"/>
+<area shape="rect" id="node4" href="$Leroi_8f90.html#a404aa1badfba9369219343ec158c37ca" title="set_tmsr" alt="" coords="273,74,347,101"/>
+<area shape="rect" id="node5" href="$Leroi_8f90.html#aa934c3b9754a6a8e18f83b6de33a0df8" title="validate_cmp" alt="" coords="261,125,359,152"/>
+</map>

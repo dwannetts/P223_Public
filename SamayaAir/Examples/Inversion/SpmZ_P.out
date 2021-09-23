@@ -1,0 +1,65 @@
+
+
+  SamAir task started at 13:54 on 14 JAN 2013
+
+
+
+      ######################################################################
+      #                                                                    #
+      #                 SamAir - Version 2.2.5   22 September 2007         #        
+      #                 ------------------------------------------         #        
+      #                                                                    #
+      #      Develped by:  CSIRO Electromagnetic Modelling Group           #
+      #                    Fred Sugeng, Glenn Wilson & Art Raiche          #
+      #                                                                    #
+      #              For:  AMIRA project P223F                             #
+      #                                                                    #
+      ######################################################################
+
+
+          INPUT DATA
+          ----------
+
+
+ SamAir Inversion - Spectrem Z, Date : 25 July 2006, Time : 3:21PM, Project File : C:\CSIRO\WIP\AEM Inversion Studies\Pro
+
+  TDFD =  1   DO3D = -1   PRFL =  1    ISTOP = 0
+
+  ISW =   1   NSX =   3   STEP = 1    UNITS =   1  NCHNL =   8
+  KRXW =  1   OFFTYM =   0.000    
+
+
+         +----------------------------------------------
+         +    Time-Domain AEM Step System Input Data    
+         +        B output will be in nT
+         +----------------------------------------------
+
+
+                          Transmitter current
+           TXON (ms)      waveform in amps
+           ---------      -----------------
+
+      1        0.000         0.000    
+      2        0.000        -1000.    
+      3        6.900        -1000.    
+
+         Receiver Window Specifications (ms)
+         -----------------------------------
+
+       Window     Open        Close      Width      Centre
+       ------     ----        -----      -----      ------
+          1       0.025       0.026      0.001       0.026
+          2       0.052       0.078      0.026       0.065
+          3       0.104       0.182      0.078       0.143
+          4       0.208       0.391      0.183       0.299
+          5       0.414       0.807      0.393       0.610
+          6       0.833       1.641      0.808       1.237
+          7       1.667       3.307      1.640       2.487
+          8       3.333       6.641      3.308       4.987
+
+  CMP = 13    KPPM =   3
+  Inclination angle of transmitter in level flight =  2.0 degrees (front up)
+
+  Tx area =     400 m^2;    NTRN = 1
+
+  Initial Rx offset relative to Tx:   36.0 Below,  123.0 Behind,   0.0 Starboard

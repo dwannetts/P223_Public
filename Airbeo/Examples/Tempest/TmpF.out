@@ -1,0 +1,155 @@
+
+
+  Airbeo task started at 12:42 on 12 JUL 2016
+
+
+
+      ######################################################################
+      #                                                                    #
+      #                 Airbeo - Version 4.7.1  22 November, 2012          #        
+      #                 ---------------------------------------            #        
+      #                                                                    #
+      #      Develped by:  CSIRO Electromagnetic Modelling Group           #
+      #                    Art Raiche, Fred Sugeng & Glenn Wilson          #
+      #                                                                    #
+      #              For:  AMIRA project P223F                             #
+      #                                                                    #
+      ######################################################################
+
+-------------------------------------------------------------------------------
+
+ Forward model used to generate inversion data for 25 Hz Tempest
+
+  TDFD =  1   DO1D =  0   PRFL =  1    ISTOP = 0
+  ISW =   4   NSX =   1   STEP = 1    UNITS =   3  NCHNL =  15
+  KRXW =  1   OFFTYM =   0.000    
+
+
+         +-------------------------------------------
+         +   Airborne System Information
+         +   100 Percent Duty Cycle STEP Response
+         +   for Rectangular Waveform
+         +   B output will be in fT
+         +-------------------------------------------
+
+
+     Peak Current =   1.0 amps.
+     Single pulse response to step current turn-off.
+
+         Receiver Window Specifications (ms)
+         -----------------------------------
+
+       Window     Open        Close      Width      Centre
+       ------     ----        -----      -----      ------
+          1       0.007       0.020      0.013       0.013
+          2       0.033       0.047      0.014       0.040
+          3       0.060       0.073      0.013       0.067
+          4       0.087       0.127      0.040       0.107
+          5       0.140       0.207      0.067       0.174
+          6       0.220       0.340      0.120       0.280
+          7       0.353       0.553      0.200       0.453
+          8       0.567       0.873      0.306       0.720
+          9       0.887       1.353      0.466       1.120
+         10       1.367       2.100      0.733       1.734
+         11       2.113       3.273      1.160       2.693
+         12       3.287       5.113      1.826       4.200
+         13       5.127       7.993      2.866       6.560
+         14       8.007      12.393      4.386      10.200
+         15      12.407      19.993      7.586      16.200
+
+  CMP =  2    KPPM =   0
+  Inclination angle of transmitter in level flight =  6.0 degrees (front up)
+
+  Initial Rx offset relative to Tx:   45.0 Below,  106.0 Behind,   0.0 Left
+
+
+  NSTAT =   5   SURVEY = 2   BAROMTRC = 0   LINE_TAG = 1
+
+        5 transmitter positions along the flight path
+
+     Line   Stat     East       North       Alt      Bearing    Pitch   ZRX    XRX      YRX
+     ----   ----     ----       -----       ---      -------    -----   ---    ---      ---
+
+     4000     1      6025.0      7900.0     105.0      90.0      0.1    45.0   106.0     0.0
+     4000     2      6050.0      7900.0     115.0      90.0      0.1    45.0   106.0     0.0
+     4000     3      6075.0      7900.0     120.0      90.0      0.1    45.0   106.0     0.0
+     4000     4      6100.0      7900.0     112.0      90.0      0.1    45.0   106.0     0.0
+     4000     5      6125.0      7900.0     105.0      90.0      0.1    45.0   106.0     0.0
+
+
+  NLAYER =  3;   NLITH =  3;   GND_LVL =    0.00
+
+
+                          LITHOLOGY PROPERTIES
+                          --------------------
+
+                                  Relative   Relative     Cole-Cole Parameters
+        Resistivity  Conductance     MU     Dielectric   CHRG    CTAU       CFREQ
+
+   1      100.0         -1.0       1.000      1.000      0.00    0.00        0.00
+   2     0.5000         -1.0       1.000      1.000      0.00    0.00        0.00
+   3      500.0         -1.0       1.000      1.000      0.00    0.00        0.00
+
+
+  LAYERED EARTH INPUT DATA
+  ------------------------
+
+   1   1   35.0   J, LITH(J), THK(J)
+   2   2   10.0   J, LITH(J), THK(J)
+   3   3             Basement Lithology
+
+
+        Model Description
+        =================
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      100.0       35.0     35.0     0.3500    
+   2     0.5000       45.0     10.0      20.00    
+   3      500.0    
+
+
+  TIME-DOMAIN Airbeo OUTPUT
+  ----------------------------
+
+  The IN-LINE component is defined as the horizontal component along
+  the flight path.  It is positive in the forward flight direction.
+
+  The receiver is  45.0 metres below and 106.0 metres behind the transmitter.  
+
+
+ TITLE:  Forward model used to generate inversion data for 25 Hz Tempest
+ -----
+
+          VERTICAL COMPONENT - fT
+
+         TRANSMITTER POSITION      CHNL 1       CHNL 2       CHNL 3       CHNL 4       CHNL 5       CHNL 6       CHNL 7       CHNL 8       CHNL 9      CHNL 10      CHNL 11      CHNL 12      CHNL 13      CHNL 14      CHNL 15 
+         EAST     NORTH    ALT     0.013        0.040        0.067        0.107        0.174        0.280        0.453        0.720        1.120        1.734        2.693        4.200        6.560       10.200       16.200
+
+  1      6025      7900    105     8.261        7.553        7.368        7.160        6.863        6.422        5.771        4.909        3.889        2.789        1.754       0.9486       0.4400       0.1793       0.6303E-01
+  2      6050      7900    115     7.062        6.464        6.307        6.130        5.878        5.506        4.958        4.235        3.379        2.450        1.565       0.8625       0.4082       0.1694       0.6054E-01
+  3      6075      7900    120     6.532        5.983        5.839        5.677        5.445        5.104        4.602        3.940        3.155        2.301        1.481       0.8232       0.3934       0.1648       0.5934E-01
+  4      6100      7900    112     7.402        6.772        6.607        6.422        6.156        5.764        5.187        4.425        3.523        2.546        1.619       0.8872       0.4174       0.1723       0.6127E-01
+  5      6125      7900    105     8.261        7.553        7.368        7.160        6.863        6.422        5.771        4.909        3.889        2.789        1.754       0.9486       0.4400       0.1793       0.6303E-01
+-------------------------------------------------------------------------------------
+
+
+          IN-LINE COMPONENT - fT
+
+         TRANSMITTER POSITION      CHNL 1       CHNL 2       CHNL 3       CHNL 4       CHNL 5       CHNL 6       CHNL 7       CHNL 8       CHNL 9      CHNL 10      CHNL 11      CHNL 12      CHNL 13      CHNL 14      CHNL 15 
+         EAST     NORTH    ALT     0.013        0.040        0.067        0.107        0.174        0.280        0.453        0.720        1.120        1.734        2.693        4.200        6.560       10.200       16.200
+
+  1      6025      7900    105     7.084        6.206        5.964        5.692        5.311        4.773        4.036        3.155        2.239        1.396       0.7376       0.3243       0.1191       0.3787E-01   0.1030E-01
+  2      6050      7900    115     5.496        4.839        4.659        4.456        4.172        3.770        3.214        2.542        1.833        1.167       0.6325       0.2860       0.1081       0.3526E-01   0.9799E-02
+  3      6075      7900    120     4.863        4.292        4.136        3.961        3.714        3.364        2.880        2.291        1.665        1.070       0.5870       0.2691       0.1031       0.3404E-01   0.9561E-02
+  4      6100      7900    112     5.924        5.208        5.011        4.790        4.480        4.041        3.437        2.710        1.945        1.230       0.6620       0.2969       0.1113       0.3602E-01   0.9946E-02
+  5      6125      7900    105     7.084        6.206        5.964        5.692        5.311        4.773        4.036        3.155        2.239        1.396       0.7376       0.3243       0.1191       0.3787E-01   0.1030E-01
+-------------------------------------------------------------------------------------
+
+
+
+  Airbeo forward model completed at 12:42 on 12 JUL 2016
+
+  Computation time =       0.05 seconds.
+
+

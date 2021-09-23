@@ -1,0 +1,9 @@
+========================================================================================
+		Read me
+
+Examples are taken from ../../../LeroiAir/Examples/Inverse and renamed.
+
+All examples were run on a XEON E5-2690 v4 running Ubuntu 16.04.5 and 
+compiled using the makefile in ../.. in RELEASE mode.
+
+========================================================================================

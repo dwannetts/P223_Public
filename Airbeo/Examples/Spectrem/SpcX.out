@@ -1,0 +1,1150 @@
+
+
+  Airbeo task started at 15:38 on 23 NOV 2012
+
+
+
+      ######################################################################
+      #                                                                    #
+      #                 Airbeo - Version 4.7.1  22 November, 2012          #        
+      #                 ---------------------------------------            #        
+      #                                                                    #
+      #      Develped by:  CSIRO Electromagnetic Modelling Group           #
+      #                    Art Raiche, Fred Sugeng & Glenn Wilson          #
+      #                                                                    #
+      #              For:  AMIRA project P223F                             #
+      #                                                                    #
+      ######################################################################
+
+          INPUT DATA
+          ----------
+
+ Inversion of 5 Spectrem stations - (layer thicknesses) in-line component only                                           
+ 1 -1 1 0          ! TDFD, DO1D, PRFL, ISTOP                                                                             
+ 1 4 1 1 8 1 0     ! ISW, NSX, STEP, UNITS, NCHNL, KRXW, OFFTIME                                                         
+ 0 0                                                                                                                     
+ 0.0001 -1000                                                                                                            
+ 6.8999 -1000                                                                                                            
+ 6.9 0             ! TXON, WAVEFORM(4)                                                                                   
+ 0.026 0.026                                                                                                             
+ 0.052 0.078                                                                                                             
+ 0.104 0.182                                                                                                             
+ 0.208 0.391                                                                                                             
+ 0.417 0.807                                                                                                             
+ 0.833 1.641                                                                                                             
+ 1.667 3.307                                                                                                             
+ 3.333 6.641            ! TOPN, TCLS(8)                                                                                  
+ 2 11 123                ! TXCLN, CMP, KPPM                                                                              
+ 3		       ! NPPF: ppm output                                                                                            
+ 400 1                  ! TXAREA NTRN                                                                                    
+ 36 123 0               ! ZRX, XRX, YRX(1)                                                                               
+ 1                      ! NPASS                                                                                          
+ 3 1 2 0                ! NLAYER, QLYR, NLITH, GND_LEVEL                                                                 
+ 100 -1 1 1 0 0 0       ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(1) - basement                                         
+ 10  -1 1 1 0 0 1       ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(10) -                                                 
+ 1 50.                  ! LITH, THICK                                                                                    
+ 2 50                   ! LITH,THICK                                                                                     
+ 1		       ! Basement                                                                                                    
+ 90 1 0 1 2             ! MAXITS, CNVRG, NFIX, MV1PRT, OUTPRT                                                            
+                                                                                                                         
+-------------------------------------------------------------------------------
+
+ Inversion of 5 Spectrem stations - (layer thicknesses) in-line component only
+
+  TDFD =  1   DO1D =  1   PRFL =  1    ISTOP = 0
+  ISW =   1   NSX =   4   STEP = 1    UNITS =   1  NCHNL =   8
+  KRXW =  1   OFFTYM =   0.000    
+
+
+         +----------------------------------------------
+         +    Time-Domain AEM Step System Input Data    
+         +        B output will be in nT
+         +----------------------------------------------
+
+
+                          Transmitter current
+           TXON (ms)      waveform in amps
+           ---------      -----------------
+
+      1        0.000         0.000    
+      2        0.000        -1000.    
+      3        6.900        -1000.    
+      4        6.900         0.000    
+
+         Receiver Window Specifications (ms)
+         -----------------------------------
+
+       Window     Open        Close      Width      Centre
+       ------     ----        -----      -----      ------
+          1       0.026       0.026      0.000       0.026
+          2       0.052       0.078      0.026       0.065
+          3       0.104       0.182      0.078       0.143
+          4       0.208       0.391      0.183       0.299
+          5       0.417       0.807      0.390       0.612
+          6       0.833       1.641      0.808       1.237
+          7       1.667       3.307      1.640       2.487
+          8       3.333       6.641      3.308       4.987
+
+  CMP = 11    KPPM =   1
+  Inclination angle of transmitter in level flight =  2.0 degrees (front up)
+
+  Tx area =     400 m^2;    NTRN = 1
+
+  Initial Rx offset relative to Tx:   36.0 Below,  123.0 Behind,   0.0 Left
+
+
+  NLAYER =  3;   NLITH =  2;   GND_LVL =    0.00
+
+
+                          LITHOLOGY PROPERTIES
+                          --------------------
+
+                                  Relative   Relative     Cole-Cole Parameters
+        Resistivity  Conductance     MU     Dielectric   CHRG    CTAU       CFREQ
+
+   1      100.0         -1.0       1.000      1.000      0.00    0.00        0.00
+   2      10.00         -1.0       1.000      1.000      0.00    0.00        1.00
+
+
+  LAYERED EARTH INPUT DATA
+  ------------------------
+
+   1   1   50.0   J, LITH(J), THK(J)
+   2   2   50.0   J, LITH(J), THK(J)
+   3   1             Basement Lithology
+
+
+  -------------------------
+  Inversion Controls & Data
+  -------------------------
+
+  Inversion of Time-Domain In-Line Component Data
+  The data to be inverted has been normalised to ppm
+
+  The same starting model will be used for all inversions
+
+  NPAR =  5   MCHNL =  8
+  MAXITS = 90   CNVRG = 1   NFIX =  0   MV1PRT = 1   OUTPRT = 2
+  Airbeo will run until the error can no longer be reduced or after 90 iterations,
+  whichever comes first.
+
+  All model parameters will be allowed to vary during inversion
+
+  NSTAT =   5   SURVEY = 2   BAROMTRC = 1   KCMP =  31   ORDER = 1
+
+  Time-Domain Data Floor =   0.000     ppm
+
+  N0STAT =   0   N0CHNL =  0   N0PTS =   0
+
+
+     Line   Station   Bearing     East       North     Alt         Vertical Component Data
+     ----   -------   -------     ----       -----     ---         -----------------------
+     4000      1        90.      6025.0      7900.0    105.0   0.1566E+06   0.1466E+06   0.1350E+06   0.1164E+06   0.8779E+05   0.5261E+05   0.2220E+05    5973.    
+     4000      2        90.      6050.0      7900.0    115.0   0.1235E+06   0.1159E+06   0.1071E+06   0.9287E+05   0.7087E+05   0.4334E+05   0.1887E+05    5279.    
+     4000      3        90.      6075.0      7900.0    120.0   0.1101E+06   0.1034E+06   0.9574E+05   0.8325E+05   0.6387E+05   0.3944E+05   0.1743E+05    4969.    
+     4000      4        90.      6100.0      7900.0    112.0   0.1325E+06   0.1242E+06   0.1147E+06   0.9928E+05   0.7550E+05   0.4590E+05   0.1980E+05    5476.    
+     4000      5        90.      6125.0      7900.0    105.0   0.1566E+06   0.1466E+06   0.1350E+06   0.1164E+06   0.8779E+05   0.5261E+05   0.2220E+05    5973.    
+
+  Time-Domain Data Floor =   0.000     ppm
+
+  Station   Vertical Weights
+  -------   ----------------
+         1   1 1 1 1 1 1 1 1
+         2   1 1 1 1 1 1 1 1
+         3   1 1 1 1 1 1 1 1
+         4   1 1 1 1 1 1 1 1
+         5   1 1 1 1 1 1 1 1
+
+
+                              Normalisation in ppm 
+                              Primary field units are nT  
+
+                     Vertical primary =  -15.03    
+                      In-line primary =  -14.19    
+                   Transverse primary =   0.000    
+                        Total primary =   20.67    
+
+          Each component is normalised to the in-line primary field
+                         In-line ppm  norm =  0.7047E+05
+
+
+        Initial Model Before Inversion for Station       1
+        ----------------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      100.0       50.0     50.0     0.5000    
+   2      10.00      100.0     50.0      5.000    
+   3      100.0    
+
+  Inversion of 5 Spectrem stations - (layer thicknesses) in-line component only
+
+  Begin time-domain inversion on in-line component for station   1
+  Maximum iterations = 90
+
+  Initial symmetric root mean square error =  102.07 percent.
+  Initial RSVT (Relative Singular Value Threshold) =   0.100
+
+
+        Model after  1 Iterations for Station       1
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      86.03       26.0     26.0     0.3026    
+   2      5.767       90.2     64.2      11.12    
+   3      96.18    
+
+  Symmetric RMS error =   65.28 percent.   RSVT =  0.050
+
+
+        Model after  2 Iterations for Station       1
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      101.0       29.8     29.8     0.2948    
+   2      2.250       69.6     39.9      17.71    
+   3      115.0    
+
+  Symmetric RMS error =   23.51 percent.   RSVT =  0.025
+
+
+        Model after  3 Iterations for Station       1
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      118.6       33.1     33.1     0.2792    
+   2      1.083       54.5     21.4      19.77    
+   3      124.4    
+
+  Symmetric RMS error =    5.99 percent.   RSVT =  0.013
+
+
+        Model after  4 Iterations for Station       1
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      136.2       33.9     33.9     0.2492    
+   2     0.7012       47.8     13.8      19.71    
+   3      132.5    
+
+  Symmetric RMS error =    1.92 percent.   RSVT =  0.010
+
+
+        Model after  5 Iterations for Station       1
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      144.8       34.3     34.3     0.2367    
+   2     0.5790       45.7     11.4      19.75    
+   3      138.3    
+
+  Symmetric RMS error =    0.55 percent.   RSVT =  0.010
+
+
+        Model after  6 Iterations for Station       1
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      147.7       34.4     34.4     0.2330    
+   2     0.5438       45.1     10.7      19.76    
+   3      140.8    
+
+  Symmetric RMS error =    0.30 percent.   RSVT =  0.010
+
+
+        Model after  7 Iterations for Station       1
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      148.8       34.5     34.5     0.2316    
+   2     0.5300       44.9     10.5      19.75    
+   3      142.0    
+
+  Symmetric RMS error =    0.28 percent.   RSVT =  0.010
+
+
+        Model after  8 Iterations for Station       1
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      149.2       34.5     34.5     0.2312    
+   2     0.5237       44.8     10.3      19.75    
+   3      142.7    
+
+  Symmetric RMS error =    0.27 percent.   RSVT =  0.010
+
+
+        Model after  9 Iterations for Station       1
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      149.4       34.5     34.5     0.2310    
+   2     0.5207       44.8     10.3      19.75    
+   3      143.2    
+
+  Symmetric RMS error =    0.27 percent.   RSVT =  0.010
+
+
+        Model after 10 Iterations for Station       1
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      149.4       34.5     34.5     0.2310    
+   2     0.5192       44.8     10.3      19.75    
+   3      143.5    
+
+  Symmetric RMS error =    0.27 percent.   RSVT =  0.010
+
+
+        Model after 11 Iterations for Station       1
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      149.4       34.5     34.5     0.2311    
+   2     0.5184       44.8     10.2      19.75    
+   3      143.8    
+
+  Symmetric RMS error =    0.27 percent.   RSVT =  0.010
+
+  --------------------------------------------------------------------
+  Inversion terminated after 11 iterations because, the reduction in
+  the RMS error from the last two iterations was less than 1 percent.
+  ____________________________________________________________________
+
+  ==================================================
+
+
+        Final Model after 11 Iterations for Station       1
+        ===============================================
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      149.4       34.5     34.5     0.2311    
+   2     0.5184       44.8     10.2      19.75    
+   3      143.8    
+
+  Parameter Importance
+  --------------------
+  RES_01    RES_02    RES_03   THICK_01  THICK_02
+  0.13      0.82      0.11      1.00      0.79
+
+                      Symmetric RMS error =     0.27 percent.
+                    Noise to signal ratio =    0.004
+
+
+      ERROR STRUCTURE OF FINAL MODEL
+      ------------------------------
+
+  For each station:
+  ----------------
+    The first line is the percent symmetric error.
+    The second line is the model response.
+    The third line is the data.
+
+
+      IN-LINE COMPONENT STRUCTURE
+      ---------------------------
+
+       CHNL_1       CHNL_2       CHNL_3       CHNL_4       CHNL_5       CHNL_6       CHNL_7       CHNL_8 
+
+   0.3652      -0.2721      -0.2962      -0.1209       0.4886E-01   0.2785       0.3253      -0.3221    
+   0.1560E+06   0.1470E+06   0.1354E+06   0.1165E+06   0.8775E+05   0.5246E+05   0.2213E+05    5992.    
+   0.1566E+06   0.1466E+06   0.1350E+06   0.1164E+06   0.8779E+05   0.5261E+05   0.2220E+05    5973.    
+
+
+        Initial Model Before Inversion for Station       2
+        ----------------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      100.0       50.0     50.0     0.5000    
+   2      10.00      100.0     50.0      5.000    
+   3      100.0    
+
+  Inversion of 5 Spectrem stations - (layer thicknesses) in-line component only
+
+  Begin time-domain inversion on in-line component for station   2
+  Maximum iterations = 90
+
+  Initial symmetric root mean square error =  100.45 percent.
+  Initial RSVT (Relative Singular Value Threshold) =   0.100
+
+
+        Model after  1 Iterations for Station       2
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      86.13       25.9     25.9     0.3010    
+   2      5.712       90.4     64.4      11.28    
+   3      96.52    
+
+  Symmetric RMS error =   62.77 percent.   RSVT =  0.050
+
+
+        Model after  2 Iterations for Station       2
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      101.0       29.8     29.8     0.2953    
+   2      2.239       70.0     40.2      17.94    
+   3      115.0    
+
+  Symmetric RMS error =   21.62 percent.   RSVT =  0.025
+
+
+        Model after  3 Iterations for Station       2
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      119.0       33.1     33.1     0.2782    
+   2      1.083       54.5     21.4      19.75    
+   3      124.4    
+
+  Symmetric RMS error =    5.73 percent.   RSVT =  0.013
+
+
+        Model after  4 Iterations for Station       2
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      137.1       34.0     34.0     0.2478    
+   2     0.7007       47.8     13.8      19.69    
+   3      132.7    
+
+  Symmetric RMS error =    1.87 percent.   RSVT =  0.010
+
+
+        Model after  5 Iterations for Station       2
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      145.8       34.3     34.3     0.2351    
+   2     0.5781       45.7     11.4      19.74    
+   3      138.7    
+
+  Symmetric RMS error =    0.54 percent.   RSVT =  0.010
+
+
+        Model after  6 Iterations for Station       2
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      148.8       34.4     34.4     0.2313    
+   2     0.5426       45.1     10.7      19.75    
+   3      141.2    
+
+  Symmetric RMS error =    0.30 percent.   RSVT =  0.010
+
+
+        Model after  7 Iterations for Station       2
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      149.9       34.5     34.5     0.2299    
+   2     0.5286       44.9     10.4      19.74    
+   3      142.5    
+
+  Symmetric RMS error =    0.27 percent.   RSVT =  0.010
+
+
+        Model after  8 Iterations for Station       2
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      150.4       34.5     34.5     0.2294    
+   2     0.5221       44.8     10.3      19.74    
+   3      143.2    
+
+  Symmetric RMS error =    0.27 percent.   RSVT =  0.010
+
+
+        Model after  9 Iterations for Station       2
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      150.6       34.5     34.5     0.2292    
+   2     0.5189       44.8     10.2      19.74    
+   3      143.7    
+
+  Symmetric RMS error =    0.27 percent.   RSVT =  0.010
+
+
+        Model after 10 Iterations for Station       2
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      150.6       34.5     34.5     0.2292    
+   2     0.5172       44.7     10.2      19.74    
+   3      144.1    
+
+  Symmetric RMS error =    0.27 percent.   RSVT =  0.010
+
+
+        Model after 11 Iterations for Station       2
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      150.6       34.5     34.5     0.2294    
+   2     0.5164       44.7     10.2      19.74    
+   3      144.4    
+
+  Symmetric RMS error =    0.27 percent.   RSVT =  0.010
+
+  --------------------------------------------------------------------
+  Inversion terminated after 11 iterations because, the reduction in
+  the RMS error from the last two iterations was less than 1 percent.
+  ____________________________________________________________________
+
+  ==================================================
+
+
+        Final Model after 11 Iterations for Station       2
+        ===============================================
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      150.6       34.5     34.5     0.2294    
+   2     0.5164       44.7     10.2      19.74    
+   3      144.4    
+
+  Parameter Importance
+  --------------------
+  RES_01    RES_02    RES_03   THICK_01  THICK_02
+  0.13      0.81      0.11      1.00      0.79
+
+                      Symmetric RMS error =     0.27 percent.
+                    Noise to signal ratio =    0.004
+
+
+      ERROR STRUCTURE OF FINAL MODEL
+      ------------------------------
+
+  For each station:
+  ----------------
+    The first line is the percent symmetric error.
+    The second line is the model response.
+    The third line is the data.
+
+
+      IN-LINE COMPONENT STRUCTURE
+      ---------------------------
+
+       CHNL_1       CHNL_2       CHNL_3       CHNL_4       CHNL_5       CHNL_6       CHNL_7       CHNL_8 
+
+   0.3557      -0.2708      -0.2764      -0.1363       0.5480E-01   0.2719       0.3307      -0.3200    
+   0.1231E+06   0.1162E+06   0.1074E+06   0.9300E+05   0.7083E+05   0.4322E+05   0.1881E+05    5296.    
+   0.1235E+06   0.1159E+06   0.1071E+06   0.9287E+05   0.7087E+05   0.4334E+05   0.1887E+05    5279.    
+
+
+        Initial Model Before Inversion for Station       3
+        ----------------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      100.0       50.0     50.0     0.5000    
+   2      10.00      100.0     50.0      5.000    
+   3      100.0    
+
+  Inversion of 5 Spectrem stations - (layer thicknesses) in-line component only
+
+  Begin time-domain inversion on in-line component for station   3
+  Maximum iterations = 90
+
+  Initial symmetric root mean square error =   99.65 percent.
+  Initial RSVT (Relative Singular Value Threshold) =   0.100
+
+
+        Model after  1 Iterations for Station       3
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      86.15       25.9     25.9     0.3005    
+   2      5.686       90.5     64.6      11.36    
+   3      96.68    
+
+  Symmetric RMS error =   61.54 percent.   RSVT =  0.050
+
+
+        Model after  2 Iterations for Station       3
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      100.9       29.8     29.8     0.2954    
+   2      2.236       70.2     40.4      18.05    
+   3      114.9    
+
+  Symmetric RMS error =   20.74 percent.   RSVT =  0.025
+
+
+        Model after  3 Iterations for Station       3
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      119.1       33.1     33.1     0.2779    
+   2      1.086       54.5     21.4      19.74    
+   3      124.3    
+
+  Symmetric RMS error =    5.60 percent.   RSVT =  0.013
+
+
+        Model after  4 Iterations for Station       3
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      137.2       33.9     33.9     0.2473    
+   2     0.7027       47.8     13.8      19.68    
+   3      132.7    
+
+  Symmetric RMS error =    1.83 percent.   RSVT =  0.010
+
+
+        Model after  5 Iterations for Station       3
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      146.1       34.3     34.3     0.2346    
+   2     0.5802       45.7     11.5      19.73    
+   3      138.7    
+
+  Symmetric RMS error =    0.53 percent.   RSVT =  0.010
+
+
+        Model after  6 Iterations for Station       3
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      149.0       34.4     34.4     0.2308    
+   2     0.5449       45.1     10.8      19.74    
+   3      141.3    
+
+  Symmetric RMS error =    0.29 percent.   RSVT =  0.010
+
+
+        Model after  7 Iterations for Station       3
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      150.1       34.5     34.5     0.2295    
+   2     0.5310       44.9     10.5      19.74    
+   3      142.5    
+
+  Symmetric RMS error =    0.27 percent.   RSVT =  0.010
+
+
+        Model after  8 Iterations for Station       3
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      150.6       34.5     34.5     0.2290    
+   2     0.5246       44.8     10.4      19.74    
+   3      143.3    
+
+  Symmetric RMS error =    0.27 percent.   RSVT =  0.010
+
+
+        Model after  9 Iterations for Station       3
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      150.8       34.5     34.5     0.2288    
+   2     0.5214       44.8     10.3      19.74    
+   3      143.8    
+
+  Symmetric RMS error =    0.27 percent.   RSVT =  0.010
+
+
+        Model after 10 Iterations for Station       3
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      150.8       34.5     34.5     0.2288    
+   2     0.5199       44.8     10.3      19.74    
+   3      144.1    
+
+  Symmetric RMS error =    0.27 percent.   RSVT =  0.010
+
+
+        Model after 11 Iterations for Station       3
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      150.7       34.5     34.5     0.2290    
+   2     0.5191       44.8     10.2      19.74    
+   3      144.4    
+
+  Symmetric RMS error =    0.27 percent.   RSVT =  0.010
+
+  --------------------------------------------------------------------
+  Inversion terminated after 11 iterations because, the reduction in
+  the RMS error from the last two iterations was less than 1 percent.
+  ____________________________________________________________________
+
+  ==================================================
+
+
+        Final Model after 11 Iterations for Station       3
+        ===============================================
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      150.7       34.5     34.5     0.2290    
+   2     0.5191       44.8     10.2      19.74    
+   3      144.4    
+
+  Parameter Importance
+  --------------------
+  RES_01    RES_02    RES_03   THICK_01  THICK_02
+  0.13      0.81      0.11      1.00      0.79
+
+                      Symmetric RMS error =     0.27 percent.
+                    Noise to signal ratio =    0.004
+
+
+      ERROR STRUCTURE OF FINAL MODEL
+      ------------------------------
+
+  For each station:
+  ----------------
+    The first line is the percent symmetric error.
+    The second line is the model response.
+    The third line is the data.
+
+
+      IN-LINE COMPONENT STRUCTURE
+      ---------------------------
+
+       CHNL_1       CHNL_2       CHNL_3       CHNL_4       CHNL_5       CHNL_6       CHNL_7       CHNL_8 
+
+   0.3560      -0.2946      -0.2505      -0.1248       0.4765E-01   0.2621       0.3265      -0.3122    
+   0.1097E+06   0.1037E+06   0.9598E+05   0.8335E+05   0.6384E+05   0.3934E+05   0.1737E+05    4985.    
+   0.1101E+06   0.1034E+06   0.9574E+05   0.8325E+05   0.6387E+05   0.3944E+05   0.1743E+05    4969.    
+
+
+        Initial Model Before Inversion for Station       4
+        ----------------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      100.0       50.0     50.0     0.5000    
+   2      10.00      100.0     50.0      5.000    
+   3      100.0    
+
+  Inversion of 5 Spectrem stations - (layer thicknesses) in-line component only
+
+  Begin time-domain inversion on in-line component for station   4
+  Maximum iterations = 90
+
+  Initial symmetric root mean square error =  100.94 percent.
+  Initial RSVT (Relative Singular Value Threshold) =   0.100
+
+
+        Model after  1 Iterations for Station       4
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      86.10       26.0     26.0     0.3015    
+   2      5.728       90.3     64.4      11.23    
+   3      96.43    
+
+  Symmetric RMS error =   63.51 percent.   RSVT =  0.050
+
+
+        Model after  2 Iterations for Station       4
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      101.0       29.8     29.8     0.2952    
+   2      2.241       69.9     40.1      17.87    
+   3      115.0    
+
+  Symmetric RMS error =   22.17 percent.   RSVT =  0.025
+
+
+        Model after  3 Iterations for Station       4
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      118.9       33.1     33.1     0.2785    
+   2      1.082       54.5     21.4      19.76    
+   3      124.4    
+
+  Symmetric RMS error =    5.80 percent.   RSVT =  0.013
+
+
+        Model after  4 Iterations for Station       4
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      136.9       34.0     34.0     0.2482    
+   2     0.7003       47.8     13.8      19.69    
+   3      132.7    
+
+  Symmetric RMS error =    1.88 percent.   RSVT =  0.010
+
+
+        Model after  5 Iterations for Station       4
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      145.6       34.3     34.3     0.2355    
+   2     0.5779       45.7     11.4      19.74    
+   3      138.6    
+
+  Symmetric RMS error =    0.55 percent.   RSVT =  0.010
+
+
+        Model after  6 Iterations for Station       4
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      148.5       34.4     34.4     0.2317    
+   2     0.5426       45.1     10.7      19.75    
+   3      141.2    
+
+  Symmetric RMS error =    0.30 percent.   RSVT =  0.010
+
+
+        Model after  7 Iterations for Station       4
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      149.6       34.5     34.5     0.2304    
+   2     0.5287       44.9     10.4      19.75    
+   3      142.4    
+
+  Symmetric RMS error =    0.28 percent.   RSVT =  0.010
+
+
+        Model after  8 Iterations for Station       4
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      150.1       34.5     34.5     0.2299    
+   2     0.5223       44.8     10.3      19.74    
+   3      143.1    
+
+  Symmetric RMS error =    0.28 percent.   RSVT =  0.010
+
+
+        Model after  9 Iterations for Station       4
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      150.3       34.5     34.5     0.2297    
+   2     0.5192       44.8     10.2      19.74    
+   3      143.6    
+
+  Symmetric RMS error =    0.28 percent.   RSVT =  0.010
+
+
+        Model after 10 Iterations for Station       4
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      150.3       34.5     34.5     0.2298    
+   2     0.5176       44.7     10.2      19.74    
+   3      144.0    
+
+  Symmetric RMS error =    0.28 percent.   RSVT =  0.010
+
+
+        Model after 11 Iterations for Station       4
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      150.2       34.5     34.5     0.2299    
+   2     0.5168       44.7     10.2      19.74    
+   3      144.3    
+
+  Symmetric RMS error =    0.28 percent.   RSVT =  0.010
+
+  --------------------------------------------------------------------
+  Inversion terminated after 11 iterations because, the reduction in
+  the RMS error from the last two iterations was less than 1 percent.
+  ____________________________________________________________________
+
+  ==================================================
+
+
+        Final Model after 11 Iterations for Station       4
+        ===============================================
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      150.2       34.5     34.5     0.2299    
+   2     0.5168       44.7     10.2      19.74    
+   3      144.3    
+
+  Parameter Importance
+  --------------------
+  RES_01    RES_02    RES_03   THICK_01  THICK_02
+  0.13      0.82      0.11      1.00      0.79
+
+                      Symmetric RMS error =     0.28 percent.
+                    Noise to signal ratio =    0.004
+
+
+      ERROR STRUCTURE OF FINAL MODEL
+      ------------------------------
+
+  For each station:
+  ----------------
+    The first line is the percent symmetric error.
+    The second line is the model response.
+    The third line is the data.
+
+
+      IN-LINE COMPONENT STRUCTURE
+      ---------------------------
+
+       CHNL_1       CHNL_2       CHNL_3       CHNL_4       CHNL_5       CHNL_6       CHNL_7       CHNL_8 
+
+   0.3731      -0.3014      -0.2703      -0.1322       0.5376E-01   0.2810       0.3271      -0.3227    
+   0.1320E+06   0.1246E+06   0.1150E+06   0.9941E+05   0.7546E+05   0.4577E+05   0.1974E+05    5494.    
+   0.1325E+06   0.1242E+06   0.1147E+06   0.9928E+05   0.7550E+05   0.4590E+05   0.1980E+05    5476.    
+
+
+        Initial Model Before Inversion for Station       5
+        ----------------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      100.0       50.0     50.0     0.5000    
+   2      10.00      100.0     50.0      5.000    
+   3      100.0    
+
+  Inversion of 5 Spectrem stations - (layer thicknesses) in-line component only
+
+  Begin time-domain inversion on in-line component for station   5
+  Maximum iterations = 90
+
+  Initial symmetric root mean square error =  102.07 percent.
+  Initial RSVT (Relative Singular Value Threshold) =   0.100
+
+
+        Model after  1 Iterations for Station       5
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      86.03       26.0     26.0     0.3026    
+   2      5.767       90.2     64.2      11.12    
+   3      96.18    
+
+  Symmetric RMS error =   65.28 percent.   RSVT =  0.050
+
+
+        Model after  2 Iterations for Station       5
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      101.0       29.8     29.8     0.2948    
+   2      2.250       69.6     39.9      17.71    
+   3      115.0    
+
+  Symmetric RMS error =   23.51 percent.   RSVT =  0.025
+
+
+        Model after  3 Iterations for Station       5
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      118.6       33.1     33.1     0.2792    
+   2      1.083       54.5     21.4      19.77    
+   3      124.4    
+
+  Symmetric RMS error =    5.99 percent.   RSVT =  0.013
+
+
+        Model after  4 Iterations for Station       5
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      136.2       33.9     33.9     0.2492    
+   2     0.7012       47.8     13.8      19.71    
+   3      132.5    
+
+  Symmetric RMS error =    1.92 percent.   RSVT =  0.010
+
+
+        Model after  5 Iterations for Station       5
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      144.8       34.3     34.3     0.2367    
+   2     0.5790       45.7     11.4      19.75    
+   3      138.3    
+
+  Symmetric RMS error =    0.55 percent.   RSVT =  0.010
+
+
+        Model after  6 Iterations for Station       5
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      147.7       34.4     34.4     0.2330    
+   2     0.5438       45.1     10.7      19.76    
+   3      140.8    
+
+  Symmetric RMS error =    0.30 percent.   RSVT =  0.010
+
+
+        Model after  7 Iterations for Station       5
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      148.8       34.5     34.5     0.2316    
+   2     0.5300       44.9     10.5      19.75    
+   3      142.0    
+
+  Symmetric RMS error =    0.28 percent.   RSVT =  0.010
+
+
+        Model after  8 Iterations for Station       5
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      149.2       34.5     34.5     0.2312    
+   2     0.5237       44.8     10.3      19.75    
+   3      142.7    
+
+  Symmetric RMS error =    0.27 percent.   RSVT =  0.010
+
+
+        Model after  9 Iterations for Station       5
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      149.4       34.5     34.5     0.2310    
+   2     0.5207       44.8     10.3      19.75    
+   3      143.2    
+
+  Symmetric RMS error =    0.27 percent.   RSVT =  0.010
+
+
+        Model after 10 Iterations for Station       5
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      149.4       34.5     34.5     0.2310    
+   2     0.5192       44.8     10.3      19.75    
+   3      143.5    
+
+  Symmetric RMS error =    0.27 percent.   RSVT =  0.010
+
+
+        Model after 11 Iterations for Station       5
+        -----------------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      149.4       34.5     34.5     0.2311    
+   2     0.5184       44.8     10.2      19.75    
+   3      143.8    
+
+  Symmetric RMS error =    0.27 percent.   RSVT =  0.010
+
+  --------------------------------------------------------------------
+  Inversion terminated after 11 iterations because, the reduction in
+  the RMS error from the last two iterations was less than 1 percent.
+  ____________________________________________________________________
+
+  ==================================================
+
+
+        Final Model after 11 Iterations for Station       5
+        ===============================================
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      149.4       34.5     34.5     0.2311    
+   2     0.5184       44.8     10.2      19.75    
+   3      143.8    
+
+  Parameter Importance
+  --------------------
+  RES_01    RES_02    RES_03   THICK_01  THICK_02
+  0.13      0.82      0.11      1.00      0.79
+
+                      Symmetric RMS error =     0.27 percent.
+                    Noise to signal ratio =    0.004
+
+
+      ERROR STRUCTURE OF FINAL MODEL
+      ------------------------------
+
+  For each station:
+  ----------------
+    The first line is the percent symmetric error.
+    The second line is the model response.
+    The third line is the data.
+
+
+      IN-LINE COMPONENT STRUCTURE
+      ---------------------------
+
+       CHNL_1       CHNL_2       CHNL_3       CHNL_4       CHNL_5       CHNL_6       CHNL_7       CHNL_8 
+
+   0.3652      -0.2721      -0.2962      -0.1209       0.4886E-01   0.2785       0.3253      -0.3221    
+   0.1560E+06   0.1470E+06   0.1354E+06   0.1165E+06   0.8775E+05   0.5246E+05   0.2213E+05    5992.    
+   0.1566E+06   0.1466E+06   0.1350E+06   0.1164E+06   0.8779E+05   0.5261E+05   0.2220E+05    5973.    
+
+
+  Airbeo inversion completed at 15:38 on 23 NOV 2012
+
+  Computation time =       1.87 seconds.
+
+

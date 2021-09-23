@@ -1,0 +1,32 @@
+#!/bin/sh
+# LokiAir $1{.cfl | .inv}
+#
+# Shell script to run $1 takes a single arguement which is the name of the 
+# cfl.  If the program is used in inversion mode, then the .inv file must 
+# have the same name as the .cfl
+
+# make a job directory ...
+ulimit -s unlimited
+clear
+mkdir -p "$1"
+cd "$1"
+
+# copy command line arguments to job directory ...
+test -f ../"$1".cfl && cp ../"$1".cfl LokiAir.cfl
+test -f ../"$1".frq && cp ../"$1".frq LokiAir.frq
+test -f ../"$1".inv && cp ../"$1".inv LokiAir.inv
+
+# run the program ...
+~/bin/LokiAir.x
+
+# copy output back to parent directory ...
+test -f LokiAir.out && cp LokiAir.out ../"$1".out
+test -f LokiAir.mv1 && cp LokiAir.mv1 ../"$1".mv1
+test -f LokiAir.mf1 && cp LokiAir.mf1 ../"$1".mf1
+test -f LokiAir.amx && cp LokiAir.amx ../"$1".amx
+test -f LokiAir.frq && cp LokiAir.frq ../"$1".frq
+test -f LokiAir.log && cp LokiAir.log ../"$1".log
+
+# ... and kill the job directory
+cd ..
+rm -rf "$1"

@@ -1,0 +1,11 @@
+<map id="egt_pl_boss" name="egt_pl_boss">
+<area shape="rect" id="node2" href="$Leroi_8f90.html#a24151574c4bb3d7844db88f91d23b589" title="egtdir" alt="" coords="152,132,207,159"/>
+<area shape="rect" id="node9" href="$Leroi_8f90.html#af139b1e21e0c1e77a354000840adee66" title="rxyz2plt" alt="" coords="145,183,213,209"/>
+<area shape="rect" id="node10" href="$Leroi_8f90.html#a8ec0c93946d1a3d78ce1cabd3de6558d" title="rplt2xyz" alt="" coords="145,233,213,260"/>
+<area shape="rect" id="node3" href="$Leroi_8f90.html#a3849611a53bff318a7443ebea8b8b480" title="q" alt="" coords="271,5,309,32"/>
+<area shape="rect" id="node4" href="$Leroi_8f90.html#a2d69cada9a1fff81caa02d919be5ce7c" title="aavp1" alt="" coords="261,56,319,83"/>
+<area shape="rect" id="node5" href="$Leroi_8f90.html#a175215729f915283d0b8fb5dec72eb0a" title="rint" alt="" coords="270,107,310,133"/>
+<area shape="rect" id="node6" href="$Leroi_8f90.html#afeabf8ee47c9628f00ed2dfa98f56e40" title="aavp2" alt="" coords="261,157,319,184"/>
+<area shape="rect" id="node7" href="$Leroi_8f90.html#ab86561ed12c5864e44152801ef93c7c8" title="r" alt="" coords="271,208,309,235"/>
+<area shape="rect" id="node8" href="$Leroi_8f90.html#a0dd58336077baa8c233cc4d08cc10939" title="dqdx" alt="" coords="265,259,315,285"/>
+</map>

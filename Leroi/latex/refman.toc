@@ -1,0 +1,568 @@
+\contentsline {chapter}{\numberline {1}Modules Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Modules List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}File Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}File List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Module Documentation}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}lg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}filter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}coefficients Module Reference}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Variable Documentation}{5}{subsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.1.1}delcos}{5}{subsubsection.3.1.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.1.2}j9}{5}{subsubsection.3.1.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.1.3}jnhi}{6}{subsubsection.3.1.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.1.4}jnlo}{6}{subsubsection.3.1.1.4}%
+\contentsline {subsubsection}{\numberline {3.1.1.5}ndec\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}jn}{6}{subsubsection.3.1.1.5}%
+\contentsline {subsubsection}{\numberline {3.1.1.6}ql}{6}{subsubsection.3.1.1.6}%
+\contentsline {subsubsection}{\numberline {3.1.1.7}shftjn}{6}{subsubsection.3.1.1.7}%
+\contentsline {subsubsection}{\numberline {3.1.1.8}wcos}{6}{subsubsection.3.1.1.8}%
+\contentsline {subsubsection}{\numberline {3.1.1.9}wj0}{6}{subsubsection.3.1.1.9}%
+\contentsline {subsubsection}{\numberline {3.1.1.10}wj1}{6}{subsubsection.3.1.1.10}%
+\contentsline {section}{\numberline {3.2}lg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}frequency\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}select Module Reference}{7}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Variable Documentation}{7}{subsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.1}frq\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}6pde}{7}{subsubsection.3.2.1.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.2}frq\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md2}{7}{subsubsection.3.2.1.2}%
+\contentsline {subsubsection}{\numberline {3.2.1.3}nf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}6pde}{7}{subsubsection.3.2.1.3}%
+\contentsline {subsubsection}{\numberline {3.2.1.4}nf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md2}{7}{subsubsection.3.2.1.4}%
+\contentsline {section}{\numberline {3.3}lg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}input\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}routines Module Reference}{7}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Function/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Subroutine Documentation}{12}{subsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.1}iscomment()}{12}{subsubsection.3.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.2}prepare\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}invrt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data()}{12}{subsubsection.3.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.3.1.3}read\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data()}{13}{subsubsection.3.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.3.1.4}read\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}parameter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}control()}{14}{subsubsection.3.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.3.1.5}read\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}system\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}and\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}survey\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data()}{15}{subsubsection.3.3.1.5}%
+\contentsline {subsubsection}{\numberline {3.3.1.6}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}frq()}{15}{subsubsection.3.3.1.6}%
+\contentsline {subsubsection}{\numberline {3.3.1.7}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rho()}{16}{subsubsection.3.3.1.7}%
+\contentsline {subsubsection}{\numberline {3.3.1.8}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}trp()}{16}{subsubsection.3.3.1.8}%
+\contentsline {subsubsection}{\numberline {3.3.1.9}show\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}and\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}tell()}{16}{subsubsection.3.3.1.9}%
+\contentsline {subsubsection}{\numberline {3.3.1.10}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}line\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}header()}{17}{subsubsection.3.3.1.10}%
+\contentsline {subsubsection}{\numberline {3.3.1.11}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}np\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}initial()}{17}{subsubsection.3.3.1.11}%
+\contentsline {subsection}{\numberline {3.3.2}Variable Documentation}{18}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}beg}{18}{subsubsection.3.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}bftl}{18}{subsubsection.3.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.3}bhazm}{18}{subsubsection.3.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.3.2.4}bhdip}{18}{subsubsection.3.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.3.2.5}cellw}{18}{subsubsection.3.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.3.2.6}cfreq}{19}{subsubsection.3.3.2.6}%
+\contentsline {subsubsection}{\numberline {3.3.2.7}cfreqp}{19}{subsubsection.3.3.2.7}%
+\contentsline {subsubsection}{\numberline {3.3.2.8}chrg}{19}{subsubsection.3.3.2.8}%
+\contentsline {subsubsection}{\numberline {3.3.2.9}chrgp}{19}{subsubsection.3.3.2.9}%
+\contentsline {subsubsection}{\numberline {3.3.2.10}clcd}{19}{subsubsection.3.3.2.10}%
+\contentsline {subsubsection}{\numberline {3.3.2.11}cmp}{19}{subsubsection.3.3.2.11}%
+\contentsline {subsubsection}{\numberline {3.3.2.12}cmpmt}{19}{subsubsection.3.3.2.12}%
+\contentsline {subsubsection}{\numberline {3.3.2.13}cnvrg}{19}{subsubsection.3.3.2.13}%
+\contentsline {subsubsection}{\numberline {3.3.2.14}ctau}{20}{subsubsection.3.3.2.14}%
+\contentsline {subsubsection}{\numberline {3.3.2.15}ctaup}{20}{subsubsection.3.3.2.15}%
+\contentsline {subsubsection}{\numberline {3.3.2.16}curnt}{20}{subsubsection.3.3.2.16}%
+\contentsline {subsubsection}{\numberline {3.3.2.17}cxpar}{20}{subsubsection.3.3.2.17}%
+\contentsline {subsubsection}{\numberline {3.3.2.18}d2r}{20}{subsubsection.3.3.2.18}%
+\contentsline {subsubsection}{\numberline {3.3.2.19}dip}{20}{subsubsection.3.3.2.19}%
+\contentsline {subsubsection}{\numberline {3.3.2.20}do3d}{20}{subsubsection.3.3.2.20}%
+\contentsline {subsubsection}{\numberline {3.3.2.21}dstat}{20}{subsubsection.3.3.2.21}%
+\contentsline {subsubsection}{\numberline {3.3.2.22}dzm}{21}{subsubsection.3.3.2.22}%
+\contentsline {subsubsection}{\numberline {3.3.2.23}ecntrd}{21}{subsubsection.3.3.2.23}%
+\contentsline {subsubsection}{\numberline {3.3.2.24}elas}{21}{subsubsection.3.3.2.24}%
+\contentsline {subsubsection}{\numberline {3.3.2.25}fin}{21}{subsubsection.3.3.2.25}%
+\contentsline {subsubsection}{\numberline {3.3.2.26}fqq}{21}{subsubsection.3.3.2.26}%
+\contentsline {subsubsection}{\numberline {3.3.2.27}freq}{21}{subsubsection.3.3.2.27}%
+\contentsline {subsubsection}{\numberline {3.3.2.28}fvers}{21}{subsubsection.3.3.2.28}%
+\contentsline {subsubsection}{\numberline {3.3.2.29}header\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}id}{21}{subsubsection.3.3.2.29}%
+\contentsline {subsubsection}{\numberline {3.3.2.30}idh}{22}{subsubsection.3.3.2.30}%
+\contentsline {subsubsection}{\numberline {3.3.2.31}inp}{22}{subsubsection.3.3.2.31}%
+\contentsline {subsubsection}{\numberline {3.3.2.32}intrude}{22}{subsubsection.3.3.2.32}%
+\contentsline {subsubsection}{\numberline {3.3.2.33}invert}{22}{subsubsection.3.3.2.33}%
+\contentsline {subsubsection}{\numberline {3.3.2.34}invprt}{22}{subsubsection.3.3.2.34}%
+\contentsline {subsubsection}{\numberline {3.3.2.35}iplt}{22}{subsubsection.3.3.2.35}%
+\contentsline {subsubsection}{\numberline {3.3.2.36}ippd}{22}{subsubsection.3.3.2.36}%
+\contentsline {subsubsection}{\numberline {3.3.2.37}istop}{22}{subsubsection.3.3.2.37}%
+\contentsline {subsubsection}{\numberline {3.3.2.38}isys}{23}{subsubsection.3.3.2.38}%
+\contentsline {subsubsection}{\numberline {3.3.2.39}j}{23}{subsubsection.3.3.2.39}%
+\contentsline {subsubsection}{\numberline {3.3.2.40}ja}{23}{subsubsection.3.3.2.40}%
+\contentsline {subsubsection}{\numberline {3.3.2.41}jab}{23}{subsubsection.3.3.2.41}%
+\contentsline {subsubsection}{\numberline {3.3.2.42}jab2}{23}{subsubsection.3.3.2.42}%
+\contentsline {subsubsection}{\numberline {3.3.2.43}jb}{23}{subsubsection.3.3.2.43}%
+\contentsline {subsubsection}{\numberline {3.3.2.44}jf}{23}{subsubsection.3.3.2.44}%
+\contentsline {subsubsection}{\numberline {3.3.2.45}jl}{23}{subsubsection.3.3.2.45}%
+\contentsline {subsubsection}{\numberline {3.3.2.46}jp}{24}{subsubsection.3.3.2.46}%
+\contentsline {subsubsection}{\numberline {3.3.2.47}jp2}{24}{subsubsection.3.3.2.47}%
+\contentsline {subsubsection}{\numberline {3.3.2.48}jr}{24}{subsubsection.3.3.2.48}%
+\contentsline {subsubsection}{\numberline {3.3.2.49}js}{24}{subsubsection.3.3.2.49}%
+\contentsline {subsubsection}{\numberline {3.3.2.50}jt}{24}{subsubsection.3.3.2.50}%
+\contentsline {subsubsection}{\numberline {3.3.2.51}jv}{24}{subsubsection.3.3.2.51}%
+\contentsline {subsubsection}{\numberline {3.3.2.52}k1}{24}{subsubsection.3.3.2.52}%
+\contentsline {subsubsection}{\numberline {3.3.2.53}kchnl}{24}{subsubsection.3.3.2.53}%
+\contentsline {subsubsection}{\numberline {3.3.2.54}khid}{25}{subsubsection.3.3.2.54}%
+\contentsline {subsubsection}{\numberline {3.3.2.55}khsq}{25}{subsubsection.3.3.2.55}%
+\contentsline {subsubsection}{\numberline {3.3.2.56}kmp}{25}{subsubsection.3.3.2.56}%
+\contentsline {subsubsection}{\numberline {3.3.2.57}kmpmt}{25}{subsubsection.3.3.2.57}%
+\contentsline {subsubsection}{\numberline {3.3.2.58}knorm}{25}{subsubsection.3.3.2.58}%
+\contentsline {subsubsection}{\numberline {3.3.2.59}knorm2}{25}{subsubsection.3.3.2.59}%
+\contentsline {subsubsection}{\numberline {3.3.2.60}kpct}{25}{subsubsection.3.3.2.60}%
+\contentsline {subsubsection}{\numberline {3.3.2.61}kprt}{25}{subsubsection.3.3.2.61}%
+\contentsline {subsubsection}{\numberline {3.3.2.62}krgtx}{26}{subsubsection.3.3.2.62}%
+\contentsline {subsubsection}{\numberline {3.3.2.63}krxw}{26}{subsubsection.3.3.2.63}%
+\contentsline {subsubsection}{\numberline {3.3.2.64}ktx}{26}{subsubsection.3.3.2.64}%
+\contentsline {subsubsection}{\numberline {3.3.2.65}lbnd}{26}{subsubsection.3.3.2.65}%
+\contentsline {subsubsection}{\numberline {3.3.2.66}line}{26}{subsubsection.3.3.2.66}%
+\contentsline {subsubsection}{\numberline {3.3.2.67}lithp}{26}{subsubsection.3.3.2.67}%
+\contentsline {subsubsection}{\numberline {3.3.2.68}lntr}{26}{subsubsection.3.3.2.68}%
+\contentsline {subsubsection}{\numberline {3.3.2.69}ltxt}{26}{subsubsection.3.3.2.69}%
+\contentsline {subsubsection}{\numberline {3.3.2.70}lyth}{27}{subsubsection.3.3.2.70}%
+\contentsline {subsubsection}{\numberline {3.3.2.71}max\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}freq}{27}{subsubsection.3.3.2.71}%
+\contentsline {subsubsection}{\numberline {3.3.2.72}maxits}{27}{subsubsection.3.3.2.72}%
+\contentsline {subsubsection}{\numberline {3.3.2.73}mchnl}{27}{subsubsection.3.3.2.73}%
+\contentsline {subsubsection}{\numberline {3.3.2.74}mcmp}{27}{subsubsection.3.3.2.74}%
+\contentsline {subsubsection}{\numberline {3.3.2.75}md1}{27}{subsubsection.3.3.2.75}%
+\contentsline {subsubsection}{\numberline {3.3.2.76}md2}{27}{subsubsection.3.3.2.76}%
+\contentsline {subsubsection}{\numberline {3.3.2.77}min\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}freq}{27}{subsubsection.3.3.2.77}%
+\contentsline {subsubsection}{\numberline {3.3.2.78}mlines}{28}{subsubsection.3.3.2.78}%
+\contentsline {subsubsection}{\numberline {3.3.2.79}mpar}{28}{subsubsection.3.3.2.79}%
+\contentsline {subsubsection}{\numberline {3.3.2.80}mqvr}{28}{subsubsection.3.3.2.80}%
+\contentsline {subsubsection}{\numberline {3.3.2.81}mrxl}{28}{subsubsection.3.3.2.81}%
+\contentsline {subsubsection}{\numberline {3.3.2.82}mrxtx}{28}{subsubsection.3.3.2.82}%
+\contentsline {subsubsection}{\numberline {3.3.2.83}msg}{28}{subsubsection.3.3.2.83}%
+\contentsline {subsubsection}{\numberline {3.3.2.84}mxab}{28}{subsubsection.3.3.2.84}%
+\contentsline {subsubsection}{\numberline {3.3.2.85}mxcl2}{28}{subsubsection.3.3.2.85}%
+\contentsline {subsubsection}{\numberline {3.3.2.86}mxerr}{29}{subsubsection.3.3.2.86}%
+\contentsline {subsubsection}{\numberline {3.3.2.87}mxrho}{29}{subsubsection.3.3.2.87}%
+\contentsline {subsubsection}{\numberline {3.3.2.88}mxrs}{29}{subsubsection.3.3.2.88}%
+\contentsline {subsubsection}{\numberline {3.3.2.89}mxtx}{29}{subsubsection.3.3.2.89}%
+\contentsline {subsubsection}{\numberline {3.3.2.90}mxvrtx}{29}{subsubsection.3.3.2.90}%
+\contentsline {subsubsection}{\numberline {3.3.2.91}nab}{29}{subsubsection.3.3.2.91}%
+\contentsline {subsubsection}{\numberline {3.3.2.92}nab2}{29}{subsubsection.3.3.2.92}%
+\contentsline {subsubsection}{\numberline {3.3.2.93}naj}{29}{subsubsection.3.3.2.93}%
+\contentsline {subsubsection}{\numberline {3.3.2.94}nbj}{30}{subsubsection.3.3.2.94}%
+\contentsline {subsubsection}{\numberline {3.3.2.95}nchnl}{30}{subsubsection.3.3.2.95}%
+\contentsline {subsubsection}{\numberline {3.3.2.96}ncmpl}{30}{subsubsection.3.3.2.96}%
+\contentsline {subsubsection}{\numberline {3.3.2.97}ncntrd}{30}{subsubsection.3.3.2.97}%
+\contentsline {subsubsection}{\numberline {3.3.2.98}nctd}{30}{subsubsection.3.3.2.98}%
+\contentsline {subsubsection}{\numberline {3.3.2.99}nd}{30}{subsubsection.3.3.2.99}%
+\contentsline {subsubsection}{\numberline {3.3.2.100}ndata}{30}{subsubsection.3.3.2.100}%
+\contentsline {subsubsection}{\numberline {3.3.2.101}ndstp}{30}{subsubsection.3.3.2.101}%
+\contentsline {subsubsection}{\numberline {3.3.2.102}nfrq}{31}{subsubsection.3.3.2.102}%
+\contentsline {subsubsection}{\numberline {3.3.2.103}nft}{31}{subsubsection.3.3.2.103}%
+\contentsline {subsubsection}{\numberline {3.3.2.104}nhid}{31}{subsubsection.3.3.2.104}%
+\contentsline {subsubsection}{\numberline {3.3.2.105}nlg}{31}{subsubsection.3.3.2.105}%
+\contentsline {subsubsection}{\numberline {3.3.2.106}nlines}{31}{subsubsection.3.3.2.106}%
+\contentsline {subsubsection}{\numberline {3.3.2.107}nlith}{31}{subsubsection.3.3.2.107}%
+\contentsline {subsubsection}{\numberline {3.3.2.108}nlyr}{31}{subsubsection.3.3.2.108}%
+\contentsline {subsubsection}{\numberline {3.3.2.109}np}{31}{subsubsection.3.3.2.109}%
+\contentsline {subsubsection}{\numberline {3.3.2.110}npar}{32}{subsubsection.3.3.2.110}%
+\contentsline {subsubsection}{\numberline {3.3.2.111}nplt}{32}{subsubsection.3.3.2.111}%
+\contentsline {subsubsection}{\numberline {3.3.2.112}nppd}{32}{subsubsection.3.3.2.112}%
+\contentsline {subsubsection}{\numberline {3.3.2.113}nprop}{32}{subsubsection.3.3.2.113}%
+\contentsline {subsubsection}{\numberline {3.3.2.114}npuls}{32}{subsubsection.3.3.2.114}%
+\contentsline {subsubsection}{\numberline {3.3.2.115}nr}{32}{subsubsection.3.3.2.115}%
+\contentsline {subsubsection}{\numberline {3.3.2.116}nrgtx}{32}{subsubsection.3.3.2.116}%
+\contentsline {subsubsection}{\numberline {3.3.2.117}nri}{32}{subsubsection.3.3.2.117}%
+\contentsline {subsubsection}{\numberline {3.3.2.118}nrmgt}{33}{subsubsection.3.3.2.118}%
+\contentsline {subsubsection}{\numberline {3.3.2.119}nrx}{33}{subsubsection.3.3.2.119}%
+\contentsline {subsubsection}{\numberline {3.3.2.120}nrxtx}{33}{subsubsection.3.3.2.120}%
+\contentsline {subsubsection}{\numberline {3.3.2.121}nsx}{33}{subsubsection.3.3.2.121}%
+\contentsline {subsubsection}{\numberline {3.3.2.122}ntx}{33}{subsubsection.3.3.2.122}%
+\contentsline {subsubsection}{\numberline {3.3.2.123}ntxl}{33}{subsubsection.3.3.2.123}%
+\contentsline {subsubsection}{\numberline {3.3.2.124}ntypls}{33}{subsubsection.3.3.2.124}%
+\contentsline {subsubsection}{\numberline {3.3.2.125}ntyrp}{33}{subsubsection.3.3.2.125}%
+\contentsline {subsubsection}{\numberline {3.3.2.126}nvrtx}{34}{subsubsection.3.3.2.126}%
+\contentsline {subsubsection}{\numberline {3.3.2.127}nw}{34}{subsubsection.3.3.2.127}%
+\contentsline {subsubsection}{\numberline {3.3.2.128}offtym}{34}{subsubsection.3.3.2.128}%
+\contentsline {subsubsection}{\numberline {3.3.2.129}parpct}{34}{subsubsection.3.3.2.129}%
+\contentsline {subsubsection}{\numberline {3.3.2.130}pctcnv}{34}{subsubsection.3.3.2.130}%
+\contentsline {subsubsection}{\numberline {3.3.2.131}pi}{34}{subsubsection.3.3.2.131}%
+\contentsline {subsubsection}{\numberline {3.3.2.132}pi2}{34}{subsubsection.3.3.2.132}%
+\contentsline {subsubsection}{\numberline {3.3.2.133}plazm}{34}{subsubsection.3.3.2.133}%
+\contentsline {subsubsection}{\numberline {3.3.2.134}pldip}{35}{subsubsection.3.3.2.134}%
+\contentsline {subsubsection}{\numberline {3.3.2.135}plg}{35}{subsubsection.3.3.2.135}%
+\contentsline {subsubsection}{\numberline {3.3.2.136}plngth}{35}{subsubsection.3.3.2.136}%
+\contentsline {subsubsection}{\numberline {3.3.2.137}pltop}{35}{subsubsection.3.3.2.137}%
+\contentsline {subsubsection}{\numberline {3.3.2.138}plunj}{35}{subsubsection.3.3.2.138}%
+\contentsline {subsubsection}{\numberline {3.3.2.139}plwdth}{35}{subsubsection.3.3.2.139}%
+\contentsline {subsubsection}{\numberline {3.3.2.140}plyr}{35}{subsubsection.3.3.2.140}%
+\contentsline {subsubsection}{\numberline {3.3.2.141}prfl}{35}{subsubsection.3.3.2.141}%
+\contentsline {subsubsection}{\numberline {3.3.2.142}prtsec}{36}{subsubsection.3.3.2.142}%
+\contentsline {subsubsection}{\numberline {3.3.2.143}pulse}{36}{subsubsection.3.3.2.143}%
+\contentsline {subsubsection}{\numberline {3.3.2.144}qd}{36}{subsubsection.3.3.2.144}%
+\contentsline {subsubsection}{\numberline {3.3.2.145}qfrq1}{36}{subsubsection.3.3.2.145}%
+\contentsline {subsubsection}{\numberline {3.3.2.146}qfrq2}{36}{subsubsection.3.3.2.146}%
+\contentsline {subsubsection}{\numberline {3.3.2.147}ql}{36}{subsubsection.3.3.2.147}%
+\contentsline {subsubsection}{\numberline {3.3.2.148}r2d}{36}{subsubsection.3.3.2.148}%
+\contentsline {subsubsection}{\numberline {3.3.2.149}rdata}{36}{subsubsection.3.3.2.149}%
+\contentsline {subsubsection}{\numberline {3.3.2.150}reftym}{37}{subsubsection.3.3.2.150}%
+\contentsline {subsubsection}{\numberline {3.3.2.151}reps}{37}{subsubsection.3.3.2.151}%
+\contentsline {subsubsection}{\numberline {3.3.2.152}res}{37}{subsubsection.3.3.2.152}%
+\contentsline {subsubsection}{\numberline {3.3.2.153}rhotrp}{37}{subsubsection.3.3.2.153}%
+\contentsline {subsubsection}{\numberline {3.3.2.154}rmu}{37}{subsubsection.3.3.2.154}%
+\contentsline {subsubsection}{\numberline {3.3.2.155}rmud}{37}{subsubsection.3.3.2.155}%
+\contentsline {subsubsection}{\numberline {3.3.2.156}rwts}{37}{subsubsection.3.3.2.156}%
+\contentsline {subsubsection}{\numberline {3.3.2.157}rx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}type}{37}{subsubsection.3.3.2.157}%
+\contentsline {subsubsection}{\numberline {3.3.2.158}rxazm}{38}{subsubsection.3.3.2.158}%
+\contentsline {subsubsection}{\numberline {3.3.2.159}rxdip}{38}{subsubsection.3.3.2.159}%
+\contentsline {subsubsection}{\numberline {3.3.2.160}rxe}{38}{subsubsection.3.3.2.160}%
+\contentsline {subsubsection}{\numberline {3.3.2.161}rxed}{38}{subsubsection.3.3.2.161}%
+\contentsline {subsubsection}{\numberline {3.3.2.162}rxfmnt}{38}{subsubsection.3.3.2.162}%
+\contentsline {subsubsection}{\numberline {3.3.2.163}rxid}{38}{subsubsection.3.3.2.163}%
+\contentsline {subsubsection}{\numberline {3.3.2.164}rxmnt}{38}{subsubsection.3.3.2.164}%
+\contentsline {subsubsection}{\numberline {3.3.2.165}rxn}{38}{subsubsection.3.3.2.165}%
+\contentsline {subsubsection}{\numberline {3.3.2.166}rxnd}{39}{subsubsection.3.3.2.166}%
+\contentsline {subsubsection}{\numberline {3.3.2.167}rxoff}{39}{subsubsection.3.3.2.167}%
+\contentsline {subsubsection}{\numberline {3.3.2.168}rxotx}{39}{subsubsection.3.3.2.168}%
+\contentsline {subsubsection}{\numberline {3.3.2.169}rxz}{39}{subsubsection.3.3.2.169}%
+\contentsline {subsubsection}{\numberline {3.3.2.170}sde0}{39}{subsubsection.3.3.2.170}%
+\contentsline {subsubsection}{\numberline {3.3.2.171}sdn0}{39}{subsubsection.3.3.2.171}%
+\contentsline {subsubsection}{\numberline {3.3.2.172}sdz0}{39}{subsubsection.3.3.2.172}%
+\contentsline {subsubsection}{\numberline {3.3.2.173}sig\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t}{39}{subsubsection.3.3.2.173}%
+\contentsline {subsubsection}{\numberline {3.3.2.174}single}{40}{subsubsection.3.3.2.174}%
+\contentsline {subsubsection}{\numberline {3.3.2.175}source\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}type}{40}{subsubsection.3.3.2.175}%
+\contentsline {subsubsection}{\numberline {3.3.2.176}step}{40}{subsubsection.3.3.2.176}%
+\contentsline {subsubsection}{\numberline {3.3.2.177}survey\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}type}{40}{subsubsection.3.3.2.177}%
+\contentsline {subsubsection}{\numberline {3.3.2.178}sv\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}azm}{40}{subsubsection.3.3.2.178}%
+\contentsline {subsubsection}{\numberline {3.3.2.179}svazm}{40}{subsubsection.3.3.2.179}%
+\contentsline {subsubsection}{\numberline {3.3.2.180}swx}{40}{subsubsection.3.3.2.180}%
+\contentsline {subsubsection}{\numberline {3.3.2.181}swy}{40}{subsubsection.3.3.2.181}%
+\contentsline {subsubsection}{\numberline {3.3.2.182}sxazm}{41}{subsubsection.3.3.2.182}%
+\contentsline {subsubsection}{\numberline {3.3.2.183}sxdip}{41}{subsubsection.3.3.2.183}%
+\contentsline {subsubsection}{\numberline {3.3.2.184}sxe}{41}{subsubsection.3.3.2.184}%
+\contentsline {subsubsection}{\numberline {3.3.2.185}sxed}{41}{subsubsection.3.3.2.185}%
+\contentsline {subsubsection}{\numberline {3.3.2.186}sxn}{41}{subsubsection.3.3.2.186}%
+\contentsline {subsubsection}{\numberline {3.3.2.187}sxnd}{41}{subsubsection.3.3.2.187}%
+\contentsline {subsubsection}{\numberline {3.3.2.188}sxz}{41}{subsubsection.3.3.2.188}%
+\contentsline {subsubsection}{\numberline {3.3.2.189}t0}{41}{subsubsection.3.3.2.189}%
+\contentsline {subsubsection}{\numberline {3.3.2.190}t0sx}{42}{subsubsection.3.3.2.190}%
+\contentsline {subsubsection}{\numberline {3.3.2.191}tcls}{42}{subsubsection.3.3.2.191}%
+\contentsline {subsubsection}{\numberline {3.3.2.192}tdfd}{42}{subsubsection.3.3.2.192}%
+\contentsline {subsubsection}{\numberline {3.3.2.193}thk}{42}{subsubsection.3.3.2.193}%
+\contentsline {subsubsection}{\numberline {3.3.2.194}thkd}{42}{subsubsection.3.3.2.194}%
+\contentsline {subsubsection}{\numberline {3.3.2.195}title}{42}{subsubsection.3.3.2.195}%
+\contentsline {subsubsection}{\numberline {3.3.2.196}tms}{42}{subsubsection.3.3.2.196}%
+\contentsline {subsubsection}{\numberline {3.3.2.197}topn}{42}{subsubsection.3.3.2.197}%
+\contentsline {subsubsection}{\numberline {3.3.2.198}trp}{43}{subsubsection.3.3.2.198}%
+\contentsline {subsubsection}{\numberline {3.3.2.199}tvals}{43}{subsubsection.3.3.2.199}%
+\contentsline {subsubsection}{\numberline {3.3.2.200}txazm}{43}{subsubsection.3.3.2.200}%
+\contentsline {subsubsection}{\numberline {3.3.2.201}txcln}{43}{subsubsection.3.3.2.201}%
+\contentsline {subsubsection}{\numberline {3.3.2.202}txfreq}{43}{subsubsection.3.3.2.202}%
+\contentsline {subsubsection}{\numberline {3.3.2.203}txlngth}{43}{subsubsection.3.3.2.203}%
+\contentsline {subsubsection}{\numberline {3.3.2.204}txmnt}{43}{subsubsection.3.3.2.204}%
+\contentsline {subsubsection}{\numberline {3.3.2.205}txon}{43}{subsubsection.3.3.2.205}%
+\contentsline {subsubsection}{\numberline {3.3.2.206}txwdth}{44}{subsubsection.3.3.2.206}%
+\contentsline {subsubsection}{\numberline {3.3.2.207}txz}{44}{subsubsection.3.3.2.207}%
+\contentsline {subsubsection}{\numberline {3.3.2.208}ubnd}{44}{subsubsection.3.3.2.208}%
+\contentsline {subsubsection}{\numberline {3.3.2.209}units}{44}{subsubsection.3.3.2.209}%
+\contentsline {subsubsection}{\numberline {3.3.2.210}waveform}{44}{subsubsection.3.3.2.210}%
+\contentsline {subsubsection}{\numberline {3.3.2.211}wtms}{44}{subsubsection.3.3.2.211}%
+\contentsline {subsubsection}{\numberline {3.3.2.212}xcell}{44}{subsubsection.3.3.2.212}%
+\contentsline {subsubsection}{\numberline {3.3.2.213}xcntr}{44}{subsubsection.3.3.2.213}%
+\contentsline {subsubsection}{\numberline {3.3.2.214}xdata}{45}{subsubsection.3.3.2.214}%
+\contentsline {subsubsection}{\numberline {3.3.2.215}xmodl}{45}{subsubsection.3.3.2.215}%
+\contentsline {subsubsection}{\numberline {3.3.2.216}xrxof}{45}{subsubsection.3.3.2.216}%
+\contentsline {subsubsection}{\numberline {3.3.2.217}xrxtx}{45}{subsubsection.3.3.2.217}%
+\contentsline {subsubsection}{\numberline {3.3.2.218}ycell}{45}{subsubsection.3.3.2.218}%
+\contentsline {subsubsection}{\numberline {3.3.2.219}ycntr}{45}{subsubsection.3.3.2.219}%
+\contentsline {subsubsection}{\numberline {3.3.2.220}yrxof}{45}{subsubsection.3.3.2.220}%
+\contentsline {subsubsection}{\numberline {3.3.2.221}yrxtx}{45}{subsubsection.3.3.2.221}%
+\contentsline {subsubsection}{\numberline {3.3.2.222}yxzplt}{46}{subsubsection.3.3.2.222}%
+\contentsline {subsubsection}{\numberline {3.3.2.223}zcell}{46}{subsubsection.3.3.2.223}%
+\contentsline {subsubsection}{\numberline {3.3.2.224}zmax}{46}{subsubsection.3.3.2.224}%
+\contentsline {subsubsection}{\numberline {3.3.2.225}zmin}{46}{subsubsection.3.3.2.225}%
+\contentsline {subsubsection}{\numberline {3.3.2.226}zrxof}{46}{subsubsection.3.3.2.226}%
+\contentsline {subsubsection}{\numberline {3.3.2.227}zrxtx}{46}{subsubsection.3.3.2.227}%
+\contentsline {section}{\numberline {3.4}lg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}metadata Module Reference}{46}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Variable Documentation}{47}{subsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.1.1}paut1}{47}{subsubsection.3.4.1.1}%
+\contentsline {subsubsection}{\numberline {3.4.1.2}paut2}{47}{subsubsection.3.4.1.2}%
+\contentsline {subsubsection}{\numberline {3.4.1.3}pdate}{47}{subsubsection.3.4.1.3}%
+\contentsline {subsubsection}{\numberline {3.4.1.4}pname}{47}{subsubsection.3.4.1.4}%
+\contentsline {subsubsection}{\numberline {3.4.1.5}pproj}{47}{subsubsection.3.4.1.5}%
+\contentsline {subsubsection}{\numberline {3.4.1.6}pvers}{47}{subsubsection.3.4.1.6}%
+\contentsline {chapter}{\numberline {4}File Documentation}{49}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Leroi.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}f90 File Reference}{49}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Function/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Subroutine Documentation}{59}{subsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}aavp1()}{59}{subsubsection.4.1.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.2}aavp2()}{59}{subsubsection.4.1.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.1.3}b\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}direct()}{59}{subsubsection.4.1.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.1.4}c2dintrp()}{60}{subsubsection.4.1.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.1.5}ccubval()}{60}{subsubsection.4.1.1.5}%
+\contentsline {subsubsection}{\numberline {4.1.1.6}cdcubval()}{61}{subsubsection.4.1.1.6}%
+\contentsline {subsubsection}{\numberline {4.1.1.7}cnvrt2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}mpar()}{62}{subsubsection.4.1.1.7}%
+\contentsline {subsubsection}{\numberline {4.1.1.8}cnvrt2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}xpar()}{62}{subsubsection.4.1.1.8}%
+\contentsline {subsubsection}{\numberline {4.1.1.9}cnvrt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bounds()}{63}{subsubsection.4.1.1.9}%
+\contentsline {subsubsection}{\numberline {4.1.1.10}colres\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1d()}{64}{subsubsection.4.1.1.10}%
+\contentsline {subsubsection}{\numberline {4.1.1.11}colres\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3d()}{64}{subsubsection.4.1.1.11}%
+\contentsline {subsubsection}{\numberline {4.1.1.12}costrn()}{65}{subsubsection.4.1.1.12}%
+\contentsline {subsubsection}{\numberline {4.1.1.13}cubint()}{65}{subsubsection.4.1.1.13}%
+\contentsline {subsubsection}{\numberline {4.1.1.14}cubspl()}{66}{subsubsection.4.1.1.14}%
+\contentsline {subsubsection}{\numberline {4.1.1.15}cubval()}{67}{subsubsection.4.1.1.15}%
+\contentsline {subsubsection}{\numberline {4.1.1.16}cubvalrz()}{67}{subsubsection.4.1.1.16}%
+\contentsline {subsubsection}{\numberline {4.1.1.17}dist2d()}{68}{subsubsection.4.1.1.17}%
+\contentsline {subsubsection}{\numberline {4.1.1.18}dprod1()}{68}{subsubsection.4.1.1.18}%
+\contentsline {subsubsection}{\numberline {4.1.1.19}dqdx()}{69}{subsubsection.4.1.1.19}%
+\contentsline {subsubsection}{\numberline {4.1.1.20}edsx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}coef()}{69}{subsubsection.4.1.1.20}%
+\contentsline {subsubsection}{\numberline {4.1.1.21}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss()}{70}{subsubsection.4.1.1.21}%
+\contentsline {subsubsection}{\numberline {4.1.1.22}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cspl()}{71}{subsubsection.4.1.1.22}%
+\contentsline {subsubsection}{\numberline {4.1.1.23}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk()}{72}{subsubsection.4.1.1.23}%
+\contentsline {subsubsection}{\numberline {4.1.1.24}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker()}{73}{subsubsection.4.1.1.24}%
+\contentsline {subsubsection}{\numberline {4.1.1.25}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}pl\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss()}{74}{subsubsection.4.1.1.25}%
+\contentsline {subsubsection}{\numberline {4.1.1.26}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ul\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss()}{75}{subsubsection.4.1.1.26}%
+\contentsline {subsubsection}{\numberline {4.1.1.27}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ul\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cspl()}{76}{subsubsection.4.1.1.27}%
+\contentsline {subsubsection}{\numberline {4.1.1.28}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ul\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk()}{77}{subsubsection.4.1.1.28}%
+\contentsline {subsubsection}{\numberline {4.1.1.29}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ul\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker()}{78}{subsubsection.4.1.1.29}%
+\contentsline {subsubsection}{\numberline {4.1.1.30}egtdir()}{79}{subsubsection.4.1.1.30}%
+\contentsline {subsubsection}{\numberline {4.1.1.31}egtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss()}{80}{subsubsection.4.1.1.31}%
+\contentsline {subsubsection}{\numberline {4.1.1.32}egtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ul()}{82}{subsubsection.4.1.1.32}%
+\contentsline {subsubsection}{\numberline {4.1.1.33}egtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cspl()}{83}{subsubsection.4.1.1.33}%
+\contentsline {subsubsection}{\numberline {4.1.1.34}egtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}dir()}{84}{subsubsection.4.1.1.34}%
+\contentsline {subsubsection}{\numberline {4.1.1.35}egtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk()}{84}{subsubsection.4.1.1.35}%
+\contentsline {subsubsection}{\numberline {4.1.1.36}egtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker()}{85}{subsubsection.4.1.1.36}%
+\contentsline {subsubsection}{\numberline {4.1.1.37}esvd()}{86}{subsubsection.4.1.1.37}%
+\contentsline {subsubsection}{\numberline {4.1.1.38}fdread()}{87}{subsubsection.4.1.1.38}%
+\contentsline {subsubsection}{\numberline {4.1.1.39}fold\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}and\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}convolve()}{87}{subsubsection.4.1.1.39}%
+\contentsline {subsubsection}{\numberline {4.1.1.40}forjac()}{88}{subsubsection.4.1.1.40}%
+\contentsline {subsubsection}{\numberline {4.1.1.41}get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}fwd\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}modl()}{91}{subsubsection.4.1.1.41}%
+\contentsline {subsubsection}{\numberline {4.1.1.42}get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}source\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}text()}{92}{subsubsection.4.1.1.42}%
+\contentsline {subsubsection}{\numberline {4.1.1.43}get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}survey\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}text()}{92}{subsubsection.4.1.1.43}%
+\contentsline {subsubsection}{\numberline {4.1.1.44}get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}units\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}text()}{93}{subsubsection.4.1.1.44}%
+\contentsline {subsubsection}{\numberline {4.1.1.45}hs\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cdnt()}{93}{subsubsection.4.1.1.45}%
+\contentsline {subsubsection}{\numberline {4.1.1.46}hs\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cdnt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rx()}{94}{subsubsection.4.1.1.46}%
+\contentsline {subsubsection}{\numberline {4.1.1.47}hsboss()}{95}{subsubsection.4.1.1.47}%
+\contentsline {subsubsection}{\numberline {4.1.1.48}hsboss\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}td()}{96}{subsubsection.4.1.1.48}%
+\contentsline {subsubsection}{\numberline {4.1.1.49}hsclb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk()}{98}{subsubsection.4.1.1.49}%
+\contentsline {subsubsection}{\numberline {4.1.1.50}hsclb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker()}{99}{subsubsection.4.1.1.50}%
+\contentsline {subsubsection}{\numberline {4.1.1.51}hsgwb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk()}{99}{subsubsection.4.1.1.51}%
+\contentsline {subsubsection}{\numberline {4.1.1.52}hsgwb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker()}{100}{subsubsection.4.1.1.52}%
+\contentsline {subsubsection}{\numberline {4.1.1.53}hslpb()}{101}{subsubsection.4.1.1.53}%
+\contentsline {subsubsection}{\numberline {4.1.1.54}hslpe()}{102}{subsubsection.4.1.1.54}%
+\contentsline {subsubsection}{\numberline {4.1.1.55}hslpe\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk()}{104}{subsubsection.4.1.1.55}%
+\contentsline {subsubsection}{\numberline {4.1.1.56}hslpe\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker()}{104}{subsubsection.4.1.1.56}%
+\contentsline {subsubsection}{\numberline {4.1.1.57}hslped()}{105}{subsubsection.4.1.1.57}%
+\contentsline {subsubsection}{\numberline {4.1.1.58}hslplp\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk()}{106}{subsubsection.4.1.1.58}%
+\contentsline {subsubsection}{\numberline {4.1.1.59}hslplp\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker()}{107}{subsubsection.4.1.1.59}%
+\contentsline {subsubsection}{\numberline {4.1.1.60}hsmdb()}{108}{subsubsection.4.1.1.60}%
+\contentsline {subsubsection}{\numberline {4.1.1.61}hsmdb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk()}{109}{subsubsection.4.1.1.61}%
+\contentsline {subsubsection}{\numberline {4.1.1.62}hsmdb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker()}{109}{subsubsection.4.1.1.62}%
+\contentsline {subsubsection}{\numberline {4.1.1.63}index\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}mpar()}{110}{subsubsection.4.1.1.63}%
+\contentsline {subsubsection}{\numberline {4.1.1.64}inter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss()}{111}{subsubsection.4.1.1.64}%
+\contentsline {subsubsection}{\numberline {4.1.1.65}inter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ul()}{112}{subsubsection.4.1.1.65}%
+\contentsline {subsubsection}{\numberline {4.1.1.66}inter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}dir()}{113}{subsubsection.4.1.1.66}%
+\contentsline {subsubsection}{\numberline {4.1.1.67}interv()}{114}{subsubsection.4.1.1.67}%
+\contentsline {subsubsection}{\numberline {4.1.1.68}interv\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}z()}{114}{subsubsection.4.1.1.68}%
+\contentsline {subsubsection}{\numberline {4.1.1.69}leroi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3d()}{115}{subsubsection.4.1.1.69}%
+\contentsline {subsubsection}{\numberline {4.1.1.70}linval()}{118}{subsubsection.4.1.1.70}%
+\contentsline {subsubsection}{\numberline {4.1.1.71}main()}{119}{subsubsection.4.1.1.71}%
+\contentsline {subsubsection}{\numberline {4.1.1.72}mdsx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}coef()}{120}{subsubsection.4.1.1.72}%
+\contentsline {subsubsection}{\numberline {4.1.1.73}mgt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss()}{120}{subsubsection.4.1.1.73}%
+\contentsline {subsubsection}{\numberline {4.1.1.74}mgt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ul()}{122}{subsubsection.4.1.1.74}%
+\contentsline {subsubsection}{\numberline {4.1.1.75}mgt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cspl()}{123}{subsubsection.4.1.1.75}%
+\contentsline {subsubsection}{\numberline {4.1.1.76}mgt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk()}{124}{subsubsection.4.1.1.76}%
+\contentsline {subsubsection}{\numberline {4.1.1.77}mgt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker()}{125}{subsubsection.4.1.1.77}%
+\contentsline {subsubsection}{\numberline {4.1.1.78}mgtdir()}{125}{subsubsection.4.1.1.78}%
+\contentsline {subsubsection}{\numberline {4.1.1.79}nlsq2()}{126}{subsubsection.4.1.1.79}%
+\contentsline {subsubsection}{\numberline {4.1.1.80}noise\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sigr()}{129}{subsubsection.4.1.1.80}%
+\contentsline {subsubsection}{\numberline {4.1.1.81}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lp()}{129}{subsubsection.4.1.1.81}%
+\contentsline {subsubsection}{\numberline {4.1.1.82}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md()}{130}{subsubsection.4.1.1.82}%
+\contentsline {subsubsection}{\numberline {4.1.1.83}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ul\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lp()}{131}{subsubsection.4.1.1.83}%
+\contentsline {subsubsection}{\numberline {4.1.1.84}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ul\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md()}{132}{subsubsection.4.1.1.84}%
+\contentsline {subsubsection}{\numberline {4.1.1.85}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cl()}{134}{subsubsection.4.1.1.85}%
+\contentsline {subsubsection}{\numberline {4.1.1.86}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md()}{134}{subsubsection.4.1.1.86}%
+\contentsline {subsubsection}{\numberline {4.1.1.87}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ol()}{135}{subsubsection.4.1.1.87}%
+\contentsline {subsubsection}{\numberline {4.1.1.88}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cl()}{136}{subsubsection.4.1.1.88}%
+\contentsline {subsubsection}{\numberline {4.1.1.89}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md()}{137}{subsubsection.4.1.1.89}%
+\contentsline {subsubsection}{\numberline {4.1.1.90}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ol()}{137}{subsubsection.4.1.1.90}%
+\contentsline {subsubsection}{\numberline {4.1.1.91}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cl()}{138}{subsubsection.4.1.1.91}%
+\contentsline {subsubsection}{\numberline {4.1.1.92}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md()}{139}{subsubsection.4.1.1.92}%
+\contentsline {subsubsection}{\numberline {4.1.1.93}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ol()}{140}{subsubsection.4.1.1.93}%
+\contentsline {subsubsection}{\numberline {4.1.1.94}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cl()}{141}{subsubsection.4.1.1.94}%
+\contentsline {subsubsection}{\numberline {4.1.1.95}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md()}{142}{subsubsection.4.1.1.95}%
+\contentsline {subsubsection}{\numberline {4.1.1.96}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ol()}{142}{subsubsection.4.1.1.96}%
+\contentsline {subsubsection}{\numberline {4.1.1.97}prmdc\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lp()}{143}{subsubsection.4.1.1.97}%
+\contentsline {subsubsection}{\numberline {4.1.1.98}prmdc\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md()}{144}{subsubsection.4.1.1.98}%
+\contentsline {subsubsection}{\numberline {4.1.1.99}propagate()}{145}{subsubsection.4.1.1.99}%
+\contentsline {subsubsection}{\numberline {4.1.1.100}q()}{145}{subsubsection.4.1.1.100}%
+\contentsline {subsubsection}{\numberline {4.1.1.101}r()}{146}{subsubsection.4.1.1.101}%
+\contentsline {subsubsection}{\numberline {4.1.1.102}rint()}{146}{subsubsection.4.1.1.102}%
+\contentsline {subsubsection}{\numberline {4.1.1.103}rplt2xyz()}{146}{subsubsection.4.1.1.103}%
+\contentsline {subsubsection}{\numberline {4.1.1.104}rxyz2plt()}{147}{subsubsection.4.1.1.104}%
+\contentsline {subsubsection}{\numberline {4.1.1.105}scat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}crnt()}{148}{subsubsection.4.1.1.105}%
+\contentsline {subsubsection}{\numberline {4.1.1.106}scat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}em()}{148}{subsubsection.4.1.1.106}%
+\contentsline {subsubsection}{\numberline {4.1.1.107}scat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss()}{150}{subsubsection.4.1.1.107}%
+\contentsline {subsubsection}{\numberline {4.1.1.108}scat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lu\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}dcmp()}{151}{subsubsection.4.1.1.108}%
+\contentsline {subsubsection}{\numberline {4.1.1.109}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cells\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1()}{152}{subsubsection.4.1.1.109}%
+\contentsline {subsubsection}{\numberline {4.1.1.110}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cells\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2()}{152}{subsubsection.4.1.1.110}%
+\contentsline {subsubsection}{\numberline {4.1.1.111}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}kfg()}{153}{subsubsection.4.1.1.111}%
+\contentsline {subsubsection}{\numberline {4.1.1.112}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}max\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}intrp()}{154}{subsubsection.4.1.1.112}%
+\contentsline {subsubsection}{\numberline {4.1.1.113}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}mgt()}{155}{subsubsection.4.1.1.113}%
+\contentsline {subsubsection}{\numberline {4.1.1.114}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}nrhs()}{156}{subsubsection.4.1.1.114}%
+\contentsline {subsubsection}{\numberline {4.1.1.115}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}output\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lines\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}fd()}{156}{subsubsection.4.1.1.115}%
+\contentsline {subsubsection}{\numberline {4.1.1.116}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}output\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lines\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}td()}{157}{subsubsection.4.1.1.116}%
+\contentsline {subsubsection}{\numberline {4.1.1.117}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}subnet()}{157}{subsubsection.4.1.1.117}%
+\contentsline {subsubsection}{\numberline {4.1.1.118}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}subnet\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cl()}{158}{subsubsection.4.1.1.118}%
+\contentsline {subsubsection}{\numberline {4.1.1.119}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}subnet\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}quad()}{159}{subsubsection.4.1.1.119}%
+\contentsline {subsubsection}{\numberline {4.1.1.120}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}survey\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1()}{159}{subsubsection.4.1.1.120}%
+\contentsline {subsubsection}{\numberline {4.1.1.121}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}survey\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2()}{160}{subsubsection.4.1.1.121}%
+\contentsline {subsubsection}{\numberline {4.1.1.122}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}survey\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}4()}{161}{subsubsection.4.1.1.122}%
+\contentsline {subsubsection}{\numberline {4.1.1.123}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}survey\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}5()}{161}{subsubsection.4.1.1.123}%
+\contentsline {subsubsection}{\numberline {4.1.1.124}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}swytd()}{162}{subsubsection.4.1.1.124}%
+\contentsline {subsubsection}{\numberline {4.1.1.125}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}time\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}order()}{163}{subsubsection.4.1.1.125}%
+\contentsline {subsubsection}{\numberline {4.1.1.126}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}tmsr()}{163}{subsubsection.4.1.1.126}%
+\contentsline {subsubsection}{\numberline {4.1.1.127}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}vertex\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}order()}{164}{subsubsection.4.1.1.127}%
+\contentsline {subsubsection}{\numberline {4.1.1.128}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}z()}{164}{subsubsection.4.1.1.128}%
+\contentsline {subsubsection}{\numberline {4.1.1.129}solve2()}{165}{subsubsection.4.1.1.129}%
+\contentsline {subsubsection}{\numberline {4.1.1.130}tdem\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3d()}{165}{subsubsection.4.1.1.130}%
+\contentsline {subsubsection}{\numberline {4.1.1.131}txcmrg()}{166}{subsubsection.4.1.1.131}%
+\contentsline {subsubsection}{\numberline {4.1.1.132}txcnvd()}{167}{subsubsection.4.1.1.132}%
+\contentsline {subsubsection}{\numberline {4.1.1.133}txcnvl()}{167}{subsubsection.4.1.1.133}%
+\contentsline {subsubsection}{\numberline {4.1.1.134}validate\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cmp()}{168}{subsubsection.4.1.1.134}%
+\contentsline {subsubsection}{\numberline {4.1.1.135}validate\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}kmp()}{169}{subsubsection.4.1.1.135}%
+\contentsline {subsubsection}{\numberline {4.1.1.136}validate\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}line()}{169}{subsubsection.4.1.1.136}%
+\contentsline {subsubsection}{\numberline {4.1.1.137}wrfdp()}{170}{subsubsection.4.1.1.137}%
+\contentsline {subsubsection}{\numberline {4.1.1.138}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data()}{171}{subsubsection.4.1.1.138}%
+\contentsline {subsubsection}{\numberline {4.1.1.139}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}fd()}{171}{subsubsection.4.1.1.139}%
+\contentsline {subsubsection}{\numberline {4.1.1.140}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}fd\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}misfit()}{172}{subsubsection.4.1.1.140}%
+\contentsline {subsubsection}{\numberline {4.1.1.141}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}invmdl()}{173}{subsubsection.4.1.1.141}%
+\contentsline {subsubsection}{\numberline {4.1.1.142}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}log\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file()}{174}{subsubsection.4.1.1.142}%
+\contentsline {subsubsection}{\numberline {4.1.1.143}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}td()}{174}{subsubsection.4.1.1.143}%
+\contentsline {subsubsection}{\numberline {4.1.1.144}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}td\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}misfit()}{175}{subsubsection.4.1.1.144}%
+\contentsline {subsubsection}{\numberline {4.1.1.145}wrtdp()}{176}{subsubsection.4.1.1.145}%
+\contentsline {section}{\numberline {4.2}Leroi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}f90 File Reference}{177}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Function/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Subroutine Documentation}{182}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}aavp1()}{182}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}aavp2()}{182}{subsubsection.4.2.1.2}%
+\contentsline {subsubsection}{\numberline {4.2.1.3}b\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}direct()}{183}{subsubsection.4.2.1.3}%
+\contentsline {subsubsection}{\numberline {4.2.1.4}c2dintrp()}{183}{subsubsection.4.2.1.4}%
+\contentsline {subsubsection}{\numberline {4.2.1.5}ccubval()}{183}{subsubsection.4.2.1.5}%
+\contentsline {subsubsection}{\numberline {4.2.1.6}cdcubval()}{184}{subsubsection.4.2.1.6}%
+\contentsline {subsubsection}{\numberline {4.2.1.7}cnvrt2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}mpar()}{184}{subsubsection.4.2.1.7}%
+\contentsline {subsubsection}{\numberline {4.2.1.8}cnvrt2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}xpar()}{185}{subsubsection.4.2.1.8}%
+\contentsline {subsubsection}{\numberline {4.2.1.9}cnvrt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bounds()}{185}{subsubsection.4.2.1.9}%
+\contentsline {subsubsection}{\numberline {4.2.1.10}colres\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1d()}{185}{subsubsection.4.2.1.10}%
+\contentsline {subsubsection}{\numberline {4.2.1.11}colres\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3d()}{186}{subsubsection.4.2.1.11}%
+\contentsline {subsubsection}{\numberline {4.2.1.12}costrn()}{186}{subsubsection.4.2.1.12}%
+\contentsline {subsubsection}{\numberline {4.2.1.13}cubint()}{186}{subsubsection.4.2.1.13}%
+\contentsline {subsubsection}{\numberline {4.2.1.14}cubspl()}{187}{subsubsection.4.2.1.14}%
+\contentsline {subsubsection}{\numberline {4.2.1.15}cubval()}{187}{subsubsection.4.2.1.15}%
+\contentsline {subsubsection}{\numberline {4.2.1.16}cubvalrz()}{188}{subsubsection.4.2.1.16}%
+\contentsline {subsubsection}{\numberline {4.2.1.17}dist2d()}{188}{subsubsection.4.2.1.17}%
+\contentsline {subsubsection}{\numberline {4.2.1.18}dprod1()}{189}{subsubsection.4.2.1.18}%
+\contentsline {subsubsection}{\numberline {4.2.1.19}dqdx()}{189}{subsubsection.4.2.1.19}%
+\contentsline {subsubsection}{\numberline {4.2.1.20}edsx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}coef()}{190}{subsubsection.4.2.1.20}%
+\contentsline {subsubsection}{\numberline {4.2.1.21}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss()}{190}{subsubsection.4.2.1.21}%
+\contentsline {subsubsection}{\numberline {4.2.1.22}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cspl()}{191}{subsubsection.4.2.1.22}%
+\contentsline {subsubsection}{\numberline {4.2.1.23}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk()}{192}{subsubsection.4.2.1.23}%
+\contentsline {subsubsection}{\numberline {4.2.1.24}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker()}{193}{subsubsection.4.2.1.24}%
+\contentsline {subsubsection}{\numberline {4.2.1.25}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}pl\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss()}{193}{subsubsection.4.2.1.25}%
+\contentsline {subsubsection}{\numberline {4.2.1.26}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ul\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss()}{194}{subsubsection.4.2.1.26}%
+\contentsline {subsubsection}{\numberline {4.2.1.27}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ul\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cspl()}{195}{subsubsection.4.2.1.27}%
+\contentsline {subsubsection}{\numberline {4.2.1.28}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ul\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk()}{196}{subsubsection.4.2.1.28}%
+\contentsline {subsubsection}{\numberline {4.2.1.29}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ul\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker()}{197}{subsubsection.4.2.1.29}%
+\contentsline {subsubsection}{\numberline {4.2.1.30}egtdir()}{198}{subsubsection.4.2.1.30}%
+\contentsline {subsubsection}{\numberline {4.2.1.31}egtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss()}{198}{subsubsection.4.2.1.31}%
+\contentsline {subsubsection}{\numberline {4.2.1.32}egtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ul()}{199}{subsubsection.4.2.1.32}%
+\contentsline {subsubsection}{\numberline {4.2.1.33}egtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cspl()}{200}{subsubsection.4.2.1.33}%
+\contentsline {subsubsection}{\numberline {4.2.1.34}egtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}dir()}{201}{subsubsection.4.2.1.34}%
+\contentsline {subsubsection}{\numberline {4.2.1.35}egtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk()}{202}{subsubsection.4.2.1.35}%
+\contentsline {subsubsection}{\numberline {4.2.1.36}egtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker()}{202}{subsubsection.4.2.1.36}%
+\contentsline {subsubsection}{\numberline {4.2.1.37}esvd()}{203}{subsubsection.4.2.1.37}%
+\contentsline {subsubsection}{\numberline {4.2.1.38}fdread()}{203}{subsubsection.4.2.1.38}%
+\contentsline {subsubsection}{\numberline {4.2.1.39}fold\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}and\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}convolve()}{204}{subsubsection.4.2.1.39}%
+\contentsline {subsubsection}{\numberline {4.2.1.40}forjac()}{204}{subsubsection.4.2.1.40}%
+\contentsline {subsubsection}{\numberline {4.2.1.41}get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}fwd\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}modl()}{207}{subsubsection.4.2.1.41}%
+\contentsline {subsubsection}{\numberline {4.2.1.42}get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}source\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}text()}{208}{subsubsection.4.2.1.42}%
+\contentsline {subsubsection}{\numberline {4.2.1.43}get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}survey\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}text()}{208}{subsubsection.4.2.1.43}%
+\contentsline {subsubsection}{\numberline {4.2.1.44}get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}units\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}text()}{208}{subsubsection.4.2.1.44}%
+\contentsline {subsubsection}{\numberline {4.2.1.45}hs\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cdnt()}{208}{subsubsection.4.2.1.45}%
+\contentsline {subsubsection}{\numberline {4.2.1.46}hs\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cdnt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rx()}{209}{subsubsection.4.2.1.46}%
+\contentsline {subsubsection}{\numberline {4.2.1.47}hsboss()}{209}{subsubsection.4.2.1.47}%
+\contentsline {subsubsection}{\numberline {4.2.1.48}hsboss\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}td()}{210}{subsubsection.4.2.1.48}%
+\contentsline {subsubsection}{\numberline {4.2.1.49}hsclb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk()}{212}{subsubsection.4.2.1.49}%
+\contentsline {subsubsection}{\numberline {4.2.1.50}hsclb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker()}{213}{subsubsection.4.2.1.50}%
+\contentsline {subsubsection}{\numberline {4.2.1.51}hsgwb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk()}{213}{subsubsection.4.2.1.51}%
+\contentsline {subsubsection}{\numberline {4.2.1.52}hsgwb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker()}{214}{subsubsection.4.2.1.52}%
+\contentsline {subsubsection}{\numberline {4.2.1.53}hslpb()}{215}{subsubsection.4.2.1.53}%
+\contentsline {subsubsection}{\numberline {4.2.1.54}hslpe()}{216}{subsubsection.4.2.1.54}%
+\contentsline {subsubsection}{\numberline {4.2.1.55}hslpe\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk()}{216}{subsubsection.4.2.1.55}%
+\contentsline {subsubsection}{\numberline {4.2.1.56}hslpe\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker()}{217}{subsubsection.4.2.1.56}%
+\contentsline {subsubsection}{\numberline {4.2.1.57}hslped()}{218}{subsubsection.4.2.1.57}%
+\contentsline {subsubsection}{\numberline {4.2.1.58}hslplp\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk()}{219}{subsubsection.4.2.1.58}%
+\contentsline {subsubsection}{\numberline {4.2.1.59}hslplp\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker()}{219}{subsubsection.4.2.1.59}%
+\contentsline {subsubsection}{\numberline {4.2.1.60}hsmdb()}{220}{subsubsection.4.2.1.60}%
+\contentsline {subsubsection}{\numberline {4.2.1.61}hsmdb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk()}{221}{subsubsection.4.2.1.61}%
+\contentsline {subsubsection}{\numberline {4.2.1.62}hsmdb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker()}{221}{subsubsection.4.2.1.62}%
+\contentsline {subsubsection}{\numberline {4.2.1.63}index\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}mpar()}{222}{subsubsection.4.2.1.63}%
+\contentsline {subsubsection}{\numberline {4.2.1.64}inter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss()}{222}{subsubsection.4.2.1.64}%
+\contentsline {subsubsection}{\numberline {4.2.1.65}inter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ul()}{223}{subsubsection.4.2.1.65}%
+\contentsline {subsubsection}{\numberline {4.2.1.66}inter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}egt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}dir()}{224}{subsubsection.4.2.1.66}%
+\contentsline {subsubsection}{\numberline {4.2.1.67}interv()}{224}{subsubsection.4.2.1.67}%
+\contentsline {subsubsection}{\numberline {4.2.1.68}interv\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}z()}{225}{subsubsection.4.2.1.68}%
+\contentsline {subsubsection}{\numberline {4.2.1.69}leroi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3d()}{225}{subsubsection.4.2.1.69}%
+\contentsline {subsubsection}{\numberline {4.2.1.70}linval()}{227}{subsubsection.4.2.1.70}%
+\contentsline {subsubsection}{\numberline {4.2.1.71}main()}{227}{subsubsection.4.2.1.71}%
+\contentsline {subsubsection}{\numberline {4.2.1.72}mdsx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}coef()}{228}{subsubsection.4.2.1.72}%
+\contentsline {subsubsection}{\numberline {4.2.1.73}mgt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss()}{229}{subsubsection.4.2.1.73}%
+\contentsline {subsubsection}{\numberline {4.2.1.74}mgt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ul()}{230}{subsubsection.4.2.1.74}%
+\contentsline {subsubsection}{\numberline {4.2.1.75}mgt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cspl()}{231}{subsubsection.4.2.1.75}%
+\contentsline {subsubsection}{\numberline {4.2.1.76}mgt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk()}{232}{subsubsection.4.2.1.76}%
+\contentsline {subsubsection}{\numberline {4.2.1.77}mgt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker()}{233}{subsubsection.4.2.1.77}%
+\contentsline {subsubsection}{\numberline {4.2.1.78}mgtdir()}{233}{subsubsection.4.2.1.78}%
+\contentsline {subsubsection}{\numberline {4.2.1.79}nlsq2()}{234}{subsubsection.4.2.1.79}%
+\contentsline {subsubsection}{\numberline {4.2.1.80}noise\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sigr()}{236}{subsubsection.4.2.1.80}%
+\contentsline {subsubsection}{\numberline {4.2.1.81}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lp()}{236}{subsubsection.4.2.1.81}%
+\contentsline {subsubsection}{\numberline {4.2.1.82}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md()}{237}{subsubsection.4.2.1.82}%
+\contentsline {subsubsection}{\numberline {4.2.1.83}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ul\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lp()}{238}{subsubsection.4.2.1.83}%
+\contentsline {subsubsection}{\numberline {4.2.1.84}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ul\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md()}{239}{subsubsection.4.2.1.84}%
+\contentsline {subsubsection}{\numberline {4.2.1.85}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cl()}{240}{subsubsection.4.2.1.85}%
+\contentsline {subsubsection}{\numberline {4.2.1.86}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md()}{241}{subsubsection.4.2.1.86}%
+\contentsline {subsubsection}{\numberline {4.2.1.87}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ol()}{241}{subsubsection.4.2.1.87}%
+\contentsline {subsubsection}{\numberline {4.2.1.88}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cl()}{242}{subsubsection.4.2.1.88}%
+\contentsline {subsubsection}{\numberline {4.2.1.89}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md()}{243}{subsubsection.4.2.1.89}%
+\contentsline {subsubsection}{\numberline {4.2.1.90}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hnk\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ol()}{243}{subsubsection.4.2.1.90}%
+\contentsline {subsubsection}{\numberline {4.2.1.91}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cl()}{244}{subsubsection.4.2.1.91}%
+\contentsline {subsubsection}{\numberline {4.2.1.92}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md()}{245}{subsubsection.4.2.1.92}%
+\contentsline {subsubsection}{\numberline {4.2.1.93}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ol()}{245}{subsubsection.4.2.1.93}%
+\contentsline {subsubsection}{\numberline {4.2.1.94}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cl()}{246}{subsubsection.4.2.1.94}%
+\contentsline {subsubsection}{\numberline {4.2.1.95}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md()}{247}{subsubsection.4.2.1.95}%
+\contentsline {subsubsection}{\numberline {4.2.1.96}prm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ker\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ol()}{247}{subsubsection.4.2.1.96}%
+\contentsline {subsubsection}{\numberline {4.2.1.97}prmdc\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lp()}{248}{subsubsection.4.2.1.97}%
+\contentsline {subsubsection}{\numberline {4.2.1.98}prmdc\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md()}{248}{subsubsection.4.2.1.98}%
+\contentsline {subsubsection}{\numberline {4.2.1.99}propagate()}{249}{subsubsection.4.2.1.99}%
+\contentsline {subsubsection}{\numberline {4.2.1.100}q()}{249}{subsubsection.4.2.1.100}%
+\contentsline {subsubsection}{\numberline {4.2.1.101}r()}{249}{subsubsection.4.2.1.101}%
+\contentsline {subsubsection}{\numberline {4.2.1.102}rint()}{250}{subsubsection.4.2.1.102}%
+\contentsline {subsubsection}{\numberline {4.2.1.103}rplt2xyz()}{250}{subsubsection.4.2.1.103}%
+\contentsline {subsubsection}{\numberline {4.2.1.104}rxyz2plt()}{250}{subsubsection.4.2.1.104}%
+\contentsline {subsubsection}{\numberline {4.2.1.105}scat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}crnt()}{251}{subsubsection.4.2.1.105}%
+\contentsline {subsubsection}{\numberline {4.2.1.106}scat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}em()}{251}{subsubsection.4.2.1.106}%
+\contentsline {subsubsection}{\numberline {4.2.1.107}scat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}boss()}{252}{subsubsection.4.2.1.107}%
+\contentsline {subsubsection}{\numberline {4.2.1.108}scat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}mtrx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lu\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}dcmp()}{253}{subsubsection.4.2.1.108}%
+\contentsline {subsubsection}{\numberline {4.2.1.109}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cells\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1()}{254}{subsubsection.4.2.1.109}%
+\contentsline {subsubsection}{\numberline {4.2.1.110}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cells\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2()}{254}{subsubsection.4.2.1.110}%
+\contentsline {subsubsection}{\numberline {4.2.1.111}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}kfg()}{255}{subsubsection.4.2.1.111}%
+\contentsline {subsubsection}{\numberline {4.2.1.112}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}max\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}intrp()}{255}{subsubsection.4.2.1.112}%
+\contentsline {subsubsection}{\numberline {4.2.1.113}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}mgt()}{256}{subsubsection.4.2.1.113}%
+\contentsline {subsubsection}{\numberline {4.2.1.114}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}nrhs()}{256}{subsubsection.4.2.1.114}%
+\contentsline {subsubsection}{\numberline {4.2.1.115}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}output\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lines\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}fd()}{257}{subsubsection.4.2.1.115}%
+\contentsline {subsubsection}{\numberline {4.2.1.116}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}output\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lines\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}td()}{257}{subsubsection.4.2.1.116}%
+\contentsline {subsubsection}{\numberline {4.2.1.117}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}subnet()}{258}{subsubsection.4.2.1.117}%
+\contentsline {subsubsection}{\numberline {4.2.1.118}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}subnet\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cl()}{258}{subsubsection.4.2.1.118}%
+\contentsline {subsubsection}{\numberline {4.2.1.119}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}subnet\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}quad()}{259}{subsubsection.4.2.1.119}%
+\contentsline {subsubsection}{\numberline {4.2.1.120}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}survey\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1()}{259}{subsubsection.4.2.1.120}%
+\contentsline {subsubsection}{\numberline {4.2.1.121}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}survey\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2()}{259}{subsubsection.4.2.1.121}%
+\contentsline {subsubsection}{\numberline {4.2.1.122}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}survey\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}4()}{260}{subsubsection.4.2.1.122}%
+\contentsline {subsubsection}{\numberline {4.2.1.123}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}survey\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}5()}{261}{subsubsection.4.2.1.123}%
+\contentsline {subsubsection}{\numberline {4.2.1.124}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}swytd()}{261}{subsubsection.4.2.1.124}%
+\contentsline {subsubsection}{\numberline {4.2.1.125}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}time\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}order()}{261}{subsubsection.4.2.1.125}%
+\contentsline {subsubsection}{\numberline {4.2.1.126}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}tmsr()}{261}{subsubsection.4.2.1.126}%
+\contentsline {subsubsection}{\numberline {4.2.1.127}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}vertex\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}order()}{262}{subsubsection.4.2.1.127}%
+\contentsline {subsubsection}{\numberline {4.2.1.128}set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}z()}{262}{subsubsection.4.2.1.128}%
+\contentsline {subsubsection}{\numberline {4.2.1.129}solve2()}{262}{subsubsection.4.2.1.129}%
+\contentsline {subsubsection}{\numberline {4.2.1.130}tdem\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3d()}{262}{subsubsection.4.2.1.130}%
+\contentsline {subsubsection}{\numberline {4.2.1.131}txcmrg()}{263}{subsubsection.4.2.1.131}%
+\contentsline {subsubsection}{\numberline {4.2.1.132}txcnvd()}{263}{subsubsection.4.2.1.132}%
+\contentsline {subsubsection}{\numberline {4.2.1.133}txcnvl()}{264}{subsubsection.4.2.1.133}%
+\contentsline {subsubsection}{\numberline {4.2.1.134}validate\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cmp()}{265}{subsubsection.4.2.1.134}%
+\contentsline {subsubsection}{\numberline {4.2.1.135}validate\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}kmp()}{265}{subsubsection.4.2.1.135}%
+\contentsline {subsubsection}{\numberline {4.2.1.136}validate\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}line()}{266}{subsubsection.4.2.1.136}%
+\contentsline {subsubsection}{\numberline {4.2.1.137}wrfdp()}{266}{subsubsection.4.2.1.137}%
+\contentsline {subsubsection}{\numberline {4.2.1.138}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data()}{266}{subsubsection.4.2.1.138}%
+\contentsline {subsubsection}{\numberline {4.2.1.139}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}fd()}{267}{subsubsection.4.2.1.139}%
+\contentsline {subsubsection}{\numberline {4.2.1.140}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}fd\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}misfit()}{268}{subsubsection.4.2.1.140}%
+\contentsline {subsubsection}{\numberline {4.2.1.141}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}invmdl()}{268}{subsubsection.4.2.1.141}%
+\contentsline {subsubsection}{\numberline {4.2.1.142}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}log\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}file()}{269}{subsubsection.4.2.1.142}%
+\contentsline {subsubsection}{\numberline {4.2.1.143}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}td()}{269}{subsubsection.4.2.1.143}%
+\contentsline {subsubsection}{\numberline {4.2.1.144}write\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}td\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}misfit()}{270}{subsubsection.4.2.1.144}%
+\contentsline {subsubsection}{\numberline {4.2.1.145}wrtdp()}{270}{subsubsection.4.2.1.145}%
+\contentsline {chapter}{Index}{271}{section*.351}%

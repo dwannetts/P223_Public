@@ -1,0 +1,45 @@
+Inverte 3 lines of closed loop, magnetic (z) and electric dipole data - for 3 layer model
+1 0 0                         ! TDFD, ISYS, ISTOP
+ 0 4 20 2 30 30               ! STEP, NSX, NCHNL, KRXW, REFTYM, OFFTIME
+ 0 0
+ 0.4 10
+ 29.6 10
+ 30 0                        ! TXON, TXAMP(4)
+ 0.487  0.879  1.271  1.663  2.055  2.643  3.427  4.211  4.995  5.779
+ 6.955  8.523  10.091 11.659 13.227 15.579 18.715 21.851 24.987 28.123  ! 20 Channel centres
+ 5*0.344  5*0.736  5*1.520  5*3.088                                     ! 20 Channel widths
+1                             ! SURVEY_TYPE
+3 8 1 1 6 1                     ! NLINES, MRXL, NTX, SOURCE_TYPE, MVRTX, NTRN
+4 0                             ! N_VRTX(1) Tx 1  TxZ
+-100  100  0
+ 100  100  0
+ 100 -100  0
+-100 -100  0
+1040 1 1 4 3            ! LINE IDTX, RX_TYPE, NRX, UNITS
+3 0 0 1 0 1000         ! CMP SV_AZM, KNORM, IPLT, IDH, RXMNT
+ 0   0   0
+ 0  70   0
+ 0 130   0
+ 0 200   0		! RXE, RXN RXZ for Line 1040
+1180 1 1 6 3            ! LINE IDTX, RX_TYPE, NRX, UNITS
+3 0 0 1 1 1000         ! CMP SV_AZM, KNORM, IPLT, IDH, RXMNT
+0   0 20   0 0
+0   0 40   0 0
+0   0 60   0 0
+0 120 20  60 0
+0 120 20  60 0
+0 120 60  60 0
+2040 1 2 4 2            ! LINE IDTX, RX_TYPE, NRX, UNITS
+-50  70 50  70 0
+-50 120 50 120 0
+-50 200 50 200 0
+-50 300 50 300 0	!  RXE(I,J,1), RXN(I,J,1), RXE(I,J,2), RXN(I,J,2), RXZ(I,J)
+3 3                        ! NLAYER, NLITH
+100  -1 1 1 0 0 0             ! RES, RMU, REPS, CHRG, CTAU, CFREQ(1) - Lyr1
+ 10  -1 1 1 0 0 0             ! RES, RMU, REPS, CHRG, CTAU, CFREQ(3) - Lyr3
+1000 -1 1 1 0 0 1            ! RES, RMU, REPS, CHRG, CTAU, CFREQ(6) - plate1
+1 50                         ! LITH, THICK - Layer 1
+2 50                         ! LITH, THICK - Layer 2
+1                            ! LITH - basement
+0 90 1 2            ! NFIX, MAXITS, CNVRG, INVPRT
+

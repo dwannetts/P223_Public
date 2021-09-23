@@ -1,0 +1,18 @@
+<map id="mdsx_coef" name="mdsx_coef">
+<area shape="rect" id="node2" href="$Leroi_8f90.html#aa06a6e2460dd29bc7e4cd0f7378aa005" title="hsmdb_ker" alt="" coords="147,43,234,69"/>
+<area shape="rect" id="node11" href="$Leroi_8f90.html#a54994b19439ad9ea5bfc96a902101c44" title="prm_ker_md" alt="" coords="289,93,384,120"/>
+<area shape="rect" id="node15" href="$Leroi_8f90.html#a3a9566c86f1c0b93bae5a6117621feae" title="prm_ker1_md" alt="" coords="140,144,241,171"/>
+<area shape="rect" id="node3" href="$Leroi_8f90.html#aa0252ede97751947c4c840de4179175d" title="hsmdb_hnk" alt="" coords="292,43,381,69"/>
+<area shape="rect" id="node4" href="$Leroi_8f90.html#a48d6fa7ecaca60caaf9ecba957eaa3b1" title="hsmdb" alt="" coords="453,43,515,69"/>
+<area shape="rect" id="node5" href="$Leroi_8f90.html#a940c66015c19ed9dab8214acf582b96c" title="hsboss" alt="" coords="613,43,677,69"/>
+<area shape="rect" id="node6" href="$Leroi_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="main" alt="" coords="1239,68,1289,95"/>
+<area shape="rect" id="node7" href="$Leroi_8f90.html#a9b871caa6fa2f7ceadf6860a0a16a07b" title="hsboss_td" alt="" coords="753,43,836,69"/>
+<area shape="rect" id="node8" href="$Leroi_8f90.html#a38a723748e0c805e5dfbd851b9c62b3e" title="get_fwd_modl" alt="" coords="884,93,987,120"/>
+<area shape="rect" id="node9" href="$Leroi_8f90.html#a2ce05aab7ca8a8111b718d33c0f7029c" title="forjac" alt="" coords="1035,93,1089,120"/>
+<area shape="rect" id="node10" href="$Leroi_8f90.html#a8f13594331f001917eefb525bce81f61" title="nlsq2" alt="" coords="1137,93,1191,120"/>
+<area shape="rect" id="node12" href="$Leroi_8f90.html#a9740ab7613ac873fc595cc92e6d5fbaf" title="prm_hnk_md" alt="" coords="435,93,533,120"/>
+<area shape="rect" id="node13" href="$Leroi_8f90.html#ac15aa4c46264754ea7abffbe2ea1926c" title="prm_boss_md" alt="" coords="593,93,697,120"/>
+<area shape="rect" id="node14" href="$Leroi_8f90.html#ad3c98b0aa8032dd5e2c3fce9417d4512" title="leroi_3d" alt="" coords="761,144,828,171"/>
+<area shape="rect" id="node16" href="$Leroi_8f90.html#a90b2b96ee9e9153503bfd5d5bf7d1d0e" title="prm_hnk1_md" alt="" coords="432,144,536,171"/>
+<area shape="rect" id="node17" href="$Leroi_8f90.html#ab6689c64fba851d3db437dbd7fc0d13a" title="prm_boss_ul_md" alt="" coords="584,144,705,171"/>
+</map>

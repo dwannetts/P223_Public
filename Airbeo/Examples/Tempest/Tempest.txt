@@ -1,0 +1,70 @@
+  Data was generated for 5 stations of differing altitude using the following model
+  contained in TmpF.cfl  The results were generated in TmpF.out and TmpF.mf1 using
+  F1.bat; ie  
+
+  F1 TmpF TmpF
+
+             "True" Model
+             ============
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      100.0       35.0     35.0     0.3500    
+   2     0.5000       45.0     10.0      20.00    
+   3      500.0    
+
+
+  All inversions were tested using the seed model below.
+  A good inversion would be expected to have an error of less than 
+  2 percent and correctly resolve the thickness of the top layer and
+  the conductance of the second layer at the very least.  An excellent
+  inversion would resolve both the thickness and depth of the second 
+  layer.  The resistivity of the basement has little effect on the 
+  data and hence a "correct" value is not expected. 
+
+
+
+        Initial Model Before Inversion
+        ------------------------------
+
+ Layer  Resistivity  Depth  Thickness  Conductance
+ -----  -----------  -----  ---------  -----------
+   1      100.0       50.0     50.0     0.5000    
+   2      10.00      100.0     50.0      5.000    
+   3      100.0    
+
+
+  All inversions were based on the unweighted data in Tmp0.inv.
+  Tempest performed  very well for inversions based on layer 
+  thickness, resolving the conductivity  and thickness for the 
+  middle layer for 2 component, single vertical component and 
+  single horizontal component. The inversion based on depth to 
+  base was not as good as those based on layer thickness.
+
+  The control files TmpT.cfl & TmpTh and TmpTv.cfl all specified 
+  inversion for resistivities and layer thicknesses.  The first was
+  joint vertical and in-line components, the second in-line only and
+  the third vertical only.
+
+  The control file TmpD.cfl, specified inversion for resistivities 
+  and depths to layer base.  It used the final model at one station 
+  as the starting model for the next.  All others used he same starting
+  model for all stations.
+
+  The four inversion runs were generated using the batch command file 
+  V1.bat as follows:
+
+
+                 mz1
+           cfl   out     inv
+
+        V1 TmpT  TmpT   Tmp0
+        V1 TmpTv TmpTv  Tmp0
+        V1 TmpTh TmpTh  Tmp0
+        V1 TmpD  TmpD   Tmp0
+
+
+
+
+
+

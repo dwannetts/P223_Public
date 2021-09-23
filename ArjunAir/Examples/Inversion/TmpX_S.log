@@ -1,0 +1,27 @@
+
+ FATAL ERROR
+ ----- -----
+
+
+  There must be at least 2 survey stations.
+
+ FATAL ERROR
+ ----- -----
+
+
+  SURVEY must = 2 or 3.  The SURVEY = 1 option does not exist in this version.
+
+ FATAL ERROR
+ ----- -----
+
+
+  KCMP is restricted to the values: 1, 3, 13, 31, 123, 312
+  In-line component inversion has been specified (CMP = 11)
+  but this component is not read in: KCMP = ****
+
+ FATAL ERROR
+ ----- -----
+
+
+  All receiver positions on the flight line must be within the horizontal limits
+  of the mesh.  Either remove points from the flight line or expand the mesh.

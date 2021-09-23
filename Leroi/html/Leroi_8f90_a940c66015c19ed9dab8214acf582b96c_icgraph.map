@@ -1,0 +1,7 @@
+<map id="hsboss" name="hsboss">
+<area shape="rect" id="node2" href="$Leroi_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="main" alt="" coords="603,43,653,69"/>
+<area shape="rect" id="node3" href="$Leroi_8f90.html#a9b871caa6fa2f7ceadf6860a0a16a07b" title="hsboss_td" alt="" coords="117,43,200,69"/>
+<area shape="rect" id="node4" href="$Leroi_8f90.html#a38a723748e0c805e5dfbd851b9c62b3e" title="get_fwd_modl" alt="" coords="248,93,351,120"/>
+<area shape="rect" id="node5" href="$Leroi_8f90.html#a2ce05aab7ca8a8111b718d33c0f7029c" title="forjac" alt="" coords="399,93,453,120"/>
+<area shape="rect" id="node6" href="$Leroi_8f90.html#a8f13594331f001917eefb525bce81f61" title="nlsq2" alt="" coords="501,93,555,120"/>
+</map>

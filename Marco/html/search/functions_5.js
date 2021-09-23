@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['init_5f3d_5finput_5ftest',['init_3d_input_test',['../Marco_8f90.html#afdb11dbe2b5041f4f314349b7334b974',1,'Marco.f90']]],
+  ['init_5fcmplx_5fcd_5f1d',['init_cmplx_cd_1d',['../Marco_8f90.html#ab5e1d6b86ed64b774c25c5b69552f078',1,'Marco.f90']]],
+  ['init_5fcmplx_5fcd_5f3d',['init_cmplx_cd_3d',['../Marco_8f90.html#aaf5e8f1fe701ea6d58511ac2fabcd83c',1,'Marco.f90']]],
+  ['init_5fcomputation',['init_computation',['../Marco_8f90.html#a5f04384a88b1293a8d2dc26d86a77d08',1,'Marco.f90']]],
+  ['init_5fdiscretization',['init_discretization',['../Marco_8f90.html#aca2a0c5479ec07e65782fa62da433365',1,'Marco.f90']]],
+  ['init_5fref_5fcell_5fdim',['init_ref_cell_dim',['../Marco_8f90.html#abe7f527d74ea96643956d52265c43729',1,'Marco.f90']]],
+  ['init_5frhomax',['init_rhomax',['../Marco_8f90.html#a0ba9e9f35837a34d8df25a815723376a',1,'Marco.f90']]],
+  ['init_5fsuper_5fblock',['init_super_block',['../Marco_8f90.html#ac268fba86b567389312bb1f5945bec19',1,'Marco.f90']]],
+  ['init_5fzlvls',['init_zlvls',['../Marco_8f90.html#a4052ce4c8e8ce6ad657a5430196fb520',1,'Marco.f90']]],
+  ['interpo_5f2d_5flg6',['interpo_2d_lg6',['../Marco_8f90.html#a170a0edeb8c14a416b4ec927bd0b5761',1,'Marco.f90']]],
+  ['interpo_5flg',['interpo_lg',['../Marco_8f90.html#ab4eafb4c3c596148d85f446d1eb69d54',1,'Marco.f90']]],
+  ['interpo_5flg1',['interpo_lg1',['../Marco_8f90.html#a3fe5c8bfe5e5729f1b02af3926c68dbc',1,'Marco.f90']]],
+  ['interpo_5flg4',['interpo_lg4',['../Marco_8f90.html#a351cb438e704ef189fa972f9590cbd80',1,'Marco.f90']]],
+  ['interpo_5flg5',['interpo_lg5',['../Marco_8f90.html#a1715ef788d21f1b4a8008fdf5f53bfc2',1,'Marco.f90']]],
+  ['interpo_5flg6',['interpo_lg6',['../Marco_8f90.html#a5fa32081a6f961179118c3eed68de85f',1,'Marco.f90']]],
+  ['interpo_5flg6_5frho0',['interpo_lg6_rho0',['../Marco_8f90.html#a26481105d1de3f776fc36a094d319fbb',1,'Marco.f90']]],
+  ['interpo_5fplpol',['interpo_plpol',['../Marco_8f90.html#afd0f4c3b7f02fba61d9bd11b3a142ac2',1,'Marco.f90']]],
+  ['interpo_5fpolint',['interpo_polint',['../Marco_8f90.html#aadd0426cc10854791039735bfa14140d',1,'Marco.f90']]],
+  ['interv',['interv',['../Marco_8f90.html#ab3d44a77ee1868f9a09dcac7e6bfcdce',1,'Marco.f90']]],
+  ['isamax',['isamax',['../Marco_8f90.html#a16c36ed9a25ca6e68931c4a00d2778e5',1,'Marco.f90']]]
+];

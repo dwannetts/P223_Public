@@ -1,0 +1,6 @@
+<map id="mg_input_routines::read_model_data" name="mg_input_routines::read_model_data">
+<area shape="rect" id="node2" href="$namespacemg__input__routines.html#a9e1339657e87110a735f9631657c9019" title="mg_input_routines::\llyth_chk" alt="" coords="189,5,325,47"/>
+<area shape="rect" id="node3" href="$Marco_8f90.html#a0c927c234a83d54d97adddd80a2c26ff" title="wryt_log_file" alt="" coords="210,71,305,98"/>
+<area shape="rect" id="node4" href="$Marco_8f90.html#a51e4a3fa9046596038f31e4e9a6ac7e5" title="chk_symmetry" alt="" coords="203,122,311,149"/>
+<area shape="rect" id="node5" href="$Marco_8f90.html#a0df391e311aae0e0ab61a43fe99aa856" title="chk_sym_prop" alt="" coords="373,122,480,149"/>
+</map>

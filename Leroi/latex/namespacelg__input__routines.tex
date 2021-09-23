@@ -1,0 +1,2037 @@
+\hypertarget{namespacelg__input__routines}{}\section{lg\+\_\+input\+\_\+routines Module Reference}
+\label{namespacelg__input__routines}\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \hyperlink{namespacelg__input__routines_a80feb058541516d5a6327fb6c344bbbd}{read\+\_\+system\+\_\+and\+\_\+survey\+\_\+data}
+\item 
+subroutine \hyperlink{namespacelg__input__routines_a39e1903280f0492197231ab5fa752f21}{read\+\_\+model\+\_\+data}
+\item 
+subroutine \hyperlink{namespacelg__input__routines_a123f91865ea388eca78b77b0d625aa8c}{read\+\_\+parameter\+\_\+control}
+\item 
+subroutine \hyperlink{namespacelg__input__routines_a3118d974d52f2c98169709e887ceb344}{prepare\+\_\+invrt\+\_\+data}
+\item 
+subroutine \hyperlink{namespacelg__input__routines_a46a4ddc163c46adad59e863dadde86a3}{show\+\_\+and\+\_\+tell}
+\item 
+subroutine \hyperlink{namespacelg__input__routines_a836674acd30d52d3aa973722014aaa9f}{set\+\_\+frq}
+\item 
+subroutine \hyperlink{namespacelg__input__routines_a74107bd43614b32d8679e91def53e94d}{set\+\_\+rho}
+\item 
+subroutine \hyperlink{namespacelg__input__routines_aff8e77512771c5a25793784a8185d5b0}{set\+\_\+trp}
+\item 
+subroutine \hyperlink{namespacelg__input__routines_a1e34012960c952d22446828d97881001}{write\+\_\+np\+\_\+initial}
+\item 
+subroutine \hyperlink{namespacelg__input__routines_abb4589f0c8ad2d2d88f0f52aac5462e6}{write\+\_\+line\+\_\+header} (QL, H\+ID, CL, N\+CL)
+\item 
+logical function \hyperlink{namespacelg__input__routines_a8433a2003dce3e9ebdd1aa0a11e16538}{iscomment} (char)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+integer, parameter \hyperlink{namespacelg__input__routines_a359e88d4557350cba3a221e513b5a0fa}{nprop} =7
+\item 
+integer, parameter \hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql} =S\+E\+L\+E\+C\+T\+E\+D\+\_\+\+R\+E\+A\+L\+\_\+\+K\+I\+ND(p = 18)
+\item 
+integer, parameter \hyperlink{namespacelg__input__routines_ad64edbbe93c0335e2a4d4d767eb9bbd1}{fvers} = 690
+\item 
+real, parameter \hyperlink{namespacelg__input__routines_a7464991af66db8354411ef5f57a78a71}{pi} =3.\+141592654
+\item 
+real, parameter \hyperlink{namespacelg__input__routines_a6274a2779db9ccb43e23b33ea759ed09}{pi2} =PI/2.
+\item 
+real, parameter \hyperlink{namespacelg__input__routines_a25c56d53596a755b2c9f8bc95595bdde}{r2d} =180./PI
+\item 
+real, parameter \hyperlink{namespacelg__input__routines_a17c7af951ca7d0cf40e35d63cadf6d43}{d2r} =PI/180.
+\item 
+integer \hyperlink{namespacelg__input__routines_abad63a3f02d5381de7890e436e450ca6}{nr}
+\item 
+integer \hyperlink{namespacelg__input__routines_a1184bd0c1a23b793999aa5ae8df45410}{nw}
+\item 
+integer \hyperlink{namespacelg__input__routines_aad696affac93d988d4b792cdfaccf874}{nd}
+\item 
+integer \hyperlink{namespacelg__input__routines_a2b185a6190d1157ccb7596a980ddeee2}{nlg}
+\item 
+integer \hyperlink{namespacelg__input__routines_a1d104fe3ddbda17fb2f63b3d483143f8}{nri}
+\item 
+integer \hyperlink{namespacelg__input__routines_a1f4753d84cde284fc19867e152298c89}{np}
+\item 
+integer \hyperlink{namespacelg__input__routines_a8156420c85f94edf75fe7cc28ec9c826}{msg}
+\item 
+integer \hyperlink{namespacelg__input__routines_abe4359e93c3a6a113806a9c696d6ecfd}{mxerr}
+\item 
+integer \hyperlink{namespacelg__input__routines_af78f7591d1f55c4a9a6aec78bdafb61c}{do3d}
+\item 
+integer \hyperlink{namespacelg__input__routines_a2eaf0660c29a584e802dcdf7aeaf8fed}{tdfd}
+\item 
+integer \hyperlink{namespacelg__input__routines_a4eb4ee97a7b4d0a162e4c92b3c592678}{ippd}
+\item 
+integer \hyperlink{namespacelg__input__routines_ab6c33e83097a9da89df8e7619e39db79}{step}
+\item 
+integer \hyperlink{namespacelg__input__routines_a824421dcc2d27ef1019d96edca43973b}{nsx}
+\item 
+integer \hyperlink{namespacelg__input__routines_a22e8c0e456440e4c42347d12a3bca9fb}{prfl}
+\item 
+integer \hyperlink{namespacelg__input__routines_a23b2611e5e3842861e03d1b579dc49aa}{istop}
+\item 
+integer \hyperlink{namespacelg__input__routines_a6e9f307b4197279d1b7e3343d2ef2ae0}{krxw}
+\item 
+integer \hyperlink{namespacelg__input__routines_afe38ea783532fc3907b8e2a14dca9f56}{mchnl}
+\item 
+integer \hyperlink{namespacelg__input__routines_ab0df43bcb1062d866441722ec2cb60be}{nchnl}
+\item 
+integer \hyperlink{namespacelg__input__routines_a81f61700f8b72e38a0a2956ff7e34383}{nfrq}
+\item 
+integer \hyperlink{namespacelg__input__routines_a7699250d511dad1cbb727dafc82df908}{nft}
+\item 
+integer, dimension(4) \hyperlink{namespacelg__input__routines_aa1e90821ade680361e1ae7f091fe973b}{cmpmt}
+\item 
+integer, dimension(4) \hyperlink{namespacelg__input__routines_a85f616adbe6187683a55c9ad1d0515dd}{kmpmt}
+\item 
+integer \hyperlink{namespacelg__input__routines_a102c576e29efd44cb401abd2a7b19f94}{mcmp}
+\item 
+integer \hyperlink{namespacelg__input__routines_a1dd929af54eac2b06f42ee3e4641bea1}{khsq}
+\item 
+integer \hyperlink{namespacelg__input__routines_a5e67c1ccd96e60a3baac0f052f42b694}{source\+\_\+type}
+\item 
+integer \hyperlink{namespacelg__input__routines_a768c5e94c3ddc2f0fc0bdd032c794cc6}{survey\+\_\+type}
+\item 
+integer \hyperlink{namespacelg__input__routines_ae13aeece4a34e71311078fd0d3f07861}{nlines}
+\item 
+integer \hyperlink{namespacelg__input__routines_ab9031c82464776c476a344366cd1453e}{mlines}
+\item 
+integer \hyperlink{namespacelg__input__routines_af5fa6446163aa57d69058b7d7d5a868c}{ntx}
+\item 
+integer \hyperlink{namespacelg__input__routines_add1ae2d6a2e68ee210845e01800d978f}{mxvrtx}
+\item 
+integer \hyperlink{namespacelg__input__routines_a7ee5cd16c5fb97f44fb5578ed560d1cb}{mqvr}
+\item 
+integer \hyperlink{namespacelg__input__routines_a34c8686fc88ac74cc36718879b12800a}{mxrs}
+\item 
+integer \hyperlink{namespacelg__input__routines_a21d152072d7a9e7973cbbe660dad9e88}{isys}
+\item 
+integer \hyperlink{namespacelg__input__routines_af870ce7c9bb6da5f1d9945198c7fa3ee}{ktx}
+\item 
+integer \hyperlink{namespacelg__input__routines_a778a4d42b3609a6eeaf964668eb06b04}{k1}
+\item 
+integer \hyperlink{namespacelg__input__routines_a7265c9a5d503079f944a23462a6dd8fe}{mxtx}
+\item 
+integer \hyperlink{namespacelg__input__routines_adda435e8b5f51edb387d7afc360820e5}{ntxl}
+\item 
+integer \hyperlink{namespacelg__input__routines_a78d4457ced9beccb65b6782146533a24}{j}
+\item 
+integer \hyperlink{namespacelg__input__routines_af9735a6ff4c4888594446ab95b98fb25}{js}
+\item 
+integer \hyperlink{namespacelg__input__routines_ae3ac5398b9c75ed98982459352600852}{jt}
+\item 
+integer \hyperlink{namespacelg__input__routines_a08d8feb2a518243a8007014ea975135c}{jf}
+\item 
+integer \hyperlink{namespacelg__input__routines_aff9789ccbeba0e0c5ea773af2638b107}{jv}
+\item 
+integer \hyperlink{namespacelg__input__routines_a245e9bc7aa95a05dde0ed89e5cfd1dce}{jr}
+\item 
+integer \hyperlink{namespacelg__input__routines_aaae12a94fcec8e8d94a81c9433ff7a5f}{mrxtx}
+\item 
+integer \hyperlink{namespacelg__input__routines_a4ab280e58a30c45984c7140c4c6e1050}{mrxl}
+\item 
+integer \hyperlink{namespacelg__input__routines_ab0a845dec1e38a17409657c392221388}{nlith}
+\item 
+integer \hyperlink{namespacelg__input__routines_a7c00bd9f36754ba9c6420a7d1ae243fd}{npuls}
+\item 
+integer \hyperlink{namespacelg__input__routines_a3b52d5f067a80e1115bc79adb4bc39a8}{ntyrp}
+\item 
+integer \hyperlink{namespacelg__input__routines_ac26f639955df5fc922f956d58f7fe94a}{ntypls}
+\item 
+integer \hyperlink{namespacelg__input__routines_a702859cf9d00d80e7a499146a391d0eb}{nppd}
+\item 
+integer \hyperlink{namespacelg__input__routines_a17d7cadc2454b6016fb359a3a143f1e6}{md1}
+\item 
+integer \hyperlink{namespacelg__input__routines_ad088fcd28685af54ab4ccbdf35ebad22}{md2}
+\item 
+integer \hyperlink{namespacelg__input__routines_af75c2ef2a6d12db9bd287ce3495e8f48}{nhid}
+\item 
+integer, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a6192486656a9e4b8f8a893cb39c1a3ef}{line}
+\item 
+integer, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a7ac8905ebcdb83c2e30359605834b350}{iplt}
+\item 
+integer, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a25ef99b6df9850605ad2562a20d87711}{idh}
+\item 
+integer, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_aaca8d700b89754dbbb181a41f27f68c3}{nvrtx}
+\item 
+integer, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_ab795991db3858f518c7ae1ef1106d716}{units}
+\item 
+integer, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_ac56a8d1d976273b4180c862633af12d6}{knorm}
+\item 
+integer, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_adf5b39741b7d138a3ecfb6657123a5ee}{nrx}
+\item 
+integer, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_afadcb9ad7dfccd7edb679d19fec0b5db}{rx\+\_\+type}
+\item 
+integer, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_ae700c1a68129dc3b61dd0eee2253b79f}{cmp}
+\item 
+integer, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_aa0b46c0970c520713d64c57e4ae00693}{nrgtx}
+\item 
+integer, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a7b767c5d80ecdf07e162e0ca88f18f5a}{nrxtx}
+\item 
+integer, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a84a9e4845e4cff7e15d920d545e920fe}{header\+\_\+id}
+\item 
+integer, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a152f414afe35dd2a3cc3fe4aeb73f16a}{khid}
+\item 
+integer, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_a2e7d7acfc8544ee74be5c4653975d59e}{krgtx}
+\item 
+integer, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_a33045beebfc96f4327913100eaf5c836}{rxid}
+\item 
+integer, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_a1b1ea2c286118a9e13f960c54b61103b}{knorm2}
+\item 
+integer, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_a9175b2b25b77757b5b292b6924ace5b8}{nctd}
+\item 
+integer, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_aba611144680c51239dc61b36cdba8ce7}{lntr}
+\item 
+real \hyperlink{namespacelg__input__routines_acb44b11a9696ae1c79df024815d346bf}{min\+\_\+freq}
+\item 
+real \hyperlink{namespacelg__input__routines_a120729b828c4a5845b2e603f0428e70f}{max\+\_\+freq}
+\item 
+real \hyperlink{namespacelg__input__routines_a1d07f499782c7e039a64c0210710874d}{t0}
+\item 
+real \hyperlink{namespacelg__input__routines_a59d37d985b0dc7db54d499a25dfdd65a}{t0sx}
+\item 
+real \hyperlink{namespacelg__input__routines_a76c7f2e1e393a33879bfdb035696a0eb}{offtym}
+\item 
+real \hyperlink{namespacelg__input__routines_afb36965de38bb47f77fe472111c7f95e}{reftym}
+\item 
+real \hyperlink{namespacelg__input__routines_a35c66c7854d0833a99927cad810718ac}{pulse}
+\item 
+real \hyperlink{namespacelg__input__routines_a051730a5273ac4e6b567252982d44414}{rxfmnt}
+\item 
+real \hyperlink{namespacelg__input__routines_a47c11280e7113256e8989d445a3b205a}{txfreq}
+\item 
+real \hyperlink{namespacelg__input__routines_ab76d54fe813a2c75ec4592b67c1c96cc}{txmnt}
+\item 
+real \hyperlink{namespacelg__input__routines_a8ca869a698383a3684c6fdb425b6dd7c}{zmax}
+\item 
+real \hyperlink{namespacelg__input__routines_a75002fff3768fa349922c4691af835eb}{zmin}
+\item 
+real \hyperlink{namespacelg__input__routines_adf00d31a387ab979268c6e7173a1c781}{sv\+\_\+azm}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a9ea6fe9c73da602e7448aa2684a035fe}{txon}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a7966da9a09991ee20d62ae7374806c50}{waveform}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a2724872da9ddfe9b94de8c091b0a36dd}{curnt}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a664cea039ac7180e824012883beeb9fe}{trp}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a5568c5b399e14b491242b1b073be4b54}{tms}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a14a35edab0eb9da183da23d0efa95eba}{wtms}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_aed3c58e52c5a1fda12def41c6995d7dd}{topn}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a634432267302a002552b9ca3feedb429}{tcls}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a2c092becc43cb2313a011cc8e3962349}{freq}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_afe41d8f3c1483586b6ddc9f4d7193b46}{swx}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a1a991d972a51bc60707aadd4e0f5bcef}{txz}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a80924219ecce4e0ceb69bac59e6aefd4}{sxz}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_ae702b8abf69e5b12bf96b026b2b112a8}{svazm}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a24da2d57446e220190d24b7ba6d7b050}{sdz0}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a607132f2ff751541dc97a344f7079627}{txlngth}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a4d1e58f6c9d49ef8c73f228edf7b9849}{txwdth}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a584f94cecae697219429638f0b6a2c0e}{txcln}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a05a79f826d1faa81e8e9840401be0982}{txazm}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a0588ff6b313bd15b75945a2d35c173db}{sxdip}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a0dc7ac3264785f849aef392afcad0d6f}{sxazm}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a07fda9e4a6dbe5d42ed0e9b3c264091f}{rhotrp}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a255b10823a2c6dd038b02a3231169307}{rxmnt}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a2a1492ae994dbca91f366a55332bff9c}{rxoff}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a34cfdcc89ce43b259ae52d8cc1cea8b6}{rxotx}
+\item 
+real, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_ad2996126165dbc2c167d12071aba2ae3}{swy}
+\item 
+real, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_ae72446e679c44a5600c61e76b9ecc278}{lyth}
+\item 
+real, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_a4c5444638308f4ad61ee85290944de7e}{sxe}
+\item 
+real, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_a4d38d40a5711f7d77f1b5edacd3a7d85}{sxn}
+\item 
+real, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_a5d82e200f9fb0c9f2aae521ab394c73b}{zrxtx}
+\item 
+real, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_af9635e4a563dcf0723d07f3d131805a0}{rxdip}
+\item 
+real, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_afde6f15754213bfa35bd69e1c934f9bc}{rxazm}
+\item 
+real, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_ad18dca12a7805ae624b71667a773a294}{bhdip}
+\item 
+real, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_aaddc398e9198a4c9e8eb40573a3f4347}{bhazm}
+\item 
+real, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_a49a8e3b29c968fef1668037824d295f4}{rxz}
+\item 
+real, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_afa609399ab44664f964450ac0c0212a3}{xrxof}
+\item 
+real, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_afb1d371ae725f99f0c1de7b0f5ee4f9f}{yrxof}
+\item 
+real, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_aa4d0d65baa1effb088dd0a2a1bcd2185}{zrxof}
+\item 
+real, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_a0ad3fab990ff61df0aef4ca7bb41cf23}{dstat}
+\item 
+real, dimension(\+:,\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_a9d8ccd1fc7c88ab57fa5af75b36600f1}{xrxtx}
+\item 
+real, dimension(\+:,\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_ae8e2697ce00581c54a3a6cffceef745b}{yrxtx}
+\item 
+real, dimension(\+:,\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_ab5e3409ae1c1d7f9b1d0ab31c0dfa296}{rxe}
+\item 
+real, dimension(\+:,\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_af724dc158a78913ba807173a41c49e7d}{rxn}
+\item 
+real, dimension(\+:,\+:,\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_ac7f5afd80317e5c4f20d0f68bac9cf59}{bftl}
+\item 
+real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}) \hyperlink{namespacelg__input__routines_a324ba9df6f9ed5b8c67035350579f985}{ecntrd}
+\item 
+real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}) \hyperlink{namespacelg__input__routines_afe3e4dc2c250144c91fdb508ecc23861}{ncntrd}
+\item 
+real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}) \hyperlink{namespacelg__input__routines_a171b7d03fe9858fea1233f4815ae16ed}{qd}
+\item 
+real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}) \hyperlink{namespacelg__input__routines_afda4a8689fe9682f5d258652b9034e8b}{qfrq1}
+\item 
+real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}) \hyperlink{namespacelg__input__routines_ac2deecae32da0c3386427796c078914b}{qfrq2}
+\item 
+real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}) \hyperlink{namespacelg__input__routines_a8482cf4c4f82b0bdade2229ebe84409b}{fqq}
+\item 
+real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}), dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a772bd4b791e045aeddee4ec3b9f83b5d}{sdn0}
+\item 
+real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}), dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a61c10a981d7dbd76a267c0287d588341}{sde0}
+\item 
+real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}), dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_a97c7be4355c05e28ac6ba0efeb78ffad}{sxed}
+\item 
+real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}), dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_aa2783aeeaa7e437824f169ebfa8333b6}{sxnd}
+\item 
+real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}), dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_ae8692e647d0f89e881c118c611840cd9}{clcd}
+\item 
+real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}), dimension(\+:,\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_aced5de847a907addba6fcf36ebf42331}{yxzplt}
+\item 
+real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}), dimension(\+:,\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_a67fb3d402119d1b2a9e63ce396fecab0}{rxed}
+\item 
+real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}), dimension(\+:,\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_a6d8afefe7edd3b38c43af674dc6a8cf2}{rxnd}
+\item 
+logical \hyperlink{namespacelg__input__routines_ac5e8dec1c471c81460b4a0f5072f8032}{prtsec}
+\item 
+logical \hyperlink{namespacelg__input__routines_a8a8f780e770a419032c0f864583b10b3}{invert}
+\item 
+character(len=200) \hyperlink{namespacelg__input__routines_a288298e67f0d988bf7778f7d3e647080}{inp}
+\item 
+character(len=200) \hyperlink{namespacelg__input__routines_a1ef30ce0b5dc7f1606ca274a96f4f69b}{title}
+\item 
+character(len=60) \hyperlink{namespacelg__input__routines_a5c20852fa900259b8802ce90a90242fd}{ltxt}
+\item 
+integer, dimension(8) \hyperlink{namespacelg__input__routines_a9effaf2dd14fcded391b9aa0024209e7}{tvals}
+\item 
+integer \hyperlink{namespacelg__input__routines_a3f207750b44b385fd4cfdfee777d99a7}{kprt}
+\item 
+integer \hyperlink{namespacelg__input__routines_af3dfe10c558a9f2f5ef8e1f6cb8f2770}{ndata}
+\item 
+integer \hyperlink{namespacelg__input__routines_ad615d7fb943281d8f06d4c1f45401a53}{kchnl}
+\item 
+integer \hyperlink{namespacelg__input__routines_a8a8ac5810a5450735ae16a17775adb2e}{maxits}
+\item 
+integer \hyperlink{namespacelg__input__routines_aa67064f3118bc318702e1ca97b197a05}{cnvrg}
+\item 
+integer \hyperlink{namespacelg__input__routines_a2efdd9d0ee189172094271241f63d28c}{invprt}
+\item 
+integer, dimension(\+:,\+:,\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_aead04e44b19b3354442aae287652c5ac}{rwts}
+\item 
+integer, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_aa1ea996394cf4a5e7b496595554acf71}{cxpar}
+\item 
+integer, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_ac804800fe349f842e1ffe85c1a0d3410}{ncmpl}
+\item 
+integer, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_af32e9ed8c544fe3339169f3f1c3993d5}{kmp}
+\item 
+integer, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_afcc12c2fb333b7b2b66ef0d4412ce04e}{plyr}
+\item 
+real \hyperlink{namespacelg__input__routines_ac6b4323af4ccd6ac9f0415f7c856302f}{pctcnv}
+\item 
+real \hyperlink{namespacelg__input__routines_a17fa14f47c0c3b7209482e10238fa8b8}{parpct}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_af1d98dc71b47044d85f3f75345bd4ad5}{xdata}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_ae31b5c3866f71b018a3e0dc5d4c63e6c}{xmodl}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a53f662035d1167d4af1fc7834120a430}{ubnd}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_ae4125e25f60f0e4a3f3a59c66c9896ac}{lbnd}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a45d7d9feedc943e6eeb7c96241a56cb9}{elas}
+\item 
+real, dimension(\+:,\+:,\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_a6f87e762092d8ff698807f2ad59f2af3}{rdata}
+\item 
+logical, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a09029b4bdcd2d8c5ae75d95f22599c0f}{single}
+\item 
+integer \hyperlink{namespacelg__input__routines_a6db35964e1d4e1d73b76f93d728b96e9}{nlyr}
+\item 
+integer \hyperlink{namespacelg__input__routines_ac4f7a7edd592899c2e3180d01abdb6ec}{nplt}
+\item 
+integer \hyperlink{namespacelg__input__routines_a43617bbf513a31819fdd9102f2d14960}{jl}
+\item 
+integer \hyperlink{namespacelg__input__routines_afca0d53e4281898737d338026b40e53d}{jp}
+\item 
+integer \hyperlink{namespacelg__input__routines_a7a11100cb9dbcf30ddd8ea9802e951c7}{mxab}
+\item 
+integer \hyperlink{namespacelg__input__routines_ad240d679ecd403cc52aac764201bfc5b}{beg}
+\item 
+integer \hyperlink{namespacelg__input__routines_a67371f9c06d68b95d45184555688f5da}{fin}
+\item 
+integer \hyperlink{namespacelg__input__routines_aee9292c01f55d537f7cafc9a3e5201bf}{ja}
+\item 
+integer \hyperlink{namespacelg__input__routines_a3d09f96b92b5909671209cf341d8939f}{jb}
+\item 
+integer \hyperlink{namespacelg__input__routines_a2b02a6181257c199eba71b3c92fb5be9}{jab}
+\item 
+integer \hyperlink{namespacelg__input__routines_ad8cb720dd00a45f91821df0e50967fc4}{nab}
+\item 
+integer \hyperlink{namespacelg__input__routines_a6a4d2fe97ff751ec658cd7c4c32c8dd8}{naj}
+\item 
+integer \hyperlink{namespacelg__input__routines_a422223cb66d2146d9c188127e4a028e2}{nbj}
+\item 
+integer \hyperlink{namespacelg__input__routines_aeeb364d56f6ccfca2d83c6f2f2116115}{jp2}
+\item 
+integer \hyperlink{namespacelg__input__routines_aa8dab0fb04a941c104a2358b9964b3cb}{jab2}
+\item 
+integer \hyperlink{namespacelg__input__routines_a8c395208e3c4b867a9efb124950523a2}{nab2}
+\item 
+integer \hyperlink{namespacelg__input__routines_a32d71e3a5fd9797e3422ec85a3ba569b}{mxrho}
+\item 
+integer \hyperlink{namespacelg__input__routines_af065b07a125b49a6638714fca2349dab}{nrmgt}
+\item 
+integer \hyperlink{namespacelg__input__routines_a2a758312b4913fc8c9b224c38fe7e237}{mxcl2}
+\item 
+integer \hyperlink{namespacelg__input__routines_a541838bde966c293ecaa09ac831cdb04}{npar}
+\item 
+integer \hyperlink{namespacelg__input__routines_a22a8c2d22e2d56ee4bc62e61d835e08e}{ndstp}
+\item 
+integer, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_aedb9ca6e70c3410a22b403679af5fc20}{lithp}
+\item 
+integer, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_aea4fa508483e9e73a626c0e62232d1f4}{kpct}
+\item 
+real \hyperlink{namespacelg__input__routines_a5aaa08577983b3738ea36301b56c0410}{cellw}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_ae3a8a91ea2d57c11242ff73731b2c9e9}{res}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a199d87b93f3f5ab8b25fcd0640c45b7d}{thk}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a6ea167ba918b3575bd7587145486068b}{rmu}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_af61c1a97123787059f666eb146880b2e}{reps}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a1653ca16fcac1be1d1e8449d3bcea089}{chrg}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_ac8bb200fd8bf044a20d5445759fab02c}{ctau}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_aa9fa43a162e95877320d121ab31b958d}{cfreq}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a3faaed94e2a40a7d19af4bf0b4e9f8cf}{sig\+\_\+t}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a05b7b31b77371774e886aadf410be79e}{chrgp}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a4ca057c77a03e564a388368be839cd43}{ctaup}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a39583b1655c1a6964d1e80639879060b}{cfreqp}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_ad8ae00121fa40a63aab71d92b83d5506}{pltop}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_ab251caca089824152c534b93625579db}{xcntr}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a72b37b88e326c2674a9dfad3146d0d1a}{ycntr}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a03aa89b2ee045a49ecf9b35b1acae19b}{plngth}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a522e8b0feae02752d8143fc403ef2e2a}{plwdth}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_ac8e6a73637bd5b85bdfbfc0734b3e44a}{dzm}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a6d226e3be6f444eac6f99d17e5218516}{plazm}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_ac6bd69a2747719d0ad644d5ef9d7cb19}{pldip}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_ac11fcc9d6ce359143f3e92b12bc56633}{dip}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a0218ae3d8505863872da20098e847208}{plg}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_ae9c8530efd2c73ef8ec9473314036af3}{plunj}
+\item 
+real, dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a5acee0395ffda270aed2b17278023be5}{mpar}
+\item 
+real, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_ac7350915506378146fba877e70cf9e5a}{xcell}
+\item 
+real, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_aeabe65741a073352b67eaf406562ccc2}{ycell}
+\item 
+real, dimension(\+:,\+:), allocatable \hyperlink{namespacelg__input__routines_a360b94863ccd8f0b4888cf64d3f7f2da}{zcell}
+\item 
+real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}), dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_a8b4948887cc082e53fbe8765475f1a6e}{rmud}
+\item 
+real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}), dimension(\+:), allocatable \hyperlink{namespacelg__input__routines_ae7adf9ffc0177ce752a4b28042df09ce}{thkd}
+\item 
+logical \hyperlink{namespacelg__input__routines_a24ada50400969251dbef61f7706a66cc}{intrude}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function/\+Subroutine Documentation}
+\mbox{\Hypertarget{namespacelg__input__routines_a8433a2003dce3e9ebdd1aa0a11e16538}\label{namespacelg__input__routines_a8433a2003dce3e9ebdd1aa0a11e16538}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!iscomment@{iscomment}}
+\index{iscomment@{iscomment}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{iscomment()}{iscomment()}}
+{\footnotesize\ttfamily logical function lg\+\_\+input\+\_\+routines\+::iscomment (\begin{DoxyParamCaption}\item[{character (len = 1)}]{char }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg__input__routines_a8433a2003dce3e9ebdd1aa0a11e16538_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg__input__routines_a3118d974d52f2c98169709e887ceb344}\label{namespacelg__input__routines_a3118d974d52f2c98169709e887ceb344}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!prepare\+\_\+invrt\+\_\+data@{prepare\+\_\+invrt\+\_\+data}}
+\index{prepare\+\_\+invrt\+\_\+data@{prepare\+\_\+invrt\+\_\+data}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{prepare\+\_\+invrt\+\_\+data()}{prepare\_invrt\_data()}}
+{\footnotesize\ttfamily subroutine lg\+\_\+input\+\_\+routines\+::prepare\+\_\+invrt\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg__input__routines_a3118d974d52f2c98169709e887ceb344_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{namespacelg__input__routines_a3118d974d52f2c98169709e887ceb344_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg__input__routines_a39e1903280f0492197231ab5fa752f21}\label{namespacelg__input__routines_a39e1903280f0492197231ab5fa752f21}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!read\+\_\+model\+\_\+data@{read\+\_\+model\+\_\+data}}
+\index{read\+\_\+model\+\_\+data@{read\+\_\+model\+\_\+data}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{read\+\_\+model\+\_\+data()}{read\_model\_data()}}
+{\footnotesize\ttfamily subroutine lg\+\_\+input\+\_\+routines\+::read\+\_\+model\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{namespacelg__input__routines_a39e1903280f0492197231ab5fa752f21_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{namespacelg__input__routines_a39e1903280f0492197231ab5fa752f21_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg__input__routines_a123f91865ea388eca78b77b0d625aa8c}\label{namespacelg__input__routines_a123f91865ea388eca78b77b0d625aa8c}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!read\+\_\+parameter\+\_\+control@{read\+\_\+parameter\+\_\+control}}
+\index{read\+\_\+parameter\+\_\+control@{read\+\_\+parameter\+\_\+control}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{read\+\_\+parameter\+\_\+control()}{read\_parameter\_control()}}
+{\footnotesize\ttfamily subroutine lg\+\_\+input\+\_\+routines\+::read\+\_\+parameter\+\_\+control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{namespacelg__input__routines_a123f91865ea388eca78b77b0d625aa8c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{namespacelg__input__routines_a123f91865ea388eca78b77b0d625aa8c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg__input__routines_a80feb058541516d5a6327fb6c344bbbd}\label{namespacelg__input__routines_a80feb058541516d5a6327fb6c344bbbd}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!read\+\_\+system\+\_\+and\+\_\+survey\+\_\+data@{read\+\_\+system\+\_\+and\+\_\+survey\+\_\+data}}
+\index{read\+\_\+system\+\_\+and\+\_\+survey\+\_\+data@{read\+\_\+system\+\_\+and\+\_\+survey\+\_\+data}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{read\+\_\+system\+\_\+and\+\_\+survey\+\_\+data()}{read\_system\_and\_survey\_data()}}
+{\footnotesize\ttfamily subroutine lg\+\_\+input\+\_\+routines\+::read\+\_\+system\+\_\+and\+\_\+survey\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg__input__routines_a80feb058541516d5a6327fb6c344bbbd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{namespacelg__input__routines_a80feb058541516d5a6327fb6c344bbbd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg__input__routines_a836674acd30d52d3aa973722014aaa9f}\label{namespacelg__input__routines_a836674acd30d52d3aa973722014aaa9f}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!set\+\_\+frq@{set\+\_\+frq}}
+\index{set\+\_\+frq@{set\+\_\+frq}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{set\+\_\+frq()}{set\_frq()}}
+{\footnotesize\ttfamily subroutine lg\+\_\+input\+\_\+routines\+::set\+\_\+frq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{namespacelg__input__routines_a836674acd30d52d3aa973722014aaa9f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg__input__routines_a74107bd43614b32d8679e91def53e94d}\label{namespacelg__input__routines_a74107bd43614b32d8679e91def53e94d}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!set\+\_\+rho@{set\+\_\+rho}}
+\index{set\+\_\+rho@{set\+\_\+rho}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{set\+\_\+rho()}{set\_rho()}}
+{\footnotesize\ttfamily subroutine lg\+\_\+input\+\_\+routines\+::set\+\_\+rho (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{namespacelg__input__routines_a74107bd43614b32d8679e91def53e94d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg__input__routines_aff8e77512771c5a25793784a8185d5b0}\label{namespacelg__input__routines_aff8e77512771c5a25793784a8185d5b0}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!set\+\_\+trp@{set\+\_\+trp}}
+\index{set\+\_\+trp@{set\+\_\+trp}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{set\+\_\+trp()}{set\_trp()}}
+{\footnotesize\ttfamily subroutine lg\+\_\+input\+\_\+routines\+::set\+\_\+trp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{namespacelg__input__routines_aff8e77512771c5a25793784a8185d5b0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg__input__routines_a46a4ddc163c46adad59e863dadde86a3}\label{namespacelg__input__routines_a46a4ddc163c46adad59e863dadde86a3}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!show\+\_\+and\+\_\+tell@{show\+\_\+and\+\_\+tell}}
+\index{show\+\_\+and\+\_\+tell@{show\+\_\+and\+\_\+tell}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{show\+\_\+and\+\_\+tell()}{show\_and\_tell()}}
+{\footnotesize\ttfamily subroutine lg\+\_\+input\+\_\+routines\+::show\+\_\+and\+\_\+tell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{namespacelg__input__routines_a46a4ddc163c46adad59e863dadde86a3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg__input__routines_abb4589f0c8ad2d2d88f0f52aac5462e6}\label{namespacelg__input__routines_abb4589f0c8ad2d2d88f0f52aac5462e6}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!write\+\_\+line\+\_\+header@{write\+\_\+line\+\_\+header}}
+\index{write\+\_\+line\+\_\+header@{write\+\_\+line\+\_\+header}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{write\+\_\+line\+\_\+header()}{write\_line\_header()}}
+{\footnotesize\ttfamily subroutine lg\+\_\+input\+\_\+routines\+::write\+\_\+line\+\_\+header (\begin{DoxyParamCaption}\item[{character(len=20)}]{QL,  }\item[{integer}]{H\+ID,  }\item[{integer}]{CL,  }\item[{integer}]{N\+CL }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{namespacelg__input__routines_abb4589f0c8ad2d2d88f0f52aac5462e6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg__input__routines_abb4589f0c8ad2d2d88f0f52aac5462e6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelg__input__routines_a1e34012960c952d22446828d97881001}\label{namespacelg__input__routines_a1e34012960c952d22446828d97881001}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!write\+\_\+np\+\_\+initial@{write\+\_\+np\+\_\+initial}}
+\index{write\+\_\+np\+\_\+initial@{write\+\_\+np\+\_\+initial}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{write\+\_\+np\+\_\+initial()}{write\_np\_initial()}}
+{\footnotesize\ttfamily subroutine lg\+\_\+input\+\_\+routines\+::write\+\_\+np\+\_\+initial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelg__input__routines_a1e34012960c952d22446828d97881001_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{namespacelg__input__routines_a1e34012960c952d22446828d97881001_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacelg__input__routines_ad240d679ecd403cc52aac764201bfc5b}\label{namespacelg__input__routines_ad240d679ecd403cc52aac764201bfc5b}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!beg@{beg}}
+\index{beg@{beg}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{beg}{beg}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::beg}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ac7f5afd80317e5c4f20d0f68bac9cf59}\label{namespacelg__input__routines_ac7f5afd80317e5c4f20d0f68bac9cf59}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!bftl@{bftl}}
+\index{bftl@{bftl}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{bftl}{bftl}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:,\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::bftl}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aaddc398e9198a4c9e8eb40573a3f4347}\label{namespacelg__input__routines_aaddc398e9198a4c9e8eb40573a3f4347}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!bhazm@{bhazm}}
+\index{bhazm@{bhazm}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{bhazm}{bhazm}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::bhazm}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ad18dca12a7805ae624b71667a773a294}\label{namespacelg__input__routines_ad18dca12a7805ae624b71667a773a294}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!bhdip@{bhdip}}
+\index{bhdip@{bhdip}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{bhdip}{bhdip}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::bhdip}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a5aaa08577983b3738ea36301b56c0410}\label{namespacelg__input__routines_a5aaa08577983b3738ea36301b56c0410}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!cellw@{cellw}}
+\index{cellw@{cellw}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{cellw}{cellw}}
+{\footnotesize\ttfamily real lg\+\_\+input\+\_\+routines\+::cellw}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aa9fa43a162e95877320d121ab31b958d}\label{namespacelg__input__routines_aa9fa43a162e95877320d121ab31b958d}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!cfreq@{cfreq}}
+\index{cfreq@{cfreq}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{cfreq}{cfreq}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::cfreq}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a39583b1655c1a6964d1e80639879060b}\label{namespacelg__input__routines_a39583b1655c1a6964d1e80639879060b}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!cfreqp@{cfreqp}}
+\index{cfreqp@{cfreqp}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{cfreqp}{cfreqp}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::cfreqp}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a1653ca16fcac1be1d1e8449d3bcea089}\label{namespacelg__input__routines_a1653ca16fcac1be1d1e8449d3bcea089}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!chrg@{chrg}}
+\index{chrg@{chrg}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{chrg}{chrg}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::chrg}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a05b7b31b77371774e886aadf410be79e}\label{namespacelg__input__routines_a05b7b31b77371774e886aadf410be79e}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!chrgp@{chrgp}}
+\index{chrgp@{chrgp}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{chrgp}{chrgp}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::chrgp}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ae8692e647d0f89e881c118c611840cd9}\label{namespacelg__input__routines_ae8692e647d0f89e881c118c611840cd9}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!clcd@{clcd}}
+\index{clcd@{clcd}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{clcd}{clcd}}
+{\footnotesize\ttfamily real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}), dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::clcd}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ae700c1a68129dc3b61dd0eee2253b79f}\label{namespacelg__input__routines_ae700c1a68129dc3b61dd0eee2253b79f}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!cmp@{cmp}}
+\index{cmp@{cmp}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{cmp}{cmp}}
+{\footnotesize\ttfamily integer, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::cmp}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aa1e90821ade680361e1ae7f091fe973b}\label{namespacelg__input__routines_aa1e90821ade680361e1ae7f091fe973b}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!cmpmt@{cmpmt}}
+\index{cmpmt@{cmpmt}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{cmpmt}{cmpmt}}
+{\footnotesize\ttfamily integer, dimension(4) lg\+\_\+input\+\_\+routines\+::cmpmt}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aa67064f3118bc318702e1ca97b197a05}\label{namespacelg__input__routines_aa67064f3118bc318702e1ca97b197a05}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!cnvrg@{cnvrg}}
+\index{cnvrg@{cnvrg}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{cnvrg}{cnvrg}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::cnvrg}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ac8bb200fd8bf044a20d5445759fab02c}\label{namespacelg__input__routines_ac8bb200fd8bf044a20d5445759fab02c}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!ctau@{ctau}}
+\index{ctau@{ctau}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{ctau}{ctau}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::ctau}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a4ca057c77a03e564a388368be839cd43}\label{namespacelg__input__routines_a4ca057c77a03e564a388368be839cd43}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!ctaup@{ctaup}}
+\index{ctaup@{ctaup}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{ctaup}{ctaup}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::ctaup}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a2724872da9ddfe9b94de8c091b0a36dd}\label{namespacelg__input__routines_a2724872da9ddfe9b94de8c091b0a36dd}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!curnt@{curnt}}
+\index{curnt@{curnt}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{curnt}{curnt}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::curnt}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aa1ea996394cf4a5e7b496595554acf71}\label{namespacelg__input__routines_aa1ea996394cf4a5e7b496595554acf71}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!cxpar@{cxpar}}
+\index{cxpar@{cxpar}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{cxpar}{cxpar}}
+{\footnotesize\ttfamily integer, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::cxpar}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a17c7af951ca7d0cf40e35d63cadf6d43}\label{namespacelg__input__routines_a17c7af951ca7d0cf40e35d63cadf6d43}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!d2r@{d2r}}
+\index{d2r@{d2r}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{d2r}{d2r}}
+{\footnotesize\ttfamily real parameter lg\+\_\+input\+\_\+routines\+::d2r =PI/180.}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ac11fcc9d6ce359143f3e92b12bc56633}\label{namespacelg__input__routines_ac11fcc9d6ce359143f3e92b12bc56633}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!dip@{dip}}
+\index{dip@{dip}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{dip}{dip}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::dip}
+
+\mbox{\Hypertarget{namespacelg__input__routines_af78f7591d1f55c4a9a6aec78bdafb61c}\label{namespacelg__input__routines_af78f7591d1f55c4a9a6aec78bdafb61c}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!do3d@{do3d}}
+\index{do3d@{do3d}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{do3d}{do3d}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::do3d}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a0ad3fab990ff61df0aef4ca7bb41cf23}\label{namespacelg__input__routines_a0ad3fab990ff61df0aef4ca7bb41cf23}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!dstat@{dstat}}
+\index{dstat@{dstat}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{dstat}{dstat}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::dstat}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ac8e6a73637bd5b85bdfbfc0734b3e44a}\label{namespacelg__input__routines_ac8e6a73637bd5b85bdfbfc0734b3e44a}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!dzm@{dzm}}
+\index{dzm@{dzm}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{dzm}{dzm}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::dzm}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a324ba9df6f9ed5b8c67035350579f985}\label{namespacelg__input__routines_a324ba9df6f9ed5b8c67035350579f985}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!ecntrd@{ecntrd}}
+\index{ecntrd@{ecntrd}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{ecntrd}{ecntrd}}
+{\footnotesize\ttfamily real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}) lg\+\_\+input\+\_\+routines\+::ecntrd}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a45d7d9feedc943e6eeb7c96241a56cb9}\label{namespacelg__input__routines_a45d7d9feedc943e6eeb7c96241a56cb9}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!elas@{elas}}
+\index{elas@{elas}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{elas}{elas}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::elas}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a67371f9c06d68b95d45184555688f5da}\label{namespacelg__input__routines_a67371f9c06d68b95d45184555688f5da}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!fin@{fin}}
+\index{fin@{fin}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{fin}{fin}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::fin}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a8482cf4c4f82b0bdade2229ebe84409b}\label{namespacelg__input__routines_a8482cf4c4f82b0bdade2229ebe84409b}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!fqq@{fqq}}
+\index{fqq@{fqq}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{fqq}{fqq}}
+{\footnotesize\ttfamily real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}) lg\+\_\+input\+\_\+routines\+::fqq}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a2c092becc43cb2313a011cc8e3962349}\label{namespacelg__input__routines_a2c092becc43cb2313a011cc8e3962349}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!freq@{freq}}
+\index{freq@{freq}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{freq}{freq}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::freq}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ad64edbbe93c0335e2a4d4d767eb9bbd1}\label{namespacelg__input__routines_ad64edbbe93c0335e2a4d4d767eb9bbd1}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!fvers@{fvers}}
+\index{fvers@{fvers}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{fvers}{fvers}}
+{\footnotesize\ttfamily integer parameter lg\+\_\+input\+\_\+routines\+::fvers = 690}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a84a9e4845e4cff7e15d920d545e920fe}\label{namespacelg__input__routines_a84a9e4845e4cff7e15d920d545e920fe}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!header\+\_\+id@{header\+\_\+id}}
+\index{header\+\_\+id@{header\+\_\+id}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{header\+\_\+id}{header\_id}}
+{\footnotesize\ttfamily integer, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::header\+\_\+id}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a25ef99b6df9850605ad2562a20d87711}\label{namespacelg__input__routines_a25ef99b6df9850605ad2562a20d87711}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!idh@{idh}}
+\index{idh@{idh}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{idh}{idh}}
+{\footnotesize\ttfamily integer, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::idh}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a288298e67f0d988bf7778f7d3e647080}\label{namespacelg__input__routines_a288298e67f0d988bf7778f7d3e647080}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!inp@{inp}}
+\index{inp@{inp}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{inp}{inp}}
+{\footnotesize\ttfamily character (len=200) lg\+\_\+input\+\_\+routines\+::inp}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a24ada50400969251dbef61f7706a66cc}\label{namespacelg__input__routines_a24ada50400969251dbef61f7706a66cc}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!intrude@{intrude}}
+\index{intrude@{intrude}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{intrude}{intrude}}
+{\footnotesize\ttfamily logical lg\+\_\+input\+\_\+routines\+::intrude}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a8a8f780e770a419032c0f864583b10b3}\label{namespacelg__input__routines_a8a8f780e770a419032c0f864583b10b3}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!invert@{invert}}
+\index{invert@{invert}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{invert}{invert}}
+{\footnotesize\ttfamily logical lg\+\_\+input\+\_\+routines\+::invert}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a2efdd9d0ee189172094271241f63d28c}\label{namespacelg__input__routines_a2efdd9d0ee189172094271241f63d28c}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!invprt@{invprt}}
+\index{invprt@{invprt}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{invprt}{invprt}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::invprt}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a7ac8905ebcdb83c2e30359605834b350}\label{namespacelg__input__routines_a7ac8905ebcdb83c2e30359605834b350}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!iplt@{iplt}}
+\index{iplt@{iplt}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{iplt}{iplt}}
+{\footnotesize\ttfamily integer, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::iplt}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a4eb4ee97a7b4d0a162e4c92b3c592678}\label{namespacelg__input__routines_a4eb4ee97a7b4d0a162e4c92b3c592678}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!ippd@{ippd}}
+\index{ippd@{ippd}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{ippd}{ippd}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::ippd}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a23b2611e5e3842861e03d1b579dc49aa}\label{namespacelg__input__routines_a23b2611e5e3842861e03d1b579dc49aa}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!istop@{istop}}
+\index{istop@{istop}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{istop}{istop}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::istop}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a21d152072d7a9e7973cbbe660dad9e88}\label{namespacelg__input__routines_a21d152072d7a9e7973cbbe660dad9e88}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!isys@{isys}}
+\index{isys@{isys}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{isys}{isys}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::isys}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a78d4457ced9beccb65b6782146533a24}\label{namespacelg__input__routines_a78d4457ced9beccb65b6782146533a24}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!j@{j}}
+\index{j@{j}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{j}{j}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::j}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aee9292c01f55d537f7cafc9a3e5201bf}\label{namespacelg__input__routines_aee9292c01f55d537f7cafc9a3e5201bf}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!ja@{ja}}
+\index{ja@{ja}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{ja}{ja}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::ja}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a2b02a6181257c199eba71b3c92fb5be9}\label{namespacelg__input__routines_a2b02a6181257c199eba71b3c92fb5be9}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!jab@{jab}}
+\index{jab@{jab}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{jab}{jab}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::jab}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aa8dab0fb04a941c104a2358b9964b3cb}\label{namespacelg__input__routines_aa8dab0fb04a941c104a2358b9964b3cb}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!jab2@{jab2}}
+\index{jab2@{jab2}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{jab2}{jab2}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::jab2}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a3d09f96b92b5909671209cf341d8939f}\label{namespacelg__input__routines_a3d09f96b92b5909671209cf341d8939f}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!jb@{jb}}
+\index{jb@{jb}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{jb}{jb}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::jb}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a08d8feb2a518243a8007014ea975135c}\label{namespacelg__input__routines_a08d8feb2a518243a8007014ea975135c}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!jf@{jf}}
+\index{jf@{jf}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{jf}{jf}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::jf}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a43617bbf513a31819fdd9102f2d14960}\label{namespacelg__input__routines_a43617bbf513a31819fdd9102f2d14960}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!jl@{jl}}
+\index{jl@{jl}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{jl}{jl}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::jl}
+
+\mbox{\Hypertarget{namespacelg__input__routines_afca0d53e4281898737d338026b40e53d}\label{namespacelg__input__routines_afca0d53e4281898737d338026b40e53d}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!jp@{jp}}
+\index{jp@{jp}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{jp}{jp}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::jp}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aeeb364d56f6ccfca2d83c6f2f2116115}\label{namespacelg__input__routines_aeeb364d56f6ccfca2d83c6f2f2116115}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!jp2@{jp2}}
+\index{jp2@{jp2}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{jp2}{jp2}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::jp2}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a245e9bc7aa95a05dde0ed89e5cfd1dce}\label{namespacelg__input__routines_a245e9bc7aa95a05dde0ed89e5cfd1dce}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!jr@{jr}}
+\index{jr@{jr}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{jr}{jr}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::jr}
+
+\mbox{\Hypertarget{namespacelg__input__routines_af9735a6ff4c4888594446ab95b98fb25}\label{namespacelg__input__routines_af9735a6ff4c4888594446ab95b98fb25}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!js@{js}}
+\index{js@{js}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{js}{js}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::js}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ae3ac5398b9c75ed98982459352600852}\label{namespacelg__input__routines_ae3ac5398b9c75ed98982459352600852}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!jt@{jt}}
+\index{jt@{jt}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{jt}{jt}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::jt}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aff9789ccbeba0e0c5ea773af2638b107}\label{namespacelg__input__routines_aff9789ccbeba0e0c5ea773af2638b107}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!jv@{jv}}
+\index{jv@{jv}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{jv}{jv}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::jv}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a778a4d42b3609a6eeaf964668eb06b04}\label{namespacelg__input__routines_a778a4d42b3609a6eeaf964668eb06b04}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!k1@{k1}}
+\index{k1@{k1}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{k1}{k1}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::k1}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ad615d7fb943281d8f06d4c1f45401a53}\label{namespacelg__input__routines_ad615d7fb943281d8f06d4c1f45401a53}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!kchnl@{kchnl}}
+\index{kchnl@{kchnl}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{kchnl}{kchnl}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::kchnl}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a152f414afe35dd2a3cc3fe4aeb73f16a}\label{namespacelg__input__routines_a152f414afe35dd2a3cc3fe4aeb73f16a}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!khid@{khid}}
+\index{khid@{khid}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{khid}{khid}}
+{\footnotesize\ttfamily integer, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::khid}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a1dd929af54eac2b06f42ee3e4641bea1}\label{namespacelg__input__routines_a1dd929af54eac2b06f42ee3e4641bea1}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!khsq@{khsq}}
+\index{khsq@{khsq}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{khsq}{khsq}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::khsq}
+
+\mbox{\Hypertarget{namespacelg__input__routines_af32e9ed8c544fe3339169f3f1c3993d5}\label{namespacelg__input__routines_af32e9ed8c544fe3339169f3f1c3993d5}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!kmp@{kmp}}
+\index{kmp@{kmp}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{kmp}{kmp}}
+{\footnotesize\ttfamily integer, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::kmp}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a85f616adbe6187683a55c9ad1d0515dd}\label{namespacelg__input__routines_a85f616adbe6187683a55c9ad1d0515dd}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!kmpmt@{kmpmt}}
+\index{kmpmt@{kmpmt}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{kmpmt}{kmpmt}}
+{\footnotesize\ttfamily integer, dimension(4) lg\+\_\+input\+\_\+routines\+::kmpmt}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ac56a8d1d976273b4180c862633af12d6}\label{namespacelg__input__routines_ac56a8d1d976273b4180c862633af12d6}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!knorm@{knorm}}
+\index{knorm@{knorm}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{knorm}{knorm}}
+{\footnotesize\ttfamily integer, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::knorm}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a1b1ea2c286118a9e13f960c54b61103b}\label{namespacelg__input__routines_a1b1ea2c286118a9e13f960c54b61103b}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!knorm2@{knorm2}}
+\index{knorm2@{knorm2}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{knorm2}{knorm2}}
+{\footnotesize\ttfamily integer, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::knorm2}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aea4fa508483e9e73a626c0e62232d1f4}\label{namespacelg__input__routines_aea4fa508483e9e73a626c0e62232d1f4}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!kpct@{kpct}}
+\index{kpct@{kpct}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{kpct}{kpct}}
+{\footnotesize\ttfamily integer, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::kpct}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a3f207750b44b385fd4cfdfee777d99a7}\label{namespacelg__input__routines_a3f207750b44b385fd4cfdfee777d99a7}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!kprt@{kprt}}
+\index{kprt@{kprt}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{kprt}{kprt}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::kprt}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a2e7d7acfc8544ee74be5c4653975d59e}\label{namespacelg__input__routines_a2e7d7acfc8544ee74be5c4653975d59e}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!krgtx@{krgtx}}
+\index{krgtx@{krgtx}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{krgtx}{krgtx}}
+{\footnotesize\ttfamily integer, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::krgtx}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a6e9f307b4197279d1b7e3343d2ef2ae0}\label{namespacelg__input__routines_a6e9f307b4197279d1b7e3343d2ef2ae0}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!krxw@{krxw}}
+\index{krxw@{krxw}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{krxw}{krxw}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::krxw}
+
+\mbox{\Hypertarget{namespacelg__input__routines_af870ce7c9bb6da5f1d9945198c7fa3ee}\label{namespacelg__input__routines_af870ce7c9bb6da5f1d9945198c7fa3ee}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!ktx@{ktx}}
+\index{ktx@{ktx}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{ktx}{ktx}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::ktx}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ae4125e25f60f0e4a3f3a59c66c9896ac}\label{namespacelg__input__routines_ae4125e25f60f0e4a3f3a59c66c9896ac}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!lbnd@{lbnd}}
+\index{lbnd@{lbnd}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{lbnd}{lbnd}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::lbnd}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a6192486656a9e4b8f8a893cb39c1a3ef}\label{namespacelg__input__routines_a6192486656a9e4b8f8a893cb39c1a3ef}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!line@{line}}
+\index{line@{line}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{line}{line}}
+{\footnotesize\ttfamily integer, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::line}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aedb9ca6e70c3410a22b403679af5fc20}\label{namespacelg__input__routines_aedb9ca6e70c3410a22b403679af5fc20}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!lithp@{lithp}}
+\index{lithp@{lithp}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{lithp}{lithp}}
+{\footnotesize\ttfamily integer, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::lithp}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aba611144680c51239dc61b36cdba8ce7}\label{namespacelg__input__routines_aba611144680c51239dc61b36cdba8ce7}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!lntr@{lntr}}
+\index{lntr@{lntr}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{lntr}{lntr}}
+{\footnotesize\ttfamily integer, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::lntr}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a5c20852fa900259b8802ce90a90242fd}\label{namespacelg__input__routines_a5c20852fa900259b8802ce90a90242fd}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!ltxt@{ltxt}}
+\index{ltxt@{ltxt}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{ltxt}{ltxt}}
+{\footnotesize\ttfamily character(len=60) lg\+\_\+input\+\_\+routines\+::ltxt}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ae72446e679c44a5600c61e76b9ecc278}\label{namespacelg__input__routines_ae72446e679c44a5600c61e76b9ecc278}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!lyth@{lyth}}
+\index{lyth@{lyth}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{lyth}{lyth}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::lyth}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a120729b828c4a5845b2e603f0428e70f}\label{namespacelg__input__routines_a120729b828c4a5845b2e603f0428e70f}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!max\+\_\+freq@{max\+\_\+freq}}
+\index{max\+\_\+freq@{max\+\_\+freq}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{max\+\_\+freq}{max\_freq}}
+{\footnotesize\ttfamily real lg\+\_\+input\+\_\+routines\+::max\+\_\+freq}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a8a8ac5810a5450735ae16a17775adb2e}\label{namespacelg__input__routines_a8a8ac5810a5450735ae16a17775adb2e}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!maxits@{maxits}}
+\index{maxits@{maxits}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{maxits}{maxits}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::maxits}
+
+\mbox{\Hypertarget{namespacelg__input__routines_afe38ea783532fc3907b8e2a14dca9f56}\label{namespacelg__input__routines_afe38ea783532fc3907b8e2a14dca9f56}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!mchnl@{mchnl}}
+\index{mchnl@{mchnl}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{mchnl}{mchnl}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::mchnl}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a102c576e29efd44cb401abd2a7b19f94}\label{namespacelg__input__routines_a102c576e29efd44cb401abd2a7b19f94}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!mcmp@{mcmp}}
+\index{mcmp@{mcmp}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{mcmp}{mcmp}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::mcmp}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a17d7cadc2454b6016fb359a3a143f1e6}\label{namespacelg__input__routines_a17d7cadc2454b6016fb359a3a143f1e6}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!md1@{md1}}
+\index{md1@{md1}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{md1}{md1}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::md1}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ad088fcd28685af54ab4ccbdf35ebad22}\label{namespacelg__input__routines_ad088fcd28685af54ab4ccbdf35ebad22}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!md2@{md2}}
+\index{md2@{md2}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{md2}{md2}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::md2}
+
+\mbox{\Hypertarget{namespacelg__input__routines_acb44b11a9696ae1c79df024815d346bf}\label{namespacelg__input__routines_acb44b11a9696ae1c79df024815d346bf}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!min\+\_\+freq@{min\+\_\+freq}}
+\index{min\+\_\+freq@{min\+\_\+freq}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{min\+\_\+freq}{min\_freq}}
+{\footnotesize\ttfamily real lg\+\_\+input\+\_\+routines\+::min\+\_\+freq}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ab9031c82464776c476a344366cd1453e}\label{namespacelg__input__routines_ab9031c82464776c476a344366cd1453e}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!mlines@{mlines}}
+\index{mlines@{mlines}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{mlines}{mlines}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::mlines}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a5acee0395ffda270aed2b17278023be5}\label{namespacelg__input__routines_a5acee0395ffda270aed2b17278023be5}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!mpar@{mpar}}
+\index{mpar@{mpar}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{mpar}{mpar}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::mpar}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a7ee5cd16c5fb97f44fb5578ed560d1cb}\label{namespacelg__input__routines_a7ee5cd16c5fb97f44fb5578ed560d1cb}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!mqvr@{mqvr}}
+\index{mqvr@{mqvr}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{mqvr}{mqvr}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::mqvr}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a4ab280e58a30c45984c7140c4c6e1050}\label{namespacelg__input__routines_a4ab280e58a30c45984c7140c4c6e1050}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!mrxl@{mrxl}}
+\index{mrxl@{mrxl}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{mrxl}{mrxl}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::mrxl}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aaae12a94fcec8e8d94a81c9433ff7a5f}\label{namespacelg__input__routines_aaae12a94fcec8e8d94a81c9433ff7a5f}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!mrxtx@{mrxtx}}
+\index{mrxtx@{mrxtx}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{mrxtx}{mrxtx}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::mrxtx}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a8156420c85f94edf75fe7cc28ec9c826}\label{namespacelg__input__routines_a8156420c85f94edf75fe7cc28ec9c826}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!msg@{msg}}
+\index{msg@{msg}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{msg}{msg}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::msg}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a7a11100cb9dbcf30ddd8ea9802e951c7}\label{namespacelg__input__routines_a7a11100cb9dbcf30ddd8ea9802e951c7}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!mxab@{mxab}}
+\index{mxab@{mxab}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{mxab}{mxab}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::mxab}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a2a758312b4913fc8c9b224c38fe7e237}\label{namespacelg__input__routines_a2a758312b4913fc8c9b224c38fe7e237}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!mxcl2@{mxcl2}}
+\index{mxcl2@{mxcl2}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{mxcl2}{mxcl2}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::mxcl2}
+
+\mbox{\Hypertarget{namespacelg__input__routines_abe4359e93c3a6a113806a9c696d6ecfd}\label{namespacelg__input__routines_abe4359e93c3a6a113806a9c696d6ecfd}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!mxerr@{mxerr}}
+\index{mxerr@{mxerr}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{mxerr}{mxerr}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::mxerr}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a32d71e3a5fd9797e3422ec85a3ba569b}\label{namespacelg__input__routines_a32d71e3a5fd9797e3422ec85a3ba569b}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!mxrho@{mxrho}}
+\index{mxrho@{mxrho}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{mxrho}{mxrho}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::mxrho}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a34c8686fc88ac74cc36718879b12800a}\label{namespacelg__input__routines_a34c8686fc88ac74cc36718879b12800a}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!mxrs@{mxrs}}
+\index{mxrs@{mxrs}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{mxrs}{mxrs}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::mxrs}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a7265c9a5d503079f944a23462a6dd8fe}\label{namespacelg__input__routines_a7265c9a5d503079f944a23462a6dd8fe}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!mxtx@{mxtx}}
+\index{mxtx@{mxtx}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{mxtx}{mxtx}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::mxtx}
+
+\mbox{\Hypertarget{namespacelg__input__routines_add1ae2d6a2e68ee210845e01800d978f}\label{namespacelg__input__routines_add1ae2d6a2e68ee210845e01800d978f}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!mxvrtx@{mxvrtx}}
+\index{mxvrtx@{mxvrtx}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{mxvrtx}{mxvrtx}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::mxvrtx}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ad8cb720dd00a45f91821df0e50967fc4}\label{namespacelg__input__routines_ad8cb720dd00a45f91821df0e50967fc4}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nab@{nab}}
+\index{nab@{nab}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nab}{nab}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::nab}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a8c395208e3c4b867a9efb124950523a2}\label{namespacelg__input__routines_a8c395208e3c4b867a9efb124950523a2}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nab2@{nab2}}
+\index{nab2@{nab2}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nab2}{nab2}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::nab2}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a6a4d2fe97ff751ec658cd7c4c32c8dd8}\label{namespacelg__input__routines_a6a4d2fe97ff751ec658cd7c4c32c8dd8}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!naj@{naj}}
+\index{naj@{naj}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{naj}{naj}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::naj}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a422223cb66d2146d9c188127e4a028e2}\label{namespacelg__input__routines_a422223cb66d2146d9c188127e4a028e2}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nbj@{nbj}}
+\index{nbj@{nbj}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nbj}{nbj}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::nbj}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ab0df43bcb1062d866441722ec2cb60be}\label{namespacelg__input__routines_ab0df43bcb1062d866441722ec2cb60be}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nchnl@{nchnl}}
+\index{nchnl@{nchnl}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nchnl}{nchnl}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::nchnl}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ac804800fe349f842e1ffe85c1a0d3410}\label{namespacelg__input__routines_ac804800fe349f842e1ffe85c1a0d3410}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!ncmpl@{ncmpl}}
+\index{ncmpl@{ncmpl}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{ncmpl}{ncmpl}}
+{\footnotesize\ttfamily integer, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::ncmpl}
+
+\mbox{\Hypertarget{namespacelg__input__routines_afe3e4dc2c250144c91fdb508ecc23861}\label{namespacelg__input__routines_afe3e4dc2c250144c91fdb508ecc23861}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!ncntrd@{ncntrd}}
+\index{ncntrd@{ncntrd}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{ncntrd}{ncntrd}}
+{\footnotesize\ttfamily real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}) lg\+\_\+input\+\_\+routines\+::ncntrd}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a9175b2b25b77757b5b292b6924ace5b8}\label{namespacelg__input__routines_a9175b2b25b77757b5b292b6924ace5b8}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nctd@{nctd}}
+\index{nctd@{nctd}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nctd}{nctd}}
+{\footnotesize\ttfamily integer, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::nctd}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aad696affac93d988d4b792cdfaccf874}\label{namespacelg__input__routines_aad696affac93d988d4b792cdfaccf874}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nd@{nd}}
+\index{nd@{nd}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nd}{nd}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::nd}
+
+\mbox{\Hypertarget{namespacelg__input__routines_af3dfe10c558a9f2f5ef8e1f6cb8f2770}\label{namespacelg__input__routines_af3dfe10c558a9f2f5ef8e1f6cb8f2770}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!ndata@{ndata}}
+\index{ndata@{ndata}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{ndata}{ndata}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::ndata}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a22a8c2d22e2d56ee4bc62e61d835e08e}\label{namespacelg__input__routines_a22a8c2d22e2d56ee4bc62e61d835e08e}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!ndstp@{ndstp}}
+\index{ndstp@{ndstp}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{ndstp}{ndstp}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::ndstp}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a81f61700f8b72e38a0a2956ff7e34383}\label{namespacelg__input__routines_a81f61700f8b72e38a0a2956ff7e34383}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nfrq@{nfrq}}
+\index{nfrq@{nfrq}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nfrq}{nfrq}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::nfrq}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a7699250d511dad1cbb727dafc82df908}\label{namespacelg__input__routines_a7699250d511dad1cbb727dafc82df908}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nft@{nft}}
+\index{nft@{nft}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nft}{nft}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::nft}
+
+\mbox{\Hypertarget{namespacelg__input__routines_af75c2ef2a6d12db9bd287ce3495e8f48}\label{namespacelg__input__routines_af75c2ef2a6d12db9bd287ce3495e8f48}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nhid@{nhid}}
+\index{nhid@{nhid}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nhid}{nhid}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::nhid}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a2b185a6190d1157ccb7596a980ddeee2}\label{namespacelg__input__routines_a2b185a6190d1157ccb7596a980ddeee2}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nlg@{nlg}}
+\index{nlg@{nlg}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nlg}{nlg}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::nlg}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ae13aeece4a34e71311078fd0d3f07861}\label{namespacelg__input__routines_ae13aeece4a34e71311078fd0d3f07861}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nlines@{nlines}}
+\index{nlines@{nlines}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nlines}{nlines}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::nlines}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ab0a845dec1e38a17409657c392221388}\label{namespacelg__input__routines_ab0a845dec1e38a17409657c392221388}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nlith@{nlith}}
+\index{nlith@{nlith}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nlith}{nlith}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::nlith}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a6db35964e1d4e1d73b76f93d728b96e9}\label{namespacelg__input__routines_a6db35964e1d4e1d73b76f93d728b96e9}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nlyr@{nlyr}}
+\index{nlyr@{nlyr}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nlyr}{nlyr}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::nlyr}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a1f4753d84cde284fc19867e152298c89}\label{namespacelg__input__routines_a1f4753d84cde284fc19867e152298c89}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!np@{np}}
+\index{np@{np}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{np}{np}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::np}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a541838bde966c293ecaa09ac831cdb04}\label{namespacelg__input__routines_a541838bde966c293ecaa09ac831cdb04}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!npar@{npar}}
+\index{npar@{npar}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{npar}{npar}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::npar}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ac4f7a7edd592899c2e3180d01abdb6ec}\label{namespacelg__input__routines_ac4f7a7edd592899c2e3180d01abdb6ec}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nplt@{nplt}}
+\index{nplt@{nplt}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nplt}{nplt}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::nplt}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a702859cf9d00d80e7a499146a391d0eb}\label{namespacelg__input__routines_a702859cf9d00d80e7a499146a391d0eb}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nppd@{nppd}}
+\index{nppd@{nppd}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nppd}{nppd}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::nppd}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a359e88d4557350cba3a221e513b5a0fa}\label{namespacelg__input__routines_a359e88d4557350cba3a221e513b5a0fa}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nprop@{nprop}}
+\index{nprop@{nprop}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nprop}{nprop}}
+{\footnotesize\ttfamily integer parameter lg\+\_\+input\+\_\+routines\+::nprop =7}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a7c00bd9f36754ba9c6420a7d1ae243fd}\label{namespacelg__input__routines_a7c00bd9f36754ba9c6420a7d1ae243fd}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!npuls@{npuls}}
+\index{npuls@{npuls}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{npuls}{npuls}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::npuls}
+
+\mbox{\Hypertarget{namespacelg__input__routines_abad63a3f02d5381de7890e436e450ca6}\label{namespacelg__input__routines_abad63a3f02d5381de7890e436e450ca6}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nr@{nr}}
+\index{nr@{nr}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nr}{nr}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::nr}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aa0b46c0970c520713d64c57e4ae00693}\label{namespacelg__input__routines_aa0b46c0970c520713d64c57e4ae00693}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nrgtx@{nrgtx}}
+\index{nrgtx@{nrgtx}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nrgtx}{nrgtx}}
+{\footnotesize\ttfamily integer, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::nrgtx}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a1d104fe3ddbda17fb2f63b3d483143f8}\label{namespacelg__input__routines_a1d104fe3ddbda17fb2f63b3d483143f8}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nri@{nri}}
+\index{nri@{nri}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nri}{nri}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::nri}
+
+\mbox{\Hypertarget{namespacelg__input__routines_af065b07a125b49a6638714fca2349dab}\label{namespacelg__input__routines_af065b07a125b49a6638714fca2349dab}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nrmgt@{nrmgt}}
+\index{nrmgt@{nrmgt}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nrmgt}{nrmgt}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::nrmgt}
+
+\mbox{\Hypertarget{namespacelg__input__routines_adf5b39741b7d138a3ecfb6657123a5ee}\label{namespacelg__input__routines_adf5b39741b7d138a3ecfb6657123a5ee}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nrx@{nrx}}
+\index{nrx@{nrx}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nrx}{nrx}}
+{\footnotesize\ttfamily integer, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::nrx}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a7b767c5d80ecdf07e162e0ca88f18f5a}\label{namespacelg__input__routines_a7b767c5d80ecdf07e162e0ca88f18f5a}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nrxtx@{nrxtx}}
+\index{nrxtx@{nrxtx}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nrxtx}{nrxtx}}
+{\footnotesize\ttfamily integer, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::nrxtx}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a824421dcc2d27ef1019d96edca43973b}\label{namespacelg__input__routines_a824421dcc2d27ef1019d96edca43973b}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nsx@{nsx}}
+\index{nsx@{nsx}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nsx}{nsx}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::nsx}
+
+\mbox{\Hypertarget{namespacelg__input__routines_af5fa6446163aa57d69058b7d7d5a868c}\label{namespacelg__input__routines_af5fa6446163aa57d69058b7d7d5a868c}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!ntx@{ntx}}
+\index{ntx@{ntx}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{ntx}{ntx}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::ntx}
+
+\mbox{\Hypertarget{namespacelg__input__routines_adda435e8b5f51edb387d7afc360820e5}\label{namespacelg__input__routines_adda435e8b5f51edb387d7afc360820e5}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!ntxl@{ntxl}}
+\index{ntxl@{ntxl}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{ntxl}{ntxl}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::ntxl}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ac26f639955df5fc922f956d58f7fe94a}\label{namespacelg__input__routines_ac26f639955df5fc922f956d58f7fe94a}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!ntypls@{ntypls}}
+\index{ntypls@{ntypls}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{ntypls}{ntypls}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::ntypls}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a3b52d5f067a80e1115bc79adb4bc39a8}\label{namespacelg__input__routines_a3b52d5f067a80e1115bc79adb4bc39a8}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!ntyrp@{ntyrp}}
+\index{ntyrp@{ntyrp}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{ntyrp}{ntyrp}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::ntyrp}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aaca8d700b89754dbbb181a41f27f68c3}\label{namespacelg__input__routines_aaca8d700b89754dbbb181a41f27f68c3}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nvrtx@{nvrtx}}
+\index{nvrtx@{nvrtx}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nvrtx}{nvrtx}}
+{\footnotesize\ttfamily integer, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::nvrtx}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a1184bd0c1a23b793999aa5ae8df45410}\label{namespacelg__input__routines_a1184bd0c1a23b793999aa5ae8df45410}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!nw@{nw}}
+\index{nw@{nw}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{nw}{nw}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::nw}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a76c7f2e1e393a33879bfdb035696a0eb}\label{namespacelg__input__routines_a76c7f2e1e393a33879bfdb035696a0eb}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!offtym@{offtym}}
+\index{offtym@{offtym}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{offtym}{offtym}}
+{\footnotesize\ttfamily real lg\+\_\+input\+\_\+routines\+::offtym}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a17fa14f47c0c3b7209482e10238fa8b8}\label{namespacelg__input__routines_a17fa14f47c0c3b7209482e10238fa8b8}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!parpct@{parpct}}
+\index{parpct@{parpct}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{parpct}{parpct}}
+{\footnotesize\ttfamily real lg\+\_\+input\+\_\+routines\+::parpct}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ac6b4323af4ccd6ac9f0415f7c856302f}\label{namespacelg__input__routines_ac6b4323af4ccd6ac9f0415f7c856302f}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!pctcnv@{pctcnv}}
+\index{pctcnv@{pctcnv}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{pctcnv}{pctcnv}}
+{\footnotesize\ttfamily real lg\+\_\+input\+\_\+routines\+::pctcnv}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a7464991af66db8354411ef5f57a78a71}\label{namespacelg__input__routines_a7464991af66db8354411ef5f57a78a71}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!pi@{pi}}
+\index{pi@{pi}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{pi}{pi}}
+{\footnotesize\ttfamily real parameter lg\+\_\+input\+\_\+routines\+::pi =3.\+141592654}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a6274a2779db9ccb43e23b33ea759ed09}\label{namespacelg__input__routines_a6274a2779db9ccb43e23b33ea759ed09}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!pi2@{pi2}}
+\index{pi2@{pi2}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{pi2}{pi2}}
+{\footnotesize\ttfamily real parameter lg\+\_\+input\+\_\+routines\+::pi2 =PI/2.}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a6d226e3be6f444eac6f99d17e5218516}\label{namespacelg__input__routines_a6d226e3be6f444eac6f99d17e5218516}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!plazm@{plazm}}
+\index{plazm@{plazm}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{plazm}{plazm}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::plazm}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ac6bd69a2747719d0ad644d5ef9d7cb19}\label{namespacelg__input__routines_ac6bd69a2747719d0ad644d5ef9d7cb19}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!pldip@{pldip}}
+\index{pldip@{pldip}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{pldip}{pldip}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::pldip}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a0218ae3d8505863872da20098e847208}\label{namespacelg__input__routines_a0218ae3d8505863872da20098e847208}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!plg@{plg}}
+\index{plg@{plg}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{plg}{plg}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::plg}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a03aa89b2ee045a49ecf9b35b1acae19b}\label{namespacelg__input__routines_a03aa89b2ee045a49ecf9b35b1acae19b}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!plngth@{plngth}}
+\index{plngth@{plngth}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{plngth}{plngth}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::plngth}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ad8ae00121fa40a63aab71d92b83d5506}\label{namespacelg__input__routines_ad8ae00121fa40a63aab71d92b83d5506}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!pltop@{pltop}}
+\index{pltop@{pltop}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{pltop}{pltop}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::pltop}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ae9c8530efd2c73ef8ec9473314036af3}\label{namespacelg__input__routines_ae9c8530efd2c73ef8ec9473314036af3}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!plunj@{plunj}}
+\index{plunj@{plunj}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{plunj}{plunj}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::plunj}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a522e8b0feae02752d8143fc403ef2e2a}\label{namespacelg__input__routines_a522e8b0feae02752d8143fc403ef2e2a}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!plwdth@{plwdth}}
+\index{plwdth@{plwdth}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{plwdth}{plwdth}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::plwdth}
+
+\mbox{\Hypertarget{namespacelg__input__routines_afcc12c2fb333b7b2b66ef0d4412ce04e}\label{namespacelg__input__routines_afcc12c2fb333b7b2b66ef0d4412ce04e}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!plyr@{plyr}}
+\index{plyr@{plyr}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{plyr}{plyr}}
+{\footnotesize\ttfamily integer, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::plyr}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a22e8c0e456440e4c42347d12a3bca9fb}\label{namespacelg__input__routines_a22e8c0e456440e4c42347d12a3bca9fb}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!prfl@{prfl}}
+\index{prfl@{prfl}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{prfl}{prfl}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::prfl}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ac5e8dec1c471c81460b4a0f5072f8032}\label{namespacelg__input__routines_ac5e8dec1c471c81460b4a0f5072f8032}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!prtsec@{prtsec}}
+\index{prtsec@{prtsec}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{prtsec}{prtsec}}
+{\footnotesize\ttfamily logical lg\+\_\+input\+\_\+routines\+::prtsec}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a35c66c7854d0833a99927cad810718ac}\label{namespacelg__input__routines_a35c66c7854d0833a99927cad810718ac}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!pulse@{pulse}}
+\index{pulse@{pulse}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{pulse}{pulse}}
+{\footnotesize\ttfamily real lg\+\_\+input\+\_\+routines\+::pulse}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a171b7d03fe9858fea1233f4815ae16ed}\label{namespacelg__input__routines_a171b7d03fe9858fea1233f4815ae16ed}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!qd@{qd}}
+\index{qd@{qd}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{qd}{qd}}
+{\footnotesize\ttfamily real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}) lg\+\_\+input\+\_\+routines\+::qd}
+
+\mbox{\Hypertarget{namespacelg__input__routines_afda4a8689fe9682f5d258652b9034e8b}\label{namespacelg__input__routines_afda4a8689fe9682f5d258652b9034e8b}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!qfrq1@{qfrq1}}
+\index{qfrq1@{qfrq1}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{qfrq1}{qfrq1}}
+{\footnotesize\ttfamily real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}) lg\+\_\+input\+\_\+routines\+::qfrq1}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ac2deecae32da0c3386427796c078914b}\label{namespacelg__input__routines_ac2deecae32da0c3386427796c078914b}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!qfrq2@{qfrq2}}
+\index{qfrq2@{qfrq2}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{qfrq2}{qfrq2}}
+{\footnotesize\ttfamily real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}) lg\+\_\+input\+\_\+routines\+::qfrq2}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}\label{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!ql@{ql}}
+\index{ql@{ql}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{ql}{ql}}
+{\footnotesize\ttfamily integer parameter lg\+\_\+input\+\_\+routines\+::ql =S\+E\+L\+E\+C\+T\+E\+D\+\_\+\+R\+E\+A\+L\+\_\+\+K\+I\+ND(p = 18)}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a25c56d53596a755b2c9f8bc95595bdde}\label{namespacelg__input__routines_a25c56d53596a755b2c9f8bc95595bdde}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!r2d@{r2d}}
+\index{r2d@{r2d}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{r2d}{r2d}}
+{\footnotesize\ttfamily real parameter lg\+\_\+input\+\_\+routines\+::r2d =180./PI}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a6f87e762092d8ff698807f2ad59f2af3}\label{namespacelg__input__routines_a6f87e762092d8ff698807f2ad59f2af3}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!rdata@{rdata}}
+\index{rdata@{rdata}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{rdata}{rdata}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:,\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::rdata}
+
+\mbox{\Hypertarget{namespacelg__input__routines_afb36965de38bb47f77fe472111c7f95e}\label{namespacelg__input__routines_afb36965de38bb47f77fe472111c7f95e}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!reftym@{reftym}}
+\index{reftym@{reftym}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{reftym}{reftym}}
+{\footnotesize\ttfamily real lg\+\_\+input\+\_\+routines\+::reftym}
+
+\mbox{\Hypertarget{namespacelg__input__routines_af61c1a97123787059f666eb146880b2e}\label{namespacelg__input__routines_af61c1a97123787059f666eb146880b2e}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!reps@{reps}}
+\index{reps@{reps}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{reps}{reps}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::reps}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ae3a8a91ea2d57c11242ff73731b2c9e9}\label{namespacelg__input__routines_ae3a8a91ea2d57c11242ff73731b2c9e9}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!res@{res}}
+\index{res@{res}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{res}{res}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::res}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a07fda9e4a6dbe5d42ed0e9b3c264091f}\label{namespacelg__input__routines_a07fda9e4a6dbe5d42ed0e9b3c264091f}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!rhotrp@{rhotrp}}
+\index{rhotrp@{rhotrp}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{rhotrp}{rhotrp}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::rhotrp}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a6ea167ba918b3575bd7587145486068b}\label{namespacelg__input__routines_a6ea167ba918b3575bd7587145486068b}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!rmu@{rmu}}
+\index{rmu@{rmu}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{rmu}{rmu}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::rmu}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a8b4948887cc082e53fbe8765475f1a6e}\label{namespacelg__input__routines_a8b4948887cc082e53fbe8765475f1a6e}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!rmud@{rmud}}
+\index{rmud@{rmud}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{rmud}{rmud}}
+{\footnotesize\ttfamily real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}), dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::rmud}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aead04e44b19b3354442aae287652c5ac}\label{namespacelg__input__routines_aead04e44b19b3354442aae287652c5ac}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!rwts@{rwts}}
+\index{rwts@{rwts}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{rwts}{rwts}}
+{\footnotesize\ttfamily integer, dimension(\+:,\+:,\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::rwts}
+
+\mbox{\Hypertarget{namespacelg__input__routines_afadcb9ad7dfccd7edb679d19fec0b5db}\label{namespacelg__input__routines_afadcb9ad7dfccd7edb679d19fec0b5db}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!rx\+\_\+type@{rx\+\_\+type}}
+\index{rx\+\_\+type@{rx\+\_\+type}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{rx\+\_\+type}{rx\_type}}
+{\footnotesize\ttfamily integer, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::rx\+\_\+type}
+
+\mbox{\Hypertarget{namespacelg__input__routines_afde6f15754213bfa35bd69e1c934f9bc}\label{namespacelg__input__routines_afde6f15754213bfa35bd69e1c934f9bc}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!rxazm@{rxazm}}
+\index{rxazm@{rxazm}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{rxazm}{rxazm}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::rxazm}
+
+\mbox{\Hypertarget{namespacelg__input__routines_af9635e4a563dcf0723d07f3d131805a0}\label{namespacelg__input__routines_af9635e4a563dcf0723d07f3d131805a0}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!rxdip@{rxdip}}
+\index{rxdip@{rxdip}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{rxdip}{rxdip}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::rxdip}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ab5e3409ae1c1d7f9b1d0ab31c0dfa296}\label{namespacelg__input__routines_ab5e3409ae1c1d7f9b1d0ab31c0dfa296}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!rxe@{rxe}}
+\index{rxe@{rxe}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{rxe}{rxe}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::rxe}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a67fb3d402119d1b2a9e63ce396fecab0}\label{namespacelg__input__routines_a67fb3d402119d1b2a9e63ce396fecab0}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!rxed@{rxed}}
+\index{rxed@{rxed}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{rxed}{rxed}}
+{\footnotesize\ttfamily real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}), dimension(\+:,\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::rxed}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a051730a5273ac4e6b567252982d44414}\label{namespacelg__input__routines_a051730a5273ac4e6b567252982d44414}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!rxfmnt@{rxfmnt}}
+\index{rxfmnt@{rxfmnt}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{rxfmnt}{rxfmnt}}
+{\footnotesize\ttfamily real lg\+\_\+input\+\_\+routines\+::rxfmnt}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a33045beebfc96f4327913100eaf5c836}\label{namespacelg__input__routines_a33045beebfc96f4327913100eaf5c836}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!rxid@{rxid}}
+\index{rxid@{rxid}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{rxid}{rxid}}
+{\footnotesize\ttfamily integer, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::rxid}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a255b10823a2c6dd038b02a3231169307}\label{namespacelg__input__routines_a255b10823a2c6dd038b02a3231169307}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!rxmnt@{rxmnt}}
+\index{rxmnt@{rxmnt}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{rxmnt}{rxmnt}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::rxmnt}
+
+\mbox{\Hypertarget{namespacelg__input__routines_af724dc158a78913ba807173a41c49e7d}\label{namespacelg__input__routines_af724dc158a78913ba807173a41c49e7d}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!rxn@{rxn}}
+\index{rxn@{rxn}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{rxn}{rxn}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::rxn}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a6d8afefe7edd3b38c43af674dc6a8cf2}\label{namespacelg__input__routines_a6d8afefe7edd3b38c43af674dc6a8cf2}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!rxnd@{rxnd}}
+\index{rxnd@{rxnd}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{rxnd}{rxnd}}
+{\footnotesize\ttfamily real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}), dimension(\+:,\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::rxnd}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a2a1492ae994dbca91f366a55332bff9c}\label{namespacelg__input__routines_a2a1492ae994dbca91f366a55332bff9c}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!rxoff@{rxoff}}
+\index{rxoff@{rxoff}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{rxoff}{rxoff}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::rxoff}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a34cfdcc89ce43b259ae52d8cc1cea8b6}\label{namespacelg__input__routines_a34cfdcc89ce43b259ae52d8cc1cea8b6}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!rxotx@{rxotx}}
+\index{rxotx@{rxotx}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{rxotx}{rxotx}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::rxotx}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a49a8e3b29c968fef1668037824d295f4}\label{namespacelg__input__routines_a49a8e3b29c968fef1668037824d295f4}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!rxz@{rxz}}
+\index{rxz@{rxz}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{rxz}{rxz}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::rxz}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a61c10a981d7dbd76a267c0287d588341}\label{namespacelg__input__routines_a61c10a981d7dbd76a267c0287d588341}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!sde0@{sde0}}
+\index{sde0@{sde0}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{sde0}{sde0}}
+{\footnotesize\ttfamily real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}), dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::sde0}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a772bd4b791e045aeddee4ec3b9f83b5d}\label{namespacelg__input__routines_a772bd4b791e045aeddee4ec3b9f83b5d}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!sdn0@{sdn0}}
+\index{sdn0@{sdn0}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{sdn0}{sdn0}}
+{\footnotesize\ttfamily real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}), dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::sdn0}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a24da2d57446e220190d24b7ba6d7b050}\label{namespacelg__input__routines_a24da2d57446e220190d24b7ba6d7b050}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!sdz0@{sdz0}}
+\index{sdz0@{sdz0}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{sdz0}{sdz0}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::sdz0}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a3faaed94e2a40a7d19af4bf0b4e9f8cf}\label{namespacelg__input__routines_a3faaed94e2a40a7d19af4bf0b4e9f8cf}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!sig\+\_\+t@{sig\+\_\+t}}
+\index{sig\+\_\+t@{sig\+\_\+t}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{sig\+\_\+t}{sig\_t}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::sig\+\_\+t}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a09029b4bdcd2d8c5ae75d95f22599c0f}\label{namespacelg__input__routines_a09029b4bdcd2d8c5ae75d95f22599c0f}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!single@{single}}
+\index{single@{single}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{single}{single}}
+{\footnotesize\ttfamily logical, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::single}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a5e67c1ccd96e60a3baac0f052f42b694}\label{namespacelg__input__routines_a5e67c1ccd96e60a3baac0f052f42b694}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!source\+\_\+type@{source\+\_\+type}}
+\index{source\+\_\+type@{source\+\_\+type}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{source\+\_\+type}{source\_type}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::source\+\_\+type}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ab6c33e83097a9da89df8e7619e39db79}\label{namespacelg__input__routines_ab6c33e83097a9da89df8e7619e39db79}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!step@{step}}
+\index{step@{step}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{step}{step}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::step}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a768c5e94c3ddc2f0fc0bdd032c794cc6}\label{namespacelg__input__routines_a768c5e94c3ddc2f0fc0bdd032c794cc6}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!survey\+\_\+type@{survey\+\_\+type}}
+\index{survey\+\_\+type@{survey\+\_\+type}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{survey\+\_\+type}{survey\_type}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::survey\+\_\+type}
+
+\mbox{\Hypertarget{namespacelg__input__routines_adf00d31a387ab979268c6e7173a1c781}\label{namespacelg__input__routines_adf00d31a387ab979268c6e7173a1c781}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!sv\+\_\+azm@{sv\+\_\+azm}}
+\index{sv\+\_\+azm@{sv\+\_\+azm}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{sv\+\_\+azm}{sv\_azm}}
+{\footnotesize\ttfamily real lg\+\_\+input\+\_\+routines\+::sv\+\_\+azm}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ae702b8abf69e5b12bf96b026b2b112a8}\label{namespacelg__input__routines_ae702b8abf69e5b12bf96b026b2b112a8}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!svazm@{svazm}}
+\index{svazm@{svazm}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{svazm}{svazm}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::svazm}
+
+\mbox{\Hypertarget{namespacelg__input__routines_afe41d8f3c1483586b6ddc9f4d7193b46}\label{namespacelg__input__routines_afe41d8f3c1483586b6ddc9f4d7193b46}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!swx@{swx}}
+\index{swx@{swx}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{swx}{swx}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::swx}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ad2996126165dbc2c167d12071aba2ae3}\label{namespacelg__input__routines_ad2996126165dbc2c167d12071aba2ae3}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!swy@{swy}}
+\index{swy@{swy}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{swy}{swy}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::swy}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a0dc7ac3264785f849aef392afcad0d6f}\label{namespacelg__input__routines_a0dc7ac3264785f849aef392afcad0d6f}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!sxazm@{sxazm}}
+\index{sxazm@{sxazm}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{sxazm}{sxazm}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::sxazm}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a0588ff6b313bd15b75945a2d35c173db}\label{namespacelg__input__routines_a0588ff6b313bd15b75945a2d35c173db}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!sxdip@{sxdip}}
+\index{sxdip@{sxdip}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{sxdip}{sxdip}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::sxdip}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a4c5444638308f4ad61ee85290944de7e}\label{namespacelg__input__routines_a4c5444638308f4ad61ee85290944de7e}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!sxe@{sxe}}
+\index{sxe@{sxe}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{sxe}{sxe}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::sxe}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a97c7be4355c05e28ac6ba0efeb78ffad}\label{namespacelg__input__routines_a97c7be4355c05e28ac6ba0efeb78ffad}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!sxed@{sxed}}
+\index{sxed@{sxed}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{sxed}{sxed}}
+{\footnotesize\ttfamily real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}), dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::sxed}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a4d38d40a5711f7d77f1b5edacd3a7d85}\label{namespacelg__input__routines_a4d38d40a5711f7d77f1b5edacd3a7d85}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!sxn@{sxn}}
+\index{sxn@{sxn}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{sxn}{sxn}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::sxn}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aa2783aeeaa7e437824f169ebfa8333b6}\label{namespacelg__input__routines_aa2783aeeaa7e437824f169ebfa8333b6}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!sxnd@{sxnd}}
+\index{sxnd@{sxnd}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{sxnd}{sxnd}}
+{\footnotesize\ttfamily real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}), dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::sxnd}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a80924219ecce4e0ceb69bac59e6aefd4}\label{namespacelg__input__routines_a80924219ecce4e0ceb69bac59e6aefd4}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!sxz@{sxz}}
+\index{sxz@{sxz}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{sxz}{sxz}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::sxz}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a1d07f499782c7e039a64c0210710874d}\label{namespacelg__input__routines_a1d07f499782c7e039a64c0210710874d}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!t0@{t0}}
+\index{t0@{t0}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{t0}{t0}}
+{\footnotesize\ttfamily real lg\+\_\+input\+\_\+routines\+::t0}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a59d37d985b0dc7db54d499a25dfdd65a}\label{namespacelg__input__routines_a59d37d985b0dc7db54d499a25dfdd65a}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!t0sx@{t0sx}}
+\index{t0sx@{t0sx}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{t0sx}{t0sx}}
+{\footnotesize\ttfamily real lg\+\_\+input\+\_\+routines\+::t0sx}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a634432267302a002552b9ca3feedb429}\label{namespacelg__input__routines_a634432267302a002552b9ca3feedb429}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!tcls@{tcls}}
+\index{tcls@{tcls}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{tcls}{tcls}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::tcls}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a2eaf0660c29a584e802dcdf7aeaf8fed}\label{namespacelg__input__routines_a2eaf0660c29a584e802dcdf7aeaf8fed}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!tdfd@{tdfd}}
+\index{tdfd@{tdfd}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{tdfd}{tdfd}}
+{\footnotesize\ttfamily integer lg\+\_\+input\+\_\+routines\+::tdfd}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a199d87b93f3f5ab8b25fcd0640c45b7d}\label{namespacelg__input__routines_a199d87b93f3f5ab8b25fcd0640c45b7d}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!thk@{thk}}
+\index{thk@{thk}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{thk}{thk}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::thk}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ae7adf9ffc0177ce752a4b28042df09ce}\label{namespacelg__input__routines_ae7adf9ffc0177ce752a4b28042df09ce}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!thkd@{thkd}}
+\index{thkd@{thkd}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{thkd}{thkd}}
+{\footnotesize\ttfamily real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}), dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::thkd}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a1ef30ce0b5dc7f1606ca274a96f4f69b}\label{namespacelg__input__routines_a1ef30ce0b5dc7f1606ca274a96f4f69b}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!title@{title}}
+\index{title@{title}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily character (len=200) lg\+\_\+input\+\_\+routines\+::title}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a5568c5b399e14b491242b1b073be4b54}\label{namespacelg__input__routines_a5568c5b399e14b491242b1b073be4b54}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!tms@{tms}}
+\index{tms@{tms}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{tms}{tms}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::tms}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aed3c58e52c5a1fda12def41c6995d7dd}\label{namespacelg__input__routines_aed3c58e52c5a1fda12def41c6995d7dd}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!topn@{topn}}
+\index{topn@{topn}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{topn}{topn}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::topn}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a664cea039ac7180e824012883beeb9fe}\label{namespacelg__input__routines_a664cea039ac7180e824012883beeb9fe}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!trp@{trp}}
+\index{trp@{trp}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{trp}{trp}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::trp}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a9effaf2dd14fcded391b9aa0024209e7}\label{namespacelg__input__routines_a9effaf2dd14fcded391b9aa0024209e7}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!tvals@{tvals}}
+\index{tvals@{tvals}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{tvals}{tvals}}
+{\footnotesize\ttfamily integer, dimension(8) lg\+\_\+input\+\_\+routines\+::tvals}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a05a79f826d1faa81e8e9840401be0982}\label{namespacelg__input__routines_a05a79f826d1faa81e8e9840401be0982}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!txazm@{txazm}}
+\index{txazm@{txazm}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{txazm}{txazm}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::txazm}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a584f94cecae697219429638f0b6a2c0e}\label{namespacelg__input__routines_a584f94cecae697219429638f0b6a2c0e}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!txcln@{txcln}}
+\index{txcln@{txcln}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{txcln}{txcln}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::txcln}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a47c11280e7113256e8989d445a3b205a}\label{namespacelg__input__routines_a47c11280e7113256e8989d445a3b205a}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!txfreq@{txfreq}}
+\index{txfreq@{txfreq}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{txfreq}{txfreq}}
+{\footnotesize\ttfamily real lg\+\_\+input\+\_\+routines\+::txfreq}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a607132f2ff751541dc97a344f7079627}\label{namespacelg__input__routines_a607132f2ff751541dc97a344f7079627}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!txlngth@{txlngth}}
+\index{txlngth@{txlngth}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{txlngth}{txlngth}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::txlngth}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ab76d54fe813a2c75ec4592b67c1c96cc}\label{namespacelg__input__routines_ab76d54fe813a2c75ec4592b67c1c96cc}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!txmnt@{txmnt}}
+\index{txmnt@{txmnt}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{txmnt}{txmnt}}
+{\footnotesize\ttfamily real lg\+\_\+input\+\_\+routines\+::txmnt}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a9ea6fe9c73da602e7448aa2684a035fe}\label{namespacelg__input__routines_a9ea6fe9c73da602e7448aa2684a035fe}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!txon@{txon}}
+\index{txon@{txon}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{txon}{txon}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::txon}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a4d1e58f6c9d49ef8c73f228edf7b9849}\label{namespacelg__input__routines_a4d1e58f6c9d49ef8c73f228edf7b9849}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!txwdth@{txwdth}}
+\index{txwdth@{txwdth}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{txwdth}{txwdth}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::txwdth}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a1a991d972a51bc60707aadd4e0f5bcef}\label{namespacelg__input__routines_a1a991d972a51bc60707aadd4e0f5bcef}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!txz@{txz}}
+\index{txz@{txz}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{txz}{txz}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::txz}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a53f662035d1167d4af1fc7834120a430}\label{namespacelg__input__routines_a53f662035d1167d4af1fc7834120a430}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!ubnd@{ubnd}}
+\index{ubnd@{ubnd}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{ubnd}{ubnd}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::ubnd}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ab795991db3858f518c7ae1ef1106d716}\label{namespacelg__input__routines_ab795991db3858f518c7ae1ef1106d716}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!units@{units}}
+\index{units@{units}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{units}{units}}
+{\footnotesize\ttfamily integer, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::units}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a7966da9a09991ee20d62ae7374806c50}\label{namespacelg__input__routines_a7966da9a09991ee20d62ae7374806c50}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!waveform@{waveform}}
+\index{waveform@{waveform}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{waveform}{waveform}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::waveform}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a14a35edab0eb9da183da23d0efa95eba}\label{namespacelg__input__routines_a14a35edab0eb9da183da23d0efa95eba}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!wtms@{wtms}}
+\index{wtms@{wtms}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{wtms}{wtms}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::wtms}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ac7350915506378146fba877e70cf9e5a}\label{namespacelg__input__routines_ac7350915506378146fba877e70cf9e5a}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!xcell@{xcell}}
+\index{xcell@{xcell}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{xcell}{xcell}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::xcell}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ab251caca089824152c534b93625579db}\label{namespacelg__input__routines_ab251caca089824152c534b93625579db}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!xcntr@{xcntr}}
+\index{xcntr@{xcntr}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{xcntr}{xcntr}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::xcntr}
+
+\mbox{\Hypertarget{namespacelg__input__routines_af1d98dc71b47044d85f3f75345bd4ad5}\label{namespacelg__input__routines_af1d98dc71b47044d85f3f75345bd4ad5}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!xdata@{xdata}}
+\index{xdata@{xdata}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{xdata}{xdata}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::xdata}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ae31b5c3866f71b018a3e0dc5d4c63e6c}\label{namespacelg__input__routines_ae31b5c3866f71b018a3e0dc5d4c63e6c}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!xmodl@{xmodl}}
+\index{xmodl@{xmodl}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{xmodl}{xmodl}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::xmodl}
+
+\mbox{\Hypertarget{namespacelg__input__routines_afa609399ab44664f964450ac0c0212a3}\label{namespacelg__input__routines_afa609399ab44664f964450ac0c0212a3}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!xrxof@{xrxof}}
+\index{xrxof@{xrxof}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{xrxof}{xrxof}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::xrxof}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a9d8ccd1fc7c88ab57fa5af75b36600f1}\label{namespacelg__input__routines_a9d8ccd1fc7c88ab57fa5af75b36600f1}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!xrxtx@{xrxtx}}
+\index{xrxtx@{xrxtx}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{xrxtx}{xrxtx}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::xrxtx}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aeabe65741a073352b67eaf406562ccc2}\label{namespacelg__input__routines_aeabe65741a073352b67eaf406562ccc2}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!ycell@{ycell}}
+\index{ycell@{ycell}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{ycell}{ycell}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::ycell}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a72b37b88e326c2674a9dfad3146d0d1a}\label{namespacelg__input__routines_a72b37b88e326c2674a9dfad3146d0d1a}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!ycntr@{ycntr}}
+\index{ycntr@{ycntr}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{ycntr}{ycntr}}
+{\footnotesize\ttfamily real, dimension(\+:), allocatable lg\+\_\+input\+\_\+routines\+::ycntr}
+
+\mbox{\Hypertarget{namespacelg__input__routines_afb1d371ae725f99f0c1de7b0f5ee4f9f}\label{namespacelg__input__routines_afb1d371ae725f99f0c1de7b0f5ee4f9f}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!yrxof@{yrxof}}
+\index{yrxof@{yrxof}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{yrxof}{yrxof}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::yrxof}
+
+\mbox{\Hypertarget{namespacelg__input__routines_ae8e2697ce00581c54a3a6cffceef745b}\label{namespacelg__input__routines_ae8e2697ce00581c54a3a6cffceef745b}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!yrxtx@{yrxtx}}
+\index{yrxtx@{yrxtx}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{yrxtx}{yrxtx}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::yrxtx}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aced5de847a907addba6fcf36ebf42331}\label{namespacelg__input__routines_aced5de847a907addba6fcf36ebf42331}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!yxzplt@{yxzplt}}
+\index{yxzplt@{yxzplt}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{yxzplt}{yxzplt}}
+{\footnotesize\ttfamily real(kind=\hyperlink{namespacelg__input__routines_a8c3fd17aa03dd450ed3e242df939ad01}{ql}), dimension(\+:,\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::yxzplt}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a360b94863ccd8f0b4888cf64d3f7f2da}\label{namespacelg__input__routines_a360b94863ccd8f0b4888cf64d3f7f2da}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!zcell@{zcell}}
+\index{zcell@{zcell}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{zcell}{zcell}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::zcell}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a8ca869a698383a3684c6fdb425b6dd7c}\label{namespacelg__input__routines_a8ca869a698383a3684c6fdb425b6dd7c}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!zmax@{zmax}}
+\index{zmax@{zmax}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{zmax}{zmax}}
+{\footnotesize\ttfamily real lg\+\_\+input\+\_\+routines\+::zmax}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a75002fff3768fa349922c4691af835eb}\label{namespacelg__input__routines_a75002fff3768fa349922c4691af835eb}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!zmin@{zmin}}
+\index{zmin@{zmin}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{zmin}{zmin}}
+{\footnotesize\ttfamily real lg\+\_\+input\+\_\+routines\+::zmin}
+
+\mbox{\Hypertarget{namespacelg__input__routines_aa4d0d65baa1effb088dd0a2a1bcd2185}\label{namespacelg__input__routines_aa4d0d65baa1effb088dd0a2a1bcd2185}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!zrxof@{zrxof}}
+\index{zrxof@{zrxof}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{zrxof}{zrxof}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::zrxof}
+
+\mbox{\Hypertarget{namespacelg__input__routines_a5d82e200f9fb0c9f2aae521ab394c73b}\label{namespacelg__input__routines_a5d82e200f9fb0c9f2aae521ab394c73b}} 
+\index{lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}!zrxtx@{zrxtx}}
+\index{zrxtx@{zrxtx}!lg\+\_\+input\+\_\+routines@{lg\+\_\+input\+\_\+routines}}
+\subsubsection{\texorpdfstring{zrxtx}{zrxtx}}
+{\footnotesize\ttfamily real, dimension(\+:,\+:), allocatable lg\+\_\+input\+\_\+routines\+::zrxtx}
+

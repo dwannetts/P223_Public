@@ -1,0 +1,54 @@
+3 Moving Loop lines, each with 3 receivers - Model: 4 layers
+1 0 0 1 0                          ! TDFD, DO3D, ISYS, PRFL, ISTOP
+0 4 20 1 8.5333333 8.133333        ! STEP, NSX, NCHNL, KRXW, REFTYM, OFFTIME
+0.0          0.0
+1.5          1.0
+8.33333  1.0
+8.53333  0.0                       ! TXON, TXAMP(4)
+0.08000  0.09620
+0.09625  0.11755
+0.11755  0.14505
+0.14505  0.17875
+0.17870  0.22250
+0.22250  0.27870
+0.27875  0.35005
+0.35000  0.44120
+0.44125  0.55755
+0.55755  0.70505
+0.70500  0.89380
+0.89400  1.13400
+1.13385  1.44015
+1.44035  1.83165
+1.83160  2.33040
+2.32985  2.96615
+2.96675  3.77925
+3.77900  4.81500
+4.81450  6.13550
+6.13550  7.82050         ! TOPN, TCLS(20) (in ms)
+2                        ! SURVEY_TYPE
+3 4 3 1                    ! NTXL, MRXL, MRXTX, NTRN
+4 100 100 60. 3140. 500. 0.    ! NRX(J),TXLNGTH(J),TXWDTH(J),SV_AZM(J),SDE0(J),SDN0(J),SDZ0(J)
+3*100.                         ! DSTAT(I,J), I= 2,NRX(J)
+1000  3   0 0 0 1 11 0 2        ! LINE(I), CMP, XRXOF(I), YRXOF(I), ZRXOF(I), RXMNT(I), UNITS(I), KNORM(I), IPLT(I)
+1100 13 110 0 0 1 11 0 2        ! LINE(I), CMP, XRXOF(I), YRXOF(I), ZRXOF(I), RXMNT(I), UNITS(I), KNORM(I), IPLT(I)
+1150 13 150 0 0 1 11 0 2        ! LINE(I), CMP, XRXOF(I), YRXOF(I), ZRXOF(I), RXMNT(I), UNITS(I), KNORM(I), IPLT(I)
+4 100 100 60. 3140. 1000. 0.    ! NRX(J),TXLNGTH(J),TXWDTH(J),SV_AZM(J),SDE0(J),SDN0(J),SDZ0(J)
+3*100.                       ! DSTAT(I,J), I= 2,NRX(J)
+2000  3   0 0 0 1 11 0 2        ! LINE(I), CMP, XRXOF(I), YRXOF(I), ZRXOF(I), RXMNT(I), UNITS(I), KNORM(I), IPLT(I)
+2110  3 110 0 0 1 11 0 2        ! LINE(I), CMP, XRXOF(I), YRXOF(I), ZRXOF(I), RXMNT(I), UNITS(I), KNORM(I), IPLT(I)
+2150  3 150 0 0 1 11 0 2        ! LINE(I), CMP, XRXOF(I), YRXOF(I), ZRXOF(I), RXMNT(I), UNITS(I), KNORM(I), IPLT(I)
+4 100 100 60. 3140. 1500. 0.    ! NRX(J),TXLNGTH(J),TXWDTH(J),SV_AZM(J),SDE0(J),SDN0(J),SDZ0(J)
+3*100.                       ! DSTAT(I,J), I= 2,NRX(J)
+3000  3   0 0 0 1 11 0 2        ! LINE(I), CMP, XRXOF(I), YRXOF(I), ZRXOF(I), RXMNT(I), UNITS(I), KNORM(I), IPLT(I)
+3110 13 110 0 0 1 11 0 2        ! LINE(I), CMP, XRXOF(I), YRXOF(I), ZRXOF(I), RXMNT(I), UNITS(I), KNORM(I), IPLT(I)
+3150 13 150 0 0 1 11 0 2        ! LINE(I), CMP, XRXOF(I), YRXOF(I), ZRXOF(I), RXMNT(I), UNITS(I), KNORM(I), IPLT(I)
+4 4                       ! NLAYER, NPLT, NLITH
+ 20 150 1 1 0 0 0              ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(1) - Lyr1
+100 150 1 1 1 1 .1              ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(1) - Lyr1
+0.5 220 1 1 0 0 0              ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(3) - Lyr3
+500 200 1 1 0 0 1              ! RES, SIG_T, RMU, REPS, CHRG, CTAU, CFREQ(6) - plate1
+1 10                         ! LITH, THICK - Layer 1
+2 15                         ! LITH, THICK - Layer 2
+3 12                         ! LITH, THICK - Layer 2
+4			     ! LITH - Basement
+0 90 1 2            ! NFIX, MAXITS, CNVRG, INVPRT

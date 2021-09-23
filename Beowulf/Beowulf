@@ -1,0 +1,30 @@
+#!/bin/sh
+# Beowulf $1{.cfl | .inv}
+#
+# Shell script to run $1 takes a single arguement which is the name of the 
+# cfl.  If the program is used in inversion mode, then the .inv file must 
+# have the same name as the .cfl
+
+# make a job directory ...
+clear
+mkdir -p "$1"
+cd "$1"
+
+# copy command line arguments to job directory ...
+test -f ../"$1".cfl && cp ../"$1".cfl Beowulf.cfl
+test -f ../"$1".inv && cp ../"$1".inv Beowulf.inv
+
+# run the program ...
+~/bin/Beowulf.x
+
+# copy output back to parent directory ...
+test -f Beowulf.out && cp Beowulf.out ../"$1".out
+test -f Beowulf.mv1 && cp Beowulf.mv1 ../"$1".mv1
+test -f Beowulf.mf1 && cp Beowulf.mf1 ../"$1".mf1
+test -f Beowulf.amx && cp Beowulf.amx ../"$1".amx
+test -f Beowulf.frq && cp Beowulf.frq ../"$1".frq
+test -f Beowulf.log && cp Beowulf.log ../"$1".log
+
+# ... and kill the job directory
+cd ..
+rm -rf "$1"

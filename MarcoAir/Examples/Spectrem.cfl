@@ -1,0 +1,46 @@
+Single prism Spectrem response;  Model 1 top lyr mu rel = 1.5
+1 1  1 0                                ! TDFD, DO3D, PRFL, ISTOP
+1 4 1 1 8 1 0                           ! ISW, NSX, STEP, UNITS, NCHNL, KRXW, OFFTIME
+0 0
+0.0001 -1000
+6.8999 -1000
+6.9 0                                   ! TXON, WAVEFORM(4)
+0.026 0.026
+0.052 0.078
+0.104 0.182
+0.208 0.391
+0.417 0.807
+0.833 1.641
+1.667 3.307
+3.333 6.641                             ! TOPN, TCLS(8)
+2 2 123                                 ! TXCLN, CMP, KPPM
+3
+400 1                                   ! TXAREA NTRN
+36 123 0                                ! ZRX, XRX, YRX(1)
+14 2 0 0                                ! NSTAT, SURVEY, BAROMTRC, LINE_TAG
+-200.000   0.       120.
+-162.412   13.6808  120.
+-124.825   27.3616  120.
+-87.2369   41.0424  120.
+-49.6492   54.7232  130.
+-12.0615   68.4040  140.
+ 25.5262   82.0848  140.
+ 63.1139   95.7656  140.
+ 100.702   109.446  140.
+ 138.289   123.127  130.
+ 175.877   136.808  120.
+ 213.465   150.489  120.
+ 251.052   164.170  120.
+ 288.640   177.850  120.
+2 1 3 50                     ! NLAYER, NPRISM, NLITH, GND_LVL
+   2. -1 1   1 .3 .001  .4   ! RES(1), SIG_T(1), RMU(1), REPS(1), CHRG(1), CTAU(1), CFREQ(1): LITH(1)
+ 275. -1 1.5 1 .3 .0001 .3   ! RES(2), SIG_T(2), RMU(2), REPS(2), CHRG(2), CTAU(2), CFREQ(2): LITH(2)
+ 300. -1 1   1  0. 0.   0.   ! RES(3), SIG_T(3), RMU(3), REPS(3), CHRG(3), CTAU(3), CFREQ(3): LITH(3)
+2 5.                         ! LITHL(1), THICK  (Overburden)
+3                            ! LITHL(2)         (Basement)
+2 1 11                       ! KACC, SOLVER, OUTPUT
+1   0.  0. -10               ! LITHP(1), PRISM_EAST(1),  PRISM_NORTH(1),   PRISM_TOP(1)
+   20 120 100                !         PRSM_SIZE_EW(1), PRSM_SIZE_NS(1), PRSM_SIZE_Z(1)
+   10  15 12.5               !         CELL_SIZE_EW(1), CELL_SIZE_NS(1), CELL_SIZE_Z(1)
+
+

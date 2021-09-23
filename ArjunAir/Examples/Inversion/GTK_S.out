@@ -1,0 +1,39 @@
+
+  ########################################################################
+  #                                                                      #
+  #      ArjunAir - Version 7.0.7 29 May,                                #
+  #                                                                      #
+  # This program has been released strictly for use by:                  #
+  #                                                                      #
+  # 1. Sponsors of AMIRA project P223F                                   #
+  # 2. Their authorised agents (P223F sponsor work only)                 #
+  # 3. Universities formally included in the P223F collaboration scheme  #
+  # 4. Authorised CSIRO personnel                                        #
+  #                                                                      #
+  #    CSIRO ESRE Version: David Annetts November, 2012                  #
+  #                                                                      #
+  ########################################################################
+
+
+ / CSIRO .inv file generated from Maxwell.
+
+  TDFD =  0   DO3D =  0   PRFL =  0    ISTOP = 0
+  KLO =  0    KHI =  0    KMD =  0     PPD1 = 3   PPD2 = 3
+
+  ISW =   0   NSX =   0   STEP = 0    UNITS =   5  NCHNL =   1
+  KRXW =  0   OFFTYM =   0.000    
+
+         Receiver Window Specifications (ms)
+         -----------------------------------
+
+       Window     Open        Close      Width      Centre
+       ------     ----        -----      -----      ------
+          1      74.000      74.000      0.000      74.000
+
+  CMP =  2    KPPM =   0
+  Inclination angle of transmitter in level flight =  0.0 degrees (front up)
+
+  Initial Rx offset relative to Tx:    0.0 Below, -730.0 Behind,   0.0 Left
+
+
+  NSTAT =   0   SURVEY =**   BAROMTRC = 0

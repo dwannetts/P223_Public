@@ -1,0 +1,22 @@
+/ 0450        File version number
+/ PROGRAM_NAME=Airbeo - Version 4.7.0     16 March 2007                    
+/ TITLE: Forward model used to generate inversion data for Dighem
+/ UNITS=ppm   NSTAT=005   NFRQ=05   NCMP=1
+/ FREQS(Hz) =       400.00       900.00      5500.00      7200.00     56000.00
+/ SURVEY=FD_AEM  PP=RX_POS
+/ LINE_HEADER
+/ Station  EastTx  NorthTx  AltTx  EastRx  NorthRx  AltRx    IHCP01  IVCA02  IVCA03  IHCP04  IHCP05  QHCP01  QVCA02  QVCA03  QHCP04  QHCP05
+/ LAYERS=03
+/ MODEL_HEADER
+/  RES_01  RES_02  RES_03 THICK_01 THICK_02
+/
+/ INITIAL_MODEL    100.0       0.5000        500.0        35.00        10.00    
+Line 4000
+    1      6029.0      7900.0    30.0      6021.0      7900.0    30.0    271.3        89.68        110.4        464.5        630.1        180.4        36.84        57.94        285.7        521.9    
+    2      6054.0      7900.0    35.0      6046.0      7900.0    35.0    228.1        73.66        88.98        373.2        472.1        141.8        27.88        41.70        204.2        347.7    
+    3      6079.0      7900.0    40.0      6071.0      7900.0    40.0    193.4        61.20        72.76        304.3        362.2        113.1        21.50        30.88        150.3        240.4    
+    4      6104.0      7900.0    37.0      6096.0      7900.0    37.0    213.3        68.31        81.97        343.3        423.5        129.3        25.07        36.87        180.1        298.8    
+    5      6129.0      7900.0    30.0      6121.0      7900.0    30.0    271.3        89.68        110.4        464.5        630.1        180.4        36.84        57.94        285.7        521.9    
+/
+/ Airbeo forward model completed at 13:50 on 22 NOV 2012
+/ Computation time =       0.00 seconds.
