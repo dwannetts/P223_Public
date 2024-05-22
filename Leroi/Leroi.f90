@@ -2768,7 +2768,7 @@ Write ( *, 1) PNAME, PVERS, PDATE, PAUT1, PAUT2, PAUT3, PPROJ, PRELS, &
  9 FORMAT(/T12,'Frequency      Transmitter current in amps', &
           /T12,'---------      ---------------------------'/)
  10 FORMAT(//T3,'SURVEY_TYPE =',I2)
- 11 FORMAT(/T3,'NLINES =',I3,';   MRXL =',I4,';   NTX =',I3,';   SOURCE_TYPE =',I2,';   MXVRTX =',I2,';   NTRN =',I3)
+ 11 FORMAT(/T3,'NLINES =',I3,';   MRXL =',I4,';   NTX =',I3,';   SOURCE_TYPE =',I2,';   MXVRTX =',I4,';   NTRN =',I3)
 
  12 FORMAT(/T3,'Vertex Locations for Loop Sources' &
            /T3,'---------------------------------')
