@@ -12,7 +12,7 @@ RUN	= Leroi
 INSTALL_DIR = $(HOME)/bin  
 
 ifeq ($(BUILD), RELEASE)
-	FC_OPTS = -O3 -march=native -Q -fwhole-program 
+	FC_OPTS = -Q -fwhole-program -O3  
 else ifeq ($(BUILD), PARANOID)
 	FC_OPTS = -fcheck=all, -ffpe-trap=invalid,zero,overflow -g -Wall -Wextra -Werror -pedantic
 else ifeq ($(BUILD), DEBUG)
