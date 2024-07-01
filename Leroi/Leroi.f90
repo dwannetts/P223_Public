@@ -2,13 +2,13 @@
 !-----------------------------------------------------------------------------------------
  Module LG_Metadata
 !--------------
-!
+! 
 ! Module designed to hold 'constant character options'
     Implicit NONE
 
     Character (Len = 40), Parameter :: PNAME = 'Leroi'
-    Character (Len = 40), Parameter :: PVERS = '8.0.4'
-    Character (Len = 40), Parameter :: PDATE = '11 June, 2021'
+    Character (Len = 40), Parameter :: PVERS = '8.0.5'
+    Character (Len = 40), Parameter :: PDATE = '12 June, 2024'
     Character (Len = 40), Parameter :: PAUT1 = 'CSIRO Electromagnetic Modelling Group'
     Character (Len = 40), Parameter :: PAUT2 = 'Art Raiche, Fred Sugeng and Glenn Wilson'
     Character (Len = 40), Parameter :: PAUT3 = 'David Annetts (david.annetts@csiro.au)'
@@ -20,24 +20,28 @@ End Module LG_Metadata
 !
 ! Changes
 !
+!	8.0.5
+!		1. restored multiplate modelling capability but effectivly modelling them will require 
+!		   placing multiple plates in a dummy layer above the basement
+!
 !	8.0.4
-!	1.	started move to better module structure
-!	2.	changed default plotting point to Rx
-!	3.	corrected array access error in SET_SWYTD
+!		1.	started move to better module structure
+!		2.	changed default plotting point to Rx
+!		3.	corrected array access error in SET_SWYTD
 !
 !	8.0.3
-!	1.	Include model in MF1 file
+!		1.	Include model in MF1 file
 !-----------------------------------------------------------------------------------------
-!    Leroi 8.0.1 represents a major improvrment in Leroi capabilities.
+!    Leroi 8.0.1 represents a major improvrment in Leroi capabilities.   
 !    Plates can be in any layer but cannot cross layers.
-!
+!    
 !    Errors, which have been present since the major revision of the P223E version,
-!    have been discovered and corrected as part of the major new development of
+!    have been discovered and corrected as part of the major new development of 
 !    The Green;s function subroutines.
-!
+!    
 !    =========================================================================
 !
-!    For modelling tasks only, plates are no longer confined to basement if
+!    For modelling tasks only, plates are no longer confined to basement if  
 !      DO3D is set to 3 in RECORD 2.  For this option:
 !
 !         Plates can be in any layer.
@@ -45,7 +49,7 @@ End Module LG_Metadata
 !         All plates must have zero plunge.  Leroi will enforce this condition
 !         by setting all plunge ot zero if necessary..
 !
-!         Plates cannot cross layers.  Leroi will enforce this condition by
+!         Plates cannot cross layers.  Leroi will enforce this condition by 
 !         by decreasing the depthextent of all offending plates.
 !
 !         Inversion is not permitted unless all paltes are in the basement.
@@ -1971,7 +1975,7 @@ End Module LG_Metadata
  CHARACTER(LEN=60) LTXT
  Integer :: tvals(8)
  DATA NR,NW,ND,NLG,NRI,np /3,4,7,9,13,14/
-
+ 
  DATA LTXT     /'----------------------------------------'/
 
 ! Inversion specific parameters
@@ -2091,7 +2095,7 @@ End Module LG_Metadata
  PRTSEC = .FALSE.
  REFTYM = 0.
  INVERT = .FALSE.
- INTRUDE = .FALSE.
+ INTRUDE = .TRUE. !.FALSE.
  MRXTX = 1
  MXVRTX = 4
  SV_AZM = 0.
@@ -2848,6 +2852,7 @@ Write ( *, 1) PNAME, PVERS, PDATE, PAUT1, PAUT2, PAUT3, PPROJ, PRELS, &
 !  ---------------------------
 
  READ(NR,*) NLYR, NPLT, NLITH
+ ! NPLT = 1
  WRITE(NW,1) NLYR, NPLT, NLITH
  IF (NLYR < 1) CALL WRITE_LOG_FILE (NLG,25,MXERR,2)
  IF (NLYR == 1) INTRUDE = .FALSE.
@@ -3888,7 +3893,7 @@ Write ( *, 1) PNAME, PVERS, PDATE, PAUT1, PAUT2, PAUT3, PPROJ, PRELS, &
             /T9,'-------   --------      -----')
 
    END SUBROUTINE SHOW_AND_TELL
-
+   
    SUBROUTINE SET_FRQ
 !  ------------------
 
@@ -4149,7 +4154,7 @@ Write ( *, 1) PNAME, PVERS, PDATE, PAUT1, PAUT2, PAUT3, PPROJ, PRELS, &
   !
  ! write model
  Write (np, 10) nlith, nlyr, nplt
- Write (np, 27)
+ Write (np, 27) 
  Do jl = 1, nlith
     Write (np, 23) jl, lyth(jl, 1:7)
  End Do
@@ -4681,7 +4686,7 @@ End Function IsComment
  CLOSE (NLG)
 
  STOP
-
+ 
 !
 ! Formats
 10 Format (/, 2x, 'Frequency-domain calculations finished ...', &
@@ -6965,7 +6970,7 @@ Write (nw, 3)
  	Write (66, 1) jt, trp(jt), ypls(1, jt), ypls(2, jt), ypls(3, jt), ypls(4, jt)
  End Do
  Close(66)
-1 Format (2x, i4, 5(2x, en15.6))
+1 Format (2x, i4, 5(2x, en15.6)) 
 
  MXCNV = NTYPLS + NSX
  DO JT = 1, NCHNL
@@ -7606,7 +7611,7 @@ Write (nw, 3)
  10 FORMAT(/T3,'Line ',A,4X,'Survey azimuth =',I4,' degrees',4X,'Units = ',A,4X,'Plot point: ',A)
  11 FORMAT(/T3,'Line ',A,4X,'Magnetic dipole Rx    Survey azimuth =',I4,' degrees',4X,'Units = ',A,4X,'Plot point: ',A)
  12 FORMAT(/T3,'Line ',A,4X,'Electric dipole Rx',4X,'Units = ',A,4X,'Plot point: ',A)
- 15 FORMAT(I5,2F12.1,F9.1,1024e15.6)
+ 15 FORMAT(I5,2F12.1,F9.1,2048(2x, en15.6))
  16 FORMAT(/T3,'Line ',A,4X,'HID:',I4,4X,'SVAZ:',I4,4X,'Units: ',A,4X,'PP: ',A)
  21 FORMAT(/T10,'X : Radial Component ',A,' for Line ',A &
            /T10,'--------------------------------------------')
@@ -8074,8 +8079,8 @@ Write (nw, 3)
  11 FORMAT(/T3,'Line ',A,4X,'Magnetic dipole Rx    Survey azimuth =',I4,' degrees',4X,'Units = ',A)
  12 FORMAT(/T3,'Line ',A,4X,'Electric dipole Rx',4X,'Units = ',A)
  13 FORMAT(/T3,'Line ',A,4X,'Point electric field',4X,'Units = ',A)
- 15 FORMAT(I5,2F12.1,F9.1,540G13.4)
- 16 FORMAT(I5,2F12.1,F9.1,540F13.2)
+ 15 FORMAT(I5,2F12.1,F9.1,2048G13.4)
+ 16 FORMAT(I5,2F12.1,F9.1,2048F13.2)
  17 FORMAT(/T3,'Line ',A,4X,'HID:',I4,4X,'SVAZ:',I4,4X,'Units: ',A,4X,'PP: ',A)
  20 FORMAT(//T3,'Inphase ',A,' for Line ',A &
             /T3,'-------------------------------')
@@ -9414,8 +9419,8 @@ Write (nw, 3)
     End Do
     Close(66)
  End If
-
-1   Format (en13.4, 6(2x, en15.6))
+ 
+1   Format (en13.4, 6(2x, en15.6)) 
 
 END SUBROUTINE HSLPB
 
@@ -10102,8 +10107,8 @@ END SUBROUTINE HSGWB_KER
     End Do
     Close(66)
  End If
-
-1   Format (en13.4, 6(2x, en15.6))
+ 
+1   Format (en13.4, 6(2x, en15.6)) 
 
  END SUBROUTINE HSLPE
 
@@ -10766,7 +10771,7 @@ If(WRITE_FRQ) Then
 	Close(66)
 End If
 
-1   Format (en13.4, 6(2x, en15.6))
+1   Format (en13.4, 6(2x, en15.6))     
 
   CONTAINS
 
@@ -11807,7 +11812,7 @@ End If
        IF (PLTOP(JP) + 0.01 > REAL (DPTHL(JL))) PLYR(JP) = JL      ! Find layer containing Plate JP
      END DO
      DEL = PLTOP(JP) - REAL (DPTHL(PLYR(JP)))
-     IF (DEL < 0.01) PLTOP(JP) = REAL (DPTHL(PLYR(JP))) + 0.01
+     IF (DEL < 0.01) PLTOP(JP) = REAL (DPTHL(PLYR(JP))) + 0.01 
      IF (PLYR(JP) < NLYR) THEN
        NTPL = NTPL + 1           !  mumber of plates above basement
        IDPL(NTPL) = JP           !  ID of each plate above basement
@@ -11817,7 +11822,7 @@ End If
 
 ! Adjust plates and set cell dimensions
  CALL SET_CELLS_1 (IPR,DPTHB,NLYR,NPLT,PLYR,CELLW,PLNGTH,PLWDTH,PLTOP,PLAZM, &
-                   PLDIP,PLUNJ,NA,NB,DA,DB,MXCL2,MXAB,NCELL2,ZMIN,ZMAX)
+                   PLDIP,PLUNJ,NA,NB,DA,DB,MXCL2,MXAB,NCELL2,ZMIN,ZMAX, INTRUDE) ! DWA 2024-06-12
 
  DO J1 = 1,NTPL
    JP = IDPL(J1)
@@ -18411,9 +18416,12 @@ End If
  END SUBROUTINE RXYZ2PLT
 
  SUBROUTINE SET_CELLS_1 (IPR,DPTHB,NLYR,NPLT,PLYR,CELLW,PLNGTH,PLWDTH,PLTOP,PLAZM, &
-                         PLDIP,PLUNJ,NA,NB,DA,DB,MXCL2,MXAB,NCELL2,ZMIN,ZMAX)
+                         PLDIP,PLUNJ,NA,NB,DA,DB,MXCL2,MXAB,NCELL2,ZMIN,ZMAX,intrude)
 !-------------------------------------------------------------------------------------
-
+!
+!	2024-06-12: intrude arguement added so that target celles are computed regardless.
+!		  : hooks to print target corners are retained but commented out.  These can be useful.
+!
 !***  Called by LEROI
 !***  Calls RPLT2XYZ
 
@@ -18518,7 +18526,10 @@ End If
  REAL CELLW,P(2),XYZ(3),R32(3,2),DPTHB,CA,SA,CP,SP,CD,SD,ZMINP,ZMIN,ZMAX,TMPL
  REAL, DIMENSION(4) :: XCNR,YCNR,ZCNR
  REAL, DIMENSION(NPLT) :: PLNGTH, PLWDTH,PLTOP,SHIFT,PLAZM,PLUNJ,PLDIP,DA,DB
- LOGICAL PRT
+ LOGICAL :: prt, INTRUDE
+! INTEGER :: newu
+
+ !Open (File = 'Leroi.trg', Newunit = newu, Status = 'Unknown')
 
  NCELL2 = 0 ; MXAB = 0
 
@@ -18553,7 +18564,7 @@ End If
    MXAB = MAX (MXAB,KMPL)
    NCELL2(JP) = NCELL2(JP-1) + 2* KMPL
 
-   IF (PLYR(JP) == NLYR) THEN               ! Restrict basement plates to basement
+   ! IF (PLYR(JP) == NLYR) THEN               ! Restrict basement plates to basement
 
      CA = COS (PLAZM(JP));   SA = SIN (PLAZM(JP))
      CD = COS (PLDIP(JP));   SD = SIN (PLDIP(JP))
@@ -18571,13 +18582,17 @@ End If
        P(2) = YCNR(JB)
        XYZ = MATMUL (R32,P)
        ZCNR(JB) = XYZ(3) + PLTOP(JP)
+       xcnr(jb) = xyz(1)
+       ycnr(jb) = xyz(2)
      END DO
      ZMINP = MINVAL (ZCNR)
 
-     IF (ZMINP < DPTHB) THEN
-       SHIFT(JP) = DPTHB - ZMINP
-       ZCNR(1:4) = ZCNR(1:4) + SHIFT(JP)
-       PLTOP(JP) = PLTOP(JP) + SHIFT(JP)
+     If (.not. INTRUDE) Then
+         IF (ZMINP < DPTHB) THEN
+           SHIFT(JP) = DPTHB - ZMINP
+           ZCNR(1:4) = ZCNR(1:4) + SHIFT(JP)
+           PLTOP(JP) = PLTOP(JP) + SHIFT(JP)
+         END IF
      END IF
 
      IF (PRT .AND. SHIFT(JP) > 0.01) THEN
@@ -18586,10 +18601,14 @@ End If
      END IF
      ZMIN = MIN (ZMIN, MINVAL (ZCNR))
      ZMAX = MAX (ZMAX, MAXVAL (ZCNR))
-   END IF
+   ! END IF
+!   Write (newu, *) xcnr
+!   Write (newu, *) ycnr
+!   Write (newu, *) zcnr
  END DO
  ZMIN = MAX (ZMIN, DPTHB + 0.01)
  MXCL2 = NCELL2(NPLT)
+! Close(newu)
 
  1 FORMAT (//T3,'********************************************************'     &
             /T3,'Plate',I3,' has been shifted down by',F7.2,' m to prevent it' &
