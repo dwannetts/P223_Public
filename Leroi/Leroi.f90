@@ -2,7 +2,7 @@
 !-----------------------------------------------------------------------------------------
  Module LG_Metadata
 !--------------
-! 
+!
 ! Module designed to hold 'constant character options'
     Implicit NONE
 
@@ -21,7 +21,7 @@ End Module LG_Metadata
 ! Changes
 !
 !	8.0.5
-!		1. restored multiplate modelling capability but effectivly modelling them will require 
+!		1. restored multiplate modelling capability but effectivly modelling them will require
 !		   placing multiple plates in a dummy layer above the basement
 !
 !	8.0.4
@@ -32,16 +32,16 @@ End Module LG_Metadata
 !	8.0.3
 !		1.	Include model in MF1 file
 !-----------------------------------------------------------------------------------------
-!    Leroi 8.0.1 represents a major improvrment in Leroi capabilities.   
+!    Leroi 8.0.1 represents a major improvrment in Leroi capabilities.
 !    Plates can be in any layer but cannot cross layers.
-!    
+!
 !    Errors, which have been present since the major revision of the P223E version,
-!    have been discovered and corrected as part of the major new development of 
+!    have been discovered and corrected as part of the major new development of
 !    The Green;s function subroutines.
-!    
+!
 !    =========================================================================
 !
-!    For modelling tasks only, plates are no longer confined to basement if  
+!    For modelling tasks only, plates are no longer confined to basement if
 !      DO3D is set to 3 in RECORD 2.  For this option:
 !
 !         Plates can be in any layer.
@@ -49,7 +49,7 @@ End Module LG_Metadata
 !         All plates must have zero plunge.  Leroi will enforce this condition
 !         by setting all plunge ot zero if necessary..
 !
-!         Plates cannot cross layers.  Leroi will enforce this condition by 
+!         Plates cannot cross layers.  Leroi will enforce this condition by
 !         by decreasing the depthextent of all offending plates.
 !
 !         Inversion is not permitted unless all paltes are in the basement.
@@ -1975,7 +1975,7 @@ End Module LG_Metadata
  CHARACTER(LEN=60) LTXT
  Integer :: tvals(8)
  DATA NR,NW,ND,NLG,NRI,np /3,4,7,9,13,14/
- 
+
  DATA LTXT     /'----------------------------------------'/
 
 ! Inversion specific parameters
@@ -2095,7 +2095,7 @@ End Module LG_Metadata
  PRTSEC = .FALSE.
  REFTYM = 0.
  INVERT = .FALSE.
- INTRUDE = .TRUE. !.FALSE.
+ INTRUDE = .FALSE.
  MRXTX = 1
  MXVRTX = 4
  SV_AZM = 0.
@@ -3893,7 +3893,7 @@ Write ( *, 1) PNAME, PVERS, PDATE, PAUT1, PAUT2, PAUT3, PPROJ, PRELS, &
             /T9,'-------   --------      -----')
 
    END SUBROUTINE SHOW_AND_TELL
-   
+
    SUBROUTINE SET_FRQ
 !  ------------------
 
@@ -4154,7 +4154,7 @@ Write ( *, 1) PNAME, PVERS, PDATE, PAUT1, PAUT2, PAUT3, PPROJ, PRELS, &
   !
  ! write model
  Write (np, 10) nlith, nlyr, nplt
- Write (np, 27) 
+ Write (np, 27)
  Do jl = 1, nlith
     Write (np, 23) jl, lyth(jl, 1:7)
  End Do
@@ -4686,7 +4686,7 @@ End Function IsComment
  CLOSE (NLG)
 
  STOP
- 
+
 !
 ! Formats
 10 Format (/, 2x, 'Frequency-domain calculations finished ...', &
@@ -6970,7 +6970,7 @@ Write (nw, 3)
  	Write (66, 1) jt, trp(jt), ypls(1, jt), ypls(2, jt), ypls(3, jt), ypls(4, jt)
  End Do
  Close(66)
-1 Format (2x, i4, 5(2x, en15.6)) 
+1 Format (2x, i4, 5(2x, en15.6))
 
  MXCNV = NTYPLS + NSX
  DO JT = 1, NCHNL
@@ -9419,8 +9419,8 @@ Write (nw, 3)
     End Do
     Close(66)
  End If
- 
-1   Format (en13.4, 6(2x, en15.6)) 
+
+1   Format (en13.4, 6(2x, en15.6))
 
 END SUBROUTINE HSLPB
 
@@ -10107,8 +10107,8 @@ END SUBROUTINE HSGWB_KER
     End Do
     Close(66)
  End If
- 
-1   Format (en13.4, 6(2x, en15.6)) 
+
+1   Format (en13.4, 6(2x, en15.6))
 
  END SUBROUTINE HSLPE
 
@@ -10771,7 +10771,7 @@ If(WRITE_FRQ) Then
 	Close(66)
 End If
 
-1   Format (en13.4, 6(2x, en15.6))     
+1   Format (en13.4, 6(2x, en15.6))
 
   CONTAINS
 
@@ -11812,7 +11812,7 @@ End If
        IF (PLTOP(JP) + 0.01 > REAL (DPTHL(JL))) PLYR(JP) = JL      ! Find layer containing Plate JP
      END DO
      DEL = PLTOP(JP) - REAL (DPTHL(PLYR(JP)))
-     IF (DEL < 0.01) PLTOP(JP) = REAL (DPTHL(PLYR(JP))) + 0.01 
+     IF (DEL < 0.01) PLTOP(JP) = REAL (DPTHL(PLYR(JP))) + 0.01
      IF (PLYR(JP) < NLYR) THEN
        NTPL = NTPL + 1           !  mumber of plates above basement
        IDPL(NTPL) = JP           !  ID of each plate above basement
