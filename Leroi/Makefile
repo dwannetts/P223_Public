@@ -9,13 +9,10 @@ BUILD 	= RELEASE
 # BUILD 	= DEBUG
 EXE	= Leroi.x
 RUN	= Leroi
+INSTALL_DIR = $(HOME)/bin  
 
 ifeq ($(BUILD), RELEASE)
-<<<<<<< HEAD
-	FC_OPTS = -O3 -march=native -Q -fwhole-program -fdefault-real-16
-=======
-	FC_OPTS = -O3 -march=native -Q -fwhole-program -fdefault-real-16 -ffpe-summary=none
->>>>>>> 4676aa917c9d4f1b6eb5eadfe8fe6efe03da6050
+	FC_OPTS = -Q -fwhole-program -O3  
 else ifeq ($(BUILD), PARANOID)
 	FC_OPTS = -fcheck=all, -ffpe-trap=invalid,zero,overflow -g -Wall -Wextra -Werror -pedantic
 else ifeq ($(BUILD), DEBUG)
@@ -35,6 +32,6 @@ clean:
 
 install:
 	chmod +x $(RUN)
-	cp $(RUN) ~/bin
-	cp $(EXE) ~/bin
+	cp $(RUN) $(INSTALL_DIR)
+	cp $(EXE) $(INSTALL_DIR)
 

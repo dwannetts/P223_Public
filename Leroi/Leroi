@@ -15,7 +15,7 @@ test -f ../"$1".cfl && cp ../"$1".cfl Leroi.cfl
 test -f ../"$1".inv && cp ../"$1".inv Leroi.inv
 
 # run the program ...
-~/bin/Leroi.x
+Leroi.x
 
 # copy output back to parent directory ...
 test -f Leroi.out && cp Leroi.out ../"$1".out

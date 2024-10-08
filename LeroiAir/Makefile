@@ -9,6 +9,7 @@ BUILD 	= RELEASE
 # BUILD 	= DEBUG
 EXE	= LeroiAir.x
 RUN	= LeroiAir
+INSTALL_DIR = $(HOME)/bin  
 
 ifeq ($(BUILD), RELEASE)
 	FC_OPTS = -O3 -march=native -Q -fwhole-program -fdefault-real-16 -ffpe-summary=none
@@ -31,6 +32,6 @@ clean:
 
 install:
 	chmod +x $(RUN)
-	cp $(RUN) ~/bin
-	cp $(EXE) ~/bin
+	cp $(RUN) $(INSTALL_DIR)
+	cp $(EXE) $(INSTALL_DIR)
 
