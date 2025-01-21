@@ -21,7 +21,7 @@ The definitive reference for the codes remains Raiche et al (2007) (http://dx.do
 
 I welcome any inquiry surrounding the codes and their use.
 
-David Annetts
+David Annetts, Aegis Geophysics
 
 01 January, 2025
 
